@@ -1,6 +1,6 @@
 ---
 title: "Research Assistant"
-collection: teaching
+collection: research
 type: "Undergraduate level"
 permalink: /research/Vru-RA
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
