@@ -1,5 +1,5 @@
 ---
-title: "Research Assistant"
+title: "Undergraduate Research Assistant"
 collection: research
 type: "Undergraduate level"
 permalink: /research/Vru-RA
