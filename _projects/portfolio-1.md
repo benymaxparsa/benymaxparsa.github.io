@@ -1,6 +1,11 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Multiple projects regarding to Data Structures and Algorithms course"
+excerpt: "Designing and implementation of:
+the Red-Black Tree, 
+the AVL Tree,
+the Trie Dictionary, 
+the Sparse Matrix via Linked List, 
+the Rat in the maze problem"
 collection: projects
 ---
 
