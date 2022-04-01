@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant and Coordinator"
+title: "Co-Head Teaching Assistant"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Spring-2022-DS
@@ -11,5 +11,7 @@ location: "Rafsanjān, Kerman, Iran"
 - Course: Data Structures
 - Course instructor: Dr. Fahimeh Dabaghi-Zarandi
 - Semester: Spring 2022
-- Team size: 9 TAs
+- Team size: 8 TAs
 
+## More Info:
+[Github Page](https://github.com/VRU-CE/Data_Structures-4002)

@@ -13,3 +13,5 @@ location: "Rafsanjān, Kerman, Iran"
 - Semester: Spring 2022
 - Team size: Solo TA
 
+## More Info:
+[Github Page](https://github.com/VRU-CE/Information_Retrieval-4002)

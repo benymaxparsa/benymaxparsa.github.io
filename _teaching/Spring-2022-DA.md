@@ -13,3 +13,5 @@ location: "Rafsanjān, Kerman, Iran"
 - Semester: Spring 2022
 - Team size: 6 TAs
 
+## More Info:
+[Github Page](https://github.com/VRU-CE/Design_and_Analysis_of_Algorithms-4002)
