@@ -11,3 +11,4 @@ location: "Rafsanjān, Kerman, Iran"
 - Field: Community Detection
 - Supervisor: Dr. Fahimeh Dabaghi-Zarandi
 - My responsibilities include: Reading and reviewing other related papers, Implementing the idea, Testing and improving the written code, gathering information and writing the initial text for the paper
+- At the moment, we have one paper under review in the JNCA journal. (Journal of Network and Computer Applications is a Q1 journal with impact factor of 6.281)
