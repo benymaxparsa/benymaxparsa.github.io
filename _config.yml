@@ -20,7 +20,7 @@ seo_description          : "Site for Parsa KamaliPour, Undergrad student of Comp
 words_per_minute         : 160
 future                   : true
 read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
-#talkmap_link             : false #change to true to add link to talkmap on talks page
+talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
