@@ -4,6 +4,17 @@ layout: default
 
 {% include base_path %}
 
+    <script type="application/ld+json">
+      {
+    "@context": "http://schema.org/",
+    "@type": "CreativeWork",
+    "author": "R. Stuart Geiger",
+          "name": "{{ page.title }}",
+    "datePublished": "{{ page.date }}",
+    "description": "{{ page.excerpt }}"
+      }
+      </script>
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% endif %}
@@ -34,7 +45,9 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         
-        {% if page.collection == 'teaching' or page.collection == 'research' %}
+        {% if page.collection == 'teaching'%}
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.collection == 'research' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
