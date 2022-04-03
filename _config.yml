@@ -16,10 +16,11 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false  # true, false (default)
+seo_description          : "Site for Parsa KamaliPour, Undergrad student of Computer Engineering at Vali-e-Asr University of Rafsanjan"
 words_per_minute         : 160
 future                   : true
 read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+#talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -73,7 +74,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google" # false (default), "google", "google-universal", "custom"
+  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "UA-221172468-1"
 
@@ -82,7 +83,7 @@ analytics:
 author:
   name             : "Parsa KamaliPour"
   avatar           : "profile.png"
-  bio              : "Software Engineering Student | Teaching/Research Assistant | Indie Game Developer | Computer Science Enthusiast"
+  bio              : "Software Engineering Student | Teaching/Research Assistant | Indie Game Developer | Computer Science Enthusiast <br> <br> Undergradute Research/Teaching Assistant at Vali-e-Asr University of Rafsanjan, <a style='color: black;' href='https://en.vru.ac.ir/department-of-computer-engineering/'>Department of Computer Engineering</a>"
   location         : "Kerman, Iran"
   employer         :
   pubmed           : 
@@ -322,3 +323,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+theme: jekyll-theme-cayman
+
+minimal_mistakes_skin

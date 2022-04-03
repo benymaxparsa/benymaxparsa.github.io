@@ -6,7 +6,7 @@ the AVL Tree,
 the Trie Dictionary, 
 the Sparse Matrix via Linked List, 
 the Rat in the maze problem"
-collection: expressions
+collection: projects
 ---
 
 ## The Rat in the maze problem
