@@ -3,7 +3,7 @@ title: "Teaching Assistant"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Spring-2022-IR
-venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+institution: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
 date: 2022-02-01
 location: "Rafsanjān, Kerman, Iran"
 ---
