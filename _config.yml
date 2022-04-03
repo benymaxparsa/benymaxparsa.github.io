@@ -324,6 +324,3 @@ compress_html:
   ignore:
     envs: development
 
-theme: jekyll-theme-cayman
-
-minimal_mistakes_skin
