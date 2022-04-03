@@ -1,11 +1,10 @@
 ---
 title: "Undergraduate Research Assistant"
-collection: research
+collection: teaching
 type: "Undergraduate level"
 permalink: /research/Vru-RA
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
 date: 2021-08-01
-location: "Rafsanjān, Kerman, Iran"
 ---
 
 - Field: Community Detection
