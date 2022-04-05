@@ -16,5 +16,5 @@ I learned to code this game using Jason Weimann's videos.
 ## 3rd-person-playground
 * [Github repo](https://github.com/benymaxparsa/3rd-person-playground)  
 In this project, I tried to learn how to develop the basics of a 3rd-person shooter game.  
-<video src="https://user-images.githubusercontent.com/51443025/161392601-25d39449-5822-4627-a96b-9be17209d26c.mp4" data-canonical-src="https://user-images.githubusercontent.com/51443025/161392601-25d39449-5822-4627-a96b-9be17209d26c.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;">
+<video src="https://user-images.githubusercontent.com/51443025/161392601-25d39449-5822-4627-a96b-9be17209d26c.mp4" data-canonical-src="https://user-images.githubusercontent.com/51443025/161392601-25d39449-5822-4627-a96b-9be17209d26c.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:440px;">
 </video>
