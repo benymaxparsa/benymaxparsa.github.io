@@ -52,18 +52,22 @@ By doing this repeatedly for all vertices, we can guarantee that the result is o
 ![](/images/bfex.png)
 
 ## Matrix Chain Multiplication
-* [Github repo](https://github.com/benymaxparsa/Red-Black-Tree)  
-The red-black tree is a self-balancing binary search tree in which each node has an extra bit to indicate whether it is red or black.
-![](/images/bfex.png)
+* Code is not available at github at the moment.  
+Matrix chain multiplication (or Matrix Chain Ordering Problem, MCOP) is an optimization problem that to find the most efficient way to multiply a given sequence of matrices. The problem is not actually to perform the multiplications but merely to decide the sequence of the matrix multiplications involved.  
+![](https://raw.githubusercontent.com/benymaxparsa/Quera.ir/master/3992%20-%20TA/AD/Project%202%20-%20mcm/phast%20%281%29.png)  
+![](https://raw.githubusercontent.com/benymaxparsa/Quera.ir/master/3992%20-%20TA/AD/Project%202%20-%20mcm/phast%20%282%29.png)
 
 ## N-Queens Solver
-* [Github repo](https://github.com/benymaxparsa/Red-Black-Tree)  
-The red-black tree is a self-balancing binary search tree in which each node has an extra bit to indicate whether it is red or black.
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Red-black_tree_example_with_NIL.svg/1920px-Red-black_tree_example_with_NIL.svg.png)
+* Code is not available at github at the moment.  
+The n-queens problem is a classic combinatorial problem. It is required to place n queens on an n×n chess board so that no two queens threaten each other. Therefore no two queens can be on the same row, column or diagonal. There must be a queen on each column and all their row numbers must differ so a solution can be represented as a permutation of the rows. (Not all permutations are solutions.)  
+we're solving this puzzle using Backtracking Algorithm.
+![](https://raw.githubusercontent.com/benymaxparsa/Quera.ir/master/3992%20-%20TA/AD/4th%20Project%20-%20N-Queen/nqueen_420.jpg)
 
 ## Travelling Salesman Problem
-* [Github repo](https://github.com/benymaxparsa/Red-Black-Tree)  
-The red-black tree is a self-balancing binary search tree in which each node has an extra bit to indicate whether it is red or black.
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Red-black_tree_example_with_NIL.svg/1920px-Red-black_tree_example_with_NIL.svg.png)
+* Code is not available at github at the moment.  
+The travelling salesman problem (also called the travelling salesperson problem or TSP) asks the following question: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, important in theoretical computer science and operations research.  
+![](https://raw.githubusercontent.com/HB-2000/DA_TSP_IMG/main/T1.JPG)  
+![](https://raw.githubusercontent.com/HB-2000/DA_TSP_IMG/main/T2.JPG)
+
 
 
