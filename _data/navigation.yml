@@ -20,6 +20,9 @@ main:
     
   - title: "CV"
     url: /cv/
+
+  - title: "Selected Courses"
+    url: /selected_courses/  
     
   # - title: "Guide"
   #   url: /markdown/
