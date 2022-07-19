@@ -27,3 +27,10 @@ author_profile: true
 | Operating Systems                                  | 15.73/20 - 3.0/4.0 |
 | Theory of Machines and Languages                   | 17.9/20 - 4.0/4.0  |
 | Engineering Mathematics                            | 17.04/20 - 4.0/4.0 |
+| Microprocessors Lab                                | 20/20 - 4.0/4.0    |
+| Database Lab                                       | 19/20 - 4.0/4.0    |
+| Bachelor's thesis                                  | 20/20 - 4.0/4.0    |
+| Computer Graphics                                  | 19.5/20 - 4.0/4.0  |
+| Fundamentals of Data Mining                        | 17.5/20 - 4.0/4.0  |
+
+
