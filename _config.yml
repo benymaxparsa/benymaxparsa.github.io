@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Parsa KamaliPour, Eng"
+title                    : "Parsa KamaliPour"
 title_separator          : "-"
 name                     : &name "Parsa KamaliPour"
-description              : &description "Software Engineering Student | Teaching/Research Assistant | Indie Game Developer | Computer Science Enthusiast"
+description              : &description "Undergraduate Research Assistant | Head Teaching Assistant | Undergrad Computer Engineering student"
 url                      : https://benymaxparsa.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io"
@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Parsa KamaliPour"
   avatar           : "profile.png"
-  bio              : "Software Engineering Student | Teaching/Research Assistant | Indie Game Developer | Computer Science Enthusiast <br> <br> Undergradute Research/Teaching Assistant at Vali-e-Asr University of Rafsanjan, <a style='color: black;' href='https://en.vru.ac.ir/department-of-computer-engineering/'>Department of Computer Engineering</a>"
+  bio              : "Software Engineering Student | Teaching/Research Assistant | Computer Science Enthusiast <br> <br> Undergradute Research Assistant and Head Teaching Assistant at Vali-e-Asr University of Rafsanjan, <a style='color: black;' href='https://en.vru.ac.ir/department-of-computer-engineering/'>Department of Computer Engineering</a>"
   location         : "Kerman, Iran"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=eBNZsM0AAAAJ"
-  email            : "parsakamalipour@gmail.com"
+  email            : "parsakamalipour@icloud.com"
   researchgate     : "https://www.researchgate.net/profile/Parsa-Kamalipour"
   uri              :
   bitbucket        :
@@ -114,7 +114,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : "https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw"
   wikipedia        :
 
 
