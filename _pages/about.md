@@ -8,7 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-Parsa KamaliPour is currently an undergraduate student of computer engineering at Vali-e-Asr university of Rafsanjan. His major focus is software engineering. He’s passionate about theoretical computer science, with interests in algorithm design, game theory, randomized algorithms, community detection, graph theory, and so on. In addition to being an undergraduate research assistant, he has been a teacher assistant for more than five courses to this day. He intends to continue his studies at the graduate level in the near future.
+Parsa KamaliPour is currently an undergraduate computer engineering student at the Vali-e-Asr university of Rafsanjan. The area of his major is Software Engineering.  
+
+He’s passionate about theoretical computer science, with interests in the Design & Analysis of Algorithms, Graph Algorithms, Data Mining, Algorithmic Game Theory, Machine Learning, and so on.  
+
+In addition to being an undergraduate research assistant, he has been a teacher assistant for more than ten courses to this day. He intends to continue his studies at the graduate level in the near future.
 
 ## Before getting into the University:
 
@@ -31,4 +35,9 @@ Even after realizing I wanted to continue my studies, I wasn't sure which sub-fi
 
 Dr. Dabaghi-Zarandi offered one of my friends and me a position to become teaching assistants for both "Data Structure and Algorithms" and "Design and Analysis of Algorithms" courses.  
 We had a blast that semester being teaching assistants to lots of students. We perfectly poured our heart and soul into that job, and as a result, everyone was happy, including our students, ourselves, and Dr. Dabaghi-Zarandi.
+
+## A new chapter in my life just began:
+
+Dr. Dabaghi-Zarandi reached out to me to offer us the position of Teaching Assistant once again, and we were more than happy to accept.  
+At that moment, it struck me that I am immensely passionate about theoretical computer science, and I would love to continue my academic journey in the field of Algorithms. So again, I reached out to Dr. Dabaghi-Zarandi, asking her if she had any available position as Undergraduate Research Assistant for me. Thankfully she gave me a chance, and ultimately, I was selected to be her undergrad research assistant. We began our research on algorithms related to Community Detection immediately.
 
