@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant"
+title: "Teaching Assistant of Introduction to Information Retrieval & Web Search course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Spring-2022-IR

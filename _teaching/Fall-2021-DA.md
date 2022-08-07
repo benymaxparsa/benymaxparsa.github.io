@@ -1,5 +1,5 @@
 ---
-title: "Head Teaching Assistant"
+title: "Head Teaching Assistant of Design and Analysis of Algorithms course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Fall-2021-DA

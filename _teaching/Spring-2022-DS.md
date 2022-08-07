@@ -1,5 +1,5 @@
 ---
-title: "Co-Head Teaching Assistant"
+title: "Co-Head Teaching Assistant of Data Structures course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Spring-2022-DS

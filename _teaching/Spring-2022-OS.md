@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant(Grader)"
+title: "Teaching Assistant(Grader) of Operating Systems course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Spring-2022-OS

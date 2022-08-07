@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant"
+title: "Teaching Assistant of Discrete Mathematics course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Fall-2021-DM

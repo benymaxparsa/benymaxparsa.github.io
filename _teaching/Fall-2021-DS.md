@@ -1,5 +1,5 @@
 ---
-title: "Head Teaching Assistant"
+title: "Head Teaching Assistant of Data Structures course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Fall-2021-DS

@@ -3,26 +3,29 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Biography"
+    url: /biography/
+
   # - title: "Talks"
-  #   url: /talks/    
+  #   url: /talks/
 
   - title: "Teaching"
-    url: /teaching/   
+    url: /teaching/
 
   - title: "Research"
-    url: /research/   
-    
+    url: /research/
+
   - title: "Projects"
     url: /projects/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+
   - title: "CV"
     url: /cv/
 
   - title: "Courses"
-    url: /selected_courses/  
-    
+    url: /selected_courses/
+
   # - title: "Guide"
   #   url: /markdown/
