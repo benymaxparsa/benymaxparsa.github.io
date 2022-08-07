@@ -54,6 +54,10 @@ My friends and I are working on two new papers under the supervision of Dr. Fahi
 
 In the summer of 2022, Vali-e-Asr University Scientific Association of Computer Engineering held the most extensive online event in our department, The Summer Coding Bootcamp. And I'm proud to be part of it, I have helped the crew to make it happen, and I'm one of the instructors of this coding Bootcamp. in this Bootcamp, I teach Python and its popular packages, Git, and GitHub.
 
+From the beginning of my 9th semester, I'm pleased to announce that I will be the Head of the Teaching Assistant Committee at Vali-e-Asr University Scientific Association of Computer Engineering.  
+My job is to be a bridge between remarkable students and professors, nominate and introduce qualified Teaching Assistants for each course to professors, accumulate a great team of TAs per course, and give my experiences to new TAs and train them to be an accomplished teaching assistants.
+
+
 ### [Click here to see my Teaching Experiences](https://benymaxparsa.github.io//teaching/)
 
 ### [Click here to see my Research Experiences](https://benymaxparsa.github.io//research/)
