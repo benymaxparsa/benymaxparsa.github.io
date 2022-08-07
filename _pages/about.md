@@ -48,7 +48,7 @@ In my 8th semester, I was honored to be a Teaching Assistant of Dr. Mojtaba Sabb
 
 And in the summer after that, I had the honor to collaborate in teaching with Dr. Amir Hossein Hadjahmadi. In my 9th semester, I am thrilled to be Dr. Hadjahmadi's Teaching Assistant, Dr. Sabbagh-Jafari's, and Dr. Dabaghi-Zarandi's.
 
- Also, I am happy to announce That my first paper has been published in the Journal of Network and Computer Applications, a Q1 journal with a 7.574 Impact Factor and 15.7 CiteScore. [doi](https://doi.org/10.1016/j.jnca.2022.103492)
+ Also, I am happy to announce That my first paper has been published in the Journal of Network and Computer Applications, a Q1 journal with a 7.574 Impact Factor and 15.7 CiteScore. [[doi]](https://doi.org/10.1016/j.jnca.2022.103492)
 
 My friends and I are working on two new papers under the supervision of Dr. Fahimeh Dabaghi-Zarandi.
 
