@@ -18,8 +18,10 @@ In high school, I was a computer enthusiast but with average grades.
 
 ## During my first two years of university as an undergraduate student:
 
-After taking the annual university entrance exam, I got accepted to the Vali-e-Asr University of Rafsanjan.  
+After taking the annual university entrance exam, I got accepted to the Vali-e-Asr University of Rafsanjan. I began my studies as a Computer Engineering major.  
 I was Remarkably superb at my programming-related courses during my first two years. I was immensely passionate about programming but didn't precisely understand what I wanted to do in the future, and I didn't know how vital mathematics was. Due to that, I hardly got any good grades in my math & Science classes in my first two years of being a student.
+
+It's worth noting that because I performed so well in my computer-related courses, our department offered me a chance to pick Software Engineering as the area of my major. Our department's software engineering is the most robust and highly competitive field. Not many students get the chance to get into this area of Computer Engineering major in our school.
 
 ## After my 4th semester ended:
 
