@@ -27,5 +27,11 @@ main:
   - title: "Courses"
     url: /selected_courses/
 
+  - title: "Education"
+    url: /education/
+
+  - title: "Extra Curricular Activities"
+    url: /extracurricular/
+
   # - title: "Guide"
   #   url: /markdown/

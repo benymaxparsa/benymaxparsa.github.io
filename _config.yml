@@ -58,7 +58,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : 
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -86,9 +86,9 @@ author:
   bio              : "Software Engineering Student | Teaching/Research Assistant | Computer Science Enthusiast <br> <br> Undergradute Research Assistant and Head Teaching Assistant at Vali-e-Asr University of Rafsanjan, <a style='color: black;' href='https://en.vru.ac.ir/department-of-computer-engineering/'>Department of Computer Engineering</a>"
   location         : "Kerman, Iran"
   employer         :
-  pubmed           : 
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=eBNZsM0AAAAJ"
-  email            : "parsakamalipour@icloud.com"
+  email            : "parsakamalipour.edu@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/Parsa-Kamalipour"
   uri              :
   bitbucket        :
@@ -110,7 +110,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          :
   vine             :
   weibo            :
   xing             :
@@ -191,6 +191,12 @@ collections:
   research:
     output: true
     permalink: /:collection/:path/
+  education:
+    output: true
+    permalink: /:collection/:path/
+  extracurricular:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -257,7 +263,27 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      
+
+   # _education
+  - scope:
+      path: ""
+      type: education
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+
+  # _extracurricular
+  - scope:
+      path: ""
+      type: extracurricular
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+
 
 # Sass/SCSS
 sass:

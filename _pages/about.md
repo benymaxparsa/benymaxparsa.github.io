@@ -16,6 +16,8 @@ In addition to being an undergraduate research assistant, he has been a teacher 
 
 ### [Click here to see my Biography](/biography/)
 
+### [Click here to see my Education](/education/)
+
 ### [Click here to see my Teaching Experiences](/teaching/)
 
 ### [Click here to see my Research Experiences](/research/)
