@@ -29,3 +29,5 @@ In addition to being an undergraduate research assistant, he has been a teacher 
 ### [Click here to see my CV](/cv/)
 
 ### [Click here to see my Selected Courses](/selected_courses/)
+
+### [Click here to see my Extra Curricular Activities](/extracurricular/)
