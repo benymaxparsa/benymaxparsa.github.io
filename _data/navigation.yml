@@ -33,5 +33,11 @@ main:
   - title: "Extra Curricular Activities"
     url: /extracurricular/
 
+  - title: "Industry Experiences"
+    url: /industry/
+
+  - title: "Honors, Scores, Skills, etc."
+    url: /honors_and_extra/
+
   # - title: "Guide"
   #   url: /markdown/

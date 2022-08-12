@@ -197,7 +197,9 @@ collections:
   extracurricular:
     output: true
     permalink: /:collection/:path/
-
+  industry:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -284,6 +286,15 @@ defaults:
       share: true
       comment: true
 
+   # _industry
+  - scope:
+      path: ""
+      type: industry
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
 
 # Sass/SCSS
 sass:

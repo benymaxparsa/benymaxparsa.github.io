@@ -22,6 +22,8 @@ In addition to being an undergraduate research assistant, he has been a teacher 
 
 ### [Click here to see my Research Experiences](/research/)
 
+### [Click here to see my Industry Experiences](/industry/)
+
 ### [Click here to see my scientific papers](/publications/)
 
 ### [Click here to see my Projects](/projects/)
@@ -31,3 +33,5 @@ In addition to being an undergraduate research assistant, he has been a teacher 
 ### [Click here to see my Selected Courses](/selected_courses/)
 
 ### [Click here to see my Extra Curricular Activities](/extracurricular/)
+
+### [Click here to see my Honors and Awards, Test Scores, Skills, etc.](/honors_and_extra/)
