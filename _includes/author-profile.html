@@ -8,29 +8,39 @@
 
   <script type="text/javascript">
     var imageURLs = [
-      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile.png",
-      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile1.png",
-      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile2.png"
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p1.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p2.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p3.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p4.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p5.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p6.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p7.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p8.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p9.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p10.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p11.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p12.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p13.jpg",
+      "https://raw.githubusercontent.com/benymaxparsa/benymaxparsa.github.io/master/images/Profile_Pictures/p14.jpg",
     ];
     function getImageTag() {
       var randomIndex = Math.floor(Math.random() * imageURLs.length);
-      img += imageURLs[randomIndex];
       return imageURLs[randomIndex];
     }
   </script>
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    <img id="prof_icon" src="{{ author.avatar }}" alt="{{ author.name }}">
+    <img id="prof_icon" src="" alt="{{ author.name }}">
     {% else %}
     <!-- <img src=changeRandomimage() class="author__avatar" alt="{{ author.name }}"> -->
-    <img id="prof_icon" src="{{ author.avatar | prepend: " /images/" | prepend: base_path }}" class="author__avatar"
-      alt="{{ author.name }}">
+    <img id="prof_icon" src="" class="author__avatar" alt="{{ author.name }}">
     {% endif %}
     <script type="text/javascript">
       document.getElementById("prof_icon").src = getImageTag();
     </script>
   </div>
+
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
