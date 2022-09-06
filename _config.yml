@@ -7,16 +7,16 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Parsa KamaliPour"
+title                    : "Parsa Kamalipour"
 title_separator          : "-"
-name                     : &name "Parsa KamaliPour"
+name                     : &name "Parsa Kamalipour"
 description              : &description "Undergraduate Research Assistant | Head Teaching Assistant | Undergrad Computer Engineering student"
 url                      : https://benymaxparsa.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false  # true, false (default)
-seo_description          : "Site for Parsa KamaliPour, Undergrad student of Computer Engineering at Vali-e-Asr University of Rafsanjan"
+seo_description          : "Site for Parsa Kamalipour, Undergrad student of Computer Engineering at Vali-e-Asr University of Rafsanjan"
 words_per_minute         : 160
 future                   : true
 read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
@@ -81,9 +81,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Parsa KamaliPour"
+  name             : "Parsa Kamalipour"
   avatar           : "profile.png"
-  bio              : "Software Engineering Student | Teaching/Research Assistant | Computer Science Enthusiast <br> <br> Undergradute Research Assistant and Head Teaching Assistant at Vali-e-Asr University of Rafsanjan, <a style='color: black;' href='https://en.vru.ac.ir/department-of-computer-engineering/'>Department of Computer Engineering</a>"
+  bio              : "Software Engineering Student | Teaching/Research Assistant | Computer Science Enthusiast <br> <br> Undergradute Research Assistant and Head Teaching Assistant at Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
   location         : "Kerman, Iran"
   employer         :
   pubmed           :

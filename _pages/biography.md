@@ -1,6 +1,6 @@
 ---
 permalink: /biography/
-title: "Biography of Parsa KamaliPour"
+title: "Biography of Parsa Kamalipour"
 excerpt: "Biography"
 author_profile: true
 ---
