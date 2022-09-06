@@ -6,12 +6,30 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
+  <script type="text/javascript">
+    var imageURLs = [
+      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile.png",
+      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile1.png",
+      "https://github.com/benymaxparsa/benymaxparsa.github.io/raw/master/images/profile2.png"
+    ];
+    function getImageTag() {
+      var randomIndex = Math.floor(Math.random() * imageURLs.length);
+      img += imageURLs[randomIndex];
+      return imageURLs[randomIndex];
+    }
+  </script>
+
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+    <img id="prof_icon" src="{{ author.avatar }}" alt="{{ author.name }}">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
+    <!-- <img src=changeRandomimage() class="author__avatar" alt="{{ author.name }}"> -->
+    <img id="prof_icon" src="{{ author.avatar | prepend: " /images/" | prepend: base_path }}" class="author__avatar"
+      alt="{{ author.name }}">
     {% endif %}
+    <script type="text/javascript">
+      document.getElementById("prof_icon").src = getImageTag();
+    </script>
   </div>
 
   <div class="author__content">
@@ -122,3 +140,4 @@
     </ul>
   </div>
 </div>
+
