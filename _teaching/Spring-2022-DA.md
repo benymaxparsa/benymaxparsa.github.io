@@ -12,6 +12,16 @@ location: "Rafsanjān, Kerman, Iran"
 - Course instructor: Dr. Fahimeh Dabaghi-Zarandi
 - Semester: Spring 2022
 - Team size: 6 TAs
+- My key role consisted of:
+  - Taught different Algorithms to undergraduate students of Computer engineering
+  - Corrected students' homework
+  - Held up recitation class
+  - managed and arranged other TAs
+  - Designed Assignments and Projects for students
+  - consulted the professor and planned the course syllabus together
+  - Helped and guided the students to thrive in the course they took
+
+Skills that we learned and used: Algorithm Design · Teaching · python · Graph Theory · Team Management · Algorithm Analysis · Data Structures · Object-Oriented Programming (OOP) · Unit Testing · C++ · LaTeX · Git · Problem Solving · Team Leadership · Teamwork
 
 ## More Info:
 [Github Page](https://github.com/VRU-CE/Design_and_Analysis_of_Algorithms-4002)

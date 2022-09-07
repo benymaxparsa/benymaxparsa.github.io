@@ -12,4 +12,7 @@ location: "Rafsanjān, Kerman, Iran"
 - Course instructor: Dr. Fahimeh Dabaghi-Zarandi
 - Semester: Spring 2022
 - Team size: 4 TAs
+- My key role consisted of:
+  - Corrected students' homework
 
+Skills that I learned and used: Teaching · LaTeX · Teamwork

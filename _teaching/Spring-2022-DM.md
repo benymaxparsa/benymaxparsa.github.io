@@ -12,4 +12,9 @@ location: "Rafsanjān, Kerman, Iran"
 - Course instructor: Dr. Fahimeh Dabaghi-Zarandi
 - Semester: Spring 2022
 - Team size: 5 TAs
+- My key role consisted of:
+  - Taught Graphs and Trees to undergraduate students of Computer engineering
+  - Corrected students' homework
+  - Held up recitation class for the graph and tree chapter
 
+Skills that I learned and used: Teaching · Discrete Mathematics · Graph Theory · LaTeX · Teamwork
