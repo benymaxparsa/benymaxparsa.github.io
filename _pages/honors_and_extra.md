@@ -86,7 +86,7 @@ author_profile: true
     Team Work, leadership, Collaboration, Communication, Problem-solving, Critical thinking, Decision-making
 
 - #### Technical Skills:
-    Algorithm Design, Algorithm Analysis, Research, Teaching, Data Mining, Deep Learning, Applied Discrete Mathematics, Algorithmic Graph Theory, Community Detection
+    Algorithm Design, Algorithm Analysis, Research, Teaching, Data Mining, Deep Learning, Algorithmic Graph Theory, Community Detection
 
 ---
 
