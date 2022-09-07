@@ -8,4 +8,6 @@ date: 2022-08-01
 location: "Kerman, Iran"
 ---
 
-- I teach Python to teenagers, and I believe everyone should learn Python whether they're Computer students or not.
+- I teach Python to teenagers in private institutes, and I believe everyone should learn Python whether they're Computer students or not.
+
+Skills related to this job: Teaching · python · Pandas (Software) · Matplotlib · NumPy · Object-Oriented Programming (OOP) · Teamwork
