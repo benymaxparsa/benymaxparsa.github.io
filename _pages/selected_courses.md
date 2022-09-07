@@ -6,7 +6,7 @@ author_profile: true
 
 ---
 
-| Courses                                            | grades             |
+| Selected courses I took at Vali-e-Asr University.  | grades             |
 |----------------------------------------------------|--------------------|
 | Design and Analysis of Algorithms                  | 18/20 - 4.0/4.0    |
 | Fundamental of Programming                         | 20/20 - 4.0/4.0    |
