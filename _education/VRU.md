@@ -3,12 +3,12 @@ title: "Vali-e-Asr University of Rafsanjan"
 collection: education
 permalink: /education/VRU
 gallery:
-  - url: Graduation_Celebration/img1.JPG
-    image_path: Graduation_Celebration/img1.JPG
+  - url: images/Graduation_Celebration/img1.JPG
+    image_path: images/Graduation_Celebration/img1.JPG
     alt: "Bachelor Graduation Day - image 1, People in this picture: Hossein Ahmadi, Mohammad Hosein(Cena) Ashoori, Me"
     title: "Bachelor Graduation Day - image 1, People in this picture: Hossein Ahmadi, Mohammad Hosein(Cena) Ashoori, Me"
-  - url: Graduation_Celebration/img2.JPG
-    image_path: Graduation_Celebration/img2.JPG
+  - url: images/Graduation_Celebration/img2.JPG
+    image_path: images/Graduation_Celebration/img2.JPG
     alt: "Bachelor Graduation Day - image 2, People in this picture: Mohammad Hosein(Cena) Ashoori, Mohammad Mehdi Afkhami, Hossein Ahmadi, Me"
     title: "Bachelor Graduation Day - image 2, People in this picture: Mohammad Hosein(Cena) Ashoori, Mohammad Mehdi Afkhami, Hossein Ahmadi, Me"
 ---
