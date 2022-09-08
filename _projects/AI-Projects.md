@@ -1,6 +1,11 @@
 ---
 title: "Multiple projects regarding to Artificial Intelligence course"
 collection: projects
+gallery:
+  - url: images/AI.jpg
+    image_path: images/AI.jpg
+    alt: "AI logo"
+    title: "AI logo"
 ---
 ***Designing and implementation of:***
 - BFS, DFS, IDS, UCS (Uninformed Search Strategies)
@@ -9,6 +14,7 @@ collection: projects
 - Min-Max, Alpha–Beta (Adversarial Search)
 - classification of a dataset (Basic Machine Learning)
 - knowledge representation using prolog (knowledge-based system)
+{% include gallery caption="AI logo" %}
 
 ## BFS, DFS, IDS, UCS (Uninformed Search Strategies)
 
@@ -53,3 +59,21 @@ collection: projects
 - [Github repo](https://github.com/benymaxparsa/8-Puzzle-Solver-AStar-IDA)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ySN5Wnu88nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[IDA star ref](https://en.wikipedia.org/wiki/Iterative_deepening_A*)
+
+## genetic algorithms, simulated annealing (Local Search)
+
+- Code is not available at github at the moment.
+
+## Min-Max, Alpha–Beta (Adversarial Search)
+
+- Code is not available at github at the moment.
+
+## classification of a dataset (Basic Machine Learning)
+
+- Code is not available at github at the moment.
+
+## knowledge representation using prolog (knowledge-based system)
+
+- Code is not available at github at the moment.

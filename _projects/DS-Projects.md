@@ -1,14 +1,19 @@
 ---
 title: "Multiple projects regarding to Data Structures and Algorithms course"
 collection: projects
+gallery:
+  - url: https://user-images.githubusercontent.com/52382093/156035992-beddef68-e74f-4509-80a9-80b43d8e0e87.gif
+    image_path: https://user-images.githubusercontent.com/52382093/156035992-beddef68-e74f-4509-80a9-80b43d8e0e87.gif
+    alt: "DS logo"
+    title: "DS logo"
 ---
-
 ***Designing and implementation of:***
 - the Red-Black Tree (self-balancing binary search tree)
 - the AVL Tree (self-balancing binary search tree)
 - the Trie Dictionary (k-ary search tree)
 - the Sparse Matrix via Linked List (Linked List)
 - the Rat in the maze problem (Backtracking & Stacks)
+{% include gallery caption="DS logo" %}
 
 ## The Rat in the maze problem
 * Code is not available at github at the moment.
@@ -33,8 +38,7 @@ The digital tree, or prefix tree, is another name for Trie. The key with which a
 Threaded binary tree is a simple binary tree but they have a speciality that null pointers of leaf node of the binary tree is set to inorder predecessor or inorder successor.
 The main idea behind setting such a structure is to make the inorder and preorder traversal of the tree faster without using any additional data structure(e.g auxilary stack) or memory to do the traversal.
 Each node in a threaded binary tree either contains a link to its child node or thread to other nodes in the tree.
-![image](https://raw.githubusercontent.com/kermanshahianAli/Quera/main/TA/DS/ThreadTree/ThreadTree00.png)
-![gif](https://raw.githubusercontent.com/kermanshahianAli/Quera/main/TA/DS/ThreadTree/ThreadTree02.png)
+![image](/images/Threaded-Binary-Tree.jpg)
 
 ## The AVL Tree
 * [Github repo](https://github.com/benymaxparsa/AVL-Tree)

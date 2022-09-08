@@ -1,8 +1,12 @@
 ---
 title: "Multiple projects regarding to Design and Analysis of Algorithms course"
 collection: projects
+gallery:
+  - url: https://user-images.githubusercontent.com/52382093/158039357-38f431d4-c24d-413f-8551-741f15c656a2.gif
+    image_path: https://user-images.githubusercontent.com/52382093/158039357-38f431d4-c24d-413f-8551-741f15c656a2.gif
+    alt: "DA logo"
+    title: "DA logo"
 ---
-
 ***Designing and implementation of:***
 - The Closest Pair of Points Problem (Divide & Conquer)
 - Sudoku Solver (Backtracking)
@@ -12,6 +16,7 @@ collection: projects
 - Matrix Chain Multiplication (Dynamic Programming)
 - N-Queens Solver (Backtracking)
 - Travelling Salesman Problem (Dynamic Programming)
+{% include gallery caption="DA logo" %}
 
 ## Closest Pair of Points Problem
 * [Github repo](https://github.com/benymaxparsa/The-Closest-Pair-of-Points)

@@ -1,9 +1,15 @@
 ---
 title: "Implementing A* path finding algorithm in Unity3D"
-excerpt: "Project:
-A-star"
 collection: projects
+gallery:
+  - url: images/Astar.png
+    image_path: images/Astar.png
+    alt: "Astar logo"
+    title: "Astar logo"
 ---
+***Designing and implementation of:***
+- A-star path finding algorithm in Unity3D
+{% include gallery caption="Astar logo" %}
 
 ## A-star
 * [Github repo](https://github.com/benymaxparsa/A-Star-Algorithm)

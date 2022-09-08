@@ -1,13 +1,18 @@
 ---
 title: "Some codes and projects related to the Compiler Design, Digital System Design, Assembly and microprocessor, Operating Systems courses"
 collection: projects
+gallery:
+  - url: images/CE.jpg
+    image_path: images/CE.jpg
+    alt: "CE logo"
+    title: "CE logo"
 ---
-
 ***Designing and implementation of:***
 - A Simple Python-based compiler (The principles of Compiler Design)
 - Round Robin time scheduling algorithm (Operating Systems)
 - The assembly language implementation of a banking system (Microprocessors and Assembly language)
 - VHDL codes of diffrent parts of a basic computer (Digital Systems Design)
+{% include gallery caption="CE logo" %}
 
 ## A Simple Python-based compiler
 * [Github repo](https://github.com/benymaxparsa/Compiler-Project)

@@ -1,11 +1,16 @@
 ---
 title: "Two projects regarding to Introduction to Information Retrieval & Web Search course"
 collection: projects
+gallery:
+  - url: https://user-images.githubusercontent.com/51443025/156167837-9da24e1c-9c3b-41a2-b9be-7be9b1748a9d.jpg
+    image_path: https://user-images.githubusercontent.com/51443025/156167837-9da24e1c-9c3b-41a2-b9be-7be9b1748a9d.jpg
+    alt: "IR logo"
+    title: "IR logo"
 ---
-
  ***Designing and implementation of:***
 - The Scrapy Crawler (Crawling)
 - Inverted Index Construction using BSBI Algorithm (Indexing)
+{% include gallery caption="IR logo" %}
 
 ## The Scrapy Crawler
 * [Github repo](https://github.com/benymaxparsa/Web-Crawler)
