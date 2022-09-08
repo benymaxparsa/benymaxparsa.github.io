@@ -7,24 +7,24 @@ venue: "Vali-e-Asr University Scientific Association of Computer Engineering"
 date: 2022-08-01
 location: "Rafsanjān, Kerman, Iran"
 gallery:
-  - url: SCB_2022/img1.JPG
-    image_path: SCB_2022/img1.JPG
+  - url: images/SCB_2022/img1.JPG
+    image_path: images/SCB_2022/img1.JPG
     alt: "Main Poster"
     title: "Main Poster"
-  - url: SCB_2022/img2.JPG
-    image_path: SCB_2022/img2.JPG
+  - url: images/SCB_2022/img2.JPG
+    image_path: images/SCB_2022/img2.JPG
     alt: "Hossein's Poster"
     title: "Hossein's Poster"
-  - url: SCB_2022/img3.JPG
-    image_path: SCB_2022/img3.JPG
+  - url: images/SCB_2022/img3.JPG
+    image_path: images/SCB_2022/img3.JPG
     alt: "Parsa's Poster"
     title: "Parsa's Poster"
-  - url: SCB_2022/img4.JPG
-    image_path: SCB_2022/img4.JPG
+  - url: images/SCB_2022/img4.JPG
+    image_path: images/SCB_2022/img4.JPG
     alt: "Cena's Poster"
     title: "Cena's Poster"
-  - url: SCB_2022/img5.JPG
-    image_path: SCB_2022/img5.JPG
+  - url: images/SCB_2022/img5.JPG
+    image_path: images/SCB_2022/img5.JPG
     alt: "MohMehdi's Poster"
     title: "MohMehdi's Poster"
 ---
