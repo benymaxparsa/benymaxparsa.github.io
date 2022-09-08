@@ -37,15 +37,14 @@ main:
   - title: "Courses"
     url: /selected_courses/
 
-  - title: "Education"
-    url: /education/
-
   - title: "Honors, Scores, Skills, etc."
     url: /honors_and_extra/
 
   - title: "Extra Curricular Activities"
     url: /extracurricular/
 
+  - title: "Education"
+    url: /education/
 
   - title: "Gallery & Images"
     url: /gallery/
