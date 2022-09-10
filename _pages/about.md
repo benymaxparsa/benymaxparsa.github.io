@@ -15,27 +15,27 @@ He is eager to continue researching these areas, pursue a Ph.D. in Computer Scie
 
 In addition to being an undergraduate research assistant, he has been a teacher assistant for more than ten courses to this day. He intends to continue his studies at the graduate level in the near future.
 
-### [Click here to see my Biography](/biography/)
+### [Biography](/biography/)
 
-### [Click here to see my Education](/education/)
+### [Education](/education/)
 
-### [Click here to see my Teaching Experiences](/teaching/)
+### [Teaching Experiences](/teaching/)
 
-### [Click here to see my Research Experiences](/research/)
+### [Research Experiences](/research/)
 
-### [Click here to see my Industry Experiences](/industry/)
+### [Industry Experiences](/industry/)
 
-### [Click here to see my scientific papers](/publications/)
+### [Scientific Papers](/publications/)
 
-### [Click here to see my Projects](/projects/)
+### [Projects](/projects/)
 
-### [Click here to see my CV](/cv/)
+### [Curriculum vitae](/cv/)
 
-### [Click here to see my Selected Courses](/selected_courses/)
+### [Selected Courses](/selected_courses/)
 
-### [Click here to see my Extra Curricular Activities](/extracurricular/)
+### [Extra Curricular Activities](/extracurricular/)
 
-### [Click here to see my Honors and Awards, Test Scores, Skills, etc.](/honors_and_extra/)
+### [Honors and Awards, Test Scores, Skills, etc.](/honors_and_extra/)
 
 
-### [Click here to see my Images and Gallery](/gallery/)
+### [Images and Gallery](/gallery/)
