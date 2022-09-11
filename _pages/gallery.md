@@ -110,6 +110,10 @@ gallery:
     image_path: images/Gallery/p22.jpg
     alt: "People in this picture: Ramin Arabpour, Pooria Mirmazhari, Me"
     title: "People in this picture: Ramin Arabpour, Pooria Mirmazhari, Me"
+  - url: images/Gallery/p23.jpg
+    image_path: images/Gallery/p23.jpg
+    alt: "Presenting GSA algorithm in one of my classes"
+    title: "Presenting GSA algorithm in one of my classes"
 
 ---
 {% include gallery caption="Gallery & Images" %}
