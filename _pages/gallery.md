@@ -98,6 +98,18 @@ gallery:
     image_path: images/Gallery/p19.jpg
     alt: "People in this picture: Mohammad Hosein(Cena) Ashoori, Hossein Bazmandegan, Mohammad Mehdi Afkhami, Me"
     title: "People in this picture: Mohammad Hosein(Cena) Ashoori, Hossein Bazmandegan, Mohammad Mehdi Afkhami, Me"
+  - url: images/Gallery/p20.jpg
+    image_path: images/Gallery/p20.jpg
+    alt: "People in this picture: Me"
+    title: "People in this picture: Me"
+  - url: images/Gallery/p21.jpg
+    image_path: images/Gallery/p21.jpg
+    alt: "People in this picture: Me"
+    title: "People in this picture: Me"
+  - url: images/Gallery/p22.jpg
+    image_path: images/Gallery/p22.jpg
+    alt: "People in this picture: Ramin Arabpour, Pooria Mirmazhari, Me"
+    title: "People in this picture: Ramin Arabpour, Pooria Mirmazhari, Me"
 
 ---
 {% include gallery caption="Gallery & Images" %}
