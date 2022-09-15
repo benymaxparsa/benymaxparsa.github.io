@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Parsa Kamalipour"
   avatar           : "profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Undergradute Research & Teaching Assistant @ Vali-e-Asr University, Dept. of Computer Engineering. <br>Theoretical Computer Science & Machine Learning Enthusiast."
+  bio              : "Research/Teaching Assistant @ Vali-e-Asr University. Theoretical Computer Science & Machine Learning Enthusiast."
   location         : "Kerman, Iran"
   email            : "parsakamalipour.edu@gmail.com"
   links:

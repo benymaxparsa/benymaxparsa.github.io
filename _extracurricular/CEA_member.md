@@ -3,7 +3,7 @@ title: "Vali-e-Asr University Scientific Association of Computer Engineering"
 collection: extracurricular
 permalink: /extracurricular/CEA_member
 ---
-* position: Member of Scientific Staff
+* position: Scientific Committee Member
 * Location: Rafsanjan, Iran
 * Date: May 2019 – Jun 2021
 * Vali-e-Asr University Scientific Association of Computer Engineering is the leading student chapter for Computer Engineering students.

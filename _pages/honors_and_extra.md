@@ -111,6 +111,7 @@ author_profile: true
         * Piano
     * Making playlists and sending my hand-pick music to my friends
     * Going to concerts
+    * reading and analyzing lyrics of musics
 
 - Movie & TV Series & Comic Books:
     * I am fan of DC universe
@@ -119,14 +120,21 @@ author_profile: true
     * Stories that have a dark tone and are more realistic rather than fake optimistic
     * Stories that are Detective based & mysterious and probably have a complex scenario
 
-- I enjoy watching stand-up comedy
+- Comedy:
+  - I enjoy watching stand-up comedy
+  - I like to make memes
+  - I like watching memes
+  - In general, I enjoy making my friends laugh
 
-- Trying new cafe and restaurants
+- Adventure:
+  - Trying new cafe and restaurants
+  - Traveling and visiting new places
+  - Photography
 
-- Weight lifting
+- Sports:
+  - Weight lifting
 
-- Photography
+- Video games:
+  - Making games
+  - Playing video games, eg. Max Payne, Stronghold, sony exclusives, AC 2 trilogy & 3, GTA, etc.
 
-- Video games
-
-- Travling and visiting new places
