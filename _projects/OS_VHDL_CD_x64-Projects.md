@@ -2,8 +2,8 @@
 title: "Some codes and projects related to the Compiler Design, Digital System Design, Assembly and microprocessor, Operating Systems courses, Digital Logic Circuit Design, Programming Language Design"
 collection: projects
 gallery:
-  - url: images/CE.jpg
-    image_path: images/CE.jpg
+  - url: /images/CE.jpg
+    image_path: /images/CE.jpg
     alt: "CE logo"
     title: "CE logo"
 ---

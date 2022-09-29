@@ -2,8 +2,8 @@
 title: "Two projects regarding to when I was learning the Unity"
 collection: projects
 gallery:
-  - url: images/unity.jpg
-    image_path: images/unity.jpg
+  - url: /images/unity.jpg
+    image_path: /images/unity.jpg
     alt: "unity logo"
     title: "unity logo"
 ---

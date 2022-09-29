@@ -2,8 +2,8 @@
 title: "Implementing A* path finding algorithm in Unity3D"
 collection: projects
 gallery:
-  - url: images/Astar.png
-    image_path: images/Astar.png
+  - url: /images/Astar.png
+    image_path: /images/Astar.png
     alt: "Astar logo"
     title: "Astar logo"
 ---

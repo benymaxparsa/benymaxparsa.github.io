@@ -2,8 +2,8 @@
 title: "Multiple assignments regarding to the Intro to Data Mining course"
 collection: projects
 gallery:
-  - url: images/DTM.jpg
-    image_path: images/DTM.jpg
+  - url: /images/DTM.jpg
+    image_path: /images/DTM.jpg
     alt: "AI logo"
     title: "AI logo"
 ---

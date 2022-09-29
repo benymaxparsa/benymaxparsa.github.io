@@ -2,8 +2,8 @@
 title: "Multiple projects regarding to Artificial Intelligence course"
 collection: projects
 gallery:
-  - url: images/AI.jpg
-    image_path: images/AI.jpg
+  - url: /images/AI.jpg
+    image_path: /images/AI.jpg
     alt: "AI logo"
     title: "AI logo"
 ---

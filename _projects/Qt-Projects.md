@@ -2,8 +2,8 @@
 title: "Two simple projects regarding to learn Qt framework"
 collection: projects
 gallery:
-  - url: images/QT.png
-    image_path: images/QT.png
+  - url: /images/QT.png
+    image_path: /images/QT.png
     alt: "Qt logo"
     title: "Qt logo"
 ---
