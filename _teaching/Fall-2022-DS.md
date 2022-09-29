@@ -1,5 +1,5 @@
 ---
-title: "Head Teaching Assistant of Data Structures course"
+title: "Co-Head Teaching Assistant of Data Structures course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/Fall-2022-DS
@@ -11,15 +11,16 @@ location: "Rafsanjān, Kerman, Iran"
 - Course: Data Structures
 - Course instructor: Dr. Fahimeh Dabaghi-Zarandi
 - Semester: Fall 2022
-- Team size: We don't know yet
+- Team size: 11 TAs
 - My key role consisted of:
   - Taught different Data Structures to undergraduate students of Computer engineering
   - Corrected students' homework
   - Held up recitation class
-  - managed and arranged other TAs
+  - managed and arranged other TAs with the help of the other Head TA
   - Designed Assignments and Projects for students
-  - consulted the professor and planned the course syllabus together
+  - consulted the professor and planned the course syllabus together with the help of the other Head TA
   - Helped and guided the students to thrive in the course they took
+  - Trained the other Head TA to be a good team leader.
 
 Skills that we learned and used: Algorithm Design · Teaching · python · Discrete Mathematics · Graph Theory · Team Management · Algorithm Analysis · Software Development · Data Structures · Object-Oriented Programming (OOP) · Unit Testing · C++ · LaTeX · Git · Problem Solving · Team Leadership · Teamwork
 
