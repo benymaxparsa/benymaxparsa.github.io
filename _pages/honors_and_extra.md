@@ -15,9 +15,16 @@ author_profile: true
 ---
 
 ## Test Scores
-**TOEFL**: Will be taken at October 5th 2022
+**TOEFL actual test**: Will be taken at November 19th 2022
 
-**GRE**: Not taken yet
+**TOEFL mock test**: Will be taken this month
+
+**TOEFL's TPO results so far**:
+  - Reading average: 26
+  - Listening average: 29
+  - Speaking average: 24
+
+**GRE general**: Not taken
 
 
 ---
@@ -77,7 +84,6 @@ author_profile: true
   <img alt="Debugging" src="https://img.shields.io/badge/Debugging-%23121011.svg?style=for-the-badge&logo=Debugging&logoColor=white"/>
   <img alt="Unit Testing" src="https://img.shields.io/badge/Unit Testing-%23121011.svg?style=for-the-badge&logo=UnitTesting&logoColor=white"/>
   <img alt="Agile mythology" src="https://img.shields.io/badge/Agile mythology-%23121011.svg?style=for-the-badge&logo=Agilemythology&logoColor=white"/>
-
   <img alt="Object Oriented Programming" src="https://img.shields.io/badge/Object Oriented Programming-%23121011.svg?style=for-the-badge&logo=OOP&logoColor=white"/>
   <img alt="Design of Algorithms" src="https://img.shields.io/badge/Design of Algorithms-%23121011.svg?style=for-the-badge&logo=DesignofAlgorithms&logoColor=white"/>
   <img alt="Data Structures" src="https://img.shields.io/badge/Data Structures-%23121011.svg?style=for-the-badge&logo=DataStructures&logoColor=white"/>
