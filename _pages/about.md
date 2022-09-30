@@ -45,5 +45,5 @@ In addition to being an undergraduate research assistant, he has been a teacher 
 
 ---
 <p align="right">
-  <h3 align="right"> [Last update: 9/29/2022] </h3></p>
+  <h3 align="right"> [Last update: Sep 30 2022] </h3></p>
 
