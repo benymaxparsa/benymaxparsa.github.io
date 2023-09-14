@@ -1,5 +1,9 @@
 ---
 title: "Two projects regarding to Introduction to Information Retrieval & Web Search course"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2021-02-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: https://user-images.githubusercontent.com/51443025/156167837-9da24e1c-9c3b-41a2-b9be-7be9b1748a9d.jpg

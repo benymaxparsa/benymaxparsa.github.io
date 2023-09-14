@@ -1,5 +1,9 @@
 ---
 title: "Two simple projects regarding to learn Qt framework"
+type: "Just for fun!"
+venue: "Available on Github"
+date: 2019-12-01
+location: "Kerman, Iran"
 collection: projects
 gallery:
   - url: /images/QT.png

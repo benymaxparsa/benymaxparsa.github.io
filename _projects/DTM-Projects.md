@@ -1,5 +1,9 @@
 ---
 title: "Multiple assignments regarding to the Intro to Data Mining course"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2022-02-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: /images/DTM.jpg

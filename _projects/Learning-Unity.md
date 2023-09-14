@@ -1,5 +1,9 @@
 ---
 title: "Two projects regarding to when I was learning the Unity"
+type: "Just for fun!"
+venue: "Null References: Game Development Team"
+date: 2020-07-01
+location: "Kerman, Iran"
 collection: projects
 gallery:
   - url: /images/unity.jpg

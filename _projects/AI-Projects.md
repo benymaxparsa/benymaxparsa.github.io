@@ -1,5 +1,9 @@
 ---
 title: "Multiple projects regarding to Artificial Intelligence course"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2021-09-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: /images/AI.jpg

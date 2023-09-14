@@ -1,5 +1,9 @@
 ---
 title: "SYMPHONYC: The database of a music streaming service similar to Spotify."
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2021-09-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery1:
   - url: https://raw.githubusercontent.com/benymaxparsa/SYMPHONYC/main/Documents_and_Pictures/Tables/tables.png

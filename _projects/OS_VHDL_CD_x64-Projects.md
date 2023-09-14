@@ -1,5 +1,9 @@
 ---
 title: "Some codes and projects related to the Compiler Design, Digital System Design, Assembly and microprocessor, Operating Systems courses, Digital Logic Circuit Design, Programming Language Design"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2021-09-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: /images/CE.jpg

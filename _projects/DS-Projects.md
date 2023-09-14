@@ -1,5 +1,9 @@
 ---
 title: "Multiple projects regarding to Data Structures and Algorithms course"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2019-09-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: https://user-images.githubusercontent.com/52382093/156035992-beddef68-e74f-4509-80a9-80b43d8e0e87.gif

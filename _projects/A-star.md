@@ -1,5 +1,9 @@
 ---
 title: "Implementing A* path finding algorithm in Unity3D"
+type: "Just for fun!"
+venue: "Null References: Game Development Team"
+date: 2020-02-01
+location: "Kerman & Yazd, Iran"
 collection: projects
 gallery:
   - url: /images/Astar.png

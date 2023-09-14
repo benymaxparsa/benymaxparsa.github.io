@@ -1,5 +1,9 @@
 ---
 title: "Project 'Uncertainty': A video game & Software Engineering Lab project"
+type: "Undergraduate Course Project & For Fun!"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering & Null References: Game Development Team"
+date: 2021-02-01
+location: "Rafsanjān & Kerman & Yazd, Iran"
 collection: projects
 gallery:
   - url: https://raw.githubusercontent.com/Null-References/Uncertainty/Develop/Documentation/GamePlay_Screenshots/ship_and_boss_3.jpg

@@ -1,5 +1,9 @@
 ---
 title: "Multiple projects regarding to Design and Analysis of Algorithms course"
+type: "Undergraduate Course Project"
+venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
+date: 2020-09-01
+location: "Rafsanjān, Kerman, Iran"
 collection: projects
 gallery:
   - url: https://user-images.githubusercontent.com/52382093/158039357-38f431d4-c24d-413f-8551-741f15c656a2.gif
