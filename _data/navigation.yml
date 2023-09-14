@@ -10,20 +10,24 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+  - title: "Research"
+    url: /research/
+
   - title: "Publications"
     url: /publications/
-
-  - title: "Biography"
-    url: /biography/
-
-  # - title: "Talks"
-  #   url: /talks/
 
   - title: "Teaching"
     url: /teaching/
 
-  - title: "Research"
-    url: /research/
+  - title: "Education"
+    url: /education/
+
+  - title: "CV"
+    url: /cv/
+
+  # - title: "Talks"
+  #   url: /talks/
 
   - title: "Projects"
     url: /projects/
@@ -31,20 +35,20 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
 
-  - title: "CV"
-    url: /cv/
 
   - title: "Courses"
     url: /selected_courses/
 
+
   - title: "Honors, Scores, Skills, etc."
     url: /honors_and_extra/
+
+  - title: "Biography"
+    url: /biography/
 
   - title: "Extra Curricular Activities"
     url: /extracurricular/
 
-  - title: "Education"
-    url: /education/
 
   - title: "Gallery & Images"
     url: /gallery/
