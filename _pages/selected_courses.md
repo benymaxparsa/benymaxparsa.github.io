@@ -6,7 +6,11 @@ author_profile: true
 
 ---
 
-| Selected courses I took at Vali-e-Asr University.  | grades             |
+
+--- 
+## Bachelor of Science Degree in Computer Engineering from Vali-e-Asr University of Rafsanjan
+
+| Selected courses I took at Vali-e-Asr University.  | Grades that I have recieved over the past years             |
 |----------------------------------------------------|--------------------|
 | Design and Analysis of Algorithms                  | 18/20 - 4.0/4.0    |
 | Fundamental of Programming                         | 20/20 - 4.0/4.0    |
@@ -32,5 +36,6 @@ author_profile: true
 | Bachelor's thesis                                  | 20/20 - 4.0/4.0    |
 | Computer Graphics                                  | 19.5/20 - 4.0/4.0  |
 | Fundamentals of Data Mining                        | 17.5/20 - 4.0/4.0  |
+| Secure Computing                                   | 17.75/20 - 4.0/4.0 |
 
 
