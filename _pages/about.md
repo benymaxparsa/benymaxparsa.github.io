@@ -14,28 +14,27 @@ Parsa's primary area of research interest centers around ***<u>Theoretical compu
 
 He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Science at the graduate level, aiming to make significant contributions as a researcher and aspiring to achieve the status of a distinguished professor in the near future.
 
-### [Biography](/biography/)
-
-### [Education](/education/)
-
-### [Teaching Experiences](/teaching/)
-
 ### [Research Experiences](/research/)
-
-### [Industry Experiences](/industry/)
 
 ### [Scientific Papers](/publications/)
 
-### [Projects](/projects/)
+### [Teaching Experiences](/teaching/)
+
+### [Education](/education/)
 
 ### [Curriculum vitae](/cv/)
 
-### [Selected Courses](/selected_courses/)
+### [Projects](/projects/)
 
-### [Extra Curricular Activities](/extracurricular/)
+### [Selected Courses](/selected_courses/)
 
 ### [Honors and Awards, Test Scores, Skills, etc.](/honors_and_extra/)
 
+### [Extra Curricular Activities](/extracurricular/)
+
+### [Industry Experiences](/industry/)
+
+### [Biography](/biography/)
 
 ### [Images and Gallery](/gallery/)
 
