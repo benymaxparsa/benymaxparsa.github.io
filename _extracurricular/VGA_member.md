@@ -1,5 +1,9 @@
 ---
-title: "Vali-e-Asr Video Games Association"
+title: "Executive Committee Member at Vali-e-Asr Video Games Association"
+type: "Volunteering"
+venue: "Vali-e-Asr University of Rafsanjan, Vali-e-Asr Video Games Association"
+date: 2020-10-01
+location: "Rafsanjān, Kerman, Iran"
 collection: extracurricular
 permalink: /extracurricular/VGA_member
 ---

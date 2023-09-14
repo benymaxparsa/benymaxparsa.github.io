@@ -1,5 +1,9 @@
 ---
-title: "Vali-e-Asr Collegiate Programming Contest (VCPC)"
+title: "Member of Teaching Staff for the Vali-e-Asr Collegiate Programming Contest (VCPC)"
+type: "Volunteering"
+venue: "Vali-e-Asr University of Rafsanjan, Vali-e-Asr University Scientific Association of Computer Engineering"
+date: 2021-9-01
+location: "Rafsanjān, Kerman, Iran"
 collection: extracurricular
 permalink: /extracurricular/VCPC_member
 ---

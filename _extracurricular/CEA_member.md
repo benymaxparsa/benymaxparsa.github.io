@@ -1,5 +1,9 @@
 ---
-title: "Vali-e-Asr University Scientific Association of Computer Engineering"
+title: "Scientific Committee Member at Vali-e-Asr University Scientific Association of Computer Engineering"
+type: "Volunteering"
+venue: "Vali-e-Asr University of Rafsanjan, Vali-e-Asr University Scientific Association of Computer Engineering"
+date: 2019-5-01
+location: "Rafsanjān, Kerman, Iran"
 collection: extracurricular
 permalink: /extracurricular/CEA_member
 ---
