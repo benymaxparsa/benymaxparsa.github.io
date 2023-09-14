@@ -12,6 +12,8 @@ gem "tzinfo"
 
 gem "jekyll-redirect-from"
 
+gem "liquid", "~> 4.0.4"
+
 gem "wdm" if Gem.win_platform?
 
 group :jekyll_plugins do
