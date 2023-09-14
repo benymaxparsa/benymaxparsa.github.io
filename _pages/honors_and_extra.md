@@ -7,24 +7,20 @@ author_profile: true
 
 ---
 ## Honors and Awards
-1. **Ranked 6th among all undergraduate computer engineering students of Vali-e-Asr university that started their studies in 2018.**
-
+1. **Ranked 1st among all teams participating from the Vali-e-Asr University for ICPC Asia Tehran - Internet Programming Contest**
+2. **Ranked 21th among all teams participating in The 2022 ICPC Asia Tehran Regional Contest at the Sharif University of Tehran**
+2. **Candidate as top researcher among undergraduate student of Vali-e-Asr University**
+1. **Ranked 6th among undergraduate students of Computer Engineering @ Vali-e-Asr University of Rafsanjan in the 8th semester**
+1. **Faculty of engineering Exceptional Talent student for 4 semesters as a result of obtaining a GPA of over 17.00/20.00 (straight A).**
 2. **Awarded by government undergraduate tuition waiver scholarship**
 
 
 ---
 
 ## Test Scores
-**TOEFL actual test**: Will be taken at November 19th 2022
+**TOEFL**: 99/120 - Reading: 26/30, Listening: 29/30, Speaking: 23/30, Writing: 21/30
 
-**TOEFL mock test**: Will be taken this month
-
-**TOEFL's TPO results so far**:
-  - Reading average: 26
-  - Listening average: 29
-  - Speaking average: 24
-
-**GRE general**: Not taken
+**GRE general**: Not taken yet.
 
 
 ---
