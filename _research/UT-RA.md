@@ -4,7 +4,7 @@ collection: research
 type: "Graduate level"
 permalink: /research/UT-RA
 venue: "University of Twente, Faculty of EE, Math and CS - FMT group: Formal Methods and Tools"
-date: 2023-08-08
+date: 2023-08-01
 location: "Enschede, The Netherlands"
 ---
 

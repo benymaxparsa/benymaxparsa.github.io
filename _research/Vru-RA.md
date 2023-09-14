@@ -4,7 +4,7 @@ collection: research
 type: "Undergraduate level"
 permalink: /research/Vru-RA
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
-date: 2021-09-01
+date: 2021-08-01
 location: "Rafsanjān, Kerman, Iran"
 ---
 
