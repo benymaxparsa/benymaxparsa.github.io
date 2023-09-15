@@ -154,8 +154,8 @@ gallery3:
     image_path: /images/Gallery/p37.jpg
     alt: "Me using our room windows as whiteboard!"
     title: "Me using our room windows as whiteboard!"
-  - url: /images/Gallery/p25.jpg
-    image_path: /images/Gallery/p25.jpg
+  - url: /images/Gallery/p250.jpg
+    image_path: /images/Gallery/p250.jpg
     alt: "Teaching Divide and Conquer algorithm in My Design & Analysis of Algorithms recitation class"
     title: "Teaching Divide and Conquer algorithm in My Design & Analysis of Algorithms recitation class"
   - url: /images/Gallery/p42.jpg
