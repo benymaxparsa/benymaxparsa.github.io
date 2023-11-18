@@ -145,6 +145,9 @@ author:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.social/@parsakamalipour"
 
 # Site Footer
 footer:
