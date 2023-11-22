@@ -122,6 +122,16 @@ He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Sc
 <br>
 
 ---
+
+# NEWS
+#### November 2023
+> 🏆 Thrilled to announce that I've been honored with the **Top Researcher Award** in Kerman Province, standing out among all undergraduate students across universities in this region! 🌍🚀 #ResearchAward -`November 21, 2023`
+
+> 🚀 Exciting news! Just submitted our short paper to [SANER 2024](https://conf.researchr.org/home/saner-2024) conference with my amazing co-authors. 📑🔍 Fingers crossed for the review process! Grateful for the collaboration and looking forward to sharing our insights! 🌐 #SANER2024 #ResearchCollaboration -`November 18, 2023`
+
+<br>
+
+---
 <p align="right">
-  <h3 align="right"><b><u> Last update: <i>September 14, 2023 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Website last update: <i>September 14, 2023 </i></u></b></h3></p>
 
