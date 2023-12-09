@@ -29,6 +29,10 @@ redirect_from:
    text-decoration: none;
 }
 
+  .small-font {
+      font-size: smaller;
+    }
+
 .cta-button:visited {
   color: #fff;
 }
@@ -54,15 +58,34 @@ redirect_from:
   </style>
 </head>
 
-Parsa introduces himself as an individual with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and with a specific focus on Data Processing. Although his major is in Computer Engineering, his true expertise lies in ***<u>Theoretical Computer Science</u>***, particularly in the areas of ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, and ***<u>Graph Theory</u>***.  
+<!-- Parsa introduces himself as an individual with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and with a specific focus on Data Processing. Although his major is in Computer Engineering, his true expertise lies in ***<u>Theoretical Computer Science</u>***, particularly in the areas of ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, and ***<u>Graph Theory</u>***.  
 
 Parsa's primary area of research interest centers around ***<u>Theoretical computer science</u>***, with a keen interest in fields such as ***<u>Design & Analysis of Algorithms</u>***, ***<u>Data Structures</u>***, ***<u>Graph Theory & Processing</u>***, ***<u>Data Mining & Social Network Analysis</u>***, ***<u>Theoretical Machine Learning</u>***, and various subcategories within the algorithms domain such as: ***<u>Combinatorial Optimization</u>***, ***<u>Complexity Theory</u>***, ***<u>Approximation Algorithms</u>***, and ***<u>Randomized Algorithms</u>***.  
 
-He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Science at the graduate level, aiming to make significant contributions as a researcher and aspiring to achieve the status of a distinguished professor in the near future.
+He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Science at the graduate level, aiming to make significant contributions as a researcher and aspiring to achieve the status of a distinguished professor in the near future. -->
+
+
+Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>*** and ***<u>Machine Learning</u>***.
+
+In Theoretical Computer Science, Parsa has a keen interest in areas such as ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization</u>***, ***<u>Online Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Computational Topology & Geometry</u>***, ***<u>Proof Complexity</u>***, and ***<u>Approximation & Randomized Algorithms</u>***.
+
+On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***. 
+
+<!-- His passion for these fields is evident in his desire to pursue advanced studies in both Theoretical Computer Science and Machine Learning at the graduate level. -->
+
+<!-- Moreover, Parsa actively pursues ***<u>Software Engineering</u>*** research as a personal passion, honing expertise in areas such as ***<u>Software Code Analysis</u>***, ***<u>Software Refactoring</u>***, and leveraging ***<u>Machine Learning techniques to enhance Software Quality</u>***. -->
+
+<!-- Parsa has enriched his academic journey through impactful roles, serving as a Research Assistant at Vali-e-Asr University of Rafsanjan with a concentrated focus on Algorithm Design and Graph Theory. Additionally, he made significant contributions as a Research Assistant at the University of Twente, immersing himself in the application of Machine Learning to advance Software Refactoring techniques. 
+
+Going beyond his research engagements, Parsa has demonstrated a commitment to education by serving as a Teaching Assistant for over 10 courses. His focus has primarily centered on Theoretical Computer Science and Machine Learning, where he has provided invaluable support for courses including Design and Analysis of Algorithms, Data Structures, Discrete Math, and Data Mining on multiple occasions. 
+
+These diverse experiences underscore Parsa's unwavering dedication to both research and education, showcasing his versatility and impact across academic domains. -->
+
+Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education.
 
 <!-- <button class="cta-button">Call to Action</button> -->
 
-<br>
+<!-- <br> -->
 
 ---
 
