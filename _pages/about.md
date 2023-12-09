@@ -81,7 +81,7 @@ Going beyond his research engagements, Parsa has demonstrated a commitment to ed
 
 These diverse experiences underscore Parsa's unwavering dedication to both research and education, showcasing his versatility and impact across academic domains. -->
 
-Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education.
+Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education. [Read more](/biography/)
 
 <!-- <button class="cta-button">Call to Action</button> -->
 
