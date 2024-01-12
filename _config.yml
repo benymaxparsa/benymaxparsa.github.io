@@ -20,7 +20,7 @@ title                    : "Parsa Kamalipour"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Parsa Kamalipour"
-description              : "Research Assistant | Head Teaching Assistant | To be a Theoretical Computer Science graduate student."
+description              : "Research Assistant | Head Teaching Assistant | Highly Interested in Theoretical CS, Algorithms, Graph Theory, and Machine Learning."
 url                      : https://benymaxparsa.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

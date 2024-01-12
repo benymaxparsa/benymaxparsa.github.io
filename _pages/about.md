@@ -115,6 +115,8 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 <a class="cta-button" href="/biography/">Biography</a>
 
 <a class="cta-button" href="/gallery/">Images and Gallery</a>
+
+<a class="cta-button" href="/contact/">Contact</a>
 </div>
 
 <!-- ### [Research Experiences](/research/)
