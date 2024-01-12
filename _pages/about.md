@@ -149,6 +149,12 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 ---
 
 # NEWS
+#### January 2024
+> 🚀 Delighted to announce the acceptance of our paper **"Extending Refactoring Detection to Kotlin: A Dataset and Comparative Study"** by Iman Hemati Moghadam, Mohammad Mehdi Afkhami, Parsa Kamalipour, Vadim Zaytsev at SANER 2024, in the [ERA Track](https://conf.researchr.org/track/saner-2024/saner-2024-early-research-achievement--era--track-)! 📚🚀 #SANER2024 #RefactoringDetection #Kotlin -`January, 2024`
+
+#### December 2023
+> 🏆 Excited to share that I have received the **Undergraduate Researcher Award** at Vali-e-Asr University of Rafsanjan, distinguishing myself among fellow undergraduate students from the institution! 🌍🚀 #ResearchAward -`December, 2023`
+
 #### November 2023
 > 🏆 Thrilled to announce that I've been honored with the **Top Researcher Award** in Kerman Province, standing out among all undergraduate students across universities in this region! 🌍🚀 #ResearchAward -`November 21, 2023`
 
@@ -158,5 +164,5 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Website last update: <i>September 14, 2023 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Website last update: <i>January 12, 2024 </i></u></b></h3></p>
 
