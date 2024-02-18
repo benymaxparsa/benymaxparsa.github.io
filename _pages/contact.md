@@ -54,6 +54,7 @@ University Academic Email:
 <i class="fab ai ai-academia-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://vru.academia.edu/ParsaKamalipour">Academia.edu</a>  
 <i class="fab ai ai-semantic-scholar ai-fw" aria-hidden="true"></i> <a rel="me" href="https://www.semanticscholar.org/author/Parsa-Kamalipour/7592796">Semantic Scholar</a>  
 <i class="fab ai ai-stackoverflow ai-fw" aria-hidden="true"></i> <a rel="me" href="https://stackoverflow.com/users/11578553/parsa-kamalipour">Stack Overflow</a>  
+<i class="fas fa-fw fa-link" aria-hidden="true"></i> <a rel="me" href="https://conf.researchr.org/profile/parsakamalipour">conf.researchr</a>  
 
 
 
