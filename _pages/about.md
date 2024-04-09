@@ -65,11 +65,13 @@ Parsa's primary area of research interest centers around ***<u>Theoretical compu
 He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Science at the graduate level, aiming to make significant contributions as a researcher and aspiring to achieve the status of a distinguished professor in the near future. -->
 
 
-Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>*** and ***<u>Machine Learning</u>***.
+<!-- Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>*** and ***<u>Machine Learning</u>***. -->
 
-In Theoretical Computer Science, Parsa has a keen interest in areas such as ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization</u>***, ***<u>Online Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Computational Topology & Geometry</u>***, ***<u>Proof Complexity</u>***, and ***<u>Approximation & Randomized Algorithms</u>***.
+Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>***.
 
-On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***. 
+Parsa has a keen interest in areas such as ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Algorithms</u>***, ***<u>Online Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, and ***<u>Approximation & Randomized Algorithms</u>***.
+
+<!-- On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***.  -->
 
 <!-- His passion for these fields is evident in his desire to pursue advanced studies in both Theoretical Computer Science and Machine Learning at the graduate level. -->
 
@@ -149,6 +151,16 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 ---
 
 # NEWS
+#### April 2024
+
+> 🚀 Exciting news! Submitted our Research Track paper to [ICSME 2024](https://conf.researchr.org/home/icsme-2024) conference with my amazing co-authors. 📑🔍 Hoping for positive review! Grateful for collaboration. Excited to share insights! #ICSME2024 #ResearchCollaboration  -`April, 2023`
+
+#### March 2024
+<!-- Scholarship received announcement -->
+
+#### February 2024
+<!-- University Admission announcement -->
+
 #### January 2024
 > 🚀 Delighted to announce the acceptance of our paper **"Extending Refactoring Detection to Kotlin: A Dataset and Comparative Study"** by Iman Hemati Moghadam, Mohammad Mehdi Afkhami, Parsa Kamalipour, Vadim Zaytsev at SANER 2024, in the [ERA Track](https://conf.researchr.org/track/saner-2024/saner-2024-early-research-achievement--era--track-)! 📚🚀 #SANER2024 #RefactoringDetection #Kotlin -`January, 2024`
 
@@ -164,5 +176,5 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Website last update: <i>January 12, 2024 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Website last update: <i>April 9, 2024 </i></u></b></h3></p>
 

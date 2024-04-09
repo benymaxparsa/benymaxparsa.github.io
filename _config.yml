@@ -20,7 +20,7 @@ title                    : "Parsa Kamalipour"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Parsa Kamalipour"
-description              : "Research Assistant | Head Teaching Assistant | Highly Interested in Theoretical CS, Algorithms, Graph Theory, and Machine Learning."
+description              : "Research Assistant | Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory."
 url                      : https://benymaxparsa.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Parsa Kamalipour"
   avatar           : "profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "RA & TA @ Vali-e-Asr University. Research Assistant @ University of Twente. Theoretical Computer Science & Machine Learning Enthusiast."
+  bio              : "Research Assistant and Theoretical Computer Science, Algorithms, and Graph Theory Enthusiast."
   location         : "Kerman, Iran"
   email            : "parsakamalipour.edu@gmail.com"
   links:
