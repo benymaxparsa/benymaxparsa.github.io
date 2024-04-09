@@ -9,5 +9,5 @@ permalink: /extracurricular/RA_committee
 ---
 * Related to: Vali-e-Asr University Scientific Association of Computer Engineering
 * Location: Rafsanjan, Iran
-* Date: Nov 2022 – Present
+* Date: Nov 2022 – Sep 2023
 * My job is to bridge remarkable students and professors, nominate and present eligible Research Assistants for each professors, accumulate a prominent team of RAs, give my experiences to new RAs and prepare them to be accomplished Research assistants.

@@ -7,6 +7,8 @@ author_profile: true
 
 ---
 ## Honors and Awards
+1. **Awarded Undergraduate Researcher status among all students of Vali-e-Asr University**
+1. **Earned Top Researcher Award among all undergraduate students of Kerman province**
 1. **Ranked 1st among all teams participating from the Vali-e-Asr University for ICPC Asia Tehran - Internet Programming Contest**
 2. **Ranked 21th among all teams participating in The 2022 ICPC Asia Tehran Regional Contest at the Sharif University of Tehran**
 2. **Candidate as top researcher among undergraduate student of Vali-e-Asr University**

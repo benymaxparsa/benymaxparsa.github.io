@@ -11,16 +11,16 @@ author_profile: true
 
 # Parsa Kamalipour  
 
-## Research Assistant & Head Teaching Assistant  
+<!-- ## Research Assistant & Head Teaching Assistant  
 Department of Computer Engineering  
-Vali-e-Asr University of Rafsanjan  
-Imam Khomeini Square, Rafsanjan, 7718897111, Iran
+Vali-e-Asr University of Rafsanjan   -->
+<!-- Imam Khomeini Square, Rafsanjan, 7718897111, Iran -->
 
-## Remote Research Assistant  
+<!-- ## Remote Research Assistant  
 University of Twente  
 Faculty of Electrical Engineering, Mathematics and Computer Science  
 Formal Methods and Tools group  
-Enschede, 7522NH, The Netherlands  
+Enschede, 7522NH, The Netherlands   -->
 
 
 ## Email
