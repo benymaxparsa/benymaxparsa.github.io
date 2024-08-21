@@ -20,7 +20,7 @@ title                    : "Parsa Kamalipour"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Parsa Kamalipour"
-description              : "Research Assistant | Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory."
+description              : "RA & TA & Master of Computer Science at Concordia University | Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory."
 url                      : https://benymaxparsa.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -108,13 +108,16 @@ analytics:
 author:
   name             : "Parsa Kamalipour"
   avatar           : "profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Research Assistant and Theoretical Computer Science, Algorithms, and Graph Theory Enthusiast."
-  location         : "Kerman, Iran"
+  bio              : "RA & TA & Master of Computer Science at Concordia University and Theoretical Computer Science, Algorithms, and Graph Theory Enthusiast."
+  location         : "Montreal, Québec, Canada"
   email            : "parsakamalipour.edu@gmail.com"
   links:
-    - label: "Email"
+    - label: "Personal Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:parsakamalipour.edu@gmail.com"
+    - label: "Academic Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:parsa.kamalipour@mail.concordia.ca"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -152,9 +155,12 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Email"
+    - label: "Personal Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:parsakamalipour.edu@gmail.com"
+    - label: "Academic Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:parsa.kamalipour@mail.concordia.ca"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
