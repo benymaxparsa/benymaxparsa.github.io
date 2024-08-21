@@ -11,6 +11,18 @@ author_profile: true
 
 # Parsa Kamalipour  
 
+## Graduate Research Assistant & Teaching Assistant & Graduate Student
+Department of Computer Science and Software Engineering  
+Gina Cody School of Engineering and Computer Science  
+Concordia University  
+Montreal, QC, H3G 1M8, Canada  
+
+My Office:  
+Room 1124.00  
+Algorithms & Complexity Lab  
+Concordia University ER Building, 11th Floor   
+2155 Guy St, Montreal, Quebec H3H 2L9  
+
 <!-- ## Research Assistant & Head Teaching Assistant  
 Department of Computer Engineering  
 Vali-e-Asr University of Rafsanjan   -->
@@ -29,12 +41,14 @@ Personal Email for Academic Purposes:
 [{firstname}{lastname}.edu@gmail.com](mailto:parsakamalipour.edu@gmail.com)  
 *(I consistently prioritize checking this email)*  
 
+Concordia University Academic Email:  
+[{firstname}.{lastname}@mail.concordia.ca](mailto:parsa.kamalipour@mail.concordia.ca)  
+
 Personal Email for Non-Academic Purposes:  
 [{firstname}{lastname}@gmail.com](mailto:parsakamalipour@gmail.com)  
 
-University Academic Email:  
-[{firstname}{lastname}@stu.vru.ac.ir](mailto:parsakamalipour@stu.vru.ac.ir)  
-*(I don't check this email)*
+<!-- [{firstname}{lastname}@stu.vru.ac.ir](mailto:parsakamalipour@stu.vru.ac.ir)   -->
+<!-- *(I don't check this email)* -->
 
 ## Links to my other accounts:  
 <i class="fas fa-fw fa-link" aria-hidden="true"></i> <a rel="me" href="https://benymaxparsa.github.io">Personal Website</a>  

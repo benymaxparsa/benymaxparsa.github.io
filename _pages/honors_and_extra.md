@@ -7,6 +7,9 @@ author_profile: true
 
 ---
 ## Honors and Awards
+1. **Awarded Concordia Merit Scholarship (Entrance Scholarship Award)** - ***Issued by Concordia University, School of Graduate Studies***
+1. **Awarded Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** - ***Issued by Concordia University, Gina Cody School of Engineering and Computer Science***
+1. **Won Distinguished Student Award among all students of Vali-e-Asr University**
 1. **Awarded Undergraduate Researcher status among all students of Vali-e-Asr University**
 1. **Earned Top Researcher Award among all undergraduate students of Kerman province**
 1. **Ranked 1st among all teams participating from the Vali-e-Asr University for ICPC Asia Tehran - Internet Programming Contest**
