@@ -176,5 +176,5 @@ University Admission announcement -->
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Website last update: <i>April 9, 2024 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Website last update: <i>August 21, 2024 </i></u></b></h3></p>
 
