@@ -151,15 +151,15 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 ---
 
 # NEWS
-#### April 2024
+<!-- #### April 2024 -->
+<!-- 
+> 🚀 Exciting news! Submitted our Research Track paper to [ICSME 2024](https://conf.researchr.org/home/icsme-2024) conference with my amazing co-authors. 📑🔍 Hoping for positive review! Grateful for collaboration. Excited to share insights! #ICSME2024 #ResearchCollaboration  -`April, 2023` -->
 
-> 🚀 Exciting news! Submitted our Research Track paper to [ICSME 2024](https://conf.researchr.org/home/icsme-2024) conference with my amazing co-authors. 📑🔍 Hoping for positive review! Grateful for collaboration. Excited to share insights! #ICSME2024 #ResearchCollaboration  -`April, 2023`
-
-#### March 2024
+<!-- #### March 2024 -->
 <!-- Scholarship received announcement -->
 
-#### February 2024
-<!-- University Admission announcement -->
+<!-- #### February 2024
+University Admission announcement -->
 
 #### January 2024
 > 🚀 Delighted to announce the acceptance of our paper **"Extending Refactoring Detection to Kotlin: A Dataset and Comparative Study"** by Iman Hemati Moghadam, Mohammad Mehdi Afkhami, Parsa Kamalipour, Vadim Zaytsev at SANER 2024, in the [ERA Track](https://conf.researchr.org/track/saner-2024/saner-2024-early-research-achievement--era--track-)! 📚🚀 #SANER2024 #RefactoringDetection #Kotlin -`January, 2024`

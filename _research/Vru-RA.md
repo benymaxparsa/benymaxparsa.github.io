@@ -11,7 +11,7 @@ location: "Rafsanjān, Kerman, Iran"
 - Field of Research: Community Detection (Graph Algorithms)
 - Supervisor: Dr. Fahimeh Dabaghi-Zarandi
 - Department: "Computer Engineering” department of "Vali-e-Asr University of Rafsanjan".
-- Date: Aug 2021 -- Present
+- Date: Aug 2021 -- March 2024
 - My key role consisted of:
     - Reading and reviewing related papers (Investigation)
     - Implementing ideas in MATLAB and Python (Data curation, Software, Programming)
