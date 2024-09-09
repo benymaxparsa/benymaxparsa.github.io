@@ -161,6 +161,21 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 <!-- #### February 2024
 University Admission announcement -->
 
+#### September 2024
+> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant & Marker for COMP 339 (Combinatorics) for Fall 2024!** 📚 Looking forward to supporting students and contributing to the course. Thank you to the department for this opportunity!
+
+#### August 2024
+> 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓 This support will greatly enhance my research endeavors. A big thank you to the faculty and everyone who has supported me along this journey! 
+
+> 🎓 Honored to receive the **Concordia Merit Scholarship (Entrance Scholarship Award)** from Concordia University’s School of Graduate Studies! 🌟 This scholarship is a significant boost for my graduate studies journey. A heartfelt thank you to the selection committee and everyone who has supported me!
+
+#### July 2024
+> 🎉 Thrilled to share that I have been honored with the **Distinguished Student Award** at Vali-e-Asr University! 🌟 Grateful for this achievement and excited for the future! #Award #AcademicExcellence #ValiEAsrUniversity #Grateful 
+
+#### February 2024
+> 🚀 Thrilled to announce that I’ve been **admitted to the Funded Thesis-based Master’s program in Computer Science at Concordia University for Fall 2024!** 📚 I’ll be joining the Algorithms & Complexity Lab, working under the guidance of Professor Hovhannes Harutyunyan. Excited for the opportunities ahead and grateful for this incredible chance to dive deeper into my research!
+
+
 #### January 2024
 > 🚀 Delighted to announce the acceptance of our paper **"Extending Refactoring Detection to Kotlin: A Dataset and Comparative Study"** by Iman Hemati Moghadam, Mohammad Mehdi Afkhami, Parsa Kamalipour, Vadim Zaytsev at SANER 2024, in the [ERA Track](https://conf.researchr.org/track/saner-2024/saner-2024-early-research-achievement--era--track-)! 📚🚀 #SANER2024 #RefactoringDetection #Kotlin -`January, 2024`
 
@@ -176,5 +191,5 @@ University Admission announcement -->
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Website last update: <i>August 21, 2024 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Website last update: <i>September 9th, 2024 </i></u></b></h3></p>
 
