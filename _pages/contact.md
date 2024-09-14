@@ -23,6 +23,10 @@ Algorithms & Complexity Lab
 Concordia University ER Building, 11th Floor   
 2155 Guy St, Montreal, Quebec H3H 2L9  
 
+University's Web Directory:  
+[users.encs.concordia.ca/~pa_kama](https://users.encs.concordia.ca/~pa_kama/)   
+
+
 <!-- ## Research Assistant & Head Teaching Assistant  
 Department of Computer Engineering  
 Vali-e-Asr University of Rafsanjan   -->
