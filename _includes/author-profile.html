@@ -5,24 +5,40 @@
 
   <script type="text/javascript">
     var imageURLs = [
-      "/images/Profile_Pictures/p1.jpg",
-      "/images/Profile_Pictures/p2.jpg",
-      "/images/Profile_Pictures/p3.jpg",
-      "/images/Profile_Pictures/p4.jpg",
-      "/images/Profile_Pictures/p5.jpg",
-      "/images/Profile_Pictures/p6.jpg",
-      "/images/Profile_Pictures/p7.jpg",
-      "/images/Profile_Pictures/p8.jpg",
-      "/images/Profile_Pictures/p9.jpg",
-      "/images/Profile_Pictures/p10.jpg",
-      "/images/Profile_Pictures/p11.jpg",
-      "/images/Profile_Pictures/p12.jpg",
-      "/images/Profile_Pictures/p13.jpg",
-    ];
-    function getImageTag() {
-      var randomIndex = Math.floor(Math.random() * imageURLs.length);
-      return imageURLs[randomIndex];
+    "/images/Profile_Pictures/p1.jpg",
+    "/images/Profile_Pictures/p2.jpg",
+    "/images/Profile_Pictures/p3.jpg",
+    "/images/Profile_Pictures/p4.jpg",
+    "/images/Profile_Pictures/p5.jpg",
+    "/images/Profile_Pictures/p6.jpg",
+    "/images/Profile_Pictures/p7.jpg",
+    "/images/Profile_Pictures/p8.jpg",
+    "/images/Profile_Pictures/p9.jpg"
+  ];
+
+  function getImageTag() {
+    // Get the last 3 images from localStorage
+    var previousImages = JSON.parse(localStorage.getItem('lastThreeImages')) || [];
+    var randomIndex;
+    var newImage;
+
+    // Loop to ensure the new image is not in the last 3 images
+    do {
+      randomIndex = Math.floor(Math.random() * imageURLs.length);
+      newImage = imageURLs[randomIndex];
+    } while (previousImages.includes(newImage));
+
+    // Update the list of last 3 images
+    previousImages.push(newImage);
+    if (previousImages.length > 3) {
+      previousImages.shift(); // Remove the oldest image to keep the array at 3
     }
+
+    // Store the updated array in localStorage
+    localStorage.setItem('lastThreeImages', JSON.stringify(previousImages));
+
+    return newImage;
+  }
   </script>
 
   {% if author.avatar %}
