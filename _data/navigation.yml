@@ -58,3 +58,6 @@ main:
 
   - title: "Contact"
     url: /contact/ 
+
+  - title: "News"
+    url: /news/
