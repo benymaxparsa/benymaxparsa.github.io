@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Parsa Kamalipour"
   avatar           : "profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "RA & TA & Master of Computer Science at Concordia University and Theoretical Computer Science, Algorithms, and Graph Theory Enthusiast."
+  bio              : "RA & TA & Master of Computer Science at Concordia University @ Algorithms & Complexity Lab."
   location         : "Montreal, Québec, Canada"
   email            : "parsakamalipour.edu@gmail.com"
   links:
@@ -145,12 +145,12 @@ author:
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0003-2546-9676"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw"
-    - label: "Mastodon"
-      icon: "fab fa-fw fa-mastodon"
-      url: "https://mastodon.social/@parsakamalipour"
+    # - label: "YouTube"
+    #   icon: "fab fa-fw fa-youtube"
+    #   url: "https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw"
+    # - label: "Mastodon"
+    #   icon: "fab fa-fw fa-mastodon"
+    #   url: "https://mastodon.social/@parsakamalipour"
 
 # Site Footer
 footer:
