@@ -118,9 +118,9 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 <a class="cta-button" href="/gallery/">Images and Gallery</a>
 
-<a class="cta-button" href="/contact/">Contact</a>
-
 <a class="cta-button" href="/news/">News</a>
+
+<a class="cta-button" href="/contact/">Contact</a>
 </div>
 
 <!-- ### [Research Experiences](/research/)
@@ -156,9 +156,9 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 
 #### September 2024
-> 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: Marker for COMP 335 (Introduction to Theoretical Computer Science) for Fall 2024!** 📚
+> 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: <u>Marker for COMP 335</u> (Introduction to Theoretical Computer Science) for Fall 2024!** 📚
 
-> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant: Tutorial Leader & Marker for COMP 339 (Combinatorics) for Fall 2024!** 📚
+> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant: <u>Tutorial Leader & Marker for COMP 339</u> (Combinatorics) for Fall 2024!** 📚
 
 #### August 2024
 > 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓 

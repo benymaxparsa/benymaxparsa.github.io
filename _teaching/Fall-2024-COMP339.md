@@ -12,7 +12,7 @@ location: "Montreal, QC, Canada"
 - Course instructor: Professor. Hovhannes Harutyunyan
 - Semester: Fall 2024
 - TA Type:
-  1. Marker for 65~70 hours
+  1. Marker for 65 hours
   2. Tutorial Leader for 48 hours
 - My key role consisted of:
   - Marking students assignments

@@ -17,13 +17,13 @@ Gina Cody School of Engineering and Computer Science
 Concordia University  
 Montreal, QC, H3G 1M8, Canada  
 
-My Office:  
+> ***My Office***:  
 Room 1124.00  
 Algorithms & Complexity Lab  
 Concordia University ER Building, 11th Floor   
 2155 Guy St, Montreal, Quebec H3H 2L9  
 
-University's Web Directory:  
+University's Web Directory (My Website):  
 [users.encs.concordia.ca/~pa_kama](https://users.encs.concordia.ca/~pa_kama/)   
 
 
@@ -45,8 +45,13 @@ Personal Email for Academic Purposes:
 [{firstname}{lastname}.edu@gmail.com](mailto:parsakamalipour.edu@gmail.com)  
 *(I consistently prioritize checking this email)*  
 
-Concordia University Academic Email:  
-[{firstname}.{lastname}@mail.concordia.ca](mailto:parsa.kamalipour@mail.concordia.ca)  
+> ***Academic Organization e-mails***:
+>
+>Concordia University Student Email:  
+>[{firstname}.{lastname}@mail.concordia.ca](mailto:parsa.kamalipour@mail.concordia.ca)  
+>
+>Concordia University Employee Email:  
+[{firstname}.{lastname}@concordia.ca](mailto:parsa.kamalipour@concordia.ca)  
 
 Personal Email for Non-Academic Purposes:  
 [{firstname}{lastname}@gmail.com](mailto:parsakamalipour@gmail.com)  
