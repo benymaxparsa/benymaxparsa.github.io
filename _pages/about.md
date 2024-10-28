@@ -154,6 +154,8 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 # Selected Recent NEWS!
 
+#### October 2024
+> 🎉 Excited to share that **I have been awarded the <u>DRW Graduate Scholarship in Computer Science</u>**, issued by Concordia University and DRW, a Montreal-based company! 🚀
 
 #### September 2024
 > 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: <u>Marker for COMP 335</u> (Introduction to Theoretical Computer Science) for Fall 2024!** 📚

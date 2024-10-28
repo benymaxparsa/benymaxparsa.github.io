@@ -6,6 +6,8 @@ author_profile: true
 ---
 
 <!-- # NEWS -->
+#### October 2024
+> 🎉 Excited to share that **I have been awarded the DRW Graduate Scholarship in Computer Science**, issued by Concordia University and DRW, a Montreal-based company! This opportunity fuels my motivation to continue pushing boundaries in my research and academic journey. Grateful for the recognition and support! 🚀
 
 #### September 2024
 > 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: Marker for COMP 335 (Introduction to Theoretical Computer Science) for Fall 2024!** 📚 Eager to assist students and contribute to the course. Grateful to the department for this opportunity!
