@@ -67,9 +67,9 @@ He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Sc
 
 <!-- Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>*** and ***<u>Machine Learning</u>***. -->
 
-Parsa is currently pursuing a Master of Computer Science degree from Concordia University in the Department of Computer Science and Software Engineering (CSSE), Gina Cody School of Engineering and Computer Science. He is conducting research at the Algorithms & Complexity Lab under the supervision of Professor Hovhannes Harutyunyan. Parsa’s true expertise extends into Theoretical Computer Science.
+Parsa is currently pursuing a **(Thesis-based) Master of Computer Science** degree from [Concordia University](https://www.concordia.ca) in the Department of [Computer Science and Software Engineering (CSSE)](https://www.concordia.ca/ginacody/computer-science-software-eng.html), at [Gina Cody School of Engineering and Computer Science](https://www.concordia.ca/ginacody.html). He is conducting research at the ***Algorithms & Complexity Lab*** under the supervision of [Professor Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/). Parsa’s true expertise is Theoretical Computer Science with some additional touch of Applied Mathematics, Software Engineering, and Data Mining.
 
-Parsa has a keen interest in areas such as ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Algorithms</u>***, ***<u>Online Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, and ***<u>Approximation & Randomized Algorithms</u>***.
+Parsa has a keen interest in areas such as ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, ***<u>Discrete Mathematics</u>***, ***<u>Data Structures</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization/Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, ***<u>Approximation & Randomized Algorithms</u>***, and ***<u>Online Algorithms</u>***.
 
 <!-- On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***.  -->
 
@@ -83,7 +83,9 @@ Going beyond his research engagements, Parsa has demonstrated a commitment to ed
 
 These diverse experiences underscore Parsa's unwavering dedication to both research and education, showcasing his versatility and impact across academic domains. -->
 
-Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education. [Read more](/biography/)
+<!-- Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education. -->
+
+Parsa is driven by a deep passion for both research and teaching, aspiring to make meaningful contributions to his field while inspiring the next generation of scholars. His ultimate goal is to become a distinguished professor, where he can advance the frontiers of knowledge through research while fostering a dynamic and engaging learning environment for students. [Read more](/biography/) 
 
 <!-- <button class="cta-button">Call to Action</button> -->
 
@@ -179,5 +181,5 @@ Parsa aspires to contribute significantly as a researcher, with the ultimate goa
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Website last update: <i>September 29th, 2024 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Last update: <i>January 28th, 2025 </i></u></b></h3></p>
 
