@@ -156,24 +156,34 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 
 # Selected Recent NEWS!
 
+#### January 2025
+> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for multiple courses in this **Winter 2025!**  
+>  
+> - **SOEN 363 [Data Systems for Software Engineers]** – *Tutorial Instructor, Programmer on Duty (POD), & Marker*  
+> - **COMP 465 [Design and Analysis of Algorithms]** – *Tutorial Instructor*  
+> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor, Programmer on Duty (POD), & Marker*  
+
+#### December 2024
+> Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team! 🌟
+
 #### October 2024
 > 🎉 Excited to share that **I have been awarded the <u>DRW Graduate Scholarship in Computer Science</u>**, issued by Concordia University and DRW, a Montreal-based company! 🚀
 
-#### September 2024
+<!-- #### September 2024
 > 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: <u>Marker for COMP 335</u> (Introduction to Theoretical Computer Science) for Fall 2024!** 📚
 
-> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant: <u>Tutorial Leader & Marker for COMP 339</u> (Combinatorics) for Fall 2024!** 📚
+> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant: <u>Tutorial Leader & Marker for COMP 339</u> (Combinatorics) for Fall 2024!** 📚 -->
 
 #### August 2024
 > 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓 
 
 > 🎓 Honored to receive the **Concordia Merit Scholarship (Entrance Scholarship Award)** from Concordia University’s School of Graduate Studies! 🌟 
 
-#### February 2024
-> 🚀 Thrilled to announce that I’ve been **admitted to the Funded Thesis-based Master’s program in Computer Science at Concordia University for Fall 2024!** 📚 I’ll be joining the Algorithms & Complexity Lab, working under the guidance of Professor Hovhannes Harutyunyan. 
-
+<!-- #### February 2024
+> 🚀 Thrilled to announce that I’ve been **admitted to the Funded Thesis-based Master’s program in Computer Science at Concordia University for Fall 2024!** 📚 I’ll be joining the Algorithms & Complexity Lab, working under the guidance of Professor Hovhannes Harutyunyan.  -->
+<!-- 
 #### November 2023
-> 🏆 Thrilled to announce that I've been honored with the **Top Researcher Award** in Kerman Province, standing out among all undergraduate students across universities in this region! 🌍🚀 #ResearchAward -`November 21, 2023`
+> 🏆 Thrilled to announce that I've been honored with the **Top Researcher Award** in Kerman Province, standing out among all undergraduate students across universities in this region! 🌍🚀 #ResearchAward -`November 21, 2023` -->
 
 [To read more news and view all of them together click here!](/news/) 
 
