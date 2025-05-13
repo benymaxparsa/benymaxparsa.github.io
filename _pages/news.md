@@ -6,6 +6,15 @@ author_profile: true
 ---
 
 <!-- # NEWS -->
+
+#### May 2025
+> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for two courses in this **First Half of Summer 2025!**  
+>  
+> - **COMP 335 [Introduction to Theoretical Computer Science]** – *Marker*  
+> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor and Marker*  
+>  
+> Looking forward to engaging with students and contributing to these courses. Grateful for the opportunity! 🚀
+
 #### January 2025
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for multiple courses in this **Winter 2025!**  
 >  
@@ -15,8 +24,8 @@ author_profile: true
 >  
 > Looking forward to engaging with students and contributing to these courses. Grateful for the opportunity! 🚀
 
-#### December 2024
-> Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team for their dedication—looking forward to the next steps! 🚀
+<!-- #### December 2024
+> Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team for their dedication—looking forward to the next steps! 🚀 -->
 
 #### October 2024
 > 🎉 Excited to share that **I have been awarded the DRW Graduate Scholarship in Computer Science**, issued by Concordia University and DRW, a Montreal-based company! This opportunity fuels my motivation to continue pushing boundaries in my research and academic journey. Grateful for the recognition and support! 🚀

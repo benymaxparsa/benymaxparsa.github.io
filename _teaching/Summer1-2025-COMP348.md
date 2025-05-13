@@ -1,20 +1,19 @@
 ---
-title: "Graduate Teaching Assistant: Tutorial Leader & Programmer on Duty (POD) & Marker of COMP 348 [Principles of Programming Languages]"
+title: "Graduate Teaching Assistant: Tutorial Leader & Marker of COMP 348 [Principles of Programming Languages]"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/Winter-2025-COMP348
+permalink: /teaching/Summer1-2025-COMP348
 venue: "Department of Computer Science and Software Engineering (CSSE), Gina Cody School of Engineering and Computer Science, Concordia University"
-date: 2025-01-20
+date: 2025-05-12
 location: "Montreal, QC, Canada"
 ---
 
 - Course: COMP 348 [Principles of Programming Languages]
-- Course instructor: Dr. Ali Jannatpour
-- Semester: Winter 2025
+- Course instructor: Dr. Ali Jannatpour & Dr. Kaustubha Mendhurwar 
+- Semester: First Half of Summer 2025
 - TA Type:
-  1. Marker for 38.8 hours
+  1. Marker for ??
   2. Tutorial Leader for 24 hours
-  3. POD (Programmer on Duty) for 40 hours
 - My key role consisted of:
   TBA
 

@@ -1,21 +1,20 @@
 ---
-title: "Graduate Teaching Assistant: Tutorial Leader & Programmer on Duty (POD) & Marker of COMP 348 [Principles of Programming Languages]"
+title: "Graduate Teaching Assistant: Marker of COMP 335 [Introduction to Theoretical Computer Science]"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/Winter-2025-COMP348
+permalink: /teaching/Summer1-2025-COMP335
 venue: "Department of Computer Science and Software Engineering (CSSE), Gina Cody School of Engineering and Computer Science, Concordia University"
-date: 2025-01-20
+date: 2025-05-12
 location: "Montreal, QC, Canada"
 ---
 
-- Course: COMP 348 [Principles of Programming Languages]
-- Course instructor: Dr. Ali Jannatpour
-- Semester: Winter 2025
+- Course: COMP 335 [Introduction to Theoretical Computer Science]
+- Course instructor: Dr. Denis Pankratov
+- Semester: First Half of Summer 2025
 - TA Type:
-  1. Marker for 38.8 hours
-  2. Tutorial Leader for 24 hours
-  3. POD (Programmer on Duty) for 40 hours
+  1. Marker for ?? hours
 - My key role consisted of:
-  TBA
+  1. Marking students assignments
+  2. Helping, answering questions, emails and guiding the students to thrive in the course they took
 
 <!-- Skills that we learned and used: Algorithm Design · Teaching · python · Discrete Mathematics · Graph Theory · Team Management · Algorithm Analysis · Software Development · Data Structures · Object-Oriented Programming (OOP) · Unit Testing · C++ · LaTeX · Git · Problem Solving · Team Leadership · Teamwork -->

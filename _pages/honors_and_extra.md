@@ -7,6 +7,7 @@ author_profile: true
 
 ---
 ## Honors and Awards
+1. **Awarded the DRW Graduate Scholarship in Computer Science** - ***Issued by Concordia University & DRW Company***
 1. **Awarded Concordia Merit Scholarship (Entrance Scholarship Award)** - ***Issued by Concordia University, School of Graduate Studies***
 1. **Awarded Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** - ***Issued by Concordia University, Gina Cody School of Engineering and Computer Science***
 1. **Won Distinguished Student Award among all students of Vali-e-Asr University**
@@ -100,8 +101,9 @@ author_profile: true
 ## Languages
 **Persian**: Native language
 
-**English**: Fluent
+**English**: Advanced (Proficient)
 
+**French**: Beginner
 
 ---
 

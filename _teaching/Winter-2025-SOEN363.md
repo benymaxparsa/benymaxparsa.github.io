@@ -12,7 +12,7 @@ location: "Montreal, QC, Canada"
 - Course instructor: Dr. Ali Jannatpour
 - Semester: Winter 2025
 - TA Type:
-  1. Marker for TBA
+  1. Marker for 34.48 hours
   2. Tutorial Leader for 24 hours
   3. POD (Programmer on Duty) for 40 hours
 - My key role consisted of:

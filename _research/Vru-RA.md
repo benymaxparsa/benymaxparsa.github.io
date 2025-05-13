@@ -17,4 +17,4 @@ location: "Rafsanjān, Kerman, Iran"
     - Implementing ideas in MATLAB and Python (Data curation, Software, Programming)
     - Testing and improving the written code (Validation)
     - Gathering information and writing the initial text for the paper (Writing primary draft preparation)
-- We have published one paper in the [JNCA journal[1]](/publication/p1), and we will submit our 2nd paper soon in [another Q1 journal[2]](/publication/p2).
+- We have published one paper in the [JNCA journal[1]](/publication/p1), and we will submit our 2nd paper in [??? [2]](/publication/p2).
