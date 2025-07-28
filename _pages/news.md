@@ -6,6 +6,12 @@ author_profile: true
 ---
 
 <!-- # NEWS -->
+#### July 2025
+> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for one course in this **Second Half of Summer 2025!**  
+>  
+> - **COMP 233 [Probability and Statistics for Computer Science]** – *Tutorial Instructor*  
+>  
+> Looking forward to engaging with students and contributing to this course. Grateful for the opportunity! 🚀
 
 #### May 2025
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for two courses in this **First Half of Summer 2025!**  

@@ -155,19 +155,16 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 ---
 
 # Selected Recent NEWS!
+#### July 2025
+> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for one course in this **Second Half of Summer 2025!**  
+>  
+> - **COMP 233 [Probability and Statistics for Computer Science]** – *Tutorial Instructor*  
 
 #### May 2025
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for two courses in this **First Half of Summer 2025!**  
 >  
 > - **COMP 335 [Introduction to Theoretical Computer Science]** – *Marker*  
 > - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor and Marker*  
-
-#### January 2025
-> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for multiple courses in this **Winter 2025!**  
->  
-> - **SOEN 363 [Data Systems for Software Engineers]** – *Tutorial Instructor, Programmer on Duty (POD), & Marker*  
-> - **COMP 465 [Design and Analysis of Algorithms]** – *Tutorial Instructor*  
-> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor, Programmer on Duty (POD), & Marker*  
 
 <!-- #### December 2024
 > Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team! 🌟 -->
@@ -197,5 +194,5 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Last update: <i>May 13th, 2025 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Last update: <i>July 28th, 2025 </i></u></b></h3></p>
 
