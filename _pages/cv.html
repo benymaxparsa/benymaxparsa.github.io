@@ -7,11 +7,11 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!-- {% include base_path %}
 
 {% capture written_label %}'None'{% endcapture %}
 
-<a href="/files/ParsaKamalipour_CV.pdf">Download PDF Here</a>
+<a href="/files/ParsaKamalipour_CV.pdf">Download My The English CV PDF Here</a>
 
   <h6 align="right"><b><u> Last CV update: <i>February 7, 2025 </i></u></b></h6>
 
@@ -20,5 +20,101 @@ redirect_from:
     width="100%" 
     style="height: 80vh;"
   >
-  </iframe>
+  </iframe> -->
 
+{% include base_path %}
+{% capture written_label %}'None'{% endcapture %}
+
+<style>
+.cv-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin:.25rem 0 1rem}
+.cv-btn{display:inline-block;padding:.6rem 1rem;border-radius:.55rem;text-decoration:none;font-weight:700;border:1px solid transparent;line-height:1}
+.cv-btn.primary{background:#2b90d9;color:#fff}
+.cv-btn.secondary{background:transparent;color:#2b90d9;border-color:#2b90d9}
+.cv-meta{margin:.25rem 0 0 auto;font-size:.95rem;opacity:.9}
+.cv-ctrl{display:flex;align-items:center;gap:.75rem;margin:.25rem 0 .6rem;font-weight:700}
+.cv-ctrl label{color:inherit;opacity:.9}
+
+/* --- Adaptive select styling --- */
+.cv-ctrl select{
+  padding:.6rem .85rem;
+  border-radius:.5rem;
+  border:1px solid #90a4ae;
+  background:#f9fafb;
+  color:#1a1a1a;
+  font-weight:600;
+  transition:background .3s,color .3s,border-color .3s;
+}
+.cv-ctrl select:hover{border-color:#2b90d9;}
+@media (prefers-color-scheme: dark){
+  .cv-ctrl select{
+    background:#0f1c2b;
+    color:#f5f7fa;
+    border-color:#3a607a;
+  }
+  .cv-ctrl select:hover{border-color:#4fa3f7;}
+}
+
+.cv-viewer{position:relative;width:100%;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;background:#fff}
+.cv-iframe{width:100%;height:80vh;border:0;background:#fff}
+
+/* --- Mobile tweaks --- */
+@media (max-width:768px){
+  .cv-actions{flex-direction:column;align-items:stretch}
+  .cv-btn{width:100%;text-align:center}
+  .cv-meta{margin:0;align-self:flex-start}
+  .cv-ctrl{gap:.5rem;flex-direction:column;align-items:flex-start}
+  .cv-ctrl select{width:100%;max-width:360px}
+  .cv-iframe{height:70vh}
+}
+@media (max-width:420px){
+  .cv-iframe{height:65vh}
+  .cv-btn{padding:.7rem 1rem}
+  .cv-ctrl label{font-size:1rem}
+  .cv-ctrl select{font-size:1rem}
+}
+</style>
+
+<div class="cv-actions">
+  <a class="cv-btn primary" href="/files/ParsaKamalipour_CV.pdf" download aria-label="Download CV in English PDF">
+    Download CV (English, PDF)
+  </a>
+  <a id="cv-fr" class="cv-btn secondary" href="/files/FR_ParsaKamalipour_CV.pdf" download aria-label="Télécharger le CV en français PDF">
+    Télécharger le CV (Français, PDF)
+  </a>
+  <div class="cv-meta"><b><u>Last CV update: <i>August 5, 2025</i></u></b></div>
+</div>
+
+<div class="cv-ctrl">
+  <label for="cv-lang">View:</label>
+  <select id="cv-lang" name="cv-lang" aria-label="Select CV language to preview">
+    <option value="/files/ParsaKamalipour_CV.pdf" selected>English PDF</option>
+    <option value="/files/FR_ParsaKamalipour_CV.pdf">Français (PDF)</option>
+  </select>
+</div>
+
+<div class="cv-viewer">
+  <iframe
+    id="cv-frame"
+    class="cv-iframe"
+    src="/files/ParsaKamalipour_CV.pdf"
+    title="CV preview"
+  ></iframe>
+</div>
+
+<script>
+(function(){
+  const frame = document.getElementById('cv-frame');
+  const sel = document.getElementById('cv-lang');
+  sel.addEventListener('change', ()=> frame.src = sel.value);
+
+  // Hide FR button & option if the file isn't uploaded yet
+  const frHref = '/files/FR_ParsaKamalipour_CV.pdf';
+  fetch(frHref, {method:'HEAD'}).then(r=>{
+    if(!r.ok){
+      const frBtn = document.getElementById('cv-fr');
+      if(frBtn) frBtn.style.display='none';
+      for (const o of [...sel.options]) if (o.value===frHref) o.remove();
+    }
+  }).catch(()=>{});
+})();
+</script>
