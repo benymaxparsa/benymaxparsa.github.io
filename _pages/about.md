@@ -155,6 +155,20 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 ---
 
 # Selected Recent NEWS!
+
+#### September 2025
+>🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for six courses this Fall 2025 semester!**
+>
+>It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
+>🎓 **Courses:**
+>- **COMP 233** – *Probability and Statistics for Computer Science* — Tutorial Instructor  
+>- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator  
+>- **COMP 339** – *Combinatorics* — Tutorial Instructor  
+>- **COMP 472** – *Artificial Intelligence* — Lab Demonstrator  
+>- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor  
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
+
+
 #### July 2025
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for one course in this **Second Half of Summer 2025!**  
 >  
