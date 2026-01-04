@@ -121,14 +121,37 @@
 
 {% comment %}<!-- hreflang tags for bilingual support -->{% endcomment %}
 {% assign is_french_page = page.url | slice: 0, 3 %}
-{% assign current_path = page.url | remove_first: "/fr" %}
+
 {% if is_french_page == "/fr" %}
-  <link rel="alternate" hreflang="en" href="{{ current_path | absolute_url }}" />
+  {% comment %} Find English equivalent {% endcomment %}
+  {% assign english_url = nil %}
+  {% for mapping_pair in site.data.language_urls %}
+    {% assign en_path = mapping_pair[0] %}
+    {% assign fr_path = mapping_pair[1] %}
+    {% if fr_path == page.url %}
+      {% assign english_url = en_path %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% unless english_url %}
+    {% assign english_url = page.url | replace: "/fr/recherche/", "/research/" | replace: "/fr/enseignement/", "/teaching/" | replace: "/fr/formation/", "/education/" | replace: "/fr/projets/", "/projects/" | replace: "/fr/distinctions/", "/honors_and_extra/" | replace: "/fr/biographie/", "/biography/" | replace: "/fr/activites/", "/extracurricular/" | replace: "/fr/galerie/", "/gallery/" | replace: "/fr/experiences/", "/industry/" | replace: "/fr/contact/", "/contact/" | replace: "/fr/nouvelles/", "/news/" | replace: "/fr/cours/", "/selected_courses/" | replace: "/fr/", "/" %}
+  {% endunless %}
+  
+  <link rel="alternate" hreflang="en" href="{{ english_url | absolute_url }}" />
   <link rel="alternate" hreflang="fr-CA" href="{{ page.url | absolute_url }}" />
-  <link rel="alternate" hreflang="x-default" href="{{ current_path | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ english_url | absolute_url }}" />
 {% else %}
+  {% comment %} Find French equivalent {% endcomment %}
+  {% assign french_url = site.data.language_urls[page.url] %}
+  {% unless french_url %}
+    {% assign french_url = page.url | replace: "/research/", "/fr/recherche/" | replace: "/teaching/", "/fr/enseignement/" | replace: "/education/", "/fr/formation/" | replace: "/projects/", "/fr/projets/" | replace: "/honors_and_extra/", "/fr/distinctions/" | replace: "/biography/", "/fr/biographie/" | replace: "/extracurricular/", "/fr/activites/" | replace: "/gallery/", "/fr/galerie/" | replace: "/industry/", "/fr/experiences/" | replace: "/contact/", "/fr/contact/" | replace: "/news/", "/fr/nouvelles/" | replace: "/selected_courses/", "/fr/cours/" %}
+    {% if french_url == page.url %}
+      {% assign french_url = page.url | prepend: "/fr" %}
+    {% endif %}
+  {% endunless %}
+  
   <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}" />
-  <link rel="alternate" hreflang="fr-CA" href="{{ '/fr' | append: current_path | absolute_url }}" />
+  <link rel="alternate" hreflang="fr-CA" href="{{ french_url | absolute_url }}" />
   <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}" />
 {% endif %}
 
