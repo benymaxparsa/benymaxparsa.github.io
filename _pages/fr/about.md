@@ -53,7 +53,7 @@ redirect_from:
   flex-wrap: wrap; 
   max-width: 1200px;
   margin: 0 auto;
-  <!-- justify-content: space-between; -->
+  /* justify-content: space-between; */
 }
 
   </style>

@@ -4,11 +4,7 @@ lang: fr-CA
 title: "Cours sélectionnés"
 permalink: /fr/cours/
 author_profile: true
-
 ---
-
-
---- 
 
 ## Maîtrise en informatique de l'Université Concordia de Montréal
 
