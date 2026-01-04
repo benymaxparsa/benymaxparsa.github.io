@@ -1,4 +1,5 @@
 <!-- begin _includes/seo.html -->
+{% assign is_french_page = page.url | slice: 0, 3 %}
 {%- if site.url -%}
   {%- assign seo_url = site.url | append: site.baseurl -%}
 {%- endif -%}
@@ -58,7 +59,11 @@
 {% endif %}
 
 <meta property="og:type" content="{{ og_type }}">
+{% if is_french_page == "/fr" or page.lang == "fr-CA" %}
+<meta property="og:locale" content="fr_CA">
+{% else %}
 <meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
+{% endif %}
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 <meta property="og:url" content="{{ canonical_url }}">
@@ -113,6 +118,19 @@
 {% endif %}
 
 <link rel="canonical" href="{{ canonical_url }}">
+
+{% comment %}<!-- hreflang tags for bilingual support -->{% endcomment %}
+{% assign is_french_page = page.url | slice: 0, 3 %}
+{% assign current_path = page.url | remove_first: "/fr" %}
+{% if is_french_page == "/fr" %}
+  <link rel="alternate" hreflang="en" href="{{ current_path | absolute_url }}" />
+  <link rel="alternate" hreflang="fr-CA" href="{{ page.url | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ current_path | absolute_url }}" />
+{% else %}
+  <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}" />
+  <link rel="alternate" hreflang="fr-CA" href="{{ '/fr' | append: current_path | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}" />
+{% endif %}
 
 {% if paginator.previous_page %}
   <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}">

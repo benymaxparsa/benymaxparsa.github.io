@@ -171,6 +171,57 @@ fr-BE:
 fr-CH:
   <<: *DEFAULT_FR
 
+# French (Canada/Québec)
+# ----------------------
+fr-CA: &DEFAULT_FR_CA
+  skip_links                 : "Sauter les liens"
+  skip_primary_nav           : "Aller à la navigation principale"
+  skip_content               : "Aller au contenu"
+  skip_footer                : "Aller au pied de page"
+  page                       : "Page"
+  pagination_previous        : "Précédent"
+  pagination_next            : "Suivant"
+  breadcrumb_home_label      : "Accueil"
+  breadcrumb_separator       : "/"
+  menu_label                 : "Basculer le menu"
+  search_label               : "Basculer la recherche"
+  toc_label                  : "Sur cette page"
+  ext_link_label             : "Lien direct"
+  less_than                  : "moins de"
+  minute_read                : "minute(s) de lecture"
+  share_on_label             : "Partager sur"
+  meta_label                 :
+  tags_label                 : "Mots-clés :"
+  categories_label           : "Catégories :"
+  date_label                 : "Mis à jour :"
+  comments_label             : "Laisser un commentaire"
+  comments_title             : "Commentaires"
+  more_label                 : "En savoir plus"
+  related_label              : "Vous aimerez peut-être aussi"
+  follow_label               : "Suivez-nous :"
+  feed_label                 : "Fil"
+  powered_by                 : "Propulsé par"
+  website_label              : "Site Web"
+  email_label                : "Courriel"
+  recent_posts               : "Publications récentes"
+  undefined_wpm              : "Le paramètre words_per_minute n'est pas défini dans _config.yml"
+  comment_form_info          : "Votre adresse courriel ne sera pas publiée. Les champs obligatoires sont indiqués"
+  comment_form_comment_label : "Commentaire"
+  comment_form_md_info       : "Markdown est pris en charge."
+  comment_form_name_label    : "Nom"
+  comment_form_email_label   : "Adresse courriel"
+  comment_form_website_label : "Site Web (optionnel)"
+  comment_btn_submit         : "Soumettre le commentaire"
+  comment_btn_submitted      : "Soumis"
+  comment_success_msg        : "Merci pour votre commentaire ! Il apparaîtra sur le site une fois approuvé."
+  comment_error_msg          : "Désolé, une erreur s'est produite lors de votre soumission. Veuillez vous assurer que tous les champs obligatoires sont remplis et réessayer."
+  loading_label              : "Chargement en cours..."
+  search_label_text          : "Entrez votre terme de recherche..."
+  search_placeholder_text    : "Entrez votre terme de recherche..."
+  search_algolia_no_results  : "Aucun résultat"
+  results_found              : "Résultat(s) trouvé(s)"
+  back_to_top                : "Retour en haut"
+
 # Turkish
 # -------
 tr: &DEFAULT_TR

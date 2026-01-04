@@ -1,0 +1,50 @@
+{% assign current_path = page.url | remove_first: "/fr" %}
+{% assign is_french = page.url | slice: 0, 3 %}
+
+<div class="language-switcher" role="navigation" aria-label="Language switcher">
+  <style>
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: 1rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .lang-btn:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    .lang-btn.active {
+      background-color: #2b90d9;
+      color: white !important;
+    }
+    @media (prefers-color-scheme: dark) {
+      .lang-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    @media (max-width: 768px) {
+      .language-switcher {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+  
+  {% if is_french == "/fr" %}
+    <a href="{{ current_path }}" class="lang-btn" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+    <a href="{{ page.url }}" class="lang-btn active" lang="fr" hreflang="fr-CA" aria-label="Version française" aria-current="page">FR</a>
+  {% else %}
+    <a href="{{ page.url }}" class="lang-btn active" lang="en" hreflang="en" aria-label="English version" aria-current="page">EN</a>
+    <a href="/fr{{ current_path }}" class="lang-btn" lang="fr" hreflang="fr-CA" aria-label="Passer au français">FR</a>
+  {% endif %}
+</div>
