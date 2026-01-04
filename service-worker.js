@@ -77,7 +77,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Fetch event - serve from cache, fallback to network
+  // Cache first strategy for static assets (images, CSS, JS)
   event.respondWith(
     caches.match(event.request)
       .then((cachedResponse) => {

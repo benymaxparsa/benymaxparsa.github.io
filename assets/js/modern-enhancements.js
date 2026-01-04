@@ -508,9 +508,10 @@
       }, 2000);
     } catch (err) {
       console.error('Fallback copy failed:', err);
+      const originalText = button.innerHTML;
       button.innerHTML = '<i class="fas fa-fw fa-times" aria-hidden="true"></i><span> Failed</span>';
       setTimeout(() => {
-        button.innerHTML = button.getAttribute('data-original-text') || 'Copy Link';
+        button.innerHTML = originalText;
       }, 2000);
     }
     
