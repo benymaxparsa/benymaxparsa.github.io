@@ -1,6 +1,15 @@
-{% assign is_french = page.url | slice: 0, 3 %}
+{% comment %} Detect French pages by lang attribute or URL {% endcomment %}
+{% assign is_french = false %}
+{% if page.lang == "fr-CA" or page.lang == "fr" %}
+  {% assign is_french = true %}
+{% else %}
+  {% assign url_prefix = page.url | slice: 0, 3 %}
+  {% if url_prefix == "/fr" %}
+    {% assign is_french = true %}
+  {% endif %}
+{% endif %}
 
-{% if is_french == "/fr" %}
+{% if is_french %}
   {% comment %} On a French page, find the English equivalent {% endcomment %}
   {% assign english_url = nil %}
   {% for mapping_pair in site.data.language_urls %}
@@ -15,14 +24,19 @@
   {% unless english_url %}
     {% assign english_url = page.url | replace: "/fr/recherche/", "/research/" | replace: "/fr/enseignement/", "/teaching/" | replace: "/fr/formation/", "/education/" | replace: "/fr/projets/", "/projects/" | replace: "/fr/distinctions/", "/honors_and_extra/" | replace: "/fr/biographie/", "/biography/" | replace: "/fr/activites/", "/extracurricular/" | replace: "/fr/galerie/", "/gallery/" | replace: "/fr/experiences/", "/industry/" | replace: "/fr/contact/", "/contact/" | replace: "/fr/nouvelles/", "/news/" | replace: "/fr/cours/", "/selected_courses/" | replace: "/fr/", "/" %}
   {% endunless %}
+  {% comment %} Final fallback: if we couldn't translate, go to English homepage {% endcomment %}
+  {% if english_url == nil or english_url == page.url %}
+    {% assign english_url = "/" %}
+  {% endif %}
 {% else %}
   {% comment %} On an English page, find the French equivalent {% endcomment %}
   {% assign french_url = site.data.language_urls[page.url] %}
   {% comment %} Fallback: try simple pattern replacement {% endcomment %}
   {% unless french_url %}
     {% assign french_url = page.url | replace: "/research/", "/fr/recherche/" | replace: "/teaching/", "/fr/enseignement/" | replace: "/education/", "/fr/formation/" | replace: "/projects/", "/fr/projets/" | replace: "/honors_and_extra/", "/fr/distinctions/" | replace: "/biography/", "/fr/biographie/" | replace: "/extracurricular/", "/fr/activites/" | replace: "/gallery/", "/fr/galerie/" | replace: "/industry/", "/fr/experiences/" | replace: "/contact/", "/fr/contact/" | replace: "/news/", "/fr/nouvelles/" | replace: "/selected_courses/", "/fr/cours/" %}
+    {% comment %} Final fallback: if no translation found, go to French homepage {% endcomment %}
     {% if french_url == page.url %}
-      {% assign french_url = page.url | prepend: "/fr" %}
+      {% assign french_url = "/fr/" %}
     {% endif %}
   {% endunless %}
 {% endif %}
@@ -70,7 +84,7 @@
     }
   </style>
   
-  {% if is_french == "/fr" %}
+  {% if is_french %}
     <a href="{{ english_url }}" class="lang-btn" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
     <a href="{{ page.url }}" class="lang-btn active" lang="fr" hreflang="fr-CA" aria-label="Version française" aria-current="page">FR</a>
   {% else %}

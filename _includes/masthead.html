@@ -1,7 +1,17 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
-{% assign is_french_page = page.url | slice: 0, 3 %}
-{% if is_french_page == "/fr" %}
+{% comment %} Detect French pages by lang attribute or URL {% endcomment %}
+{% assign is_french_page = false %}
+{% if page.lang == "fr-CA" or page.lang == "fr" %}
+  {% assign is_french_page = true %}
+{% else %}
+  {% assign url_prefix = page.url | slice: 0, 3 %}
+  {% if url_prefix == "/fr" %}
+    {% assign is_french_page = true %}
+  {% endif %}
+{% endif %}
+
+{% if is_french_page %}
   {% assign nav_links = site.data.navigation.main_fr %}
 {% else %}
   {% assign nav_links = site.data.navigation.main %}
@@ -12,9 +22,9 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{% if is_french_page == '/fr' %}/fr/{% else %}/{% endif %}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{% if is_french_page %}/fr/{% else %}/{% endif %}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
-        <a class="site-title" href="{% if is_french_page == '/fr' %}/fr/{% else %}/{% endif %}">
+        <a class="site-title" href="{% if is_french_page %}/fr/{% else %}/{% endif %}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
