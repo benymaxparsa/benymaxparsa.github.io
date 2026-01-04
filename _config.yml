@@ -450,8 +450,6 @@ compress_html:
     envs: development
 
 # Custom scripts
-head_scripts:
-  - /assets/css/modern-enhancements.css
 after_footer_scripts:
   - /assets/js/custom-enhancements.js
   - /assets/js/modern-enhancements.js
