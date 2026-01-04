@@ -7,6 +7,7 @@
   "background_color": "#ffffff",
   "theme_color": "#00adb5",
   "orientation": "portrait-primary",
+  "scope": "/",
   "icons": [
     {
       "src": "/assets/favicon/android-chrome-192x192.png",
@@ -34,5 +35,37 @@
     }
   ],
   "categories": ["education", "research", "academic"],
-  "lang": "en-US"
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Publications",
+      "short_name": "Publications",
+      "description": "View academic publications",
+      "url": "/publications/",
+      "icons": [{ "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Research",
+      "short_name": "Research",
+      "description": "View research work",
+      "url": "/research/",
+      "icons": [{ "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Read blog posts",
+      "url": "/year-archive/",
+      "icons": [{ "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
 }
