@@ -1,0 +1,26 @@
+{
+  "name": "Parsa Kamalipour - Computer Science Portfolio",
+  "short_name": "Parsa Kamalipour",
+  "description": "RA & TA & Master of Computer Science at Concordia University. Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00adb5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "academic"],
+  "lang": "en-US"
+}

@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /robots.txt
+---
+# Robots.txt for benymaxparsa.github.io
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Disallow crawling of search and tag/category archives
+Disallow: /search/
+Disallow: /tags/
+Disallow: /categories/
+
+# Allow all other content
+Allow: /research/
+Allow: /publications/
+Allow: /teaching/
+Allow: /education/
+Allow: /projects/
+Allow: /cv/
+Allow: /biography/
+Allow: /news/
+Allow: /contact/
