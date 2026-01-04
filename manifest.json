@@ -34,5 +34,6 @@
     }
   ],
   "categories": ["education", "research", "academic"],
-  "lang": "en-US"
+  "lang": "en-US",
+  "locales": ["en-US", "fr-CA"]
 }

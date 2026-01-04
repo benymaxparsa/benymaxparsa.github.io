@@ -24,6 +24,17 @@
   outline: none;
   border-color: #00adb5;
 }
+
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-left: 5px;
+  }
+  
+  .language-switcher select {
+    padding: 4px 8px;
+    font-size: 0.85em;
+  }
+}
 </style>
 
 <div class="language-switcher">
@@ -45,7 +56,9 @@ function changeLanguage(lang) {
     } else if (currentPath === '/' || currentPath === '') {
       newPath = '/fr/';
     } else {
-      newPath = '/fr' + currentPath;
+      // Remove trailing slash if present
+      const cleanPath = currentPath.replace(/\/$/, '');
+      newPath = '/fr' + cleanPath;
     }
   } else {
     // Switch to English
@@ -59,19 +72,33 @@ function changeLanguage(lang) {
     }
   }
   
+  // Store language preference
+  localStorage.setItem('preferredLanguage', lang);
+  
   window.location.href = newPath;
 }
 
-// Store language preference
-document.getElementById('language-select').addEventListener('change', function(e) {
-  localStorage.setItem('preferredLanguage', e.target.value);
-});
-
-// Load language preference
+// Load language preference on page load
 window.addEventListener('DOMContentLoaded', function() {
   const preferredLang = localStorage.getItem('preferredLanguage');
-  if (preferredLang && preferredLang !== document.getElementById('language-select').value) {
-    changeLanguage(preferredLang);
+  const currentPath = window.location.pathname;
+  const isOnFrenchPage = currentPath.startsWith('/fr/');
+  
+  // Update select to match current page
+  if (isOnFrenchPage) {
+    document.getElementById('language-select').value = 'fr';
+  } else {
+    document.getElementById('language-select').value = 'en';
+  }
+  
+  // Only auto-redirect if there's a mismatch and a preference is set
+  if (preferredLang && 
+      ((preferredLang === 'fr' && !isOnFrenchPage) || 
+       (preferredLang === 'en' && isOnFrenchPage))) {
+    // Only redirect on the home page to avoid breaking direct links
+    if (currentPath === '/' || currentPath === '/fr/') {
+      changeLanguage(preferredLang);
+    }
   }
 });
 </script>
