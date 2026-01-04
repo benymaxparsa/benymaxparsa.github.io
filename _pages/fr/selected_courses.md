@@ -1,7 +1,7 @@
 ---
 permalink: /fr/selected_courses/
-title: "Selected courses"
-excerpt: "selected courses"
+title: "Cours Sélectionnés"
+excerpt: "Cours sélectionnés"
 author_profile: true
 lang: fr
 ---

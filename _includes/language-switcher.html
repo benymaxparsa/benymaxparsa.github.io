@@ -83,6 +83,7 @@ window.addEventListener('DOMContentLoaded', function() {
   const preferredLang = localStorage.getItem('preferredLanguage');
   const currentPath = window.location.pathname;
   const isOnFrenchPage = currentPath.startsWith('/fr/');
+  const hasRedirected = sessionStorage.getItem('languageRedirected');
   
   // Update select to match current page
   if (isOnFrenchPage) {
@@ -91,12 +92,13 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('language-select').value = 'en';
   }
   
-  // Only auto-redirect if there's a mismatch and a preference is set
-  if (preferredLang && 
+  // Only auto-redirect if there's a mismatch, a preference is set, and we haven't redirected in this session
+  if (!hasRedirected && preferredLang && 
       ((preferredLang === 'fr' && !isOnFrenchPage) || 
        (preferredLang === 'en' && isOnFrenchPage))) {
     // Only redirect on the home page to avoid breaking direct links
     if (currentPath === '/' || currentPath === '/fr/') {
+      sessionStorage.setItem('languageRedirected', 'true');
       changeLanguage(preferredLang);
     }
   }

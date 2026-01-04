@@ -1,7 +1,7 @@
 ---
 permalink: /fr/gallery/
-title: "Gallery"
-excerpt: "gallery"
+title: "Galerie"
+excerpt: "Galerie"
 author_profile: true
 lang: fr
 ---

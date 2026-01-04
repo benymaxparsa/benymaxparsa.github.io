@@ -1,7 +1,7 @@
 ---
 permalink: /fr/industry/
-title: "Industry"
-excerpt: "industry"
+title: "Expériences Professionnelles"
+excerpt: "Expériences professionnelles"
 author_profile: true
 lang: fr
 ---

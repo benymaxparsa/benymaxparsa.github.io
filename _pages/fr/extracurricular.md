@@ -1,7 +1,7 @@
 ---
 permalink: /fr/extracurricular/
-title: "Extracurricular"
-excerpt: "extracurricular"
+title: "Activités Extrascolaires"
+excerpt: "Activités extrascolaires"
 author_profile: true
 lang: fr
 ---

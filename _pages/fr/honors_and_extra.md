@@ -1,7 +1,7 @@
 ---
 permalink: /fr/honors_and_extra/
-title: "Honors and extra"
-excerpt: "honors and extra"
+title: "Honneurs et Extras"
+excerpt: "Honneurs et extras"
 author_profile: true
 lang: fr
 ---

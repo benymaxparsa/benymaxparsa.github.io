@@ -1,7 +1,7 @@
 ---
 permalink: /fr/projects/
-title: "Projects"
-excerpt: "projects"
+title: "Projets"
+excerpt: "Projets"
 author_profile: true
 lang: fr
 ---
