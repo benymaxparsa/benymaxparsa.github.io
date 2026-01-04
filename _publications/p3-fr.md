@@ -3,7 +3,7 @@ title: "Extension de la détection de réusinage à Kotlin : Un ensemble de donn
 collection: publications
 permalink: /fr/publications/p3
 date: 2024-01-11
-venue: 'Actes de la 31e Conférence internationale IEEE sur l'analyse, l'évolution et la réingénierie de logiciels'
+venue: 'Actes de la 31e Conférence internationale IEEE sur l''analyse, l''évolution et la réingénierie de logiciels'
 paperurl: 'http://dx.doi.org/10.1109/SANER60148.2024.00034'
 citation: 'I. H. Moghadam, M. M. Afkhami, P. Kamalipour and V. Zaytsev, "Extending Refactoring Detection to Kotlin: A Dataset and Comparative Study," 2024 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), Rovaniemi, Finland, 2024, pp. 267-271, doi: 10.1109/SANER60148.2024.00034.'
 lang: fr-CA
