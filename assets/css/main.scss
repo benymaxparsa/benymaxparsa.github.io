@@ -212,7 +212,7 @@ textarea:focus {
   z-index: 999;
 }
 
-@media (min-width: var(--breakpoint-mobile)) {
+@media (min-width: 768px) {
   .scroll-to-top {
     bottom: var(--spacing-unit);
   }
@@ -293,12 +293,12 @@ button:focus,
 
 /* Improved blockquote styling */
 blockquote {
-  border-left: 4px solid #00adb5;
+  border-left: 4px solid var(--primary-color);
   margin-left: 0;
   font-style: italic;
   background: rgba(0, 173, 181, 0.05);
   padding: 1em 1em 1em 1.5em;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 /* Better list styling */

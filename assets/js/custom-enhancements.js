@@ -49,8 +49,15 @@
             block: 'start'
           });
           
-          // Update focus for accessibility
-          target.setAttribute('tabindex', '-1');
+          // Set focus for keyboard users only if target isn't naturally focusable
+          if (!target.hasAttribute('tabindex') && 
+              !['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'].includes(target.tagName)) {
+            target.setAttribute('tabindex', '-1');
+            // Remove tabindex after focus to restore natural tab order
+            target.addEventListener('blur', function() {
+              target.removeAttribute('tabindex');
+            }, { once: true });
+          }
           target.focus();
         }
       });

@@ -209,7 +209,8 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 <br>
 
 ---
-<p align="right">
-  <h3 align="right"><b><u> Last update: <i>January 4th, 2026 </i></u></b></h3>
+
+<p style="text-align: right;">
+  <strong><em>Last update: January 4th, 2026</em></strong>
 </p>
 
