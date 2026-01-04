@@ -61,3 +61,47 @@ main:
 
   - title: "News"
     url: /news/
+
+# French (Quebec) navigation
+main_fr:
+  - title: "Recherche"
+    url: /fr/research/
+
+  - title: "Publications"
+    url: /fr/publications/
+
+  - title: "Enseignement"
+    url: /fr/teaching/
+
+  - title: "Éducation"
+    url: /fr/education/
+
+  - title: "CV"
+    url: /fr/cv/
+
+  - title: "Projets"
+    url: /fr/projects/
+
+  - title: "Cours"
+    url: /fr/selected_courses/
+
+  - title: "Honneurs, Scores, Compétences, etc."
+    url: /fr/honors_and_extra/
+
+  - title: "Biographie"
+    url: /fr/biography/
+
+  - title: "Activités Extrascolaires"
+    url: /fr/extracurricular/
+
+  - title: "Galerie & Images"
+    url: /fr/gallery/
+
+  - title: "Expériences Professionnelles"
+    url: /fr/industry/
+
+  - title: "Contact"
+    url: /fr/contact/
+
+  - title: "Nouvelles"
+    url: /fr/news/

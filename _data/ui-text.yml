@@ -170,6 +170,8 @@ fr-BE:
   <<: *DEFAULT_FR
 fr-CH:
   <<: *DEFAULT_FR
+fr-CA:
+  <<: *DEFAULT_FR
 
 # Turkish
 # -------

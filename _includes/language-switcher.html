@@ -1,0 +1,77 @@
+<!-- Language Switcher -->
+<style>
+.language-switcher {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.language-switcher select {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  color: inherit;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher select:hover {
+  border-color: #00adb5;
+}
+
+.language-switcher select:focus {
+  outline: none;
+  border-color: #00adb5;
+}
+</style>
+
+<div class="language-switcher">
+  <select id="language-select" onchange="changeLanguage(this.value)" aria-label="Select language">
+    <option value="en" {% if page.lang == 'en' or page.lang == nil %}selected{% endif %}>English</option>
+    <option value="fr" {% if page.lang == 'fr' %}selected{% endif %}>Français (Québec)</option>
+  </select>
+</div>
+
+<script>
+function changeLanguage(lang) {
+  const currentPath = window.location.pathname;
+  let newPath;
+  
+  if (lang === 'fr') {
+    // Switch to French
+    if (currentPath.startsWith('/fr/')) {
+      newPath = currentPath;
+    } else if (currentPath === '/' || currentPath === '') {
+      newPath = '/fr/';
+    } else {
+      newPath = '/fr' + currentPath;
+    }
+  } else {
+    // Switch to English
+    if (currentPath.startsWith('/fr/')) {
+      newPath = currentPath.replace('/fr/', '/');
+      if (newPath === '/') {
+        newPath = '/';
+      }
+    } else {
+      newPath = currentPath;
+    }
+  }
+  
+  window.location.href = newPath;
+}
+
+// Store language preference
+document.getElementById('language-select').addEventListener('change', function(e) {
+  localStorage.setItem('preferredLanguage', e.target.value);
+});
+
+// Load language preference
+window.addEventListener('DOMContentLoaded', function() {
+  const preferredLang = localStorage.getItem('preferredLanguage');
+  if (preferredLang && preferredLang !== document.getElementById('language-select').value) {
+    changeLanguage(preferredLang);
+  }
+});
+</script>
