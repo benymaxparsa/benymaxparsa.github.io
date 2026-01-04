@@ -49,8 +49,9 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) {
+  // Skip cross-origin requests - use more robust check
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.origin !== location.origin) {
     return;
   }
 
@@ -76,7 +77,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache first strategy for static assets
+  // Fetch event - serve from cache, fallback to network
   event.respondWith(
     caches.match(event.request)
       .then((cachedResponse) => {

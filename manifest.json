@@ -38,13 +38,6 @@
   "lang": "en-US",
   "dir": "ltr",
   "prefer_related_applications": false,
-  "screenshots": [
-    {
-      "src": "/screenshot.png",
-      "sizes": "1280x720",
-      "type": "image/png"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Publications",

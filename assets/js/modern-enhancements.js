@@ -428,17 +428,26 @@
     const copyBtn = document.getElementById('copy-link-btn');
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText(window.location.href)
-          .then(() => {
-            const originalText = copyBtn.innerHTML;
-            copyBtn.innerHTML = '<i class="fas fa-fw fa-check" aria-hidden="true"></i><span> Copied!</span>';
-            setTimeout(() => {
-              copyBtn.innerHTML = originalText;
-            }, 2000);
-          })
-          .catch((err) => {
-            console.error('Failed to copy:', err);
-          });
+        const url = window.location.href;
+        
+        // Try modern Clipboard API first (requires HTTPS)
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url)
+            .then(() => {
+              const originalText = copyBtn.innerHTML;
+              copyBtn.innerHTML = '<i class="fas fa-fw fa-check" aria-hidden="true"></i><span> Copied!</span>';
+              setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+              }, 2000);
+            })
+            .catch((err) => {
+              console.error('Failed to copy:', err);
+              fallbackCopyToClipboard(url, copyBtn);
+            });
+        } else {
+          // Fallback for older browsers or HTTP
+          fallbackCopyToClipboard(url, copyBtn);
+        }
       });
     }
 
@@ -471,6 +480,41 @@
         document.head.appendChild(meta);
       }
     });
+  }
+
+  /**
+   * Fallback copy to clipboard for older browsers or HTTP
+   */
+  function fallbackCopyToClipboard(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      const successful = document.execCommand('copy');
+      const originalText = button.innerHTML;
+      if (successful) {
+        button.innerHTML = '<i class="fas fa-fw fa-check" aria-hidden="true"></i><span> Copied!</span>';
+      } else {
+        button.innerHTML = '<i class="fas fa-fw fa-times" aria-hidden="true"></i><span> Failed</span>';
+      }
+      setTimeout(() => {
+        button.innerHTML = originalText;
+      }, 2000);
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+      button.innerHTML = '<i class="fas fa-fw fa-times" aria-hidden="true"></i><span> Failed</span>';
+      setTimeout(() => {
+        button.innerHTML = button.getAttribute('data-original-text') || 'Copy Link';
+      }, 2000);
+    }
+    
+    document.body.removeChild(textArea);
   }
 
   /**
