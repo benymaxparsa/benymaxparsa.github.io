@@ -12,6 +12,17 @@ search: false
    Custom Enhancements for Better User Experience
    ========================================================================== */
 
+/* CSS Custom Properties for Consistency */
+:root {
+  --primary-color: #00adb5;
+  --primary-hover: #008c94;
+  --primary-light: #6aa9ad;
+  --breakpoint-mobile: 768px;
+  --spacing-unit: 20px;
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
 /* Smooth scrolling for better navigation experience */
 html {
   scroll-behavior: smooth;
@@ -19,14 +30,14 @@ html {
 
 /* Improved focus visibility for accessibility */
 *:focus {
-  outline: 2px solid #00adb5;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
 /* Enhanced button hover effects */
 .cta-button,
 .btn {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta-button:hover,
@@ -83,7 +94,7 @@ pre.highlight {
 }
 
 /* Better responsive spacing */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-mobile)) {
   .button-container {
     gap: 8px;
   }
@@ -185,8 +196,8 @@ textarea:focus {
 .scroll-to-top {
   position: fixed;
   bottom: 80px;
-  right: 20px;
-  background: #00adb5;
+  right: var(--spacing-unit);
+  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 50%;
@@ -195,15 +206,15 @@ textarea:focus {
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(var(--spacing-unit));
   z-index: 999;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-mobile)) {
   .scroll-to-top {
-    bottom: 20px;
+    bottom: var(--spacing-unit);
   }
 }
 
@@ -213,7 +224,7 @@ textarea:focus {
 }
 
 .scroll-to-top:hover {
-  background: #008c94;
+  background: var(--primary-hover);
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
@@ -229,18 +240,20 @@ textarea:focus {
   top: 8px;
   right: 8px;
   padding: 6px 12px;
-  background: rgba(0, 173, 181, 0.9);
+  background: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   font-size: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
+  opacity: 0.9;
   z-index: 1;
 }
 
 .copy-code-button:hover {
-  background: #00adb5;
+  opacity: 1;
+  background: var(--primary-hover);
   transform: scale(1.05);
 }
 
@@ -281,11 +294,10 @@ button:focus,
 /* Improved blockquote styling */
 blockquote {
   border-left: 4px solid #00adb5;
-  padding-left: 1em;
   margin-left: 0;
   font-style: italic;
   background: rgba(0, 173, 181, 0.05);
-  padding: 1em;
+  padding: 1em 1em 1em 1.5em;
   border-radius: 4px;
 }
 

@@ -94,7 +94,7 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 ---
 
 <nav aria-label="Quick navigation to main sections">
-  <h1 id="site-navigation">Links to Each Section of the Site</h1>
+  <h2 id="site-navigation">Links to Each Section of the Site</h2>
 
   <div class="button-container" role="navigation">
     <a class="cta-button" href="/research/" aria-label="View research experiences">Research Experiences</a>

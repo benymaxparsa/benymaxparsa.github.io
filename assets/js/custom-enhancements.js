@@ -124,6 +124,7 @@
 
   /**
    * Fallback copy method for browsers without Clipboard API
+   * Note: document.execCommand is deprecated but kept for legacy browser support
    */
   function fallbackCopy(text, button) {
     const textArea = document.createElement('textarea');
