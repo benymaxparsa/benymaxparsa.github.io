@@ -1,0 +1,40 @@
+---
+layout: archive
+lang: fr-CA
+title: "Expérience de recherche"
+permalink: /fr/recherche/
+author_profile: true
+---
+
+Intérêts de recherche :
+<table>
+  <tr>
+    <td>
+      <ul>
+          <li>Conception et analyse d'algorithmes</li>
+          <li>Théorie des graphes et ses applications</li>
+          <li>Algorithmes d'approximation et aléatoires</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+          <li>Algorithmes combinatoires</li>
+          <li>Exploration de graphes</li>
+          <li>Analyse de réseaux sociaux</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+          <li>Structures de données</li>
+          <li>Algorithmes stochastiques et en ligne</li>
+          <li>Théorie de la complexité</li>
+      </ul>
+    </td>
+  </tr>
+  </table>
+
+{% include base_path %}
+
+{% for post in site.research reversed %}
+  {% include archive-single.html %}
+{% endfor %}

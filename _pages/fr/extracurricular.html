@@ -1,0 +1,13 @@
+---
+layout: archive
+lang: fr-CA
+title: "Activités parascolaires"
+permalink: /fr/activites/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.extracurricular reversed %}
+  {% include archive-single.html %}
+{% endfor %}

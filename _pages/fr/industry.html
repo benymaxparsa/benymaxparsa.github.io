@@ -1,0 +1,13 @@
+---
+layout: archive
+lang: fr-CA
+title: "Expériences professionnelles"
+permalink: /fr/experiences/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.industry reversed %}
+  {% include archive-single.html %}
+{% endfor %}

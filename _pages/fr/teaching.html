@@ -1,0 +1,31 @@
+---
+layout: archive
+lang: fr-CA
+title: "Expériences d'enseignement"
+permalink: /fr/enseignement/
+author_profile: true
+---
+
+
+{% include base_path %}
+
+{% assign grouped_teaching = site.teaching | group_by: "venue" %}
+
+<div class="teaching-experiences">
+  {% for venue in grouped_teaching reversed %}
+    <div class="venue-group">
+      <h2>{{ venue.name }}</h2>
+      
+      <ul>
+        {% for post in venue.items reversed %}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a> <br>
+            <small>{{ post.date | date: "%B %Y" }} - {{ post.type }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
