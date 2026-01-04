@@ -93,37 +93,39 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 
 ---
 
-# Links to Each Section of the Site
+<nav aria-label="Quick navigation to main sections">
+  <h1 id="site-navigation">Links to Each Section of the Site</h1>
 
-<div class="button-container">
-  <a class="cta-button" href="/research/">Research Experiences</a>
+  <div class="button-container" role="navigation">
+    <a class="cta-button" href="/research/" aria-label="View research experiences">Research Experiences</a>
 
-<a class="cta-button" href="/publications/">Scientific Papers</a>
+<a class="cta-button" href="/publications/" aria-label="View scientific papers">Scientific Papers</a>
 
-<a class="cta-button" href="/teaching/">Teaching Experiences</a>
+<a class="cta-button" href="/teaching/" aria-label="View teaching experiences">Teaching Experiences</a>
 
-<a class="cta-button" href="/education/">Education</a>
+<a class="cta-button" href="/education/" aria-label="View educational background">Education</a>
 
-<a class="cta-button" href="/cv/">Curriculum vitae</a>
+<a class="cta-button" href="/cv/" aria-label="View curriculum vitae">Curriculum vitae</a>
 
-<a class="cta-button" href="/projects/">Projects</a>
+<a class="cta-button" href="/projects/" aria-label="View projects">Projects</a>
 
-<a class="cta-button" href="/selected_courses/">Selected Courses</a>
+<a class="cta-button" href="/selected_courses/" aria-label="View selected courses">Selected Courses</a>
 
-<a class="cta-button" href="/extracurricular/">Extra Curricular Activities</a>
+<a class="cta-button" href="/extracurricular/" aria-label="View extracurricular activities">Extra Curricular Activities</a>
 
-<a class="cta-button" href="/industry/">Industry Experiences</a>
+<a class="cta-button" href="/industry/" aria-label="View industry experiences">Industry Experiences</a>
 
-<a class="cta-button" href="/honors_and_extra/">Honors and Awards, Test Scores, Skills, etc.</a>
+<a class="cta-button" href="/honors_and_extra/" aria-label="View honors and awards">Honors and Awards, Test Scores, Skills, etc.</a>
 
-<a class="cta-button" href="/biography/">Biography</a>
+<a class="cta-button" href="/biography/" aria-label="Read full biography">Biography</a>
 
-<a class="cta-button" href="/gallery/">Images and Gallery</a>
+<a class="cta-button" href="/gallery/" aria-label="View images and gallery">Images and Gallery</a>
 
-<a class="cta-button" href="/news/">News</a>
+<a class="cta-button" href="/news/" aria-label="Read latest news">News</a>
 
-<a class="cta-button" href="/contact/">Contact</a>
-</div>
+<a class="cta-button" href="/contact/" aria-label="Contact information">Contact</a>
+  </div>
+</nav>
 
 <!-- ### [Research Experiences](/research/)
 
@@ -208,5 +210,6 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 
 ---
 <p align="right">
-  <h3 align="right"><b><u> Last update: <i>July 28th, 2025 </i></u></b></h3></p>
+  <h3 align="right"><b><u> Last update: <i>January 4th, 2026 </i></u></b></h3>
+</p>
 
