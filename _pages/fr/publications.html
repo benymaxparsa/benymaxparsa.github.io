@@ -13,5 +13,7 @@ Vous pouvez également consulter mes articles sur mon <a href="https://scholar.g
 {% include base_path %}
 
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  {% if post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}

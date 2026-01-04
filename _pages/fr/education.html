@@ -9,5 +9,7 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.education reversed %}
-  {% include archive-single.html %}
+  {% if post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}

@@ -63,5 +63,7 @@ Research Interests:
 {% include base_path %}
 
 {% for post in site.research reversed %}
-  {% include archive-single.html %}
+  {% unless post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endunless %}
 {% endfor %}
