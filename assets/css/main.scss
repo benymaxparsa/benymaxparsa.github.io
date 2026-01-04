@@ -8,3 +8,325 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* ==========================================================================
+   Custom Enhancements for Better User Experience
+   ========================================================================== */
+
+/* CSS Custom Properties for Consistency */
+:root {
+  --primary-color: #00adb5;
+  --primary-hover: #008c94;
+  --primary-light: #6aa9ad;
+  --breakpoint-mobile: 768px;
+  --spacing-unit: 20px;
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
+/* Smooth scrolling for better navigation experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved focus visibility for accessibility */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Enhanced button hover effects */
+.cta-button,
+.btn {
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page__content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Better image loading with lazy load effect */
+img {
+  transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Enhanced link styles for better visibility */
+.page__content a:not(.btn) {
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: border-color 0.2s ease;
+}
+
+.page__content a:not(.btn):hover {
+  border-bottom-width: 2px;
+}
+
+/* Improved code block styling */
+pre.highlight {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Better responsive spacing */
+@media (max-width: var(--breakpoint-mobile)) {
+  .button-container {
+    gap: 8px;
+  }
+  
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Enhanced card hover effects for archive items */
+.archive__item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved masthead with subtle shadow */
+.masthead {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Better visibility for skip links */
+.skip-links a {
+  background: #00adb5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.skip-links a:focus {
+  outline: 3px solid #fff;
+}
+
+/* Smooth transitions for sidebar */
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+/* Enhanced footer styling */
+.page__footer {
+  border-top: 2px solid rgba(0, 173, 181, 0.1);
+}
+
+/* Improved table styling */
+table {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Better form input styling */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+}
+
+/* Optimized animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .masthead,
+  .sidebar,
+  .page__footer,
+  .skip-links {
+    display: none;
+  }
+  
+  .page__content {
+    max-width: 100%;
+  }
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: var(--spacing-unit);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-speed) ease;
+  opacity: 0;
+  transform: translateY(var(--spacing-unit));
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  .scroll-to-top {
+    bottom: var(--spacing-unit);
+  }
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:focus {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* Copy code button */
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.copy-code-button:hover {
+  opacity: 1;
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.copy-code-button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* External link indicator */
+.external-link::after {
+  content: '↗';
+  font-size: 0.8em;
+  margin-left: 0.2em;
+  opacity: 0.7;
+}
+
+/* Improved animation for page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Better focus styles for buttons */
+button:focus,
+.btn:focus {
+  outline: 3px solid #00adb5;
+  outline-offset: 3px;
+}
+
+/* Improved blockquote styling */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin-left: 0;
+  font-style: italic;
+  background: rgba(0, 173, 181, 0.05);
+  padding: 1em 1em 1em 1.5em;
+  border-radius: var(--border-radius);
+}
+
+/* Better list styling */
+.page__content ul li,
+.page__content ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Enhanced search bar */
+.search-content input[type="search"] {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.search-content input[type="search"]:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+  transform: scale(1.02);
+}
+
+/* Accessibility: High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+  
+  .cta-button {
+    border: 2px solid currentColor;
+  }
+}

@@ -448,6 +448,10 @@ compress_html:
   ignore:
     envs: development
 
+# Custom scripts
+after_footer_scripts:
+  - /assets/js/custom-enhancements.js
+
 
 # # Defaults
 # defaults:

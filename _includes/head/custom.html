@@ -8,9 +8,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<link rel="manifest" href="/manifest.json">
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+<!-- Performance and resource hints -->
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+<!-- Security headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta name="referrer" content="no-referrer-when-downgrade">
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
@@ -23,5 +35,32 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
+<!-- Lazy loading script for images -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add loading="lazy" to images that are not in the viewport
+    // Skip images that are likely above the fold (first 2-3 images)
+    const images = Array.from(document.querySelectorAll('img:not([loading])'));
+    
+    images.forEach((img, index) => {
+      // Skip first 3 images to avoid affecting LCP
+      if (index >= 3) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+    
+    // Add loaded class when images finish loading
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function() {
+          this.classList.add('loaded');
+        });
+      }
+    });
+  });
+</script>
 
 <!-- end custom head snippets -->
