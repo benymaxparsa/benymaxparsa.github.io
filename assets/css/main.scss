@@ -160,9 +160,9 @@ textarea:focus {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0s !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0s !important;
     scroll-behavior: auto !important;
   }
 }
@@ -184,7 +184,7 @@ textarea:focus {
 /* Scroll to top button */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background: #00adb5;
   color: white;
@@ -199,6 +199,12 @@ textarea:focus {
   opacity: 0;
   transform: translateY(20px);
   z-index: 999;
+}
+
+@media (min-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+  }
 }
 
 .scroll-to-top.visible {

@@ -38,10 +38,15 @@
 <!-- Lazy loading script for images -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Add loading="lazy" to all images that don't have it
-    const images = document.querySelectorAll('img:not([loading])');
-    images.forEach(img => {
-      img.setAttribute('loading', 'lazy');
+    // Add loading="lazy" to images that are not in the viewport
+    // Skip images that are likely above the fold (first 2-3 images)
+    const images = Array.from(document.querySelectorAll('img:not([loading])'));
+    
+    images.forEach((img, index) => {
+      // Skip first 3 images to avoid affecting LCP
+      if (index >= 3) {
+        img.setAttribute('loading', 'lazy');
+      }
     });
     
     // Add loaded class when images finish loading

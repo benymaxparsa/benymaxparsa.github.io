@@ -82,19 +82,25 @@
    * Add copy buttons to code blocks
    */
   function addCopyCodeButtons() {
-    document.querySelectorAll('pre.highlight').forEach(codeBlock => {
+    // Use more generic selectors for better compatibility
+    const codeBlocks = document.querySelectorAll('pre code, pre.highlight, pre[class*="language-"]');
+    
+    codeBlocks.forEach(codeElement => {
+      const pre = codeElement.tagName === 'PRE' ? codeElement : codeElement.parentElement;
+      if (!pre || pre.querySelector('.copy-code-button')) return;
+      
       const button = document.createElement('button');
       button.className = 'copy-code-button';
       button.textContent = 'Copy';
       button.setAttribute('aria-label', 'Copy code to clipboard');
       
       button.addEventListener('click', function() {
-        const code = codeBlock.querySelector('code');
+        const code = pre.querySelector('code') || pre;
         if (code) {
           const text = code.textContent;
           
-          // Use modern clipboard API
-          if (navigator.clipboard) {
+          // Use modern clipboard API with fallback
+          if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(text).then(() => {
               button.textContent = 'Copied!';
               setTimeout(() => {
@@ -102,18 +108,53 @@
               }, 2000);
             }).catch(err => {
               console.error('Failed to copy:', err);
-              button.textContent = 'Failed';
-              setTimeout(() => {
-                button.textContent = 'Copy';
-              }, 2000);
+              fallbackCopy(text, button);
             });
+          } else {
+            // Fallback for older browsers
+            fallbackCopy(text, button);
           }
         }
       });
       
-      codeBlock.style.position = 'relative';
-      codeBlock.appendChild(button);
+      pre.style.position = 'relative';
+      pre.appendChild(button);
     });
+  }
+
+  /**
+   * Fallback copy method for browsers without Clipboard API
+   */
+  function fallbackCopy(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        button.textContent = 'Copied!';
+        setTimeout(() => {
+          button.textContent = 'Copy';
+        }, 2000);
+      } else {
+        button.textContent = 'Failed';
+        setTimeout(() => {
+          button.textContent = 'Copy';
+        }, 2000);
+      }
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+      button.textContent = 'Failed';
+      setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 2000);
+    }
+    
+    document.body.removeChild(textArea);
   }
 
   /**
