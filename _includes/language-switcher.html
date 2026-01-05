@@ -44,37 +44,81 @@
 <div class="language-switcher" role="navigation" aria-label="Language switcher">
   <style>
     .language-switcher {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
+      display: inline-block;
+      position: relative;
       margin-left: 0.75rem;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
-    .lang-btn {
-      padding: 0.25rem 0.5rem;
-      border-radius: 3px;
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-current {
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
       text-decoration: none;
       font-weight: 500;
-      transition: all 0.2s ease;
+      cursor: pointer;
       border: 1px solid rgba(128, 128, 128, 0.3);
       background-color: transparent;
-    }
-    .lang-btn:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-      border-color: rgba(0, 0, 0, 0.2);
-    }
-    .lang-btn.active {
-      background-color: rgba(43, 144, 217, 0.15);
-      border-color: #2b90d9;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.2s ease;
       color: inherit;
     }
+    .lang-current:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+    .lang-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.25rem;
+      background-color: #fff;
+      min-width: 100px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      border-radius: 4px;
+      border: 1px solid rgba(128, 128, 128, 0.2);
+      z-index: 1000;
+    }
+    .lang-dropdown:hover .lang-dropdown-content {
+      display: block;
+    }
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.2s ease;
+      border-radius: 3px;
+      margin: 0.15rem;
+    }
+    .lang-option:hover {
+      background-color: rgba(43, 144, 217, 0.1);
+    }
     @media (prefers-color-scheme: dark) {
-      .lang-btn {
+      .lang-current {
         border-color: rgba(255, 255, 255, 0.3);
+        color: inherit;
       }
-      .lang-btn:hover {
+      .lang-current:hover {
         background-color: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.4);
+      }
+      .lang-dropdown-content {
+        background-color: #2a2a2a;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      .lang-option {
+        color: #ddd;
+      }
+      .lang-option:hover {
+        background-color: rgba(43, 144, 217, 0.2);
       }
     }
     @media (max-width: 768px) {
@@ -84,11 +128,17 @@
     }
   </style>
   
-  {% if is_french %}
-    <a href="{{ english_url }}" class="lang-btn" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
-    <a href="{{ page.url }}" class="lang-btn active" lang="fr" hreflang="fr-CA" aria-label="Version française" aria-current="page">FR</a>
-  {% else %}
-    <a href="{{ page.url }}" class="lang-btn active" lang="en" hreflang="en" aria-label="English version" aria-current="page">EN</a>
-    <a href="{{ french_url }}" class="lang-btn" lang="fr" hreflang="fr-CA" aria-label="Passer au français">FR</a>
-  {% endif %}
+  <div class="lang-dropdown">
+    {% if is_french %}
+      <span class="lang-current">🇫🇷 FR</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ english_url }}" class="lang-option" lang="en" hreflang="en" aria-label="Switch to English">🇬🇧 EN</a>
+      </div>
+    {% else %}
+      <span class="lang-current">🇬🇧 EN</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ french_url }}" class="lang-option" lang="fr" hreflang="fr-CA" aria-label="Passer au français">🇫🇷 FR</a>
+      </div>
+    {% endif %}
+  </div>
 </div>
