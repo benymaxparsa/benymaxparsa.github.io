@@ -35,12 +35,20 @@
         {% include language-switcher.html %}
         {% if site.search == true %}
         <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          {% if is_french_page %}
+            <span class="visually-hidden">{{ site.data.ui-text["fr-CA"].search_label | default: "Toggle search" }}</span>
+          {% else %}
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          {% endif %}
           <i class="fas fa-search"></i>
         </button>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          {% if is_french_page %}
+            <span class="visually-hidden">{{ site.data.ui-text["fr-CA"].menu_label | default: "Toggle menu" }}</span>
+          {% else %}
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          {% endif %}
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
