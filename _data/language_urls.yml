@@ -1,0 +1,24 @@
+# URL mapping between English and French pages
+# Format: english_url: french_url
+# This ensures the language switcher works correctly when page paths are translated
+
+# Main pages
+"/": "/fr/"
+"/research/": "/fr/recherche/"
+"/publications/": "/fr/publications/"
+"/teaching/": "/fr/enseignement/"
+"/education/": "/fr/formation/"
+"/cv/": "/fr/cv/"
+"/projects/": "/fr/projets/"
+"/selected_courses/": "/fr/cours/"
+"/honors_and_extra/": "/fr/distinctions/"
+"/biography/": "/fr/biographie/"
+"/extracurricular/": "/fr/activites/"
+"/gallery/": "/fr/galerie/"
+"/industry/": "/fr/experiences/"
+"/contact/": "/fr/contact/"
+"/news/": "/fr/nouvelles/"
+"/404.html": "/fr/404.html"
+
+# Collection items will use pattern-based fallback
+# Format: /collection/item -> /fr/collection-fr/item

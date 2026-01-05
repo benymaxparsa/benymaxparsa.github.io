@@ -39,10 +39,6 @@ main:
   - title: "Courses"
     url: /selected_courses/
 
-
-  - title: "Honors, Scores, Skills, etc."
-    url: /honors_and_extra/
-
   - title: "Biography"
     url: /biography/
 
@@ -56,8 +52,55 @@ main:
   - title: "Industry Experiences"
     url: /industry/
 
+  - title: "Honors, Scores, Skills, etc."
+    url: /honors_and_extra/
+
   - title: "Contact"
     url: /contact/ 
 
   - title: "News"
     url: /news/
+
+# main links - French (Canada)
+main_fr:
+  - title: "Recherche"
+    url: /fr/recherche/
+
+  - title: "Publications"
+    url: /fr/publications/
+
+  - title: "Enseignement"
+    url: /fr/enseignement/
+
+  - title: "Formation"
+    url: /fr/formation/
+
+  - title: "CV"
+    url: /fr/cv/
+
+  - title: "Projets"
+    url: /fr/projets/
+
+  - title: "Cours"
+    url: /fr/cours/
+
+  - title: "Biographie"
+    url: /fr/biographie/
+
+  - title: "Activités parascolaires"
+    url: /fr/activites/
+
+  - title: "Galerie d'images"
+    url: /fr/galerie/
+
+  - title: "Expériences professionnelles"
+    url: /fr/experiences/
+
+  - title: "Distinctions, résultats, compétences, etc."
+    url: /fr/distinctions/
+
+  - title: "Contact"
+    url: /fr/contact/
+
+  - title: "Nouvelles"
+    url: /fr/nouvelles/

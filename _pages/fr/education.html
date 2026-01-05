@@ -1,0 +1,15 @@
+---
+layout: archive
+lang: fr-CA
+title: "Formation"
+permalink: /fr/formation/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.education reversed %}
+  {% if post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,19 @@
+---
+layout: archive
+lang: fr-CA
+title: "Publications"
+permalink: /fr/publications/
+author_profile: true
+---
+
+
+Vous pouvez également consulter mes articles sur mon <a href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ">profil Google Scholar</a>, et mon <a href="https://www.researchgate.net/profile/Parsa-Kamalipour">compte ResearchGate</a>
+
+
+{% include base_path %}
+
+{% for post in site.publications reversed %}
+  {% if post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}

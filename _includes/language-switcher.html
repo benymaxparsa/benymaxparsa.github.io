@@ -1,0 +1,232 @@
+{% comment %} Detect French pages by lang attribute or URL prefix {% endcomment %}
+{% assign is_french = false %}
+{% if page.lang == "fr-CA" or page.lang == "fr" %}
+  {% assign is_french = true %}
+{% elsif page.url contains "/fr/" or page.url == "/fr" %}
+  {% assign is_french = true %}
+{% endif %}
+
+{% if is_french %}
+  {% comment %} On a French page, find the English equivalent {% endcomment %}
+  {% assign english_url = nil %}
+  {% for mapping_pair in site.data.language_urls %}
+    {% assign en_path = mapping_pair[0] %}
+    {% assign fr_path = mapping_pair[1] %}
+    {% if fr_path == page.url %}
+      {% assign english_url = en_path %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% comment %} Fallback: try simple pattern replacement {% endcomment %}
+  {% unless english_url %}
+    {% assign english_url = page.url | replace: "/fr/recherche/", "/research/" | replace: "/fr/enseignement/", "/teaching/" | replace: "/fr/formation/", "/education/" | replace: "/fr/projets/", "/projects/" | replace: "/fr/distinctions/", "/honors_and_extra/" | replace: "/fr/biographie/", "/biography/" | replace: "/fr/activites/", "/extracurricular/" | replace: "/fr/galerie/", "/gallery/" | replace: "/fr/experiences/", "/industry/" | replace: "/fr/contact/", "/contact/" | replace: "/fr/nouvelles/", "/news/" | replace: "/fr/cours/", "/selected_courses/" | replace: "/fr/publications/", "/publications/" | replace: "/fr/cv/", "/cv/" | replace: "/fr/", "/" %}
+  {% endunless %}
+  {% comment %} Final fallback: if we couldn't translate, go to English homepage {% endcomment %}
+  {% if english_url == nil or english_url == page.url %}
+    {% assign english_url = "/" %}
+  {% endif %}
+{% else %}
+  {% comment %} On an English page, find the French equivalent {% endcomment %}
+  {% assign french_url = site.data.language_urls[page.url] %}
+  {% comment %} Fallback: try simple pattern replacement {% endcomment %}
+  {% unless french_url %}
+    {% assign french_url = page.url | replace: "/research/", "/fr/recherche/" | replace: "/teaching/", "/fr/enseignement/" | replace: "/education/", "/fr/formation/" | replace: "/projects/", "/fr/projets/" | replace: "/honors_and_extra/", "/fr/distinctions/" | replace: "/biography/", "/fr/biographie/" | replace: "/extracurricular/", "/fr/activites/" | replace: "/gallery/", "/fr/galerie/" | replace: "/industry/", "/fr/experiences/" | replace: "/contact/", "/fr/contact/" | replace: "/news/", "/fr/nouvelles/" | replace: "/selected_courses/", "/fr/cours/" | replace: "/publications/", "/fr/publications/" | replace: "/cv/", "/fr/cv/" %}
+    {% comment %} Final fallback: if no translation found, go to French homepage {% endcomment %}
+    {% if french_url == page.url %}
+      {% assign french_url = "/fr/" %}
+    {% endif %}
+  {% endunless %}
+{% endif %}
+
+<div class="language-switcher" role="navigation" aria-label="Language switcher">
+  <style>
+    .language-switcher {
+      display: inline-block;
+      position: relative;
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-current {
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid rgba(52, 152, 219, 0.4);
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.1) 100%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.6s ease;
+      color: inherit;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .lang-current:hover {
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%);
+      border-color: rgba(52, 152, 219, 0.6);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .lang-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.1rem;
+      background-color: #252a34;
+      min-width: 130px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      border: 2px solid rgba(52, 152, 219, 0.3);
+      z-index: 1000;
+      animation: fadeIn 0.2s ease;
+      padding: 0.3rem 0;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .lang-dropdown.open .lang-dropdown-content,
+    .lang-dropdown:hover .lang-dropdown-content,
+    .lang-dropdown-content:hover {
+      display: block;
+    }
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1rem;
+      text-decoration: none;
+      color: #2c3e50;
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      margin: 0.2rem 0.3rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .lang-option:hover {
+      background-color: rgba(52, 152, 219, 0.15);
+      color: #1a5490;
+      transform: translateX(3px);
+    }
+    @media (prefers-color-scheme: dark) {
+      .lang-current {
+        border-color: rgba(52, 152, 219, 0.5);
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(41, 128, 185, 0.15) 100%);
+        color: inherit;
+      }
+      .lang-current:hover {
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%);
+        border-color: rgba(52, 152, 219, 0.7);
+      }
+      .lang-dropdown-content {
+        background-color: #2a2a2a;
+        border-color: rgba(52, 152, 219, 0.4);
+      }
+      .lang-option {
+        color: #e0e0e0;
+        font-weight: 600;
+      }
+      .lang-option:hover {
+        background-color: rgba(52, 152, 219, 0.3);
+        color: #5dade2;
+      }
+    }
+    @media (max-width: 768px) {
+      .language-switcher {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+      }
+      .lang-current {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.85rem;
+      }
+      .lang-option {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+  
+  <div class="lang-dropdown">
+    {% if is_french %}
+      <span class="lang-current">🇫🇷 FR</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ english_url }}" class="lang-option lang-switch-link" data-lang="en" lang="en" hreflang="en" aria-label="Switch to English">🇬🇧 English</a>
+      </div>
+    {% else %}
+      <span class="lang-current">🇬🇧 EN</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ french_url }}" class="lang-option lang-switch-link" data-lang="fr" lang="fr" hreflang="fr-CA" aria-label="Passer au français">🇫🇷 Français</a>
+      </div>
+    {% endif %}
+  </div>
+  
+  <script>
+    (function() {
+      'use strict';
+      
+      // Store language preference when switching
+      document.addEventListener('DOMContentLoaded', function() {
+        var langLinks = document.querySelectorAll('.lang-switch-link');
+        langLinks.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            var lang = this.getAttribute('data-lang');
+            if (lang) {
+              try {
+                localStorage.setItem('preferredLanguage', lang);
+              } catch (e) {
+                // Silently fail if localStorage is not available
+                console.log('Could not save language preference');
+              }
+            }
+          });
+        });
+        
+        // Add click toggle functionality
+        var langDropdown = document.querySelector('.lang-dropdown');
+        var langCurrent = document.querySelector('.lang-current');
+        
+        if (langCurrent && langDropdown) {
+          langCurrent.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+          });
+          
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!langDropdown.contains(e.target)) {
+              langDropdown.classList.remove('open');
+            }
+          });
+        }
+      });
+      
+      // On homepage, redirect to preferred language
+      if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        try {
+          var preferredLang = localStorage.getItem('preferredLanguage');
+          if (preferredLang === 'fr' && !window.location.pathname.includes('/fr/')) {
+            window.location.href = '/fr/';
+          }
+        } catch (e) {
+          // Silently fail if localStorage is not available
+          console.log('Could not read language preference');
+        }
+      }
+    })();
+  </script>
+</div>
