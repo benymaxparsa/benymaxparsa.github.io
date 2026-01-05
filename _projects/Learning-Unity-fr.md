@@ -7,8 +7,8 @@ location: "Kerman et Yazd, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/Unity.png
-    image_path: /images/Unity.png
+  - url: /images/unity.jpg
+    image_path: /images/unity.jpg
     alt: "Logo Unity"
     title: "Logo Unity"
 ---

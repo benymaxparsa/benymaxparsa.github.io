@@ -7,8 +7,8 @@ location: "Rafsanjan, Kerman, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/IR.png
-    image_path: /images/IR.png
+  - url: https://user-images.githubusercontent.com/51443025/156167837-9da24e1c-9c3b-41a2-b9be-7be9b1748a9d.jpg
+    image_path: https://user-images.githubusercontent.com/51443025/156167837-9da24e1c-9c3b-41a2-b9be-7be9b1748a9d.jpg
     alt: "Logo RI"
     title: "Logo RI"
 ---

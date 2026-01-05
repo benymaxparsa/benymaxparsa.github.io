@@ -39,10 +39,6 @@ main:
   - title: "Courses"
     url: /selected_courses/
 
-
-  - title: "Honors, Scores, Skills, etc."
-    url: /honors_and_extra/
-
   - title: "Biography"
     url: /biography/
 
@@ -55,6 +51,9 @@ main:
 
   - title: "Industry Experiences"
     url: /industry/
+
+  - title: "Honors, Scores, Skills, etc."
+    url: /honors_and_extra/
 
   - title: "Contact"
     url: /contact/ 
@@ -85,9 +84,6 @@ main_fr:
   - title: "Cours"
     url: /fr/cours/
 
-  - title: "Distinctions, résultats, compétences, etc."
-    url: /fr/distinctions/
-
   - title: "Biographie"
     url: /fr/biographie/
 
@@ -99,6 +95,9 @@ main_fr:
 
   - title: "Expériences professionnelles"
     url: /fr/experiences/
+
+  - title: "Distinctions, résultats, compétences, etc."
+    url: /fr/distinctions/
 
   - title: "Contact"
     url: /fr/contact/

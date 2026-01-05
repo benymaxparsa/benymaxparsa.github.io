@@ -7,8 +7,8 @@ location: "Rafsanjan, Kerman, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/OS_VHDL_CD_x64.png
-    image_path: /images/OS_VHDL_CD_x64.png
+  - url: /images/CE.jpg
+    image_path: /images/CE.jpg
     alt: "Logo OS/VHDL/CD/x64"
     title: "Logo OS/VHDL/CD/x64"
 ---

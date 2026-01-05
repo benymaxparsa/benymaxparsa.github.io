@@ -109,6 +109,7 @@ author:
   name             : "Parsa Kamalipour"
   avatar           : "profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "RA & TA & Master of Computer Science at Concordia University @ Algorithms & Complexity Lab."
+  bio_fr: "Assistant de recherche & Assistant d'enseignement & Maîtrise en informatique à l'Université Concordia @ Laboratoire d'algorithmes et de complexité."
   location         : "Montreal, Québec, Canada"
   email            : "parsakamalipour.edu@gmail.com"
   links:
