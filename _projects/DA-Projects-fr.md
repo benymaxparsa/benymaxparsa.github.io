@@ -7,8 +7,8 @@ location: "Rafsanjan, Kerman, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/DA.png
-    image_path: /images/DA.png
+  - url: https://user-images.githubusercontent.com/52382093/158039357-38f431d4-c24d-413f-8551-741f15c656a2.gif
+    image_path: https://user-images.githubusercontent.com/52382093/158039357-38f431d4-c24d-413f-8551-741f15c656a2.gif
     alt: "Logo DA"
     title: "Logo DA"
 ---

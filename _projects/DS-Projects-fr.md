@@ -7,8 +7,8 @@ location: "Rafsanjan, Kerman, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/DS.png
-    image_path: /images/DS.png
+  - url: https://user-images.githubusercontent.com/52382093/156035992-beddef68-e74f-4509-80a9-80b43d8e0e87.gif
+    image_path: https://user-images.githubusercontent.com/52382093/156035992-beddef68-e74f-4509-80a9-80b43d8e0e87.gif
     alt: "Logo DS"
     title: "Logo DS"
 ---

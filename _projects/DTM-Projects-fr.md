@@ -7,8 +7,8 @@ location: "Rafsanjan, Kerman, Iran"
 collection: projects
 lang: fr-CA
 gallery:
-  - url: /images/DTM.png
-    image_path: /images/DTM.png
+  - url: /images/DTM.jpg
+    image_path: /images/DTM.jpg
     alt: "Logo DTM"
     title: "Logo DTM"
 ---
