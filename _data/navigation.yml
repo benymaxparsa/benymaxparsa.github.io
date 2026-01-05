@@ -61,3 +61,47 @@ main:
 
   - title: "News"
     url: /news/
+
+# main links - French (Canada)
+main_fr:
+  - title: "Recherche"
+    url: /fr/recherche/
+
+  - title: "Publications"
+    url: /fr/publications/
+
+  - title: "Enseignement"
+    url: /fr/enseignement/
+
+  - title: "Formation"
+    url: /fr/formation/
+
+  - title: "CV"
+    url: /fr/cv/
+
+  - title: "Projets"
+    url: /fr/projets/
+
+  - title: "Cours"
+    url: /fr/cours/
+
+  - title: "Distinctions, résultats, compétences, etc."
+    url: /fr/distinctions/
+
+  - title: "Biographie"
+    url: /fr/biographie/
+
+  - title: "Activités parascolaires"
+    url: /fr/activites/
+
+  - title: "Galerie d'images"
+    url: /fr/galerie/
+
+  - title: "Expériences professionnelles"
+    url: /fr/experiences/
+
+  - title: "Contact"
+    url: /fr/contact/
+
+  - title: "Nouvelles"
+    url: /fr/nouvelles/

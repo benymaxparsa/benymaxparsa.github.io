@@ -11,6 +11,8 @@ New projects will be added here as they are completed.
 
 
 {% for post in site.projects reversed %}
-  {% include archive-single.html %}
+  {% unless post.lang == 'fr-CA' %}
+    {% include archive-single.html %}
+  {% endunless %}
 {% endfor %}
 

@@ -1,0 +1,141 @@
+{% comment %} Detect French pages by lang attribute or URL prefix {% endcomment %}
+{% assign is_french = false %}
+{% if page.lang == "fr-CA" or page.lang == "fr" %}
+  {% assign is_french = true %}
+{% elsif page.url contains "/fr/" or page.url == "/fr" %}
+  {% assign is_french = true %}
+{% endif %}
+
+{% if is_french %}
+  {% comment %} On a French page, find the English equivalent {% endcomment %}
+  {% assign english_url = nil %}
+  {% for mapping_pair in site.data.language_urls %}
+    {% assign en_path = mapping_pair[0] %}
+    {% assign fr_path = mapping_pair[1] %}
+    {% if fr_path == page.url %}
+      {% assign english_url = en_path %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% comment %} Fallback: try simple pattern replacement {% endcomment %}
+  {% unless english_url %}
+    {% assign english_url = page.url | replace: "/fr/recherche/", "/research/" | replace: "/fr/enseignement/", "/teaching/" | replace: "/fr/formation/", "/education/" | replace: "/fr/projets/", "/projects/" | replace: "/fr/distinctions/", "/honors_and_extra/" | replace: "/fr/biographie/", "/biography/" | replace: "/fr/activites/", "/extracurricular/" | replace: "/fr/galerie/", "/gallery/" | replace: "/fr/experiences/", "/industry/" | replace: "/fr/contact/", "/contact/" | replace: "/fr/nouvelles/", "/news/" | replace: "/fr/cours/", "/selected_courses/" | replace: "/fr/", "/" %}
+  {% endunless %}
+  {% comment %} Final fallback: if we couldn't translate, go to English homepage {% endcomment %}
+  {% if english_url == nil or english_url == page.url %}
+    {% assign english_url = "/" %}
+  {% endif %}
+{% else %}
+  {% comment %} On an English page, find the French equivalent {% endcomment %}
+  {% assign french_url = site.data.language_urls[page.url] %}
+  {% comment %} Fallback: try simple pattern replacement {% endcomment %}
+  {% unless french_url %}
+    {% assign french_url = page.url | replace: "/research/", "/fr/recherche/" | replace: "/teaching/", "/fr/enseignement/" | replace: "/education/", "/fr/formation/" | replace: "/projects/", "/fr/projets/" | replace: "/honors_and_extra/", "/fr/distinctions/" | replace: "/biography/", "/fr/biographie/" | replace: "/extracurricular/", "/fr/activites/" | replace: "/gallery/", "/fr/galerie/" | replace: "/industry/", "/fr/experiences/" | replace: "/contact/", "/fr/contact/" | replace: "/news/", "/fr/nouvelles/" | replace: "/selected_courses/", "/fr/cours/" %}
+    {% comment %} Final fallback: if no translation found, go to French homepage {% endcomment %}
+    {% if french_url == page.url %}
+      {% assign french_url = "/fr/" %}
+    {% endif %}
+  {% endunless %}
+{% endif %}
+
+<div class="language-switcher" role="navigation" aria-label="Language switcher">
+  <style>
+    .language-switcher {
+      display: inline-block;
+      position: relative;
+      margin-left: 0.75rem;
+      font-size: 0.75rem;
+    }
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-current {
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid rgba(128, 128, 128, 0.3);
+      background-color: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.2s ease;
+      color: inherit;
+    }
+    .lang-current:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+    .lang-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.25rem;
+      background-color: #fff;
+      min-width: 100px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      border-radius: 4px;
+      border: 1px solid rgba(128, 128, 128, 0.2);
+      z-index: 1000;
+    }
+    .lang-dropdown:hover .lang-dropdown-content {
+      display: block;
+    }
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.2s ease;
+      border-radius: 3px;
+      margin: 0.15rem;
+    }
+    .lang-option:hover {
+      background-color: rgba(43, 144, 217, 0.1);
+    }
+    @media (prefers-color-scheme: dark) {
+      .lang-current {
+        border-color: rgba(255, 255, 255, 0.3);
+        color: inherit;
+      }
+      .lang-current:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+      .lang-dropdown-content {
+        background-color: #2a2a2a;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      .lang-option {
+        color: #ddd;
+      }
+      .lang-option:hover {
+        background-color: rgba(43, 144, 217, 0.2);
+      }
+    }
+    @media (max-width: 768px) {
+      .language-switcher {
+        margin-left: 0.5rem;
+      }
+    }
+  </style>
+  
+  <div class="lang-dropdown">
+    {% if is_french %}
+      <span class="lang-current">🇫🇷 FR</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ english_url }}" class="lang-option" lang="en" hreflang="en" aria-label="Switch to English">🇬🇧 EN</a>
+      </div>
+    {% else %}
+      <span class="lang-current">🇬🇧 EN</span>
+      <div class="lang-dropdown-content">
+        <a href="{{ french_url }}" class="lang-option" lang="fr" hreflang="fr-CA" aria-label="Passer au français">🇫🇷 FR</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
