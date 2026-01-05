@@ -79,15 +79,15 @@
       position: absolute;
       right: 0;
       top: 100%;
-      margin-top: 0.25rem;
+      margin-top: 0.1rem;
       background-color: #fff;
-      min-width: 120px;
+      min-width: 130px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       border-radius: 6px;
       border: 2px solid rgba(52, 152, 219, 0.3);
       z-index: 1000;
       animation: fadeIn 0.2s ease;
-      padding-top: 0.25rem;
+      padding: 0.3rem 0;
     }
     @keyframes fadeIn {
       from {
@@ -99,6 +99,7 @@
         transform: translateY(0);
       }
     }
+    .lang-dropdown.open .lang-dropdown-content,
     .lang-dropdown:hover .lang-dropdown-content,
     .lang-dropdown-content:hover {
       display: block;
@@ -107,18 +108,18 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.6rem 0.9rem;
+      padding: 0.7rem 1rem;
       text-decoration: none;
-      color: #1a1a1a;
+      color: #2c3e50;
       transition: all 0.2s ease;
       border-radius: 4px;
-      margin: 0.25rem;
+      margin: 0.2rem 0.3rem;
       font-weight: 600;
       font-size: 0.9rem;
     }
     .lang-option:hover {
-      background-color: rgba(52, 152, 219, 0.2);
-      color: #000;
+      background-color: rgba(52, 152, 219, 0.15);
+      color: #1a5490;
       transform: translateX(3px);
     }
     @media (prefers-color-scheme: dark) {
@@ -132,16 +133,16 @@
         border-color: rgba(52, 152, 219, 0.7);
       }
       .lang-dropdown-content {
-        background-color: #1a1a1a;
+        background-color: #2a2a2a;
         border-color: rgba(52, 152, 219, 0.4);
       }
       .lang-option {
-        color: #ffffff;
+        color: #e0e0e0;
         font-weight: 600;
       }
       .lang-option:hover {
         background-color: rgba(52, 152, 219, 0.3);
-        color: #ffffff;
+        color: #5dade2;
       }
     }
     @media (max-width: 768px) {
@@ -194,6 +195,24 @@
             }
           });
         });
+        
+        // Add click toggle functionality
+        var langDropdown = document.querySelector('.lang-dropdown');
+        var langCurrent = document.querySelector('.lang-current');
+        
+        if (langCurrent && langDropdown) {
+          langCurrent.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+          });
+          
+          // Close dropdown when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!langDropdown.contains(e.target)) {
+              langDropdown.classList.remove('open');
+            }
+          });
+        }
       });
       
       // On homepage, redirect to preferred language
