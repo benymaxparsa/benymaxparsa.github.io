@@ -1,12 +1,9 @@
-{% comment %} Detect French pages by lang attribute or URL {% endcomment %}
+{% comment %} Detect French pages by lang attribute or URL prefix {% endcomment %}
 {% assign is_french = false %}
 {% if page.lang == "fr-CA" or page.lang == "fr" %}
   {% assign is_french = true %}
-{% else %}
-  {% assign url_prefix = page.url | slice: 0, 3 %}
-  {% if url_prefix == "/fr" %}
-    {% assign is_french = true %}
-  {% endif %}
+{% elsif page.url contains "/fr/" or page.url == "/fr" %}
+  {% assign is_french = true %}
 {% endif %}
 
 {% if is_french %}
