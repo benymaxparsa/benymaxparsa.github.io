@@ -61,9 +61,7 @@ redirect_from:
 
 Parsa poursuit actuellement une maîtrise en informatique **(avec mémoire)** à l'[Université Concordia](https://www.concordia.ca) au Département d'[Informatique et de Génie Logiciel (CSSE)](https://www.concordia.ca/ginacody/computer-science-software-eng.html), à l'[École de génie et d'informatique Gina-Cody](https://www.concordia.ca/ginacody.html). Il mène des recherches au ***Laboratoire d'algorithmes et de complexité*** sous la supervision du [professeur Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/). L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
 
-Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conception et l'analyse d'algorithmes</u>***, la ***<u>théorie des graphes</u>***, les ***<u>mathématiques discrètes</u>***, les ***<u>structures de données</u>*** et la ***<u>théorie de la complexité</u>***. Ses intérêts de recherche couvrent diverses sous-catégories du domaine des algorithmes, notamment l'***<u>optimisation/algorithmes combinatoires</u>***, les ***<u>algorithmes de graphes</u>***, l'***<u>exploration de graphes</u>***, l'***<u>analyse de réseaux sociaux</u>***, les ***<u>algorithmes d'approximation et aléatoires</u>*** et les ***<u>algorithmes en ligne</u>***.
-
-Parsa est animé par une passion profonde pour la recherche et l'enseignement, aspirant à apporter des contributions significatives à son domaine tout en inspirant la prochaine génération de chercheurs. Son objectif ultime est de devenir un professeur distingué, où il pourra faire progresser les frontières de la connaissance par la recherche tout en favorisant un environnement d'apprentissage dynamique et engageant pour les étudiants. [En savoir plus](/fr/biographie/)
+Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conception et l'analyse d'algorithmes</u>***, la ***<u>théorie des graphes</u>***, les ***<u>mathématiques discrètes</u>***, les ***<u>structures de données</u>*** et la ***<u>théorie de la complexité</u>***. Ses intérêts de recherche couvrent diverses sous-catégories du domaine des algorithmes, notamment l'***<u>optimisation/algorithmes combinatoires</u>***, les ***<u>algorithmes de graphes</u>***, l'***<u>exploration de graphes</u>***, l'***<u>analyse de réseaux sociaux</u>***, les ***<u>algorithmes d'approximation et aléatoires</u>*** et les ***<u>algorithmes en ligne</u>***. [En savoir plus](/fr/biographie/)
 
 ---
 
@@ -107,29 +105,28 @@ Parsa est animé par une passion profonde pour la recherche et l'enseignement, a
 
 # Nouvelles récentes sélectionnées !
 
-#### Septembre 2025
->🍁 **Ravi de partager que j'ai été sélectionné comme auxiliaire d'enseignement diplômé pour six cours durant la session d'automne 2025 !**
->
->C'est un honneur de continuer à contribuer à l'apprentissage des étudiants dans plusieurs domaines de l'informatique et du génie logiciel à l'Université Concordia.
->🎓 **Cours :**
->- **COMP 233** – *Probabilités et statistiques pour l'informatique* — Instructeur de tutoriels
->- **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire
->- **COMP 339** – *Combinatoire* — Instructeur de tutoriels
->- **COMP 472** – *Intelligence artificielle* — Démonstrateur de laboratoire
->- **SOEN 363** – *Systèmes de données pour ingénieurs logiciels* — Instructeur de tutoriels
->- **COEN 311** – *Organisation informatique et logiciel* — Démonstrateur de laboratoire
 
+#### Janvier 2026
+> J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
 
-#### Juillet 2025
-> 🎉 Ravi de partager que j'ai été sélectionné comme **auxiliaire d'enseignement diplômé** pour un cours dans cette **deuxième moitié de l'été 2025 !**
+> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement (Graduate Teaching Assistant) pour quatre cours durant la session d’hiver 2026 !**
 >
-> - **COMP 233 [Probabilités et statistiques pour l'informatique]** – *Instructeur de tutoriels*
+> C’est un honneur de continuer à contribuer à la formation des étudiantes et étudiants dans plusieurs domaines de l’informatique et du génie logiciel à l’Université Concordia.
+>
+> 🎓 **Cours :**
+> - **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire  
+> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels et correcteur  
+> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire  
+> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire  
 
-#### Mai 2025
-> 🎉 Ravi de partager que j'ai été sélectionné comme **auxiliaire d'enseignement diplômé** pour deux cours dans cette **première moitié de l'été 2025 !**
+#### Décembre 2025
+> J’ai le plaisir d’annoncer que j’ai reçu la **Concordia Conference and Exposition Allowance** de l’**Université Concordia** en **2025**, en reconnaissance de mes activités universitaires liées aux conférences.
+
+#### Novembre 2025
+> J’ai le plaisir d’annoncer que mon article **« From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks »** a été **accepté** pour publication et **présentation** à la  
+> **12e Conférence internationale sur l’analyse, la gestion et la sécurité des réseaux sociaux (SNAMS 2025)**.
 >
-> - **COMP 335 [Introduction à l'informatique théorique]** – *Correcteur*
-> - **COMP 348 [Principes des langages de programmation]** – *Instructeur de tutoriels et correcteur*
+> L’article sera présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
 
 #### Octobre 2024
 > 🎉 Ravi de partager que **j'ai reçu la <u>bourse d'études supérieures DRW en informatique</u>**, décernée par l'Université Concordia et DRW, une entreprise basée à Montréal ! 🚀

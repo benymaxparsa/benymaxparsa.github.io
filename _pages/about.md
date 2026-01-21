@@ -69,7 +69,7 @@ He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Sc
 
 Parsa is currently pursuing a **(Thesis-based) Master of Computer Science** degree from [Concordia University](https://www.concordia.ca) in the Department of [Computer Science and Software Engineering (CSSE)](https://www.concordia.ca/ginacody/computer-science-software-eng.html), at [Gina Cody School of Engineering and Computer Science](https://www.concordia.ca/ginacody.html). He is conducting research at the ***Algorithms & Complexity Lab*** under the supervision of [Professor Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/). Parsa’s true expertise is Theoretical Computer Science with some additional touch of Applied Mathematics, Software Engineering, and Data Mining.
 
-Parsa has a keen interest in areas such as ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, ***<u>Discrete Mathematics</u>***, ***<u>Data Structures</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization/Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, ***<u>Approximation & Randomized Algorithms</u>***, and ***<u>Online Algorithms</u>***.
+Parsa has a keen interest in areas such as ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, ***<u>Discrete Mathematics</u>***, ***<u>Data Structures</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization/Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, ***<u>Approximation & Randomized Algorithms</u>***, and ***<u>Online Algorithms</u>***. [Read more](/biography/) 
 
 <!-- On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***.  -->
 
@@ -85,7 +85,7 @@ These diverse experiences underscore Parsa's unwavering dedication to both resea
 
 <!-- Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education. -->
 
-Parsa is driven by a deep passion for both research and teaching, aspiring to make meaningful contributions to his field while inspiring the next generation of scholars. His ultimate goal is to become a distinguished professor, where he can advance the frontiers of knowledge through research while fostering a dynamic and engaging learning environment for students. [Read more](/biography/) 
+<!-- Parsa is driven by a deep passion for both research and teaching, aspiring to make meaningful contributions to his field while inspiring the next generation of scholars. His ultimate goal is to become a distinguished professor, where he can advance the frontiers of knowledge through research while fostering a dynamic and engaging learning environment for students.  -->
 
 <!-- <button class="cta-button">Call to Action</button> -->
 
@@ -158,7 +158,28 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 
 # Selected Recent NEWS!
 
-#### September 2025
+#### January 2026
+> I am pleased to share that my paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** has been **accepted** for publication in the journal **Computers**, Special Issue: **Recent Advances in Social Networks and Social Media**.
+
+>🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for four courses this Winter 2026 semester!**
+>
+>It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
+>🎓 **Courses:**
+>- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator  
+>- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor and Marker
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
+>- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator  
+
+#### December 2025
+> I am pleased to share that I was awarded the **Concordia Conference and Exposition Allowance** by **Concordia University** in **2025**, in recognition of conference-related scholarly activities.
+
+#### November 2025
+> I am pleased to share that my paper **“From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks”** has been **accepted** for publication and **presentation** at the  
+> **12th International Conference on Social Networks Analysis, Management and Security (SNAMS 2025)**.
+>
+> The paper will be presented in **Vienna, Austria**, during **November 25–28, 2025**.
+
+<!-- #### September 2025
 >🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for six courses this Fall 2025 semester!**
 >
 >It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
@@ -168,9 +189,9 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 >- **COMP 339** – *Combinatorics* — Tutorial Instructor  
 >- **COMP 472** – *Artificial Intelligence* — Lab Demonstrator  
 >- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor  
->- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator   -->
 
-
+<!-- 
 #### July 2025
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for one course in this **Second Half of Summer 2025!**  
 >  
@@ -180,7 +201,7 @@ Parsa is driven by a deep passion for both research and teaching, aspiring to ma
 > 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for two courses in this **First Half of Summer 2025!**  
 >  
 > - **COMP 335 [Introduction to Theoretical Computer Science]** – *Marker*  
-> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor and Marker*  
+> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor and Marker*   -->
 
 <!-- #### December 2024
 > Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team! 🌟 -->
