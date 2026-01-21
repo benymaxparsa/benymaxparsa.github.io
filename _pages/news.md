@@ -7,6 +7,27 @@ author_profile: true
 
 <!-- # NEWS -->
 
+#### January 2026
+> I am pleased to share that my paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** has been **accepted** for publication in the journal **Computers**, Special Issue: **Recent Advances in Social Networks and Social Media**.
+
+>🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for four courses this Winter 2026 semester!**
+>
+>It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
+>🎓 **Courses:**
+>- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator  
+>- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor and Marker
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
+>- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator  
+
+#### December 2025
+> I am pleased to share that I was awarded the **Concordia Conference and Exposition Allowance** by **Concordia University** in **2025**, in recognition of conference-related scholarly activities.
+
+#### November 2025
+> I am pleased to share that my paper **“From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks”** has been **accepted** for publication and **presentation** at the  
+> **12th International Conference on Social Networks Analysis, Management and Security (SNAMS 2025)**.
+>
+> The paper will be presented in **Vienna, Austria**, during **November 25–28, 2025**.
+
 #### September 2025
 >🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for six courses this Fall 2025 semester!**
 >

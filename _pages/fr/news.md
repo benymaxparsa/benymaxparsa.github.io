@@ -6,6 +6,28 @@ excerpt: "Nouvelles"
 author_profile: true
 ---
 
+#### Janvier 2026
+> J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
+
+> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement (Graduate Teaching Assistant) pour quatre cours durant la session d’hiver 2026 !**
+>
+> C’est un honneur de continuer à contribuer à la formation des étudiantes et étudiants dans plusieurs domaines de l’informatique et du génie logiciel à l’Université Concordia.
+>
+> 🎓 **Cours :**
+> - **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire  
+> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels et correcteur  
+> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire  
+> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire  
+
+#### Décembre 2025
+> J’ai le plaisir d’annoncer que j’ai reçu la **Concordia Conference and Exposition Allowance** de l’**Université Concordia** en **2025**, en reconnaissance de mes activités universitaires liées aux conférences.
+
+#### Novembre 2025
+> J’ai le plaisir d’annoncer que mon article **« From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks »** a été **accepté** pour publication et **présentation** à la  
+> **12e Conférence internationale sur l’analyse, la gestion et la sécurité des réseaux sociaux (SNAMS 2025)**.
+>
+> L’article sera présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
+
 #### Septembre 2025
 >🍁 **Ravi de partager que j'ai été sélectionné comme auxiliaire d'enseignement diplômé pour six cours durant la session d'automne 2025 !**
 >
