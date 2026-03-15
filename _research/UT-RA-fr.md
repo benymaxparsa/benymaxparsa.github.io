@@ -15,9 +15,8 @@ lang: fr-CA
 - Date : Août 2023 -- Mars 2024
 - Superviseur : Dr Iman Hemati Moghadam
 - Mon rôle clé consistait à :
-    - Écrire du code Java, des tests unitaires, déboguer, réusiner, entretenir et corriger les bogues des outils « KotlinCode2Text » et « RefDetect »
-    - Implémenter l'analyseur « KotlinCode2Text » pour l'outil « RefDetect »
-    - Créer deux ensembles de données de réusinage
-    - Exécuter de nombreuses étapes de tests et fournir de nouvelles idées pour améliorer nos résultats de recherche
-    - Ingénierie d'invite et utilisation de LLM pour notre deuxième article
-- Nous avons publié un article dans la [conférence SANER 2024[1]](/publication/p3), et nous avons soumis notre 2e article dans [??? [2]](/publication/p4).
+    - Implémenter l’analyseur KotlinCode2Text et l’intégrer au cadre RefDetect pour la détection automatisée des refactorisations.
+    - Construire deux jeux de données de refactorisation utilisés pour l’évaluation empirique dans l’étude SANER 2024.
+    - Améliorer la fiabilité de l’analyse et le temps d’exécution grâce à un débogage ciblé et à des raffinements algorithmiques.
+    - Étudier l’ingénierie de requêtes (prompt engineering) basée sur les LLM pour la traduction de code interlangage dans l’extraction de refactorisations.
+- Nous avons publié un article dans la [conférence IEEE SANER 2024[1]](/fr/publications/p3), et nous avons soumis notre 2e article dans [??? [2]](/fr/publications/p4).

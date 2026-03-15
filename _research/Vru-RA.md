@@ -13,8 +13,9 @@ location: "Rafsanjān, Kerman, Iran"
 - Department: "Computer Engineering” department of "Vali-e-Asr University of Rafsanjan".
 - Date: Aug 2021 -- March 2024
 - My key role consisted of:
-    - Reading and reviewing related papers (Investigation)
-    - Implementing ideas in MATLAB and Python (Data curation, Software, Programming)
-    - Testing and improving the written code (Validation)
-    - Gathering information and writing the initial text for the paper (Writing primary draft preparation)
-- We have published one paper in the [JNCA journal[1]](/publication/p1), and we will submit our 2nd paper in [??? [2]](/publication/p2).
+    - Conducted a comprehensive review of prior work in graph-based community detection.
+    - Designed and implemented CRLG, a randomized community detection framework leveraging both local and global network information.
+    - Developed weighted probabilistic seeding and similarity-driven community assignment with heuristic community merging.
+    - Implemented and evaluated the framework in MATLAB and Python, including validation, testing, and performance tuning.
+    - Evaluated on real-world networks and GN/LFR benchmarks, achieving up to 10% improvement over LCDR, MOACO, Node2Vec-SC, NE-N2V, CDASS, and TS using NMI, modularity, and density metrics.
+- We have published one paper in the [JNCA journal[1]](/publication/p1).

@@ -12,12 +12,9 @@ location: "Montreal, Québec, Canada"
 - Working in the Algorithms & Complexity Lab
 - Under the supervision of Professor Hovhannes Harutyunyan
 - Date: Aug 2024 -- Now
-
-<!-- - My key role consisted of:
-    - Writing Java codes, unit tests, debugging, refactoring, maintenance, and bug fixing the "KotlinCode2Text" parser + "RefDetect" tools
-    - Implementing the "KotlinCode2Text" parser for the "RefDetect" tool
-    - Creating two refactoring datasets
-    - Running Numerous testing stages and providing new ideas to improve our research results
-    - Prompt engineering and utilizing LLMs for our second paper -->
-<!-- - At the moment, We're working on two papers to get them ready for the conference. -->
-<!-- - We have published one paper in the [SANER 2024 Conference[1]](/publication/p3), and we have submitted our 2nd paper in the [ICSME 2024 Conference[2]](/publication/p4) which is currently under review. -->
+- My key role consisted of:
+    - Designed Spider, a graph community detection algorithm combining geodesic expansion, modularity-guided refinement, and greedy merge matching.
+    - Benchmarked Spider on 14 real-world networks (up to 8,035 nodes / 183,663 edges) against Leiden, Louvain, and Infomap, achieving 8–15% improvements in NMI, modularity, and F1-score.
+    - Applied metric backbone sparsification, achieving an average 65% edge reduction, and introduced Weighted Average Geodesic Distance Modularity (wGDM) to normalize and balance GDM for local community quality evaluation.
+    - Built a fully reproducible experimental pipeline with fixed random seeds, baseline implementations, and automated evaluation scripts.
+- We have published two papers so far: the [IEEE SNAMS 2025 Conference[1]](/publication/p5) and the [Computers Journal[2]](/publication/p6)
