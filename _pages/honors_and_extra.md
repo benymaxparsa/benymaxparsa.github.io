@@ -7,6 +7,7 @@ author_profile: true
 
 ---
 ## Honors and Awards
+1. **Awarded Concordia Conference and Exposition Allowance** - ***Issued by Concordia University***
 1. **Awarded the DRW Graduate Scholarship in Computer Science** - ***Issued by Concordia University & DRW Company***
 1. **Awarded Concordia Merit Scholarship (Entrance Scholarship Award)** - ***Issued by Concordia University, School of Graduate Studies***
 1. **Awarded Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** - ***Issued by Concordia University, Gina Cody School of Engineering and Computer Science***
@@ -26,86 +27,70 @@ author_profile: true
 ## Test Scores
 **TOEFL**: 99/120 - Reading: 26/30, Listening: 29/30, Speaking: 23/30, Writing: 21/30
 
-**GRE general**: Not taken yet.
+<!-- **GRE general**: Not taken yet. -->
 
 
 ---
 
-## Skills
-- #### Programming Languages:
-  <img alt="Python" src="https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/>
-  <img alt="C++" src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-  <img alt="Matlab" src="https://img.shields.io/badge/Matlab®-%23E34F26.svg?style=for-the-badge&logo=matlab&logoColor=white"/>
-  <img alt="C#" src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"/>
-  <img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"/>
-  <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
+## 🛠️ Skills & Tools
 
-- #### Game Development:
-  <img alt="Unity" src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white"/>
+**Programming Languages**
 
-- #### Application Development & Frameworks & Libraries:
-  <img alt="Qt" src="https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white"/>
-  <img alt="NumPy" src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img alt="Pandas" src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img alt="Matplotlib" src="https://img.shields.io/badge/matplotlib-%23316192.svg?style=for-the-badge&logo=matplotlib&logoColor=white"/>
-  <img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-  <img alt="NetworkX" src="https://img.shields.io/badge/NetworkX-%23316192.svg?style=for-the-badge&logo=NetworkX&logoColor=white"/>
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white"/>
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
+![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![x86 Assembly](https://img.shields.io/badge/Assembly%20x86-6E4C13?style=flat-square)
+![ARM Assembly](https://img.shields.io/badge/Assembly%20ARM-0091BD?style=flat-square)
+![VHDL](https://img.shields.io/badge/VHDL-6A0DAD?style=flat-square)
+![Unity](https://img.shields.io/badge/Unity%20Engine-000000?style=flat-square&logo=unity&logoColor=white)
 
-- #### Databases:
-  <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
+**ML & Data Science**
 
-- #### Markup languages:
-  <img alt="LaTeX" src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white"/>
-  <img alt="Markdown" src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white"/>
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square)
+![NetworkX](https://img.shields.io/badge/NetworkX-3A7EBB?style=flat-square)
+![iGraph](https://img.shields.io/badge/iGraph-E8652A?style=flat-square)
 
-- #### Tools:
-  <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>
-  <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-  <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-%23F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white" />
-  <img alt="Obsidian" src="https://img.shields.io/badge/obsidian-%23150458.svg?style=for-the-badge&logo=obsidian&logoColor=white" />
-  <img alt="Microsoft Office" src="https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white" />
-    <img alt="Google Sheets" src="https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white" />
-    <img alt="Notion" src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
-    <img alt="Trello" src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white" />
-    <img alt="Canva" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" />
-    <img alt="Anaconda" src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white" />
 
-- #### Partially familiar with (Elementary level):
-  <img alt="VHDL" src="https://img.shields.io/badge/VHDL-%23121011.svg?style=for-the-badge&logo=vhdl&logoColor=white"/>
-  <img alt="Assembly 8086" src="https://img.shields.io/badge/Assembly 8086-%23121011.svg?style=for-the-badge&logo=Assembly8086&logoColor=white"/>
-  <img alt="Django" src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
-  <img alt="C# WPF" src="https://img.shields.io/badge/WPF-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"/>
-  <img alt="Blender" src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white"/>
-  <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
+**Tools & Databases**
 
-- #### Software Engineering:
-  <img alt="Refactoring" src="https://img.shields.io/badge/Refactoring-%23121011.svg?style=for-the-badge&logo=Refactoring&logoColor=white"/>
-  <img alt="Debugging" src="https://img.shields.io/badge/Debugging-%23121011.svg?style=for-the-badge&logo=Debugging&logoColor=white"/>
-  <img alt="Unit Testing" src="https://img.shields.io/badge/Unit Testing-%23121011.svg?style=for-the-badge&logo=UnitTesting&logoColor=white"/>
-  <img alt="Agile mythology" src="https://img.shields.io/badge/Agile mythology-%23121011.svg?style=for-the-badge&logo=Agilemythology&logoColor=white"/>
-  <img alt="Object Oriented Programming" src="https://img.shields.io/badge/Object Oriented Programming-%23121011.svg?style=for-the-badge&logo=OOP&logoColor=white"/>
-  <img alt="Design of Algorithms" src="https://img.shields.io/badge/Design of Algorithms-%23121011.svg?style=for-the-badge&logo=DesignofAlgorithms&logoColor=white"/>
-  <img alt="Data Structures" src="https://img.shields.io/badge/Data Structures-%23121011.svg?style=for-the-badge&logo=DataStructures&logoColor=white"/>
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white)
+![Obsidian](https://img.shields.io/badge/Obsidian-7C3AED?style=flat-square&logo=obsidian&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white)
 
-- #### Soft Skills:
-    Team Work, leadership, Collaboration, Communication, Problem-solving, Critical thinking, Decision-making
+**Soft Skills**
 
-- #### Technical Skills:
-    Algorithm Design, Algorithm Analysis, Research, Teaching, Data Mining, Deep Learning, Algorithmic Graph Theory, Community Detection
+Problem-solving, Critical thinking, Research collaboration, technical presentation, clear written documentation, code review
+
 
 ---
 
 ## Languages
 **Persian**: Native language
 
-**English**: Advanced (Proficient)
+**English**: Proficient (C1)
 
-**French**: Beginner
+**French**: Pre-intermediate (A2)
 
----
+<!-- ---
 
 ## Hubbies & Non-Academic Interests
 - Music:
@@ -146,4 +131,4 @@ author_profile: true
 - Video games:
   - Making games
   - Playing video games, eg. Max Payne, Stronghold, sony exclusives, AC 2 trilogy & 3, GTA, etc.
-
+ -->
