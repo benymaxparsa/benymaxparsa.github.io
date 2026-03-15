@@ -14,9 +14,10 @@ gallery:
     title: "capture d'écran"
 ---
 {% include gallery caption="capture d'écran" %}
-- Conférence : La Conférence internationale IEEE sur l'analyse, l'évolution et la réingénierie de logiciels (SANER)
-- DOI : http://dx.doi.org/10.1109/SANER60148.2024.00034
-- Site Web de l'ensemble de données : https://sites.google.com/view/refdetectkotlin/home
+- Conférence : La 2024 Conférence internationale IEEE sur l'analyse, l'évolution et la réingénierie de logiciels (SANER)
+- DOI : [http://dx.doi.org/10.1109/SANER60148.2024.00034](http://dx.doi.org/10.1109/SANER60148.2024.00034)
+- Site Web de l'ensemble de données : [https://doi.org/10.5281/zenodo.10465265](https://doi.org/10.5281/zenodo.10465265)
+- PDF de l’article: [https://grammarware.net/text/2024/kotlinrefdetect.pdf](https://grammarware.net/text/2024/kotlinrefdetect.pdf)
 
 ## Résumé :
 

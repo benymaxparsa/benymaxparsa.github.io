@@ -15,8 +15,8 @@ gallery:
 ---
 {% include gallery caption="capture d'écran" %}
 - Revue : Journal of Network and Computer Applications (JNCA)
-- Facteur d'impact (2021) : 7.574 - Q1
-- CiteScore (2021) : 15.7
+- Facteur d'impact (2026) : 8.0 - Q1
+- CiteScore (2026) : 20.3
 - Classement en informatique, génie logiciel (2021) : 8/110
 - DOI : https://doi.org/10.1016/j.jnca.2022.103492
 
