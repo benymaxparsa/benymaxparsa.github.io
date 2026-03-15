@@ -91,7 +91,7 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conceptio
 
 <a class="cta-button" href="/fr/biographie/" aria-label="Lire la biographie complète">Biographie</a>
 
-<a class="cta-button" href="/fr/galerie/" aria-label="Voir les images et la galerie">Images et galerie</a>
+<!-- <a class="cta-button" href="/fr/galerie/" aria-label="Voir les images et la galerie">Images et galerie</a> -->
 
 <a class="cta-button" href="/fr/nouvelles/" aria-label="Lire les dernières nouvelles">Nouvelles</a>
 

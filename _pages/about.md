@@ -119,7 +119,7 @@ These diverse experiences underscore Parsa's unwavering dedication to both resea
 
 <a class="cta-button" href="/biography/" aria-label="Read full biography">Biography</a>
 
-<a class="cta-button" href="/gallery/" aria-label="View images and gallery">Images and Gallery</a>
+<!-- <a class="cta-button" href="/gallery/" aria-label="View images and gallery">Images and Gallery</a> -->
 
 <a class="cta-button" href="/news/" aria-label="Read latest news">News</a>
 

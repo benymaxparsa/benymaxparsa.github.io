@@ -46,8 +46,8 @@ main:
     url: /extracurricular/
 
 
-  - title: "Gallery & Images"
-    url: /gallery/
+  # - title: "Gallery & Images"
+  #   url: /gallery/
 
   - title: "Industry Experiences"
     url: /industry/
@@ -90,8 +90,8 @@ main_fr:
   - title: "Activités parascolaires"
     url: /fr/activites/
 
-  - title: "Galerie d'images"
-    url: /fr/galerie/
+  # - title: "Galerie d'images"
+  #   url: /fr/galerie/
 
   - title: "Expériences professionnelles"
     url: /fr/experiences/

@@ -37,15 +37,14 @@ author_profile: true
     text-align: center;
   }
 </style>
-
+<!-- 
 # Galerie et images
 
-Cette section contient des photos et images diverses de mon parcours académique et professionnel.
 
 <div class="gallery-grid">
   <!-- Ajoutez vos images ici -->
-</div>
+<!-- </div> --> 
 
 ---
 
-*Pour voir plus de photos et d'images, veuillez consulter la [version anglaise](/gallery/).*
+Malheureusement, la gestion de la section galerie demande plus de temps que je ne peux y consacrer; j’ai donc décidé de la retirer.
