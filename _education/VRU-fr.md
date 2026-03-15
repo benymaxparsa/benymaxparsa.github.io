@@ -19,12 +19,10 @@ gallery:
 ---
 * Majeure : Baccalauréat ès sciences - B.Sc. Génie informatique
 * Voie principale : Génie logiciel
-* Focus principal : Traitement des données
 * Date : Sep 2018 – Juin 2023
-* Moyenne des semestres 5, 6, 7, 8 : 17.37/20 (3.71/4.00)
-* Moyenne cumulative : 16.26/20 avec 140+2 crédits réussis
+* Moyenne cumulative : 16,26 / 20
+* Moyenne cumulative (cours de spécialisation) : 17,80 / 20
 * Mémoire de baccalauréat : Détection de communautés dans un réseau complexe basée sur un algorithme aléatoire amélioré utilisant des informations de réseau locales et globales
 * Note du mémoire de baccalauréat : 20/20 (4.0/4.0)
-* Au 8e semestre, classé 6e parmi tous les étudiants en génie informatique de l'Université Vali-e-Asr ayant commencé leurs études en 2018.
-* Participation à plusieurs concours de programmation à l'Université Vali-e-Asr
+* Classement : 6e parmi les étudiants en génie informatique (cohorte de 8e session, année d’admission 2018)
 {% include gallery caption="Photos du jour de remise des diplômes de baccalauréat" %}

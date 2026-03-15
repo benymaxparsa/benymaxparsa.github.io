@@ -18,15 +18,12 @@ gallery:
 ---
 * Major: Bachelor of Science - B.Sc. Computer Engineering
 * Major Track: Software Engineering
-* Major Focus: Data Processing
-<!-- * Location: Rafsanjan, Iran -->
 * Date: Sep 2018 – Jun 2023
-* GPA of 5th, 6th, 7th, 8th semesters: 17.37/20 (3.71/4.00)
-* CGPA: 16.26/20 with 140+2 credits passed
+* CGPA: 16.26/20
+* GPA (specialized courses): 17.80 / 20
 * Bachelor’s Thesis: Community detection in complex network based on an improved random algorithm using local and global network information
 * Bachelor’s Thesis grade: 20/20 (4.0/4.0)
-* in the 8th semester, ranked 6th among all computer engineering students of Vali-e-Asr university that started their studies in 2018.
-* Participated in multiple programming contests at Vali-e-Asr university
+* Ranking: 6th among Computer Engineering students (8th semester cohort, entry year 2018)
 {% include gallery caption="Bachelor Graduation Day pictures" %}
 
 
