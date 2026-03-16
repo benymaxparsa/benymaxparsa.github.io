@@ -5,27 +5,387 @@ permalink: /teaching/
 author_profile: true
 ---
 
-
 {% include base_path %}
 
-{% assign english_teaching = site.teaching | where_exp: "item", "item.lang != 'fr-CA'" %}
-{% assign grouped_teaching = english_teaching | group_by: "venue" %}
-
 <div class="teaching-experiences">
-  {% for venue in grouped_teaching reversed %}
-    <div class="venue-group">
-      <h2>{{ venue.name }}</h2>
-      
-      <ul>
-        {% for post in venue.items reversed %}
-          <li>
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title }}
-            </a> <br>
-            <small>{{ post.date | date: "%B %Y" }} - {{ post.type }}</small>
-          </li>
-        {% endfor %}
+
+  <div class="teaching-role">
+    <div class="teaching-role-header">
+      <div class="teaching-role-dot"></div>
+      <div class="teaching-role-heading">
+        <p class="teaching-institution">Concordia University</p>
+        <h2>Graduate Teaching Assistant</h2>
+
+        <div class="teaching-meta-row">
+          <span class="teaching-badge">Contract Part-time</span>
+          <span class="teaching-meta-sep">•</span>
+          <span class="teaching-date">Sep 2024 – Present</span>
+          <span class="teaching-meta-sep">•</span>
+          <span class="teaching-duration">1 yr 7 mos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="teaching-role-body">
+      <p class="teaching-summary">
+        <strong>1100+ hours of experience</strong> across tutorial instruction, tutorial leadership,
+        laboratory demonstration, marking, and Programmer on Duty (POD) support.
+      </p>
+
+      <div class="teaching-section">
+        <h3>Courses Assisted</h3>
+
+        <div class="teaching-subsection">
+          <h4>Tutorial Instruction</h4>
+          <ul>
+            <li><strong>SOEN 363</strong> – Data Systems for Software Engineers <span>(Winter 2025, Fall 2025, Winter 2026)</span></li>
+            <li><strong>COMP 465</strong> – Design and Analysis of Algorithms <span>(Winter 2025)</span></li>
+            <li><strong>COMP 348</strong> – Principles of Programming Languages <span>(Winter 2025, Summer 2025)</span></li>
+            <li><strong>COMP 339</strong> – Combinatorics <span>(Fall 2024, Fall 2025)</span></li>
+            <li><strong>COMP 233</strong> – Probability and Statistics for Computer Science <span>(Summer 2025, Fall 2025)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Laboratory Demonstration</h4>
+          <ul>
+            <li><strong>COMP 248</strong> – Object-Oriented Programming I <span>(Fall 2025, Winter 2026)</span></li>
+            <li><strong>COMP 472</strong> – Artificial Intelligence <span>(Fall 2025)</span></li>
+            <li><strong>COEN 311</strong> – Computer Organization and Software <span>(Fall 2025, Winter 2026)</span></li>
+            <li><strong>COEN 317</strong> – Microprocessor-Based Systems <span>(Winter 2026)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Marking</h4>
+          <ul>
+            <li><strong>COMP 335</strong> – Introduction to Theoretical Computer Science <span>(Fall 2024, Summer 2025)</span></li>
+            <li><strong>COMP 348</strong> – Principles of Programming Languages <span>(Winter 2025, Summer 2025)</span></li>
+            <li><strong>SOEN 363</strong> – Data Systems for Software Engineers <span>(Winter 2025, Winter 2026)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Programmer on Duty (POD)</h4>
+          <ul>
+            <li><strong>COMP 348</strong> – Principles of Programming Languages <span>(Winter 2025)</span></li>
+            <li><strong>SOEN 363</strong> – Data Systems for Software Engineers <span>(Winter 2025)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="teaching-section">
+        <h3>Key Responsibilities</h3>
+        <ul class="responsibility-list">
+          <li>Delivered weekly tutorials and laboratory sessions for undergraduate CS, SE, and CE courses.</li>
+          <li>Designed and explained problem-solving strategies in algorithms, combinatorics, databases, AI, computer architectures, and programming languages.</li>
+          <li>Evaluated assignments, quizzes, and exams and provided structured written feedback.</li>
+          <li>Supported students through office hours and Programmer on Duty (POD) sessions.</li>
+          <li>Assisted instructors with course logistics, student guidance, and academic mentoring.</li>
+          <li>Prepared and maintained LaTeX-based instructional and assessment materials.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role">
+  <div class="teaching-role-header">
+    <div class="teaching-role-dot"></div>
+    <div class="teaching-role-heading">
+      <p class="teaching-institution">Vali-e-Asr University of Rafsanjan</p>
+      <h2>Undergraduate Teaching Assistant</h2>
+
+      <div class="teaching-meta-row">
+        <span class="teaching-badge">Contract Part-time</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-date">Feb 2021 – Jan 2024</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-duration">3 yrs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role-body">
+
+    <p class="teaching-summary">
+      Teaching and leadership experience across Head TA, Co-Head TA, Teaching Assistant, and Grader roles.
+    </p>
+
+    <div class="teaching-section">
+      <h3>Courses Assisted</h3>
+
+      <div class="teaching-subsection">
+        <h4>Tutorial / Recitation Instruction</h4>
+        <ul>
+          <li><strong>Data Structures</strong> <span>(Spring 2021, Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023)</span></li>
+          <li><strong>Design and Analysis of Algorithms</strong> <span>(Spring 2021, Fall 2021, Spring 2022, Fall 2022, Spring 2023)</span></li>
+          <li><strong>Discrete Mathematics</strong> <span>(Fall 2021, Spring 2022)</span></li>
+          <li><strong>Introduction to Information Retrieval & Web Search</strong> <span>(Spring 2022, Spring 2023)</span></li>
+          <li><strong>Artificial Intelligence</strong> <span>(Fall 2022)</span></li>
+          <li><strong>Fundamentals of Programming (C++)</strong> <span>(Fall 2022)</span></li>
+          <li><strong>Database Systems</strong> <span>(Fall 2022)</span></li>
+          <li><strong>Introduction to Data Mining</strong> <span>(Spring 2023)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Laboratory Demonstration</h4>
+        <ul>
+          <li><strong>Fundamentals of Programming (C++)</strong> <span>(Fall 2022)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Marking</h4>
+        <ul>
+          <li><strong>Data Structures</strong> <span>(6 semesters)</span></li>
+          <li><strong>Design and Analysis of Algorithms</strong> <span>(5 semesters)</span></li>
+          <li><strong>Operating Systems</strong> <span>(Spring 2022)</span></li>
+          <li><strong>Discrete Mathematics</strong> <span>(Fall 2021, Spring 2022)</span></li>
+          <li><strong>Introduction to Information Retrieval & Web Search</strong> <span>(Spring 2022, Spring 2023)</span></li>
+          <li><strong>Database Systems</strong> <span>(Fall 2022)</span></li>
+          <li><strong>Artificial Intelligence</strong> <span>(Fall 2022)</span></li>
+          <li><strong>Introduction to Data Mining</strong> <span>(Spring 2023)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Head / Co-Head TA Leadership</h4>
+        <ul>
+          <li><strong>Data Structures</strong> — Head / Co-Head TA <span>(6 semesters, teams up to 11 TAs)</span></li>
+          <li><strong>Design and Analysis of Algorithms</strong> — Head / Co-Head TA <span>(5 semesters, teams up to 10 TAs)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teaching-section">
+      <h3>Key Responsibilities</h3>
+      <ul class="responsibility-list">
+        <li>Delivered weekly tutorials, recitations, and labs for undergraduate Computer Engineering courses.</li>
+        <li>Designed assignments, projects, quizzes, and midterm exams, including rubrics and solution sets.</li>
+        <li>Graded coursework and exams, providing structured written feedback.</li>
+        <li>Led and coordinated TA teams across multiple semesters, including scheduling and task delegation.</li>
+        <li>Collaborated with instructors on syllabus planning, assessments, and course logistics.</li>
+        <li>Supported students through office hours and academic mentoring.</li>
+        <li>Prepared and maintained LaTeX-based instructional and assessment materials.</li>
       </ul>
     </div>
-  {% endfor %}
+
+  </div>
 </div>
+
+  <div class="teaching-role">
+  <div class="teaching-role-header">
+    <div class="teaching-role-dot"></div>
+    <div class="teaching-role-heading">
+      <p class="teaching-institution">
+        Vali-e-Asr University – Scientific Association of Computer Engineering
+      </p>
+      <h2>Instructor – Summer Coding Bootcamp</h2>
+
+      <div class="teaching-meta-row">
+        <span class="teaching-badge">Part-time</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-date">Jul 2022 – Sep 2022</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-duration">3 mos</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role-body">
+    <ul class="responsibility-list">
+      <li>Served as an instructor for a university-organized Summer Coding Bootcamp focused on practical software development skills.</li>
+      <li>Delivered instructional sessions on Python, core Python libraries, Git, and GitHub.</li>
+      <li>Supported participants through hands-on exercises, version-control workflows, and applied programming tasks.</li>
+      <li>Collaborated with the organizing team to deliver a structured, multi-week online program.</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<style>
+
+/* TIMELINE CONTAINER */
+.teaching-experiences {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+
+/* SINGLE VERTICAL LINE */
+.teaching-experiences::before {
+  content: "";
+  position: absolute;
+  left: 1.4rem;        /* ← master alignment value */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.14);
+}
+/* EACH ROLE */
+.teaching-role {
+  position: relative;
+  margin: 0 0 3rem 0;
+}
+
+.teaching-role-header {
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+/* DOT */
+
+.teaching-role-dot {
+  position: absolute;
+  left: calc(-3rem + 1.4rem + 1px - 5px);
+  top: 0.58rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7dd3fc;
+}
+
+.teaching-role-heading h2 {
+  margin: 0.12rem 0 0.35rem 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.teaching-institution {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7f8ea3;
+}
+
+.teaching-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+  font-size: 0.98rem;
+  color: #94a3b8;
+}
+
+.teaching-badge {
+  display: inline-block;
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.16);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.teaching-meta-sep {
+  color: #64748b;
+}
+
+.teaching-role-body {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 1.35rem 1.5rem 1.2rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(6px);
+}
+
+.teaching-summary {
+  margin: 0 0 1.3rem 0;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #dbe4ee;
+}
+
+.teaching-summary strong {
+  color: #ffffff;
+}
+
+.teaching-section {
+  margin-top: 1.5rem;
+}
+
+.teaching-section h3 {
+  margin: 0 0 0.85rem 0;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.teaching-subsection {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+}
+
+.teaching-subsection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.teaching-subsection h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.teaching-role ul {
+  margin: 0.25rem 0 0.25rem 1.2rem;
+  padding: 0;
+}
+
+.teaching-role li {
+  margin-bottom: 0.45rem;
+  line-height: 1.65;
+  color: #d6deea;
+}
+
+.teaching-role li strong {
+  color: #ffffff;
+}
+
+.teaching-role li span {
+  color: #94a3b8;
+}
+
+.responsibility-list li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+  .teaching-role-body {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teaching-role {
+    padding-left: 1.2rem;
+  }
+
+  .teaching-role-dot {
+    left: -1.66rem;
+  }
+
+  .teaching-role-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .teaching-role-body {
+    padding: 1rem 1rem 0.95rem 1rem;
+  }
+
+  .teaching-meta-row {
+    font-size: 0.92rem;
+  }
+}
+</style>

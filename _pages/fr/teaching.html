@@ -9,24 +9,385 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign french_teaching = site.teaching | where: "lang", "fr-CA" %}
-{% assign grouped_teaching = french_teaching | group_by: "venue" %}
-
 <div class="teaching-experiences">
-  {% for venue in grouped_teaching reversed %}
-    <div class="venue-group">
-      <h2>{{ venue.name }}</h2>
-      
-      <ul>
-        {% for post in venue.items reversed %}
-          <li>
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title }}
-            </a> <br>
-            <small>{{ post.date | date: "%B %Y" }} - {{ post.type }}</small>
-          </li>
-        {% endfor %}
+
+  <div class="teaching-role">
+    <div class="teaching-role-header">
+      <div class="teaching-role-dot"></div>
+      <div class="teaching-role-heading">
+        <p class="teaching-institution">Université Concordia</p>
+        <h2>Auxiliaire d’enseignement aux cycles supérieurs</h2>
+
+        <div class="teaching-meta-row">
+          <span class="teaching-badge">Contrat à temps partiel</span>
+          <span class="teaching-meta-sep">•</span>
+          <span class="teaching-date">Sep 2024 – Présent</span>
+          <span class="teaching-meta-sep">•</span>
+          <span class="teaching-duration">1 an 7 mois</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="teaching-role-body">
+      <p class="teaching-summary">
+        <strong>Plus de 1100 heures d’expérience</strong> en enseignement de travaux dirigés, coordination de travaux dirigés,
+        démonstrations en laboratoire, correction, et soutien Programmer on Duty (POD).
+      </p>
+
+      <div class="teaching-section">
+        <h3>Cours encadrés</h3>
+
+        <div class="teaching-subsection">
+          <h4>Enseignement de travaux dirigés</h4>
+          <ul>
+            <li><strong>SOEN 363</strong> – Systèmes de données pour les ingénieurs en logiciel <span>(Hiver 2025, Automne 2025, Hiver 2026)</span></li>
+            <li><strong>COMP 465</strong> – Conception et analyse d’algorithmes <span>(Hiver 2025)</span></li>
+            <li><strong>COMP 348</strong> – Principes des langages de programmation <span>(Hiver 2025, Été 2025)</span></li>
+            <li><strong>COMP 339</strong> – Combinatoire <span>(Automne 2024, Automne 2025)</span></li>
+            <li><strong>COMP 233</strong> – Probabilités et statistiques pour l’informatique <span>(Été 2025, Automne 2025)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Démonstration en laboratoire</h4>
+          <ul>
+            <li><strong>COMP 248</strong> – Programmation orientée objet I <span>(Automne 2025, Hiver 2026)</span></li>
+            <li><strong>COMP 472</strong> – Intelligence artificielle <span>(Automne 2025)</span></li>
+            <li><strong>COEN 311</strong> – Organisation des ordinateurs et logiciels <span>(Automne 2025, Hiver 2026)</span></li>
+            <li><strong>COEN 317</strong> – Systèmes à microprocesseur <span>(Hiver 2026)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Correction</h4>
+          <ul>
+            <li><strong>COMP 335</strong> – Introduction à l’informatique théorique <span>(Automne 2024, Été 2025)</span></li>
+            <li><strong>COMP 348</strong> – Principes des langages de programmation <span>(Hiver 2025, Été 2025)</span></li>
+            <li><strong>SOEN 363</strong> – Systèmes de données pour les ingénieurs en logiciel <span>(Hiver 2025, Hiver 2026)</span></li>
+          </ul>
+        </div>
+
+        <div class="teaching-subsection">
+          <h4>Programmer on Duty (POD)</h4>
+          <ul>
+            <li><strong>COMP 348</strong> – Principes des langages de programmation <span>(Hiver 2025)</span></li>
+            <li><strong>SOEN 363</strong> – Systèmes de données pour les ingénieurs en logiciel <span>(Hiver 2025)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="teaching-section">
+        <h3>Responsabilités principales</h3>
+        <ul class="responsibility-list">
+          <li>Animation hebdomadaire de travaux dirigés et de séances de laboratoire pour des cours de premier cycle en informatique, génie logiciel et génie informatique.</li>
+          <li>Conception et explication de stratégies de résolution de problèmes en algorithmes, combinatoire, bases de données, intelligence artificielle, architectures des ordinateurs et langages de programmation.</li>
+          <li>Évaluation de travaux, quiz et examens, avec rétroaction écrite structurée.</li>
+          <li>Soutien aux étudiants lors des heures de bureau et des séances Programmer on Duty (POD).</li>
+          <li>Soutien aux enseignants pour la logistique des cours, l’encadrement des étudiants et le mentorat académique.</li>
+          <li>Préparation et maintien de matériel pédagogique et d’évaluation en LaTeX.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role">
+  <div class="teaching-role-header">
+    <div class="teaching-role-dot"></div>
+    <div class="teaching-role-heading">
+      <p class="teaching-institution">Université Vali-e-Asr de Rafsanjan</p>
+      <h2>Auxiliaire d’enseignement au premier cycle</h2>
+
+      <div class="teaching-meta-row">
+        <span class="teaching-badge">Contrat à temps partiel</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-date">Fév 2021 – Jan 2024</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-duration">3 ans</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role-body">
+
+    <p class="teaching-summary">
+      Expérience en enseignement et en leadership à titre de chef auxiliaire, co-chef auxiliaire, auxiliaire d’enseignement et correcteur.
+    </p>
+
+    <div class="teaching-section">
+      <h3>Cours encadrés</h3>
+
+      <div class="teaching-subsection">
+        <h4>Enseignement de travaux dirigés / séances de révision</h4>
+        <ul>
+          <li><strong>Structures de données</strong> <span>(Printemps 2021, Automne 2021, Printemps 2022, Automne 2022, Printemps 2023, Automne 2023)</span></li>
+          <li><strong>Conception et analyse d’algorithmes</strong> <span>(Printemps 2021, Automne 2021, Printemps 2022, Automne 2022, Printemps 2023)</span></li>
+          <li><strong>Mathématiques discrètes</strong> <span>(Automne 2021, Printemps 2022)</span></li>
+          <li><strong>Introduction à la recherche d’information et à la recherche Web</strong> <span>(Printemps 2022, Printemps 2023)</span></li>
+          <li><strong>Intelligence artificielle</strong> <span>(Automne 2022)</span></li>
+          <li><strong>Fondements de la programmation (C++)</strong> <span>(Automne 2022)</span></li>
+          <li><strong>Systèmes de bases de données</strong> <span>(Automne 2022)</span></li>
+          <li><strong>Introduction à l’exploration de données</strong> <span>(Printemps 2023)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Démonstration en laboratoire</h4>
+        <ul>
+          <li><strong>Fondements de la programmation (C++)</strong> <span>(Automne 2022)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Correction</h4>
+        <ul>
+          <li><strong>Structures de données</strong> <span>(6 semestres)</span></li>
+          <li><strong>Conception et analyse d’algorithmes</strong> <span>(5 semestres)</span></li>
+          <li><strong>Systèmes d’exploitation</strong> <span>(Printemps 2022)</span></li>
+          <li><strong>Mathématiques discrètes</strong> <span>(Automne 2021, Printemps 2022)</span></li>
+          <li><strong>Introduction à la recherche d’information et à la recherche Web</strong> <span>(Printemps 2022, Printemps 2023)</span></li>
+          <li><strong>Systèmes de bases de données</strong> <span>(Automne 2022)</span></li>
+          <li><strong>Intelligence artificielle</strong> <span>(Automne 2022)</span></li>
+          <li><strong>Introduction à l’exploration de données</strong> <span>(Printemps 2023)</span></li>
+        </ul>
+      </div>
+
+      <div class="teaching-subsection">
+        <h4>Leadership – Chef / Co-chef auxiliaire</h4>
+        <ul>
+          <li><strong>Structures de données</strong> — Chef / Co-chef auxiliaire <span>(6 semestres, équipes jusqu’à 11 auxiliaires)</span></li>
+          <li><strong>Conception et analyse d’algorithmes</strong> — Chef / Co-chef auxiliaire <span>(5 semestres, équipes jusqu’à 10 auxiliaires)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teaching-section">
+      <h3>Responsabilités principales</h3>
+      <ul class="responsibility-list">
+        <li>Animation hebdomadaire de travaux dirigés, séances de révision et laboratoires pour des cours de premier cycle en génie informatique.</li>
+        <li>Conception de travaux, projets, quiz et examens de mi-session, incluant les grilles de correction et les corrigés.</li>
+        <li>Correction des travaux et examens avec rétroaction écrite structurée.</li>
+        <li>Direction et coordination d’équipes d’auxiliaires sur plusieurs semestres, incluant la planification des horaires et la délégation des tâches.</li>
+        <li>Collaboration avec les enseignants pour la planification du syllabus, les évaluations et la logistique des cours.</li>
+        <li>Soutien aux étudiants lors des heures de bureau et par mentorat académique.</li>
+        <li>Préparation et maintien de matériel pédagogique et d’évaluation en LaTeX.</li>
       </ul>
     </div>
-  {% endfor %}
+
+  </div>
 </div>
+
+  <div class="teaching-role">
+  <div class="teaching-role-header">
+    <div class="teaching-role-dot"></div>
+    <div class="teaching-role-heading">
+      <p class="teaching-institution">
+        Université Vali-e-Asr – Association scientifique de génie informatique
+      </p>
+      <h2>Formateur – Camp d’été de programmation</h2>
+
+      <div class="teaching-meta-row">
+        <span class="teaching-badge">Temps partiel</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-date">Juil 2022 – Sep 2022</span>
+        <span class="teaching-meta-sep">•</span>
+        <span class="teaching-duration">3 mois</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teaching-role-body">
+    <ul class="responsibility-list">
+      <li>Rôle de formateur dans un camp d’été de programmation organisé par l’université, axé sur les compétences pratiques en développement logiciel.</li>
+      <li>Animation de séances d’enseignement sur Python, les bibliothèques principales de Python, Git et GitHub.</li>
+      <li>Accompagnement des participants dans des exercices pratiques, des flux de travail avec contrôle de version et des tâches de programmation appliquée.</li>
+      <li>Collaboration avec l’équipe organisatrice pour offrir un programme en ligne structuré sur plusieurs semaines.</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<style>
+
+/* TIMELINE CONTAINER */
+.teaching-experiences {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+
+/* SINGLE VERTICAL LINE */
+.teaching-experiences::before {
+  content: "";
+  position: absolute;
+  left: 1.4rem;        /* ← master alignment value */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.14);
+}
+/* EACH ROLE */
+.teaching-role {
+  position: relative;
+  margin: 0 0 3rem 0;
+}
+
+.teaching-role-header {
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+/* DOT */
+
+.teaching-role-dot {
+  position: absolute;
+  left: calc(-3rem + 1.4rem + 1px - 5px);
+  top: 0.58rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7dd3fc;
+}
+
+.teaching-role-heading h2 {
+  margin: 0.12rem 0 0.35rem 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.teaching-institution {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7f8ea3;
+}
+
+.teaching-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+  font-size: 0.98rem;
+  color: #94a3b8;
+}
+
+.teaching-badge {
+  display: inline-block;
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.16);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.teaching-meta-sep {
+  color: #64748b;
+}
+
+.teaching-role-body {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 1.35rem 1.5rem 1.2rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(6px);
+}
+
+.teaching-summary {
+  margin: 0 0 1.3rem 0;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #dbe4ee;
+}
+
+.teaching-summary strong {
+  color: #ffffff;
+}
+
+.teaching-section {
+  margin-top: 1.5rem;
+}
+
+.teaching-section h3 {
+  margin: 0 0 0.85rem 0;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.teaching-subsection {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+}
+
+.teaching-subsection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.teaching-subsection h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.teaching-role ul {
+  margin: 0.25rem 0 0.25rem 1.2rem;
+  padding: 0;
+}
+
+.teaching-role li {
+  margin-bottom: 0.45rem;
+  line-height: 1.65;
+  color: #d6deea;
+}
+
+.teaching-role li strong {
+  color: #ffffff;
+}
+
+.teaching-role li span {
+  color: #94a3b8;
+}
+
+.responsibility-list li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+  .teaching-role-body {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teaching-role {
+    padding-left: 1.2rem;
+  }
+
+  .teaching-role-dot {
+    left: -1.66rem;
+  }
+
+  .teaching-role-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .teaching-role-body {
+    padding: 1rem 1rem 0.95rem 1rem;
+  }
+
+  .teaching-meta-row {
+    font-size: 0.92rem;
+  }
+}
+</style>
