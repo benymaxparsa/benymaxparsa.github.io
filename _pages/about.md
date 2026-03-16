@@ -232,6 +232,6 @@ These diverse experiences underscore Parsa's unwavering dedication to both resea
 ---
 
 <p style="text-align: right;">
-  <strong><em>Last update: January 4th, 2026</em></strong>
+  <strong><em>Last update: March 15th, 2026</em></strong>
 </p>
 

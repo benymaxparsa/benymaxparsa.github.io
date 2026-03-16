@@ -143,5 +143,5 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conceptio
 ---
 
 <p style="text-align: right;">
-  <strong><em>Dernière mise à jour : 4 janvier 2026</em></strong>
+  <strong><em>Dernière mise à jour : 15 mars 2026</em></strong>
 </p>
