@@ -8,155 +8,94 @@ redirect_from:
   - /about.html
 ---
 
-<head>
-  <style>
-    .cta-button {
-  padding: 12px 24px;
-  border-radius: 4px; 
-  background-color: #00adb5;
-  /* color: white; */
-  color: #fff;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: 0.2s ease-in-out;
-  flex: 1 1 auto;
-  max-width: 100%;
-  text-align: center;
-  margin: 5px 0;
-  padding: 8px 12px; 
-  margin-right: 10px;
-  margin-bottom: 10px; 
-   text-decoration: none;
-}
+<p class="page__lead">
+Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science</strong> degree at <a href="https://www.concordia.ca">Concordia University</a> in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering (CSSE)</a>, at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He is conducting research at the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>. Parsa’s true expertise is Theoretical Computer Science with an additional touch of Applied Mathematics, Software Engineering, and Data Mining.
+</p>
 
-  .small-font {
-      font-size: smaller;
-    }
+Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms***, ***Graph Theory***, ***Discrete Mathematics***, ***Data Structures***, and ***Complexity Theory***. His research interest spans various subcategories within the algorithms domain, including ***Combinatorial Optimization/Algorithms***, ***Graph Algorithms***, ***Graph Mining***, ***Social Network Analysis***, ***Approximation &amp; Randomized Algorithms***, and ***Online Algorithms***. [Read more about Parsa →](/biography/)
 
-.cta-button:visited {
-  color: #fff;
-}
+<div class="interest-tags" aria-label="Research interests">
+  <span class="interest-tag"><i class="fas fa-project-diagram" aria-hidden="true"></i> Graph Theory</span>
+  <span class="interest-tag"><i class="fas fa-code-branch" aria-hidden="true"></i> Algorithms</span>
+  <span class="interest-tag"><i class="fas fa-infinity" aria-hidden="true"></i> Complexity Theory</span>
+  <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Social Network Analysis</span>
+  <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Combinatorial Optimization</span>
+  <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Data Mining</span>
+</div>
 
-.cta-button:active {
-  color: #fff;
-}
+<h2 class="section-heading" id="explore">Explore This Site</h2>
 
-.cta-button:hover {
-  background: #6aa9ad;
-  transform: scale(1.05);
-}
-
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap; 
-  max-width: 1200px;
-  margin: 0 auto;
-  <!-- justify-content: space-between; -->
-}
-
-  </style>
-</head>
-
-<!-- Parsa introduces himself as an individual with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and with a specific focus on Data Processing. Although his major is in Computer Engineering, his true expertise lies in ***<u>Theoretical Computer Science</u>***, particularly in the areas of ***<u>Data Structures</u>***, ***<u>Design and Analysis of Algorithms</u>***, and ***<u>Graph Theory</u>***.  
-
-Parsa's primary area of research interest centers around ***<u>Theoretical computer science</u>***, with a keen interest in fields such as ***<u>Design & Analysis of Algorithms</u>***, ***<u>Data Structures</u>***, ***<u>Graph Theory & Processing</u>***, ***<u>Data Mining & Social Network Analysis</u>***, ***<u>Theoretical Machine Learning</u>***, and various subcategories within the algorithms domain such as: ***<u>Combinatorial Optimization</u>***, ***<u>Complexity Theory</u>***, ***<u>Approximation Algorithms</u>***, and ***<u>Randomized Algorithms</u>***.  
-
-He expresses enthusiasm for pursuing advanced studies in Theoretical Computer Science at the graduate level, aiming to make significant contributions as a researcher and aspiring to achieve the status of a distinguished professor in the near future. -->
-
-
-<!-- Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***<u>Theoretical Computer Science</u>*** and ***<u>Machine Learning</u>***. -->
-
-Parsa is currently pursuing a **(Thesis-based) Master of Computer Science** degree from [Concordia University](https://www.concordia.ca) in the Department of [Computer Science and Software Engineering (CSSE)](https://www.concordia.ca/ginacody/computer-science-software-eng.html), at [Gina Cody School of Engineering and Computer Science](https://www.concordia.ca/ginacody.html). He is conducting research at the ***Algorithms & Complexity Lab*** under the supervision of [Professor Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/). Parsa’s true expertise is Theoretical Computer Science with some additional touch of Applied Mathematics, Software Engineering, and Data Mining.
-
-Parsa has a keen interest in areas such as ***<u>Design and Analysis of Algorithms</u>***, ***<u>Graph Theory</u>***, ***<u>Discrete Mathematics</u>***, ***<u>Data Structures</u>***, and ***<u>Complexity Theory</u>***. His research interest spans various subcategories within the algorithms domain, including ***<u>Combinatorial Optimization/Algorithms</u>***, ***<u>Graph Algorithms</u>***, ***<u>Graph Mining</u>***, ***<u>Social Network Analysis</u>***, ***<u>Approximation & Randomized Algorithms</u>***, and ***<u>Online Algorithms</u>***. [Read more](/biography/) 
-
-<!-- On the Machine Learning front, Parsa likes to explore ***<u>Graph Mining</u>***, ***<u>Graph Neural Networks</u>***, ***<u>Social Networks Analysis</u>***, ***<u>Learning Algorithms</u>***, ***<u>Optimization Algorithms</u>***, ***<u>Machine Learning in Healthcare</u>***, and ***<u>Bayesian & Probabilistic Modeling</u>***.  -->
-
-<!-- His passion for these fields is evident in his desire to pursue advanced studies in both Theoretical Computer Science and Machine Learning at the graduate level. -->
-
-<!-- Moreover, Parsa actively pursues ***<u>Software Engineering</u>*** research as a personal passion, honing expertise in areas such as ***<u>Software Code Analysis</u>***, ***<u>Software Refactoring</u>***, and leveraging ***<u>Machine Learning techniques to enhance Software Quality</u>***. -->
-
-<!-- Parsa has enriched his academic journey through impactful roles, serving as a Research Assistant at Vali-e-Asr University of Rafsanjan with a concentrated focus on Algorithm Design and Graph Theory. Additionally, he made significant contributions as a Research Assistant at the University of Twente, immersing himself in the application of Machine Learning to advance Software Refactoring techniques. 
-
-Going beyond his research engagements, Parsa has demonstrated a commitment to education by serving as a Teaching Assistant for over 10 courses. His focus has primarily centered on Theoretical Computer Science and Machine Learning, where he has provided invaluable support for courses including Design and Analysis of Algorithms, Data Structures, Discrete Math, and Data Mining on multiple occasions. 
-
-These diverse experiences underscore Parsa's unwavering dedication to both research and education, showcasing his versatility and impact across academic domains. -->
-
-<!-- Parsa aspires to contribute significantly as a researcher, with the ultimate goal of achieving the esteemed status of a distinguished professor in the near future. His enthusiasm for advancing the frontiers of knowledge and making a lasting impact in the academic community drives his commitment to excellence in research and education. -->
-
-<!-- Parsa is driven by a deep passion for both research and teaching, aspiring to make meaningful contributions to his field while inspiring the next generation of scholars. His ultimate goal is to become a distinguished professor, where he can advance the frontiers of knowledge through research while fostering a dynamic and engaging learning environment for students.  -->
-
-<!-- <button class="cta-button">Call to Action</button> -->
-
-<!-- <br> -->
-
----
-
-<nav aria-label="Quick navigation to main sections">
-  <h2 id="site-navigation">Links to Each Section of the Site</h2>
-
-  <div class="button-container" role="navigation">
-    <a class="cta-button" href="/research/" aria-label="View research experiences">Research Experiences</a>
-
-<a class="cta-button" href="/publications/" aria-label="View scientific papers">Scientific Papers</a>
-
-<a class="cta-button" href="/teaching/" aria-label="View teaching experiences">Teaching Experiences</a>
-
-<a class="cta-button" href="/education/" aria-label="View educational background">Education</a>
-
-<a class="cta-button" href="/cv/" aria-label="View curriculum vitae">Curriculum vitae</a>
-
-<a class="cta-button" href="/projects/" aria-label="View projects">Projects</a>
-
-<a class="cta-button" href="/selected_courses/" aria-label="View selected courses">Selected Courses</a>
-
-<a class="cta-button" href="/extracurricular/" aria-label="View extracurricular activities">Extra Curricular Activities</a>
-
-<a class="cta-button" href="/industry/" aria-label="View industry experiences">Industry Experiences</a>
-
-<a class="cta-button" href="/honors_and_extra/" aria-label="View honors and awards">Honors and Awards, Test Scores, Skills, etc.</a>
-
-<a class="cta-button" href="/biography/" aria-label="Read full biography">Biography</a>
-
-<!-- <a class="cta-button" href="/gallery/" aria-label="View images and gallery">Images and Gallery</a> -->
-
-<a class="cta-button" href="/news/" aria-label="Read latest news">News</a>
-
-<a class="cta-button" href="/contact/" aria-label="Contact information">Contact</a>
-  </div>
+<nav class="quick-links" aria-label="Quick navigation to main sections">
+  <a class="quick-link" href="/research/">
+    <i class="fas fa-flask" aria-hidden="true"></i>
+    <span class="quick-link__title">Research</span>
+    <span class="quick-link__desc">Research experiences &amp; labs</span>
+  </a>
+  <a class="quick-link" href="/publications/">
+    <i class="fas fa-scroll" aria-hidden="true"></i>
+    <span class="quick-link__title">Publications</span>
+    <span class="quick-link__desc">Scientific papers</span>
+  </a>
+  <a class="quick-link" href="/teaching/">
+    <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+    <span class="quick-link__title">Teaching</span>
+    <span class="quick-link__desc">TA &amp; tutoring roles</span>
+  </a>
+  <a class="quick-link" href="/education/">
+    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+    <span class="quick-link__title">Education</span>
+    <span class="quick-link__desc">Academic background</span>
+  </a>
+  <a class="quick-link" href="/cv/">
+    <i class="fas fa-file-alt" aria-hidden="true"></i>
+    <span class="quick-link__title">Curriculum Vitae</span>
+    <span class="quick-link__desc">Full CV &amp; PDF download</span>
+  </a>
+  <a class="quick-link" href="/projects/">
+    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+    <span class="quick-link__title">Projects</span>
+    <span class="quick-link__desc">Selected works &amp; code</span>
+  </a>
+  <a class="quick-link" href="/selected_courses/">
+    <i class="fas fa-book-open" aria-hidden="true"></i>
+    <span class="quick-link__title">Courses</span>
+    <span class="quick-link__desc">Selected coursework</span>
+  </a>
+  <a class="quick-link" href="/extracurricular/">
+    <i class="fas fa-users" aria-hidden="true"></i>
+    <span class="quick-link__title">Extracurricular</span>
+    <span class="quick-link__desc">Activities &amp; volunteering</span>
+  </a>
+  <a class="quick-link" href="/industry/">
+    <i class="fas fa-briefcase" aria-hidden="true"></i>
+    <span class="quick-link__title">Industry</span>
+    <span class="quick-link__desc">Professional experience</span>
+  </a>
+  <a class="quick-link" href="/honors_and_extra/">
+    <i class="fas fa-trophy" aria-hidden="true"></i>
+    <span class="quick-link__title">Honors &amp; Awards</span>
+    <span class="quick-link__desc">Scholarships, scores, skills</span>
+  </a>
+  <a class="quick-link" href="/biography/">
+    <i class="fas fa-user" aria-hidden="true"></i>
+    <span class="quick-link__title">Biography</span>
+    <span class="quick-link__desc">The full story</span>
+  </a>
+  <a class="quick-link" href="/news/">
+    <i class="fas fa-newspaper" aria-hidden="true"></i>
+    <span class="quick-link__title">News</span>
+    <span class="quick-link__desc">Announcements &amp; updates</span>
+  </a>
+  <a class="quick-link" href="/contact/">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <span class="quick-link__title">Contact</span>
+    <span class="quick-link__desc">Get in touch</span>
+  </a>
 </nav>
 
-<!-- ### [Research Experiences](/research/)
+<h2 class="section-heading" id="news">Selected Recent News</h2>
 
-### [Scientific Papers](/publications/)
-
-### [Teaching Experiences](/teaching/)
-
-### [Education](/education/)
-
-### [Curriculum vitae](/cv/)
-
-### [Projects](/projects/)
-
-### [Selected Courses](/selected_courses/)
-
-### [Honors and Awards, Test Scores, Skills, etc.](/honors_and_extra/)
-
-### [Extra Curricular Activities](/extracurricular/)
-
-### [Industry Experiences](/industry/)
-
-### [Biography](/biography/)
-
-### [Images and Gallery](/gallery/) -->
-
-
-<br>
-
----
-
-# Selected Recent NEWS!
+<div class="news-feed" markdown="1">
 
 #### January 2026
 > I am pleased to share that my paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** has been **accepted** for publication in the journal **Computers**, Special Issue: **Recent Advances in Social Networks and Social Media**.
@@ -165,73 +104,34 @@ These diverse experiences underscore Parsa's unwavering dedication to both resea
 >
 >It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
 >🎓 **Courses:**
->- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator  
+>- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator
 >- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor and Marker
->- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
->- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator  
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator
+>- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator
 
 #### December 2025
 > I am pleased to share that I was awarded the **Concordia Conference and Exposition Allowance** by **Concordia University** in **2025**, in recognition of conference-related scholarly activities.
 
 #### November 2025
-> I am pleased to share that my paper **“From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks”** has been **accepted** for publication and **presentation** at the  
+> I am pleased to share that my paper **“From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks”** has been **accepted** for publication and **presentation** at the
 > **12th International Conference on Social Networks Analysis, Management and Security (SNAMS 2025)**.
 >
-> The paper will be presented in **Vienna, Austria**, during **November 25–28, 2025**.
-
-<!-- #### September 2025
->🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for six courses this Fall 2025 semester!**
->
->It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
->🎓 **Courses:**
->- **COMP 233** – *Probability and Statistics for Computer Science* — Tutorial Instructor  
->- **COMP 248** – *Object-Oriented Programming I* — Lab Demonstrator  
->- **COMP 339** – *Combinatorics* — Tutorial Instructor  
->- **COMP 472** – *Artificial Intelligence* — Lab Demonstrator  
->- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor  
->- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator   -->
-
-<!-- 
-#### July 2025
-> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for one course in this **Second Half of Summer 2025!**  
->  
-> - **COMP 233 [Probability and Statistics for Computer Science]** – *Tutorial Instructor*  
-
-#### May 2025
-> 🎉 Excited to share that I’ve been selected as the **Graduate Teaching Assistant** for two courses in this **First Half of Summer 2025!**  
->  
-> - **COMP 335 [Introduction to Theoretical Computer Science]** – *Marker*  
-> - **COMP 348 [Principles of Programming Languages]** – *Tutorial Instructor and Marker*   -->
-
-<!-- #### December 2024
-> Excited to announce that our research **“Cross-Language Refactoring Detection: Bridging Gaps with Pre-trained Language Models”** has been **<u>submitted to The Journal of Systems & Software!</u>** A big thank you to my previous research team! 🌟 -->
+> The paper was presented in **Vienna, Austria**, during **November 25–28, 2025**.
 
 #### October 2024
 > 🎉 Excited to share that **I have been awarded the <u>DRW Graduate Scholarship in Computer Science</u>**, issued by Concordia University and DRW, a Montreal-based company! 🚀
 
-<!-- #### September 2024
-> 🎉 Thrilled to announce that I’ve been selected as the **Graduate Teaching Assistant: <u>Marker for COMP 335</u> (Introduction to Theoretical Computer Science) for Fall 2024!** 📚
-
-> 🎉 Excited to share that I’ve been appointed as the **Graduate Teaching Assistant: <u>Tutorial Leader & Marker for COMP 339</u> (Combinatorics) for Fall 2024!** 📚 -->
-
 #### August 2024
-> 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓 
+> 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓
 
-> 🎓 Honored to receive the **Concordia Merit Scholarship (Entrance Scholarship Award)** from Concordia University’s School of Graduate Studies! 🌟 
+> 🎓 Honored to receive the **Concordia Merit Scholarship (Entrance Scholarship Award)** from Concordia University’s School of Graduate Studies! 🌟
 
-<!-- #### February 2024
-> 🚀 Thrilled to announce that I’ve been **admitted to the Funded Thesis-based Master’s program in Computer Science at Concordia University for Fall 2024!** 📚 I’ll be joining the Algorithms & Complexity Lab, working under the guidance of Professor Hovhannes Harutyunyan.  -->
-<!-- 
-#### November 2023
-> 🏆 Thrilled to announce that I've been honored with the **Top Researcher Award** in Kerman Province, standing out among all undergraduate students across universities in this region! 🌍🚀 #ResearchAward -`November 21, 2023` -->
+</div>
 
-[To read more news and view all of them together click here!](/news/) 
-
-<br>
+<p><a class="btn btn--news" href="/news/"><i class="fas fa-newspaper" aria-hidden="true"></i> View all news</a></p>
 
 ---
 
-<p style="text-align: right;">
-  <strong><em>Last update: March 15th, 2026</em></strong>
+<p class="page__updated">
+  <em>Last updated: {{ site.time | date: "%B %-d, %Y" }}</em>
 </p>
-

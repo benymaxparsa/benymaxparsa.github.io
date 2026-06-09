@@ -88,13 +88,19 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "images/profile.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Parsa Kamalipour"
+  links:
+    - "https://github.com/benymaxparsa"
+    - "https://www.linkedin.com/in/parsakamalipour/"
+    - "https://twitter.com/ParsaKamalipour"
+    - "https://scholar.google.com/citations?user=eBNZsM0AAAAJ"
+    - "https://www.researchgate.net/profile/Parsa-Kamalipour"
+    - "https://orcid.org/0000-0003-2546-9676"
 
 # Analytics
 analytics:
@@ -391,7 +397,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Toronto # Montreal local time — https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)

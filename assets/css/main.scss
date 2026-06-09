@@ -5,21 +5,32 @@ search: false
 
 @charset "utf-8";
 
+/* Theme variable overrides (must come before the imports) */
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace: "JetBrains Mono", Monaco, Consolas, "Lucida Console", monospace;
+$border-radius: 8px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 /* ==========================================================================
-   Custom Enhancements for Better User Experience
+   Custom design system — dark, teal-accented, card-based
    ========================================================================== */
 
-/* CSS Custom Properties for Consistency */
 :root {
   --primary-color: #00adb5;
-  --primary-hover: #008c94;
-  --primary-light: #6aa9ad;
-  --breakpoint-mobile: 768px;
+  --primary-hover: #00cdd6;
+  --primary-soft: rgba(0, 173, 181, 0.12);
+  --primary-border: rgba(0, 173, 181, 0.35);
+  --primary-light: #7fd9dd;
+  --card-bg: #2c3240;
+  --card-bg-hover: #313848;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --heading-color: #f5f7fa;
+  --muted-color: #9aa3b2;
   --spacing-unit: 20px;
-  --border-radius: 4px;
+  --border-radius: 8px;
   --transition-speed: 0.3s;
 }
 
@@ -28,25 +39,308 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Improved focus visibility for accessibility */
-*:focus {
+/* Focus visibility for keyboard users (without flashing outlines on mouse clicks) */
+:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
-/* Enhanced button hover effects */
-.cta-button,
-.btn {
+/* Subtle ambient glow at the top of the page */
+body {
+  background-image: radial-gradient(
+    ellipse 80% 380px at 50% -120px,
+    rgba(0, 173, 181, 0.12),
+    transparent
+  );
+  background-repeat: no-repeat;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Crisper headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  letter-spacing: -0.01em;
+}
+
+.page__title {
+  letter-spacing: -0.02em;
+}
+
+/* Lead paragraph on landing pages */
+.page__lead {
+  font-size: 1.08em;
+  line-height: 1.8;
+}
+
+/* "Last updated" stamp */
+.page__updated {
+  text-align: right;
+  color: var(--muted-color);
+  font-size: 0.85em;
+}
+
+/* ==========================================================================
+   Sidebar / author profile
+   ========================================================================== */
+
+.author__avatar img {
+  padding: 4px;
+  border: 2px solid var(--primary-border);
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.15), 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.04);
+  border-color: var(--primary-color);
+}
+
+.author__name {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   Masthead & footer
+   ========================================================================== */
+
+.masthead {
+  border-bottom: 1px solid var(--card-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.masthead__inner-wrap {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+.greedy-nav .visible-links a:before {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+  height: 3px;
+}
+
+.page__footer {
+  border-top: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   Interest tag pills (homepage)
+   ========================================================================== */
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1.25em 0 0.75em;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.35em 0.85em;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  color: var(--primary-light);
+  font-size: 0.8em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.interest-tag i {
+  opacity: 0.85;
+  font-size: 0.9em;
+}
+
+/* ==========================================================================
+   Section headings with gradient accent
+   ========================================================================== */
+
+.section-heading {
+  position: relative;
+  margin-top: 2.25em;
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 72px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+/* ==========================================================================
+   Quick-link card grid (homepage navigation)
+   ========================================================================== */
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.85em;
+  margin: 1.5em 0 2.25em;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1em 1.15em 1em;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.page__content .quick-link,
+.page__content .quick-link:visited {
+  border-bottom: 1px solid var(--card-border);
+  color: inherit;
+}
+
+.quick-link i {
+  font-size: 1.35em;
+  color: var(--primary-color);
+  margin-bottom: 0.6em;
+  transition: transform 0.25s ease;
+}
+
+.quick-link__title {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--heading-color);
+  line-height: 1.3;
+}
+
+.quick-link__desc {
+  margin-top: 0.25em;
+  font-size: 0.76em;
+  line-height: 1.4;
+  color: var(--muted-color);
+}
+
+.quick-link:hover,
+.quick-link:focus-visible {
+  transform: translateY(-4px);
+  background: var(--card-bg-hover);
+  border-color: var(--primary-border);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 173, 181, 0.15);
+}
+
+.quick-link:hover i {
+  transform: scale(1.12);
+}
+
+/* ==========================================================================
+   News feed (homepage & news page)
+   ========================================================================== */
+
+.news-feed h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1.75em 0 0.6em;
+  font-size: 0.82em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-light);
+}
+
+.news-feed h4::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-soft);
+  flex-shrink: 0;
+}
+
+.news-feed blockquote {
+  font-style: normal;
+  background: var(--card-bg);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  padding: 1em 1.25em;
+  margin: 0 0 1em 0.25em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.news-feed blockquote p:last-child,
+.news-feed blockquote ul:last-child {
+  margin-bottom: 0;
+}
+
+/* "View all news" button */
+.btn--news {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: linear-gradient(135deg, var(--primary-color), #0090a8);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.65em 1.4em;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 173, 181, 0.3);
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.page__content .btn--news,
+.page__content .btn--news:visited {
+  color: #fff;
+  border-bottom: none;
+}
+
+.btn--news:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 173, 181, 0.45);
+  color: #fff;
+}
+
+/* Legacy class kept for any remaining uses */
+.cta-button {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 0 10px 10px 0;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:visited,
+.cta-button:active {
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Buttons, links & content polish
+   ========================================================================== */
 
 .cta-button:hover,
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Improved loading animations */
+/* Loading animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -58,11 +352,20 @@ html {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .page__content {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Better image loading with lazy load effect */
+/* Image lazy-load fade-in */
 img {
   transition: opacity 0.3s ease-in;
 }
@@ -75,82 +378,62 @@ img[loading="lazy"].loaded {
   opacity: 1;
 }
 
-/* Enhanced link styles for better visibility */
-.page__content a:not(.btn) {
+/* Underline-on-hover link styling for body copy */
+.page__content a:not(.btn):not(.quick-link) {
   position: relative;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.page__content a:not(.btn):hover {
+.page__content a:not(.btn):not(.quick-link):hover {
   border-bottom-width: 2px;
+  color: var(--primary-hover);
 }
 
-/* Improved code block styling */
+/* Code blocks */
 pre.highlight {
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* Better responsive spacing */
-@media (max-width: var(--breakpoint-mobile)) {
-  .button-container {
-    gap: 8px;
-  }
-  
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-  }
-}
-
-/* Enhanced card hover effects for archive items */
+/* Archive/list items */
 .archive__item {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .archive__item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Improved masthead with subtle shadow */
-.masthead {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.archive__item-title a {
+  color: var(--primary-light);
 }
 
-/* Better visibility for skip links */
-.skip-links a {
-  background: #00adb5;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: 600;
+/* Blockquotes (site-wide default) */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin-left: 0;
+  background: rgba(0, 173, 181, 0.06);
+  padding: 1em 1em 1em 1.5em;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
-.skip-links a:focus {
-  outline: 3px solid #fff;
+/* Lists breathing room */
+.page__content ul li,
+.page__content ol li {
+  margin-bottom: 0.5em;
 }
 
-/* Smooth transitions for sidebar */
-.sidebar {
-  transition: transform 0.3s ease;
-}
-
-/* Enhanced footer styling */
-.page__footer {
-  border-top: 2px solid rgba(0, 173, 181, 0.1);
-}
-
-/* Improved table styling */
+/* Tables */
 table {
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Better form input styling */
+/* Forms & search */
 input[type="text"],
 input[type="email"],
 input[type="search"],
@@ -162,37 +445,65 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  border-color: #00adb5;
-  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-soft);
 }
 
-/* Optimized animations for reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0s !important;
-    scroll-behavior: auto !important;
-  }
+.search-content input[type="search"] {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--card-border);
+  background: var(--card-bg);
+  transition: all 0.3s ease;
 }
 
-/* Print optimizations */
-@media print {
-  .masthead,
-  .sidebar,
-  .page__footer,
-  .skip-links {
-    display: none;
-  }
-  
-  .page__content {
-    max-width: 100%;
-  }
+.search-content input[type="search"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-soft);
 }
 
-/* Scroll to top button */
+/* Skip links */
+.skip-links a {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+
+.skip-links a:focus {
+  outline: 3px solid #fff;
+}
+
+/* Selection color */
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Slim custom scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e232c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424a59;
+  border-radius: 5px;
+  border: 2px solid #1e232c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ==========================================================================
+   Floating UI: scroll-to-top & copy-code buttons
+   ========================================================================== */
+
 .scroll-to-top {
   position: fixed;
   bottom: 80px;
@@ -205,7 +516,7 @@ textarea:focus {
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all var(--transition-speed) ease;
   opacity: 0;
   transform: translateY(var(--spacing-unit));
@@ -226,7 +537,7 @@ textarea:focus {
 .scroll-to-top:hover {
   background: var(--primary-hover);
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 .scroll-to-top:focus {
@@ -234,7 +545,6 @@ textarea:focus {
   outline-offset: 2px;
 }
 
-/* Copy code button */
 .copy-code-button {
   position: absolute;
   top: 8px;
@@ -264,69 +574,76 @@ textarea:focus {
 
 /* External link indicator */
 .external-link::after {
-  content: '↗';
+  content: "↗";
   font-size: 0.8em;
   margin-left: 0.2em;
   opacity: 0.7;
 }
 
-/* Improved animation for page load */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* ==========================================================================
+   Responsive tweaks
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  .quick-links {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.6em;
   }
-  to {
-    opacity: 1;
+
+  .quick-link {
+    padding: 0.9em 0.95em 0.85em;
+  }
+
+  .quick-link__desc {
+    display: none;
+  }
+
+  .button-container {
+    gap: 8px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
   }
 }
 
-body {
-  animation: fadeIn 0.3s ease-in;
+/* ==========================================================================
+   Accessibility & print
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* Better focus styles for buttons */
-button:focus,
-.btn:focus {
-  outline: 3px solid #00adb5;
-  outline-offset: 3px;
-}
-
-/* Improved blockquote styling */
-blockquote {
-  border-left: 4px solid var(--primary-color);
-  margin-left: 0;
-  font-style: italic;
-  background: rgba(0, 173, 181, 0.05);
-  padding: 1em 1em 1em 1.5em;
-  border-radius: var(--border-radius);
-}
-
-/* Better list styling */
-.page__content ul li,
-.page__content ol li {
-  margin-bottom: 0.5em;
-}
-
-/* Enhanced search bar */
-.search-content input[type="search"] {
-  border-radius: 8px;
-  border: 2px solid #e0e0e0;
-  transition: all 0.3s ease;
-}
-
-.search-content input[type="search"]:focus {
-  border-color: #00adb5;
-  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
-  transform: scale(1.02);
-}
-
-/* Accessibility: High contrast mode support */
 @media (prefers-contrast: high) {
   * {
     border-color: currentColor !important;
   }
-  
-  .cta-button {
+
+  .cta-button,
+  .quick-link {
     border: 2px solid currentColor;
+  }
+}
+
+@media print {
+  .masthead,
+  .sidebar,
+  .page__footer,
+  .skip-links,
+  .scroll-to-top {
+    display: none;
+  }
+
+  .page__content {
+    max-width: 100%;
   }
 }

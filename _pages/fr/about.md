@@ -9,102 +9,94 @@ redirect_from:
   - /fr/a-propos/
 ---
 
-<head>
-  <style>
-    .cta-button {
-  padding: 12px 24px;
-  border-radius: 4px; 
-  background-color: #00adb5;
-  /* color: white; */
-  color: #fff;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: 0.2s ease-in-out;
-  flex: 1 1 auto;
-  max-width: 100%;
-  text-align: center;
-  margin: 5px 0;
-  padding: 8px 12px; 
-  margin-right: 10px;
-  margin-bottom: 10px; 
-   text-decoration: none;
-}
+<p class="page__lead">
+Parsa poursuit actuellement une maîtrise en informatique <strong>(avec mémoire)</strong> à l'<a href="https://www.concordia.ca">Université Concordia</a> au Département d'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Informatique et de Génie Logiciel (CSSE)</a>, à l'<a href="https://www.concordia.ca/ginacody.html">École de génie et d'informatique Gina-Cody</a>. Il mène des recherches au <strong><em>Laboratoire d'algorithmes et de complexité</em></strong> sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>. L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
+</p>
 
-  .small-font {
-      font-size: smaller;
-    }
+Parsa s'intéresse particulièrement à des domaines tels que la ***conception et l'analyse d'algorithmes***, la ***théorie des graphes***, les ***mathématiques discrètes***, les ***structures de données*** et la ***théorie de la complexité***. Ses intérêts de recherche couvrent diverses sous-catégories du domaine des algorithmes, notamment l'***optimisation/algorithmes combinatoires***, les ***algorithmes de graphes***, l'***exploration de graphes***, l'***analyse de réseaux sociaux***, les ***algorithmes d'approximation et aléatoires*** et les ***algorithmes en ligne***. [En savoir plus →](/fr/biographie/)
 
-.cta-button:visited {
-  color: #fff;
-}
+<div class="interest-tags" aria-label="Intérêts de recherche">
+  <span class="interest-tag"><i class="fas fa-project-diagram" aria-hidden="true"></i> Théorie des graphes</span>
+  <span class="interest-tag"><i class="fas fa-code-branch" aria-hidden="true"></i> Algorithmes</span>
+  <span class="interest-tag"><i class="fas fa-infinity" aria-hidden="true"></i> Théorie de la complexité</span>
+  <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Analyse de réseaux sociaux</span>
+  <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Optimisation combinatoire</span>
+  <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Exploration de données</span>
+</div>
 
-.cta-button:active {
-  color: #fff;
-}
+<h2 class="section-heading" id="explorer">Explorer ce site</h2>
 
-.cta-button:hover {
-  background: #6aa9ad;
-  transform: scale(1.05);
-}
-
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap; 
-  max-width: 1200px;
-  margin: 0 auto;
-  /* justify-content: space-between; */
-}
-
-  </style>
-</head>
-
-Parsa poursuit actuellement une maîtrise en informatique **(avec mémoire)** à l'[Université Concordia](https://www.concordia.ca) au Département d'[Informatique et de Génie Logiciel (CSSE)](https://www.concordia.ca/ginacody/computer-science-software-eng.html), à l'[École de génie et d'informatique Gina-Cody](https://www.concordia.ca/ginacody.html). Il mène des recherches au ***Laboratoire d'algorithmes et de complexité*** sous la supervision du [professeur Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/). L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
-
-Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conception et l'analyse d'algorithmes</u>***, la ***<u>théorie des graphes</u>***, les ***<u>mathématiques discrètes</u>***, les ***<u>structures de données</u>*** et la ***<u>théorie de la complexité</u>***. Ses intérêts de recherche couvrent diverses sous-catégories du domaine des algorithmes, notamment l'***<u>optimisation/algorithmes combinatoires</u>***, les ***<u>algorithmes de graphes</u>***, l'***<u>exploration de graphes</u>***, l'***<u>analyse de réseaux sociaux</u>***, les ***<u>algorithmes d'approximation et aléatoires</u>*** et les ***<u>algorithmes en ligne</u>***. [En savoir plus](/fr/biographie/)
-
----
-
-<nav aria-label="Navigation rapide vers les sections principales">
-  <h2 id="navigation-du-site">Liens vers chaque section du site</h2>
-
-  <div class="button-container" role="navigation">
-    <a class="cta-button" href="/fr/recherche/" aria-label="Voir les expériences de recherche">Expériences de recherche</a>
-
-<a class="cta-button" href="/fr/publications/" aria-label="Voir les articles scientifiques">Articles scientifiques</a>
-
-<a class="cta-button" href="/fr/enseignement/" aria-label="Voir les expériences d'enseignement">Expériences d'enseignement</a>
-
-<a class="cta-button" href="/fr/formation/" aria-label="Voir le parcours éducatif">Formation</a>
-
-<a class="cta-button" href="/fr/cv/" aria-label="Voir le curriculum vitae">Curriculum vitæ</a>
-
-<a class="cta-button" href="/fr/projets/" aria-label="Voir les projets">Projets</a>
-
-<a class="cta-button" href="/fr/cours/" aria-label="Voir les cours sélectionnés">Cours sélectionnés</a>
-
-<a class="cta-button" href="/fr/activites/" aria-label="Voir les activités parascolaires">Activités parascolaires</a>
-
-<a class="cta-button" href="/fr/experiences/" aria-label="Voir les expériences professionnelles">Expériences professionnelles</a>
-
-<a class="cta-button" href="/fr/distinctions/" aria-label="Voir les distinctions et prix">Distinctions et prix, résultats de tests, compétences, etc.</a>
-
-<a class="cta-button" href="/fr/biographie/" aria-label="Lire la biographie complète">Biographie</a>
-
-<!-- <a class="cta-button" href="/fr/galerie/" aria-label="Voir les images et la galerie">Images et galerie</a> -->
-
-<a class="cta-button" href="/fr/nouvelles/" aria-label="Lire les dernières nouvelles">Nouvelles</a>
-
-<a class="cta-button" href="/fr/contact/" aria-label="Informations de contact">Contact</a>
-  </div>
+<nav class="quick-links" aria-label="Navigation rapide vers les sections principales">
+  <a class="quick-link" href="/fr/recherche/">
+    <i class="fas fa-flask" aria-hidden="true"></i>
+    <span class="quick-link__title">Recherche</span>
+    <span class="quick-link__desc">Expériences de recherche</span>
+  </a>
+  <a class="quick-link" href="/fr/publications/">
+    <i class="fas fa-scroll" aria-hidden="true"></i>
+    <span class="quick-link__title">Publications</span>
+    <span class="quick-link__desc">Articles scientifiques</span>
+  </a>
+  <a class="quick-link" href="/fr/enseignement/">
+    <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+    <span class="quick-link__title">Enseignement</span>
+    <span class="quick-link__desc">Rôles d'auxiliaire d'enseignement</span>
+  </a>
+  <a class="quick-link" href="/fr/formation/">
+    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+    <span class="quick-link__title">Formation</span>
+    <span class="quick-link__desc">Parcours académique</span>
+  </a>
+  <a class="quick-link" href="/fr/cv/">
+    <i class="fas fa-file-alt" aria-hidden="true"></i>
+    <span class="quick-link__title">Curriculum vitæ</span>
+    <span class="quick-link__desc">CV complet et PDF</span>
+  </a>
+  <a class="quick-link" href="/fr/projets/">
+    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+    <span class="quick-link__title">Projets</span>
+    <span class="quick-link__desc">Travaux sélectionnés</span>
+  </a>
+  <a class="quick-link" href="/fr/cours/">
+    <i class="fas fa-book-open" aria-hidden="true"></i>
+    <span class="quick-link__title">Cours</span>
+    <span class="quick-link__desc">Cours sélectionnés</span>
+  </a>
+  <a class="quick-link" href="/fr/activites/">
+    <i class="fas fa-users" aria-hidden="true"></i>
+    <span class="quick-link__title">Parascolaire</span>
+    <span class="quick-link__desc">Activités et bénévolat</span>
+  </a>
+  <a class="quick-link" href="/fr/experiences/">
+    <i class="fas fa-briefcase" aria-hidden="true"></i>
+    <span class="quick-link__title">Industrie</span>
+    <span class="quick-link__desc">Expériences professionnelles</span>
+  </a>
+  <a class="quick-link" href="/fr/distinctions/">
+    <i class="fas fa-trophy" aria-hidden="true"></i>
+    <span class="quick-link__title">Distinctions et prix</span>
+    <span class="quick-link__desc">Bourses, résultats, compétences</span>
+  </a>
+  <a class="quick-link" href="/fr/biographie/">
+    <i class="fas fa-user" aria-hidden="true"></i>
+    <span class="quick-link__title">Biographie</span>
+    <span class="quick-link__desc">L'histoire complète</span>
+  </a>
+  <a class="quick-link" href="/fr/nouvelles/">
+    <i class="fas fa-newspaper" aria-hidden="true"></i>
+    <span class="quick-link__title">Nouvelles</span>
+    <span class="quick-link__desc">Annonces et mises à jour</span>
+  </a>
+  <a class="quick-link" href="/fr/contact/">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <span class="quick-link__title">Contact</span>
+    <span class="quick-link__desc">Me joindre</span>
+  </a>
 </nav>
 
-<br>
+<h2 class="section-heading" id="nouvelles">Nouvelles récentes sélectionnées</h2>
 
----
-
-# Nouvelles récentes sélectionnées !
-
+<div class="news-feed" markdown="1">
 
 #### Janvier 2026
 > J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
@@ -114,19 +106,19 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conceptio
 > C’est un honneur de continuer à contribuer à la formation des étudiantes et étudiants dans plusieurs domaines de l’informatique et du génie logiciel à l’Université Concordia.
 >
 > 🎓 **Cours :**
-> - **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire  
-> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels et correcteur  
-> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire  
-> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire  
+> - **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire
+> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels et correcteur
+> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire
+> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire
 
 #### Décembre 2025
 > J’ai le plaisir d’annoncer que j’ai reçu la **Concordia Conference and Exposition Allowance** de l’**Université Concordia** en **2025**, en reconnaissance de mes activités universitaires liées aux conférences.
 
 #### Novembre 2025
-> J’ai le plaisir d’annoncer que mon article **« From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks »** a été **accepté** pour publication et **présentation** à la  
+> J’ai le plaisir d’annoncer que mon article **« From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks »** a été **accepté** pour publication et **présentation** à la
 > **12e Conférence internationale sur l’analyse, la gestion et la sécurité des réseaux sociaux (SNAMS 2025)**.
 >
-> L’article sera présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
+> L’article a été présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
 
 #### Octobre 2024
 > 🎉 Ravi de partager que **j'ai reçu la <u>bourse d'études supérieures DRW en informatique</u>**, décernée par l'Université Concordia et DRW, une entreprise basée à Montréal ! 🚀
@@ -136,12 +128,14 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***<u>conceptio
 
 > 🎓 Honoré de recevoir la **bourse d'excellence Concordia (bourse d'admission)** de l'École des études supérieures de l'Université Concordia ! 🌟
 
-[Pour lire plus de nouvelles et les voir toutes ensemble, cliquez ici !](/fr/nouvelles/)
+</div>
 
-<br>
+<p><a class="btn btn--news" href="/fr/nouvelles/"><i class="fas fa-newspaper" aria-hidden="true"></i> Voir toutes les nouvelles</a></p>
 
 ---
 
-<p style="text-align: right;">
-  <strong><em>Dernière mise à jour : 15 mars 2026</em></strong>
+{% assign mois_index = site.time | date: "%-m" | minus: 1 %}
+{% assign mois_fr = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+<p class="page__updated">
+  <em>Dernière mise à jour : {{ site.time | date: "%-d" }} {{ mois_fr[mois_index] }} {{ site.time | date: "%Y" }}</em>
 </p>
