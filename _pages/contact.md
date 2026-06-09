@@ -60,31 +60,23 @@ Personal Email for Non-Academic Purposes:
 <!-- *(I don't check this email)* -->
 
 ## Links to my other accounts:  
-<i class="fas fa-fw fa-link" aria-hidden="true"></i> <a rel="me" href="https://benymaxparsa.github.io">Personal Website</a>  
-<i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> <a rel="me" href="https://twitter.com/ParsaKamalipour">X (Twitter)</a>  
-<i class="fab fa-fw fa-github" aria-hidden="true"></i> <a rel="me" href="https://github.com/benymaxparsa">GitHub</a>   
-<i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <a rel="me" href="https://www.linkedin.com/in/parsakamalipour">LinkedIn</a>  
-<i class="fab ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ">Google Scholar</a>  
-<i class="fab ai ai-researchgate-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://www.researchgate.net/profile/Parsa-Kamalipour">ResearchGate</a>  
-<i class="fab fa-fw fa-orcid" aria-hidden="true"></i> <a rel="me" href="https://orcid.org/0000-0003-2546-9676">ORCID</a>  
-<i class="fab fa-fw fa-youtube" aria-hidden="true"></i> <a rel="me" href="https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw">YouTube</a>  
-<i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> <a rel="me" href="https://mastodon.social/@parsakamalipour">Mastodon</a>  
-<i class="fab fa-fw fa-kaggle" aria-hidden="true"></i> <a rel="me" href="https://www.kaggle.com/parsakamalipour">Kaggle</a>  
-<i class="fas fa-fw fa-link" aria-hidden="true"></i> <a rel="me" href="https://huggingface.co/ParsaKamalipour">Hugging Face</a>  
-<i class="fab ai ai-acmdl ai-fw" aria-hidden="true"></i> <a rel="me" href="https://dl.acm.org/profile/99660589972">ACM Digital Library</a>  
-<i class="fab ai ai-scopus-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://www.scopus.com/authid/detail.uri?authorId=57191498047">Scopus</a>  
-<i class="fab ai ai-dblp-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://dblp.org/pid/328/7111.html">DBLP</a>  
-<i class="fab ai ai-academia-square ai-fw" aria-hidden="true"></i> <a rel="me" href="https://vru.academia.edu/ParsaKamalipour">Academia.edu</a>  
-<i class="fab ai ai-semantic-scholar ai-fw" aria-hidden="true"></i> <a rel="me" href="https://www.semanticscholar.org/author/Parsa-Kamalipour/7592796">Semantic Scholar</a>  
-<i class="fab ai ai-stackoverflow ai-fw" aria-hidden="true"></i> <a rel="me" href="https://stackoverflow.com/users/11578553/parsa-kamalipour">Stack Overflow</a>  
-<i class="fas fa-fw fa-link" aria-hidden="true"></i> <a rel="me" href="https://conf.researchr.org/profile/parsakamalipour">conf.researchr</a>  
-
-
-
-
-
-
-
-
-
-
+<ul class="contact-links">
+  <li><a class="contact-link" rel="me" href="https://benymaxparsa.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Personal Website</a></li>
+  <li><a class="contact-link" rel="me" href="https://twitter.com/ParsaKamalipour"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> X (Twitter)</a></li>
+  <li><a class="contact-link" rel="me" href="https://github.com/benymaxparsa"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.linkedin.com/in/parsakamalipour"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+  <li><a class="contact-link" rel="me" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ"><i class="fab ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.researchgate.net/profile/Parsa-Kamalipour"><i class="fab ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+  <li><a class="contact-link" rel="me" href="https://orcid.org/0000-0003-2546-9676"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i> ORCID</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.youtube.com/channel/UCIu6MeO9aaBsLy00XoKO5tw"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+  <li><a class="contact-link" rel="me" href="https://mastodon.social/@parsakamalipour"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.kaggle.com/parsakamalipour"><i class="fab fa-fw fa-kaggle" aria-hidden="true"></i> Kaggle</a></li>
+  <li><a class="contact-link" rel="me" href="https://huggingface.co/ParsaKamalipour"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Hugging Face</a></li>
+  <li><a class="contact-link" rel="me" href="https://dl.acm.org/profile/99660589972"><i class="fab ai ai-acmdl ai-fw" aria-hidden="true"></i> ACM Digital Library</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.scopus.com/authid/detail.uri?authorId=57191498047"><i class="fab ai ai-scopus-square ai-fw" aria-hidden="true"></i> Scopus</a></li>
+  <li><a class="contact-link" rel="me" href="https://dblp.org/pid/328/7111.html"><i class="fab ai ai-dblp-square ai-fw" aria-hidden="true"></i> DBLP</a></li>
+  <li><a class="contact-link" rel="me" href="https://vru.academia.edu/ParsaKamalipour"><i class="fab ai ai-academia-square ai-fw" aria-hidden="true"></i> Academia.edu</a></li>
+  <li><a class="contact-link" rel="me" href="https://www.semanticscholar.org/author/Parsa-Kamalipour/7592796"><i class="fab ai ai-semantic-scholar ai-fw" aria-hidden="true"></i> Semantic Scholar</a></li>
+  <li><a class="contact-link" rel="me" href="https://stackoverflow.com/users/11578553/parsa-kamalipour"><i class="fab ai ai-stackoverflow ai-fw" aria-hidden="true"></i> Stack Overflow</a></li>
+  <li><a class="contact-link" rel="me" href="https://conf.researchr.org/profile/parsakamalipour"><i class="fas fa-fw fa-link" aria-hidden="true"></i> conf.researchr</a></li>
+</ul>

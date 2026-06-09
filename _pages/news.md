@@ -5,6 +5,9 @@ excerpt: "News"
 author_profile: true
 ---
 
+<div class="news-feed" markdown="1">
+
+
 <!-- # NEWS -->
 
 #### January 2026
@@ -102,4 +105,4 @@ author_profile: true
 
 > 🚀 Exciting news! Just submitted our short paper to [SANER 2024](https://conf.researchr.org/home/saner-2024) conference with my amazing co-authors. 📑🔍 Fingers crossed for the review process! Grateful for the collaboration and looking forward to sharing our insights! 🌐 #SANER2024 #ResearchCollaboration -`November 18, 2023`
 
-
+</div>

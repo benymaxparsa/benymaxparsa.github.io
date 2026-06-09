@@ -12,6 +12,12 @@ redirect_from:
 Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science</strong> degree at <a href="https://www.concordia.ca">Concordia University</a> in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering (CSSE)</a>, at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He is conducting research at the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>. Parsa’s true expertise is Theoretical Computer Science with an additional touch of Applied Mathematics, Software Engineering, and Data Mining.
 </p>
 
+<div class="hero-actions">
+  <a class="hero-btn hero-btn--primary" href="/files/ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
+  <a class="hero-btn hero-btn--ghost" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+  <a class="hero-btn hero-btn--ghost" href="/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Get in touch</a>
+</div>
+
 Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms***, ***Graph Theory***, ***Discrete Mathematics***, ***Data Structures***, and ***Complexity Theory***. His research interest spans various subcategories within the algorithms domain, including ***Combinatorial Optimization/Algorithms***, ***Graph Algorithms***, ***Graph Mining***, ***Social Network Analysis***, ***Approximation &amp; Randomized Algorithms***, and ***Online Algorithms***. [Read more about Parsa →](/biography/)
 
 <div class="interest-tags" aria-label="Research interests">
@@ -21,6 +27,13 @@ Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms*
   <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Social Network Analysis</span>
   <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Combinatorial Optimization</span>
   <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Data Mining</span>
+</div>
+
+<div class="stats-band" aria-label="Academic profile at a glance">
+  <div class="stat-card"><span class="stat-card__number">4</span><span class="stat-card__label">Publications</span></div>
+  <div class="stat-card"><span class="stat-card__number">15+</span><span class="stat-card__label">Courses TA’d</span></div>
+  <div class="stat-card"><span class="stat-card__number">1100+</span><span class="stat-card__label">Teaching hours</span></div>
+  <div class="stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Research positions</span></div>
 </div>
 
 <h2 class="section-heading" id="explore">Explore This Site</h2>

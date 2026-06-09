@@ -30,14 +30,12 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-        {% if post.collection == 'teaching' or page.collection == 'research'  %}
-          <p> {{ post.type }}, <u><i>{{ post.venue }}</i></u>, {{ post.location }}, [{{ post.date | default: "1900-01-01" | date: "%B, %d, %Y" }}] </p>
-        <!-- <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p> -->
-        {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, [{{ post.date | default: "1900-01-01" | date: "%B, %d, %Y" }}] </p>
-        {% elsif post.date %}
-          <p> {{ post.type }}, <u><i>{{ post.venue }}</i></u>, {{ post.location }}, [{{ post.date | default: "1900-01-01" | date: "%B, %d, %Y" }}] </p>
-         <!-- <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p> -->
+        {% assign item_is_fr = false %}
+        {% if page.url contains "/fr/" or page.lang == "fr-CA" %}{% assign item_is_fr = true %}{% endif %}
+        {% if post.collection == 'publications' %}
+          <p class="archive__item-meta">{% if item_is_fr %}Publié dans{% else %}Published in{% endif %} <span class="venue">{{ post.venue }}</span>{% if post.date %} · <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>{% endif %}</p>
+        {% elsif post.collection == 'teaching' or post.collection == 'research' or post.date %}
+          <p class="archive__item-meta">{% if post.type %}{{ post.type }}{% endif %}{% if post.venue %} · <span class="venue">{{ post.venue }}</span>{% endif %}{% if post.location %} · {{ post.location }}{% endif %}{% if post.date %} · <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>{% endif %}</p>
         {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
@@ -46,12 +44,10 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
 
-    {% if post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }} </p>
+    {% if post.citation %}
+      <div class="archive__item-citation">{% if item_is_fr %}Citation recommandée :{% else %}Recommended citation:{% endif %} {{ post.citation }}{% if post.paperurl %} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a>{% endif %}</div>
     {% elsif post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} ">here</a></p>
+      <p>{% if item_is_fr %}Télécharger <a href="{{ post.paperurl }}">ici</a>{% else %}Download <a href="{{ post.paperurl }}">here</a>{% endif %}</p>
     {% endif %}
 
 

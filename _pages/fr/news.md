@@ -6,6 +6,9 @@ excerpt: "Nouvelles"
 author_profile: true
 ---
 
+<div class="news-feed" markdown="1">
+
+
 #### Janvier 2026
 > J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
 
@@ -95,3 +98,5 @@ author_profile: true
 
 #### Novembre 2023
 > 🏆 Ravi d'annoncer que j'ai été honoré du **prix du meilleur chercheur** dans la province de Kerman, me distinguant parmi tous les étudiants de premier cycle des universités de cette région ! 🌍🚀 #PrixRecherche -*21 novembre 2023*
+
+</div>

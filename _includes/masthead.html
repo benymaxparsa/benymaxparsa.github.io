@@ -28,7 +28,7 @@
         <ul class="visible-links">
           {%- for link in nav_links -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if page.url == link.url %} class="nav-current" aria-current="page"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>

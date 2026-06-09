@@ -52,47 +52,47 @@
       display: inline-block;
     }
     .lang-current {
-      padding: 0.35rem 0.65rem;
-      border-radius: 6px;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      border: 2px solid rgba(52, 152, 219, 0.4);
-      background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.1) 100%);
+      border: 1px solid var(--primary-border, rgba(0, 173, 181, 0.35));
+      background: var(--primary-soft, rgba(0, 173, 181, 0.12));
+      color: var(--primary-light, #7fd9dd);
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      transition: all 0.6s ease;
-      color: inherit;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       font-size: 0.85rem;
       white-space: nowrap;
     }
     .lang-current:hover {
-      background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%);
-      border-color: rgba(52, 152, 219, 0.6);
+      background: rgba(0, 173, 181, 0.22);
+      border-color: var(--primary-color, #00adb5);
       transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .lang-dropdown-content {
       display: none;
       position: absolute;
       right: 0;
       top: 100%;
-      margin-top: 0.1rem;
-      background-color: #252a34;
-      min-width: 130px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 6px;
-      border: 2px solid rgba(52, 152, 219, 0.3);
+      margin-top: 0.25rem;
+      background-color: var(--card-bg, #2c3240);
+      min-width: 140px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
+      border: 1px solid var(--card-border-strong, rgba(255, 255, 255, 0.14));
       z-index: 1000;
-      animation: fadeIn 0.2s ease;
-      padding: 0.3rem 0;
+      animation: langFadeIn 0.2s ease;
+      padding: 0.3rem;
     }
-    @keyframes fadeIn {
+    @keyframes langFadeIn {
       from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-8px);
       }
       to {
         opacity: 1;
@@ -108,42 +108,18 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.7rem 1rem;
+      padding: 0.6rem 0.9rem;
       text-decoration: none;
-      color: #2c3e50;
+      color: #e0e6ee;
       transition: all 0.2s ease;
-      border-radius: 4px;
-      margin: 0.2rem 0.3rem;
+      border-radius: 7px;
       font-weight: 600;
       font-size: 0.9rem;
     }
     .lang-option:hover {
-      background-color: rgba(52, 152, 219, 0.15);
-      color: #1a5490;
+      background-color: var(--primary-soft, rgba(0, 173, 181, 0.12));
+      color: var(--primary-light, #7fd9dd);
       transform: translateX(3px);
-    }
-    @media (prefers-color-scheme: dark) {
-      .lang-current {
-        border-color: rgba(52, 152, 219, 0.5);
-        background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(41, 128, 185, 0.15) 100%);
-        color: inherit;
-      }
-      .lang-current:hover {
-        background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%);
-        border-color: rgba(52, 152, 219, 0.7);
-      }
-      .lang-dropdown-content {
-        background-color: #2a2a2a;
-        border-color: rgba(52, 152, 219, 0.4);
-      }
-      .lang-option {
-        color: #e0e0e0;
-        font-weight: 600;
-      }
-      .lang-option:hover {
-        background-color: rgba(52, 152, 219, 0.3);
-        color: #5dade2;
-      }
     }
     @media (max-width: 768px) {
       .language-switcher {

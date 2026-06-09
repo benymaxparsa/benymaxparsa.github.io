@@ -13,6 +13,12 @@ redirect_from:
 Parsa poursuit actuellement une maîtrise en informatique <strong>(avec mémoire)</strong> à l'<a href="https://www.concordia.ca">Université Concordia</a> au Département d'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Informatique et de Génie Logiciel (CSSE)</a>, à l'<a href="https://www.concordia.ca/ginacody.html">École de génie et d'informatique Gina-Cody</a>. Il mène des recherches au <strong><em>Laboratoire d'algorithmes et de complexité</em></strong> sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>. L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
 </p>
 
+<div class="hero-actions">
+  <a class="hero-btn hero-btn--primary" href="/files/FR_ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Télécharger le CV</a>
+  <a class="hero-btn hero-btn--ghost" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+  <a class="hero-btn hero-btn--ghost" href="/fr/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Me joindre</a>
+</div>
+
 Parsa s'intéresse particulièrement à des domaines tels que la ***conception et l'analyse d'algorithmes***, la ***théorie des graphes***, les ***mathématiques discrètes***, les ***structures de données*** et la ***théorie de la complexité***. Ses intérêts de recherche couvrent diverses sous-catégories du domaine des algorithmes, notamment l'***optimisation/algorithmes combinatoires***, les ***algorithmes de graphes***, l'***exploration de graphes***, l'***analyse de réseaux sociaux***, les ***algorithmes d'approximation et aléatoires*** et les ***algorithmes en ligne***. [En savoir plus →](/fr/biographie/)
 
 <div class="interest-tags" aria-label="Intérêts de recherche">
@@ -22,6 +28,13 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***conception e
   <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Analyse de réseaux sociaux</span>
   <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Optimisation combinatoire</span>
   <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Exploration de données</span>
+</div>
+
+<div class="stats-band" aria-label="Profil académique en un coup d'œil">
+  <div class="stat-card"><span class="stat-card__number">4</span><span class="stat-card__label">Publications</span></div>
+  <div class="stat-card"><span class="stat-card__number">15+</span><span class="stat-card__label">Cours assistés</span></div>
+  <div class="stat-card"><span class="stat-card__number">1100+</span><span class="stat-card__label">Heures d'enseignement</span></div>
+  <div class="stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Postes de recherche</span></div>
 </div>
 
 <h2 class="section-heading" id="explorer">Explorer ce site</h2>
