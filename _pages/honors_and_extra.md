@@ -5,8 +5,9 @@ excerpt: "Honors and Awards, Test Scores, Skills, etc."
 author_profile: true
 ---
 
----
 ## Honors and Awards
+{: .section-heading .section-heading--first}
+
 1. **Awarded Concordia Conference and Exposition Allowance** - ***Issued by Concordia University***
 1. **Awarded the DRW Graduate Scholarship in Computer Science** - ***Issued by Concordia University & DRW Company***
 1. **Awarded Concordia Merit Scholarship (Entrance Scholarship Award)** - ***Issued by Concordia University, School of Graduate Studies***
@@ -20,19 +21,20 @@ author_profile: true
 1. **Ranked 6th among undergraduate students of Computer Engineering @ Vali-e-Asr University of Rafsanjan in the 8th semester**
 1. **Faculty of engineering Exceptional Talent student for 4 semesters as a result of obtaining a GPA of over 17.00/20.00 (straight A).**
 2. **Awarded by government undergraduate tuition waiver scholarship**
-
-
----
+{: .award-list}
 
 ## Test Scores
-**TOEFL**: 99/120 - Reading: 26/30, Listening: 29/30, Speaking: 23/30, Writing: 21/30
+{: .section-heading}
+
+<div class="score-card">
+  <span class="score-card__total">TOEFL iBT — 99/120</span>
+  <span class="score-card__parts">Reading 26 · Listening 29 · Speaking 23 · Writing 21</span>
+</div>
 
 <!-- **GRE general**: Not taken yet. -->
 
-
----
-
 ## 🛠️ Skills & Tools
+{: .section-heading}
 
 **Programming Languages**
 
@@ -81,14 +83,14 @@ author_profile: true
 Problem-solving, Critical thinking, Research collaboration, technical presentation, clear written documentation, code review
 
 
----
-
 ## Languages
-**Persian**: Native language
+{: .section-heading}
 
-**English**: Proficient (C1)
-
-**French**: Pre-intermediate (A2)
+<div class="lang-grid">
+  <div class="lang-card"><span class="lang-card__name">Persian</span><span class="lang-card__level">Native language</span></div>
+  <div class="lang-card"><span class="lang-card__name">English</span><span class="lang-card__level">Proficient (C1)</span></div>
+  <div class="lang-card"><span class="lang-card__name">French</span><span class="lang-card__level">Pre-intermediate (A2)</span></div>
+</div>
 
 <!-- ---
 

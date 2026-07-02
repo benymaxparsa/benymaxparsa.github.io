@@ -39,158 +39,67 @@
 {% endif %}
 
 <div class="language-switcher" role="navigation" aria-label="Language switcher">
-  <style>
-    .language-switcher {
-      display: inline-block;
-      position: relative;
-      margin-left: 0.5rem;
-      font-size: 0.8rem;
-      flex-shrink: 0;
-    }
-    .lang-dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .lang-current {
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      cursor: pointer;
-      border: 1px solid var(--primary-border, rgba(0, 173, 181, 0.35));
-      background: var(--primary-soft, rgba(0, 173, 181, 0.12));
-      color: var(--primary-light, #7fd9dd);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
-    .lang-current:hover {
-      background: rgba(0, 173, 181, 0.22);
-      border-color: var(--primary-color, #00adb5);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    .lang-dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      margin-top: 0.25rem;
-      background-color: var(--card-bg, #2c3240);
-      min-width: 140px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
-      border-radius: 10px;
-      border: 1px solid var(--card-border-strong, rgba(255, 255, 255, 0.14));
-      z-index: 1000;
-      animation: langFadeIn 0.2s ease;
-      padding: 0.3rem;
-    }
-    @keyframes langFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .lang-dropdown.open .lang-dropdown-content,
-    .lang-dropdown:hover .lang-dropdown-content,
-    .lang-dropdown-content:hover {
-      display: block;
-    }
-    .lang-option {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 0.9rem;
-      text-decoration: none;
-      color: #e0e6ee;
-      transition: all 0.2s ease;
-      border-radius: 7px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .lang-option:hover {
-      background-color: var(--primary-soft, rgba(0, 173, 181, 0.12));
-      color: var(--primary-light, #7fd9dd);
-      transform: translateX(3px);
-    }
-    @media (max-width: 768px) {
-      .language-switcher {
-        margin-left: 0.5rem;
-        font-size: 0.8rem;
-      }
-      .lang-current {
-        padding: 0.35rem 0.6rem;
-        font-size: 0.85rem;
-      }
-      .lang-option {
-        padding: 0.5rem 0.7rem;
-        font-size: 0.85rem;
-      }
-    }
-  </style>
-  
   <div class="lang-dropdown">
     {% if is_french %}
-      <span class="lang-current">🇫🇷 FR</span>
+      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Changer de langue">🇫🇷 FR <span class="lang-caret" aria-hidden="true">▾</span></button>
       <div class="lang-dropdown-content">
         <a href="{{ english_url }}" class="lang-option lang-switch-link" data-lang="en" lang="en" hreflang="en" aria-label="Switch to English">🇬🇧 English</a>
       </div>
     {% else %}
-      <span class="lang-current">🇬🇧 EN</span>
+      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Change language">🇬🇧 EN <span class="lang-caret" aria-hidden="true">▾</span></button>
       <div class="lang-dropdown-content">
         <a href="{{ french_url }}" class="lang-option lang-switch-link" data-lang="fr" lang="fr" hreflang="fr-CA" aria-label="Passer au français">🇫🇷 Français</a>
       </div>
     {% endif %}
   </div>
-  
+
   <script>
     (function() {
       'use strict';
-      
-      // Store language preference when switching
-      document.addEventListener('DOMContentLoaded', function() {
-        var langLinks = document.querySelectorAll('.lang-switch-link');
-        langLinks.forEach(function(link) {
-          link.addEventListener('click', function(e) {
+
+      function setup() {
+        var dropdown = document.querySelector('.lang-dropdown');
+        var toggle = document.querySelector('.lang-current');
+        if (!dropdown || !toggle) return;
+
+        function setOpen(open) {
+          dropdown.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
+        // Click/tap only — no hover behavior, so it can't close on the way to the option
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          setOpen(!dropdown.classList.contains('open'));
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) setOpen(false);
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') setOpen(false);
+        });
+
+        // Store language preference when switching
+        dropdown.querySelectorAll('.lang-switch-link').forEach(function(link) {
+          link.addEventListener('click', function() {
             var lang = this.getAttribute('data-lang');
             if (lang) {
               try {
                 localStorage.setItem('preferredLanguage', lang);
-              } catch (e) {
-                // Silently fail if localStorage is not available
-                console.log('Could not save language preference');
-              }
+              } catch (err) { /* localStorage unavailable */ }
             }
           });
         });
-        
-        // Add click toggle functionality
-        var langDropdown = document.querySelector('.lang-dropdown');
-        var langCurrent = document.querySelector('.lang-current');
-        
-        if (langCurrent && langDropdown) {
-          langCurrent.addEventListener('click', function(e) {
-            e.stopPropagation();
-            langDropdown.classList.toggle('open');
-          });
-          
-          // Close dropdown when clicking outside
-          document.addEventListener('click', function(e) {
-            if (!langDropdown.contains(e.target)) {
-              langDropdown.classList.remove('open');
-            }
-          });
-        }
-      });
-      
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setup);
+      } else {
+        setup();
+      }
+
       // On homepage, redirect to preferred language
       if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
         try {
@@ -198,10 +107,7 @@
           if (preferredLang === 'fr' && !window.location.pathname.includes('/fr/')) {
             window.location.href = '/fr/';
           }
-        } catch (e) {
-          // Silently fail if localStorage is not available
-          console.log('Could not read language preference');
-        }
+        } catch (e) { /* localStorage unavailable */ }
       }
     })();
   </script>

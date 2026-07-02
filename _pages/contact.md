@@ -7,59 +7,38 @@ author_profile: true
 
 <link rel="stylesheet" href="/academicons-1.9.4/css/academicons.min.css"/>
 
-<br>
+## Affiliation
+{: .section-heading .section-heading--first}
 
-# Parsa Kamalipour  
+<div class="info-card">
+  <p class="info-card__role">Graduate Research Assistant &amp; Teaching Assistant &amp; Graduate Student</p>
+  <p>Department of Computer Science and Software Engineering<br>
+  Gina Cody School of Engineering and Computer Science<br>
+  Concordia University<br>
+  Montreal, QC, H3G 1M8, Canada</p>
+  <p class="info-card__muted">University's web directory: <a href="https://users.encs.concordia.ca/~pa_kama/">users.encs.concordia.ca/~pa_kama</a></p>
+</div>
 
-## Graduate Research Assistant & Teaching Assistant & Graduate Student
-Department of Computer Science and Software Engineering  
-Gina Cody School of Engineering and Computer Science  
-Concordia University  
-Montreal, QC, H3G 1M8, Canada  
-
-> ***My Office***:  
-Room 1124.00  
-Algorithms & Complexity Lab  
-Concordia University ER Building, 11th Floor   
-2155 Guy St, Montreal, Quebec H3H 2L9  
-
-University's Web Directory (My Website):  
-[users.encs.concordia.ca/~pa_kama](https://users.encs.concordia.ca/~pa_kama/)   
-
-
-<!-- ## Research Assistant & Head Teaching Assistant  
-Department of Computer Engineering  
-Vali-e-Asr University of Rafsanjan   -->
-<!-- Imam Khomeini Square, Rafsanjan, 7718897111, Iran -->
-
-<!-- ## Remote Research Assistant  
-University of Twente  
-Faculty of Electrical Engineering, Mathematics and Computer Science  
-Formal Methods and Tools group  
-Enschede, 7522NH, The Netherlands   -->
-
+<div class="info-card">
+  <p class="info-card__role"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> My Office</p>
+  <p>Room 1124.00 — Algorithms &amp; Complexity Lab<br>
+  Concordia University ER Building, 11th Floor<br>
+  2155 Guy St, Montreal, Quebec H3H 2L9</p>
+</div>
 
 ## Email
+{: .section-heading}
 
-Personal Email for Academic Purposes:  
-[{firstname}{lastname}.edu@gmail.com](mailto:parsakamalipour.edu@gmail.com)  
-*(I consistently prioritize checking this email)*  
+<ul class="contact-links">
+  <li><a class="contact-link" href="mailto:parsakamalipour.edu@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="contact-link__text"><span>Personal — Academic</span><span class="contact-link__sub">parsakamalipour.edu@gmail.com</span></span><span class="contact-badge">Checked first</span></a></li>
+  <li><a class="contact-link" href="mailto:parsa.kamalipour@mail.concordia.ca"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><span class="contact-link__text"><span>Concordia Student</span><span class="contact-link__sub">parsa.kamalipour@mail.concordia.ca</span></span></a></li>
+  <li><a class="contact-link" href="mailto:parsa.kamalipour@concordia.ca"><i class="fas fa-fw fa-briefcase" aria-hidden="true"></i><span class="contact-link__text"><span>Concordia Employee</span><span class="contact-link__sub">parsa.kamalipour@concordia.ca</span></span></a></li>
+  <li><a class="contact-link" href="mailto:parsakamalipour@gmail.com"><i class="fas fa-fw fa-envelope-open" aria-hidden="true"></i><span class="contact-link__text"><span>Personal — Non-academic</span><span class="contact-link__sub">parsakamalipour@gmail.com</span></span></a></li>
+</ul>
 
-> ***Academic Organization e-mails***:
->
->Concordia University Student Email:  
->[{firstname}.{lastname}@mail.concordia.ca](mailto:parsa.kamalipour@mail.concordia.ca)  
->
->Concordia University Employee Email:  
-[{firstname}.{lastname}@concordia.ca](mailto:parsa.kamalipour@concordia.ca)  
+## Links to my other accounts
+{: .section-heading}
 
-Personal Email for Non-Academic Purposes:  
-[{firstname}{lastname}@gmail.com](mailto:parsakamalipour@gmail.com)  
-
-<!-- [{firstname}{lastname}@stu.vru.ac.ir](mailto:parsakamalipour@stu.vru.ac.ir)   -->
-<!-- *(I don't check this email)* -->
-
-## Links to my other accounts:  
 <ul class="contact-links">
   <li><a class="contact-link" rel="me" href="https://benymaxparsa.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Personal Website</a></li>
   <li><a class="contact-link" rel="me" href="https://twitter.com/ParsaKamalipour"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> X (Twitter)</a></li>

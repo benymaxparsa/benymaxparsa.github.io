@@ -6,8 +6,9 @@ excerpt: "Distinctions et prix, résultats de tests, compétences, etc."
 author_profile: true
 ---
 
----
 ## Distinctions et prix
+{: .section-heading .section-heading--first}
+
 1. **Allocation de participation aux conférences et expositions de Concordia** - ***Décernée par l'Université Concordia***
 1. **Bourse d'études supérieures DRW en informatique** - ***Décernée par l'Université Concordia et la compagnie DRW***
 1. **Bourse d'excellence Concordia (bourse d'admission)** - ***Décernée par l'Université Concordia, École des études supérieures***
@@ -21,20 +22,20 @@ author_profile: true
 1. **Classé 6e parmi les étudiants de premier cycle en génie informatique @ Université Vali-e-Asr de Rafsanjan au 8e semestre**
 1. **Étudiant à talent exceptionnel de la faculté de génie pendant 4 semestres suite à l'obtention d'une moyenne cumulative supérieure à 17.00/20.00 (mention A).**
 2. **Bourse gouvernementale de dispense de frais de scolarité de premier cycle**
-
-
----
+{: .award-list}
 
 ## Résultats des tests
-**TOEFL** : 99/120 - Lecture : 26/30, Compréhension orale : 29/30, Expression orale : 23/30, Rédaction : 21/30
+{: .section-heading}
+
+<div class="score-card">
+  <span class="score-card__total">TOEFL iBT — 99/120</span>
+  <span class="score-card__parts">Lecture 26 · Compréhension orale 29 · Expression orale 23 · Rédaction 21</span>
+</div>
 
 <!-- **GRE général** : Pas encore passé. -->
 
-
----
-
-
 ## 🛠️ Compétences
+{: .section-heading}
 
 **Langages de programmation**
 
@@ -82,11 +83,11 @@ author_profile: true
 
 Résolution de problèmes, pensée critique, collaboration en recherche, présentation technique, rédaction technique claire, révision de code
 
----
-
 ## Langues
-**Persan**: langue maternelle
+{: .section-heading}
 
-**Anglais**: avancé (C1)
-
-**Français**: préintermédiaire (A2)
+<div class="lang-grid">
+  <div class="lang-card"><span class="lang-card__name">Persan</span><span class="lang-card__level">Langue maternelle</span></div>
+  <div class="lang-card"><span class="lang-card__name">Anglais</span><span class="lang-card__level">Avancé (C1)</span></div>
+  <div class="lang-card"><span class="lang-card__name">Français</span><span class="lang-card__level">Préintermédiaire (A2)</span></div>
+</div>

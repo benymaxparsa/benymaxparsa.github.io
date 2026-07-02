@@ -24,6 +24,60 @@
     addScrollReveal();
     enhanceLazyLoading();
     addSearchShortcut();
+    recalcNavAfterFonts();
+    updateDurations();
+  }
+
+  /**
+   * The greedy nav measures link widths on load; custom web fonts arriving
+   * later change those widths and leave the masthead overlapping on phones.
+   * Re-trigger its resize handler once fonts are ready.
+   */
+  function recalcNavAfterFonts() {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function() {
+        window.dispatchEvent(new Event('resize'));
+      });
+    }
+  }
+
+  /**
+   * Auto-updating "X yrs Y mos" durations (LinkedIn-style, inclusive months)
+   * for elements like <span class="teaching-duration" data-start="2024-09">.
+   * Static text in the markup stays as the no-JS fallback.
+   */
+  function updateDurations() {
+    var nodes = document.querySelectorAll('.teaching-duration[data-start]');
+    if (!nodes.length) return;
+
+    var now = new Date();
+    var isFrench = (document.documentElement.lang || '').toLowerCase().indexOf('fr') === 0;
+
+    nodes.forEach(function(el) {
+      var start = (el.getAttribute('data-start') || '').split('-');
+      var startY = parseInt(start[0], 10);
+      var startM = parseInt(start[1], 10);
+      if (!startY || !startM) return;
+
+      var end = (el.getAttribute('data-end') || '').split('-');
+      var endY = parseInt(end[0], 10) || now.getFullYear();
+      var endM = parseInt(end[1], 10) || now.getMonth() + 1;
+
+      var months = (endY - startY) * 12 + (endM - startM) + 1;
+      if (months < 1) return;
+
+      var yrs = Math.floor(months / 12);
+      var mos = months % 12;
+      var parts = [];
+      if (isFrench) {
+        if (yrs) parts.push(yrs + (yrs > 1 ? ' ans' : ' an'));
+        if (mos) parts.push(mos + ' mois');
+      } else {
+        if (yrs) parts.push(yrs + (yrs > 1 ? ' yrs' : ' yr'));
+        if (mos) parts.push(mos + (mos > 1 ? ' mos' : ' mo'));
+      }
+      if (parts.length) el.textContent = parts.join(' ');
+    });
   }
 
   /**
@@ -243,8 +297,10 @@
   function addScrollReveal() {
     if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
 
+    // News entries are excluded: fading them in as you scroll read as lag,
+    // especially on phones — they now render instantly.
     const targets = document.querySelectorAll(
-      '.quick-link, .stat-card, .list__item, .news-feed blockquote, .teaching-role, .contact-links li'
+      '.quick-link, .stat-card, .list__item, .teaching-role, .contact-links li'
     );
     if (!targets.length) return;
 
@@ -256,8 +312,10 @@
         }
       });
     }, {
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.05
+      // Start revealing well before the element enters the viewport so the
+      // next card is already visible as you scroll toward it
+      rootMargin: '0px 0px 200px 0px',
+      threshold: 0
     });
 
     targets.forEach((el, i) => {
@@ -265,7 +323,6 @@
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight * 0.9) return;
       el.classList.add('reveal');
-      el.style.transitionDelay = Math.min(i % 6, 4) * 0.05 + 's';
       observer.observe(el);
     });
   }
@@ -274,6 +331,15 @@
    * Enhance lazy loading with fade-in effect
    */
   function enhanceLazyLoading() {
+    // Fade-in for natively lazy-loaded images that haven't arrived yet
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      if (img.complete) return;
+      img.classList.add('lazy-fade');
+      const markLoaded = () => img.classList.add('loaded');
+      img.addEventListener('load', markLoaded, { once: true });
+      img.addEventListener('error', markLoaded, { once: true });
+    });
+
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

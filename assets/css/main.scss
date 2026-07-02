@@ -179,6 +179,112 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-light);
 }
 
+/* Masthead blur is expensive to composite on low-end phones — use a solid bar there */
+@media (max-width: 768px) {
+  .masthead {
+    background: rgba(37, 42, 52, 0.97);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* ==========================================================================
+   Language switcher (masthead) — click/tap only, no hover-open
+   ========================================================================== */
+
+.language-switcher {
+  display: inline-block;
+  position: relative;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-current {
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid var(--primary-border);
+  background: var(--primary-soft);
+  color: var(--primary-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-current:hover,
+.lang-dropdown.open .lang-current {
+  background: rgba(0, 173, 181, 0.22);
+  border-color: var(--primary-color);
+}
+
+.lang-caret {
+  font-size: 0.7em;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.lang-dropdown.open .lang-caret {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding-top: 0.25rem; /* bridge the gap so the pointer never leaves the dropdown */
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.lang-dropdown.open .lang-dropdown-content {
+  display: block;
+  animation: langFadeIn 0.15s ease;
+}
+
+@keyframes langFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  text-decoration: none;
+  color: var(--body-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border-strong);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-option:hover,
+.lang-option:focus-visible {
+  background-color: var(--primary-soft);
+  color: var(--primary-light);
+}
+
 .page__footer {
   border-top: 1px solid var(--card-border);
 }
@@ -212,6 +318,23 @@ h1, h2, h3, h4, h5, h6 {
     var(--gradient-brand) border-box;
   box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.12), 0 10px 28px rgba(0, 0, 0, 0.4);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
+  animation: none; /* kill the theme's infinite color-cycling animation (constant repaints) */
+  margin-left: 0;
+}
+
+/* Larger avatar in the stacked mobile/tablet sidebar (theme squeezes it to 36px) */
+@media (max-width: 1023px) {
+  .author__avatar {
+    width: 90px;
+  }
+
+  .author__avatar img {
+    max-width: 90px;
+  }
+
+  .author__content {
+    vertical-align: middle;
+  }
 }
 
 .author__avatar img:hover {
@@ -409,6 +532,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--card-border);
 }
 
+.section-heading--first {
+  margin-top: 0.5em;
+}
+
 .section-heading::after {
   content: "";
   position: absolute;
@@ -533,7 +660,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  margin: 1.75em 0 0.6em;
+  margin: 2.4em 0 0.9em;
   font-size: 0.82em;
   font-weight: 700;
   text-transform: uppercase;
@@ -560,10 +687,14 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--card-border);
   border-left: 3px solid var(--primary-color);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  padding: 1em 1.25em;
-  margin: 0 0 1em 0.25em;
+  padding: 1.1em 1.3em;
+  margin: 0 0 1.4em 0.25em;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s var(--ease-out), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-feed h4:first-child {
+  margin-top: 0.5em;
 }
 
 .news-feed blockquote:hover {
@@ -643,6 +774,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.1em;
 }
 
+/* Breathing room between an intro paragraph and the first list card below it */
+.page__content p + .list__item {
+  margin-top: 1.75em;
+}
+
 .list__item .archive__item {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -693,6 +829,13 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.16);
   border-radius: var(--border-radius);
   border: 1px dashed var(--card-border-strong);
+  overflow-wrap: anywhere; /* long DOI/paper URLs must not escape the card */
+}
+
+/* Long URLs anywhere in content wrap instead of overflowing their box */
+.page__content a,
+.archive__item a {
+  overflow-wrap: anywhere;
 }
 
 .archive__item-excerpt {
@@ -1080,6 +1223,111 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Honors & awards page
+   ========================================================================== */
+
+.award-list {
+  list-style: none;
+  counter-reset: award;
+  margin: 1.25em 0 0;
+  padding: 0;
+}
+
+.award-list > li {
+  position: relative;
+  counter-increment: award;
+  margin: 0 0 0.65em;
+  padding: 0.9em 1.1em 0.9em 3.4em;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  line-height: 1.55;
+  transition: border-color 0.25s ease, transform 0.25s var(--ease-out);
+}
+
+.award-list > li::before {
+  content: counter(award, decimal-leading-zero);
+  position: absolute;
+  left: 1em;
+  top: 0.95em;
+  font-family: "Space Grotesk", $sans-serif;
+  font-size: 1.05em;
+  font-weight: 700;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.award-list > li:hover {
+  border-color: var(--primary-border);
+  transform: translateX(3px);
+}
+
+.award-list > li em {
+  color: var(--muted-color);
+}
+
+.score-card {
+  display: inline-block;
+  margin: 0.75em 0 0.5em;
+  padding: 0.9em 1.2em;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.score-card .score-card__total {
+  display: block;
+  font-family: "Space Grotesk", $sans-serif;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.score-card .score-card__parts {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 0.88em;
+  color: var(--muted-color);
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.7em;
+  margin: 1em 0 1.5em;
+}
+
+.lang-card {
+  padding: 0.85em 1em;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  transition: border-color 0.25s ease;
+}
+
+.lang-card:hover {
+  border-color: var(--primary-border);
+}
+
+.lang-card .lang-card__name {
+  display: block;
+  font-family: "Space Grotesk", $sans-serif;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.lang-card .lang-card__level {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 0.82em;
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* ==========================================================================
    Contact page — profile link grid
    ========================================================================== */
 
@@ -1134,6 +1382,68 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-light);
 }
 
+/* Two-line variant for email cards: label on top, address below */
+.contact-link__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact-link__sub {
+  margin-top: 0.15em;
+  font-weight: 400;
+  font-size: 0.85em;
+  color: var(--muted-color);
+  overflow-wrap: anywhere;
+}
+
+.contact-link .contact-badge {
+  margin-left: auto;
+  padding: 0.15em 0.6em;
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  color: var(--primary-light);
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Affiliation / office card */
+.info-card {
+  margin: 1em 0 1.5em;
+  padding: 1.2em 1.4em;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card p {
+  margin: 0 0 0.35em;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card .info-card__role,
+.page__content .info-card .info-card__role {
+  font-family: "Space Grotesk", $sans-serif;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5em;
+}
+
+.info-card .info-card__muted {
+  color: var(--muted-color);
+  font-size: 0.92em;
+}
+
 /* ==========================================================================
    Content polish: links, blockquotes, lists, tables, code, forms
    ========================================================================== */
@@ -1171,12 +1481,23 @@ blockquote {
   margin-bottom: 0.5em;
 }
 
-/* Tables */
+/* Tables — the theme's `display: block` keeps columns from stretching to the
+   page width; render as a real table and only fall back to horizontal
+   scrolling on narrow screens */
 table {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--card-border);
+  display: table;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 thead {
@@ -1340,8 +1661,8 @@ textarea:focus {
 /* Scroll-reveal (elements get .reveal from JS, .is-visible when scrolled into view) */
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+  transform: translateY(12px);
+  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out);
 }
 
 .reveal.is-visible {
@@ -1349,16 +1670,14 @@ textarea:focus {
   transform: none;
 }
 
-/* Image lazy-load fade-in */
-img {
+/* Image lazy-load fade-in (.lazy-fade is added by JS, so no-JS visitors
+   always see images) */
+img.lazy-fade {
+  opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 
-img[loading="lazy"] {
-  opacity: 0;
-}
-
-img[loading="lazy"].loaded {
+img.lazy-fade.loaded {
   opacity: 1;
 }
 
