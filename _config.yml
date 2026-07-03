@@ -20,7 +20,7 @@ title                    : "Parsa Kamalipour"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Parsa Kamalipour"
-description              : "RA & TA & Master of Computer Science at Concordia University | Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory."
+description              : "Graph Algorithms & Social Networks Analysis | Teaching Excellence Award · Teaching Assistant | Community Detection · Graph Sparsification · GNNs · ML · Algorithm Design · NetworkX | MSc Computer Science @ Concordia · BSc Computer Engineering"
 url                      : https://benymaxparsa.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "benymaxparsa/benymaxparsa.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -75,7 +75,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "vQuZMUe3btAbp5KkvECmsGlPRzZigNOqouxjo7-J6Kc"
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
