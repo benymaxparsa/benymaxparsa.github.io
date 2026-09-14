@@ -8,6 +8,7 @@ author_profile: true
 ## Honors and Awards
 {: .section-heading .section-heading--first}
 
+1. **Awarded the Dean's Excellence Award for Excellence in Teaching by a Teaching Assistant** - ***Issued by Concordia University, Gina Cody School of Engineering and Computer Science***
 1. **Awarded Concordia Conference and Exposition Allowance** - ***Issued by Concordia University***
 1. **Awarded the DRW Graduate Scholarship in Computer Science** - ***Issued by Concordia University & DRW Company***
 1. **Awarded Concordia Merit Scholarship (Entrance Scholarship Award)** - ***Issued by Concordia University, School of Graduate Studies***

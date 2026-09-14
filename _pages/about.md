@@ -32,7 +32,7 @@ Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms*
 <div class="stats-band" aria-label="Academic profile at a glance">
   <div class="stat-card"><span class="stat-card__number">4</span><span class="stat-card__label">Publications</span></div>
   <div class="stat-card"><span class="stat-card__number">15+</span><span class="stat-card__label">Courses TA’d</span></div>
-  <div class="stat-card"><span class="stat-card__number">1100+</span><span class="stat-card__label">Teaching hours</span></div>
+  <div class="stat-card"><span class="stat-card__number">1400+</span><span class="stat-card__label">Teaching hours</span></div>
   <div class="stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Research positions</span></div>
 </div>
 

@@ -9,6 +9,7 @@ author_profile: true
 ## Distinctions et prix
 {: .section-heading .section-heading--first}
 
+1. **Prix d'excellence du doyen pour l'excellence en enseignement par un auxiliaire d'enseignement** - ***Décerné par l'Université Concordia, École de génie et d'informatique Gina-Cody***
 1. **Allocation de participation aux conférences et expositions de Concordia** - ***Décernée par l'Université Concordia***
 1. **Bourse d'études supérieures DRW en informatique** - ***Décernée par l'Université Concordia et la compagnie DRW***
 1. **Bourse d'excellence Concordia (bourse d'admission)** - ***Décernée par l'Université Concordia, École des études supérieures***

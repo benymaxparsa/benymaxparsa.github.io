@@ -9,6 +9,16 @@ author_profile: true
 <div class="news-feed" markdown="1">
 
 
+#### Mai 2026
+> 🏆 J’ai l’honneur d’annoncer que j’ai reçu le **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant**, décerné par l’**École de génie et d’informatique Gina Cody** de l’**Université Concordia**.
+>
+> Merci à mes étudiantes et étudiants ainsi qu’aux enseignantes et enseignants avec qui j’ai collaboré dans les nombreux cours que j’ai soutenus depuis mon arrivée à Concordia. L’enseignement a été l’un des aspects les plus enrichissants de mon parcours aux cycles supérieurs.
+
+#### Février 2026
+> 📄 Mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** est maintenant **publié** dans la revue **Computers**, vol. 15, n° 2, article 83, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
+>
+> Lire l’article : [https://doi.org/10.3390/computers15020083](https://doi.org/10.3390/computers15020083)
+
 #### Janvier 2026
 > J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
 

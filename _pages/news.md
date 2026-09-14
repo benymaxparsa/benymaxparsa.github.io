@@ -10,6 +10,16 @@ author_profile: true
 
 <!-- # NEWS -->
 
+#### May 2026
+> 🏆 I am honoured to share that I have received the **Dean's Excellence Award for Excellence in Teaching by a Teaching Assistant**, awarded by the **Gina Cody School of Engineering and Computer Science** at **Concordia University**.
+>
+> Thank you to my students and to the instructors I have worked alongside across the many courses I have supported since joining Concordia. Teaching has been one of the most rewarding parts of my graduate journey.
+
+#### February 2026
+> 📄 My paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** is now **published** in the journal **Computers**, vol. 15, no. 2, article 83, Special Issue: **Recent Advances in Social Networks and Social Media**.
+>
+> Read the paper: [https://doi.org/10.3390/computers15020083](https://doi.org/10.3390/computers15020083)
+
 #### January 2026
 > I am pleased to share that my paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** has been **accepted** for publication in the journal **Computers**, Special Issue: **Recent Advances in Social Networks and Social Media**.
 
