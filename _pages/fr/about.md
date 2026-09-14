@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <p class="page__lead">
-Parsa poursuit actuellement une maîtrise en informatique <strong>(avec mémoire)</strong> à l'<a href="https://www.concordia.ca">Université Concordia</a> au Département d'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Informatique et de Génie Logiciel (CSSE)</a>, à l'<a href="https://www.concordia.ca/ginacody.html">École de génie et d'informatique Gina-Cody</a>. Il mène des recherches au <strong><em>Laboratoire d'algorithmes et de complexité</em></strong> sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>. L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
+Parsa poursuit actuellement une maîtrise en informatique <strong>(avec mémoire)</strong> à l'<a href="https://www.concordia.ca">Université Concordia</a> au Département d'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Informatique et de Génie Logiciel (CSSE)</a>, à l'<a href="https://www.concordia.ca/ginacody.html">École de génie et d'informatique Gina-Cody</a>. Il mène des recherches au <strong><em>Laboratoire d'algorithmes et de complexité</em></strong> sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>, où son mémoire, <strong><em>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</em></strong>, devrait être achevé en 2027. L'expertise de Parsa se situe en informatique théorique avec quelques touches de mathématiques appliquées, de génie logiciel et d'exploration de données.
 </p>
 
 <div class="hero-actions">
@@ -26,6 +26,7 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***conception e
   <span class="interest-tag"><i class="fas fa-code-branch" aria-hidden="true"></i> Algorithmes</span>
   <span class="interest-tag"><i class="fas fa-infinity" aria-hidden="true"></i> Théorie de la complexité</span>
   <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Analyse de réseaux sociaux</span>
+  <span class="interest-tag"><i class="fas fa-users" aria-hidden="true"></i> Détection de communautés</span>
   <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Optimisation combinatoire</span>
   <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Exploration de données</span>
 </div>
@@ -111,6 +112,21 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***conception e
 
 <div class="news-feed" markdown="1">
 
+#### Septembre 2026
+> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement pour quatre cours durant la session d’automne 2026 !**
+>
+> 🎓 **Cours :**
+> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire
+> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire
+> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels, POD et correcteur
+> - **COMP 339** – *Combinatoire* — Instructeur de tutoriels
+
+#### Mai 2026
+> 🏆 J’ai l’honneur d’avoir reçu le **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant**, décerné par l’**École de génie et d’informatique Gina-Cody** de l’**Université Concordia**.
+
+#### Février 2026
+> 📄 Mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** est maintenant **publié** dans la revue **Computers**, vol. 15, n° 2, article 83. [Lire l’article](https://doi.org/10.3390/computers15020083)
+
 #### Janvier 2026
 > J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
 
@@ -132,14 +148,6 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***conception e
 > **12e Conférence internationale sur l’analyse, la gestion et la sécurité des réseaux sociaux (SNAMS 2025)**.
 >
 > L’article a été présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
-
-#### Octobre 2024
-> 🎉 Ravi de partager que **j'ai reçu la <u>bourse d'études supérieures DRW en informatique</u>**, décernée par l'Université Concordia et DRW, une entreprise basée à Montréal ! 🚀
-
-#### Août 2024
-> 🌟 Ravi de partager que j'ai reçu le **soutien financier à la recherche (FRS) de la Faculté de génie et d'informatique de Concordia** de l'École de génie et d'informatique Gina-Cody à l'Université Concordia ! 🎓
-
-> 🎓 Honoré de recevoir la **bourse d'excellence Concordia (bourse d'admission)** de l'École des études supérieures de l'Université Concordia ! 🌟
 
 </div>
 

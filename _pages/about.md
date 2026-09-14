@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <p class="page__lead">
-Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science</strong> degree at <a href="https://www.concordia.ca">Concordia University</a> in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering (CSSE)</a>, at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He is conducting research at the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>. Parsa’s true expertise is Theoretical Computer Science with an additional touch of Applied Mathematics, Software Engineering, and Data Mining.
+Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science</strong> degree at <a href="https://www.concordia.ca">Concordia University</a> in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering (CSSE)</a>, at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He is conducting research at the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>, where his thesis, <strong><em>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</em></strong>, is expected to be completed in 2027. Parsa’s true expertise is Theoretical Computer Science with an additional touch of Applied Mathematics, Software Engineering, and Data Mining.
 </p>
 
 <div class="hero-actions">
@@ -25,6 +25,7 @@ Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms*
   <span class="interest-tag"><i class="fas fa-code-branch" aria-hidden="true"></i> Algorithms</span>
   <span class="interest-tag"><i class="fas fa-infinity" aria-hidden="true"></i> Complexity Theory</span>
   <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Social Network Analysis</span>
+  <span class="interest-tag"><i class="fas fa-users" aria-hidden="true"></i> Community Detection</span>
   <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Combinatorial Optimization</span>
   <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Data Mining</span>
 </div>
@@ -110,6 +111,21 @@ Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms*
 
 <div class="news-feed" markdown="1">
 
+#### September 2026
+>🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for four courses this Fall 2026 semester!**
+>
+>🎓 **Courses:**
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator
+>- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator
+>- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor, POD, and Marker
+>- **COMP 339** – *Combinatorics* — Tutorial Instructor
+
+#### May 2026
+> 🏆 I am honoured to have received the **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant**, awarded by the **Gina Cody School of Engineering and Computer Science** at **Concordia University**.
+
+#### February 2026
+> 📄 My paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** is now **published** in the journal **Computers**, vol. 15, no. 2, article 83. [Read it here](https://doi.org/10.3390/computers15020083)
+
 #### January 2026
 > I am pleased to share that my paper **“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching”** has been **accepted** for publication in the journal **Computers**, Special Issue: **Recent Advances in Social Networks and Social Media**.
 
@@ -130,14 +146,6 @@ Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms*
 > **12th International Conference on Social Networks Analysis, Management and Security (SNAMS 2025)**.
 >
 > The paper was presented in **Vienna, Austria**, during **November 25–28, 2025**.
-
-#### October 2024
-> 🎉 Excited to share that **I have been awarded the <u>DRW Graduate Scholarship in Computer Science</u>**, issued by Concordia University and DRW, a Montreal-based company! 🚀
-
-#### August 2024
-> 🌟 Excited to share that I’ve been awarded the **Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)** by the Gina Cody School of Engineering and Computer Science at Concordia University! 🎓
-
-> 🎓 Honored to receive the **Concordia Merit Scholarship (Entrance Scholarship Award)** from Concordia University’s School of Graduate Studies! 🌟
 
 </div>
 
