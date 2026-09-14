@@ -1,0 +1,66 @@
+---
+layout: archive
+title: "Course Materials for Students"
+permalink: /teaching/materials/
+author_profile: true
+excerpt: "Tutorial notes, lecture notes, and slides for the courses I teach at Concordia University — free to view and download."
+---
+
+{% include base_path %}
+
+<p class="page__lead">
+  Notes and slides I prepare for the courses I assist at Concordia University.
+  Everything here is free to view and download. If a file you are looking for is
+  missing, or you spot an error in one, please
+  <a href="/contact/">let me know</a>.
+</p>
+
+<div class="materials-note">
+  <i class="fas fa-info-circle" aria-hidden="true"></i>
+  <span>
+    These are supplementary materials written to support the tutorials and labs.
+    They do not replace your instructor's lecture notes, the course textbook, or
+    anything posted on Moodle, and the official course outline always takes
+    precedence.
+  </span>
+</div>
+
+{% for course in site.data.course_materials.courses %}
+  {% assign files = site.static_files | where_exp: "f", "f.path contains course.dir" | sort: "name" %}
+
+  <div class="course-materials">
+    <div class="course-materials__header">
+      <h2 class="course-materials__title">
+        <span class="course-materials__code">{{ course.code }}</span>
+        {{ course.name }}
+      </h2>
+      <p class="course-materials__meta">
+        {{ course.role }} <span class="course-materials__sep">•</span> {{ course.terms }}
+      </p>
+      {% if course.blurb %}<p class="course-materials__blurb">{{ course.blurb }}</p>{% endif %}
+    </div>
+
+    {% if files.size > 0 %}
+      <ul class="material-list">
+        {% for file in files %}
+          {% assign ext = file.extname | remove: "." | upcase %}
+          {% assign pretty = file.basename | replace: "_", " " | replace: "-", " " %}
+          <li class="material-item">
+            <a class="material-link" href="{{ file.path | relative_url }}" download>
+              <i class="fas fa-file-download" aria-hidden="true"></i>
+              <span class="material-name">{{ pretty }}</span>
+              <span class="material-ext">{{ ext }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="material-empty">
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        Materials for this course will be posted here during the term.
+      </p>
+    {% endif %}
+  </div>
+{% endfor %}
+
+<p><a class="btn btn--news" href="/teaching/"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Back to teaching</a></p>

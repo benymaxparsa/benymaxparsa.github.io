@@ -20,6 +20,8 @@ gallery:
 * Majeure : Baccalauréat ès sciences - B.Sc. Génie informatique
 * Voie principale : Génie logiciel
 * Date : Sep 2018 – Juin 2023
+* Diplômé avec mention
+* Directrice de mémoire : Dr Fahimeh Dabaghi-Zarandi
 * Moyenne cumulative : 16,26 / 20
 * Moyenne cumulative (cours de spécialisation) : 17,80 / 20
 * Mémoire de baccalauréat : Détection de communautés dans un réseau complexe basée sur un algorithme aléatoire amélioré utilisant des informations de réseau locales et globales

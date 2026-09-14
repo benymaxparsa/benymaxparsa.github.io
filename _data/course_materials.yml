@@ -1,0 +1,24 @@
+# Course materials shared with students.
+#
+# HOW TO ADD MATERIAL:
+#   1. Drop the file (PDF, slides, etc.) into the course's `dir` below.
+#   2. That's it. The page lists whatever is actually in the folder, so
+#      there are never dead links and no YAML edit is required.
+#
+# Optional: add a `titles:` mapping to override the auto-generated name
+# for a specific filename.
+
+courses:
+  - code: "COMP 339"
+    name: "Combinatorics"
+    role: "Tutorial Instructor"
+    terms: "Fall 2024, Fall 2025, Fall 2026"
+    blurb: "Tutorial notes covering counting, recurrences, generating functions, and graph-theoretic combinatorics."
+    dir: "/files/teaching/comp339/"
+
+  - code: "SOEN 363"
+    name: "Data Systems for Software Engineers"
+    role: "Tutorial Instructor, POD, and Marker"
+    terms: "Winter 2025, Fall 2025, Winter 2026, Fall 2026"
+    blurb: "Tutorial slides on relational design, query languages, indexing, transactions, and NoSQL data systems."
+    dir: "/files/teaching/soen363/"

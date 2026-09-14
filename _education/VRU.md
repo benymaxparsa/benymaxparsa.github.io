@@ -19,6 +19,8 @@ gallery:
 * Major: Bachelor of Science - B.Sc. Computer Engineering
 * Major Track: Software Engineering
 * Date: Sep 2018 – Jun 2023
+* Graduated with Honors
+* Thesis Advisor: Dr. Fahimeh Dabaghi-Zarandi
 * CGPA: 16.26/20
 * GPA (specialized courses): 17.80 / 20
 * Bachelor’s Thesis: Community detection in complex network based on an improved random algorithm using local and global network information

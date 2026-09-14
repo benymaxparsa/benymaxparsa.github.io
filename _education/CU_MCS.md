@@ -19,9 +19,11 @@ gallery:
 ---
 * Major: Master of Computer Science (Thesis-based) - Computer Science
 * Research Lab: Algorithms & Complexity Lab
-* Date: Sep 2024 – Aug 2026
+* Date: Sep 2024 – 2027 (expected)
 * Supervisor: Professor Hovhannes A. Harutyunyan
+* Thesis: Geodesic-Compact Community Detection and Quality Assessment in Social Networks
 * Research Topics: Community Detection, Social Networks Analysis, Algorithms Design, Graph Theory
+* Graduate Coursework: Advanced Analysis of Algorithms, Combinatorial Algorithms, Algorithm Design Techniques, Machine Learning
 {% include gallery %}
 
 

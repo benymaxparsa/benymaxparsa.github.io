@@ -1850,6 +1850,229 @@ img.lazy-fade.loaded {
   }
 }
 
+/* ==========================================================================
+   Course materials for students (/teaching/materials/)
+   ========================================================================== */
+
+/* Callout linking to the materials page from the teaching page */
+.teaching-materials-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--gradient-brand-soft);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 2rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.teaching-materials-cta > i {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.teaching-materials-cta__text {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.teaching-materials-cta__title {
+  display: block;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.15rem;
+}
+
+.teaching-materials-cta__desc {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--muted-color);
+  line-height: 1.6;
+}
+
+/* Advisory note at the top of the materials page */
+.materials-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0.95rem 1.15rem;
+  margin: 0 0 2.2rem 0;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--muted-color);
+}
+
+.materials-note i {
+  color: var(--primary-color);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* One card per course */
+.course-materials {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.5rem 1.2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-materials:hover {
+  border-color: var(--card-border-strong);
+}
+
+.course-materials__header {
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--card-border-strong);
+}
+
+.course-materials__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 0.4rem 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.course-materials__code {
+  display: inline-block;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  padding: 0.15em 0.75em;
+  font-family: $monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--primary-light);
+}
+
+.course-materials__meta {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.88rem;
+  color: var(--faint-color);
+}
+
+.course-materials__sep {
+  margin: 0 0.35em;
+}
+
+.course-materials__blurb {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--body-color);
+}
+
+/* The downloadable files */
+.material-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.material-item {
+  margin: 0;
+  padding: 0;
+}
+
+.material-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--bg-base);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  padding: 0.8rem 1rem;
+  transition: transform 0.25s var(--ease-out), border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Override the .page__content anchor defaults (colour + underline) */
+.page__content .material-link,
+.page__content .material-link:visited {
+  color: var(--body-color);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.material-link:hover,
+.material-link:focus-visible {
+  transform: translateX(3px);
+  border-color: var(--primary-border);
+  background: var(--card-bg-hover);
+}
+
+.page__content .material-link:hover {
+  color: var(--heading-color);
+}
+
+.material-link > i {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.material-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.material-ext {
+  flex-shrink: 0;
+  font-family: $monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--primary-light);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  padding: 0.2em 0.7em;
+}
+
+.material-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.93rem;
+  font-style: italic;
+  color: var(--faint-color);
+}
+
+.material-empty i {
+  color: var(--primary-color);
+  font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .course-materials {
+    padding: 1.1rem 1.05rem 1rem;
+  }
+
+  .material-link {
+    padding: 0.75rem 0.85rem;
+    gap: 0.6rem;
+  }
+}
+
 @media print {
   .masthead,
   .sidebar,
