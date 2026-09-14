@@ -1449,14 +1449,14 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 /* Underline-on-hover link styling for body copy */
-.page__content a:not(.btn):not(.quick-link):not(.hero-btn):not(.cv-btn):not(.contact-link) {
+.page__content a:not(.btn):not(.quick-link):not(.hero-btn):not(.cv-btn):not(.contact-link):not(.teaching-materials-cta):not(.material-link) {
   position: relative;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.page__content a:not(.btn):not(.quick-link):not(.hero-btn):not(.cv-btn):not(.contact-link):hover {
+.page__content a:not(.btn):not(.quick-link):not(.hero-btn):not(.cv-btn):not(.contact-link):not(.teaching-materials-cta):not(.material-link):hover {
   border-bottom-width: 2px;
   color: var(--primary-hover);
 }
@@ -1937,36 +1937,72 @@ img.lazy-fade.loaded {
    Course materials for students (/teaching/materials/)
    ========================================================================== */
 
-/* Callout linking to the materials page from the teaching page */
+/* Callout linking to the materials page from the teaching page.
+   Kept visually quieter than .teaching-award so the award stays the
+   first thing the eye lands on. */
 .teaching-materials-cta {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  background: var(--gradient-brand-soft);
-  border: 1px solid var(--primary-border);
+  align-items: flex-start;
+  gap: 0.95rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  padding: 1.1rem 1.3rem;
+  padding: 1.05rem 1.25rem;
   margin: 0 0 2rem 0;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease-out), border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Cancel the inherited anchor styling (underline + link colour).
+   Keyed off `a.<class>` rather than a wrapper: pages using `layout: archive`
+   render into .archive, not .page__content, so a wrapper-scoped override
+   would silently not apply there. */
+a.teaching-materials-cta,
+a.teaching-materials-cta:visited,
+a.teaching-materials-cta:hover,
+a.teaching-materials-cta:focus {
+  color: var(--body-color);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.teaching-materials-cta:hover,
+.teaching-materials-cta:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--primary-border);
+  background: var(--card-bg-hover);
 }
 
 .teaching-materials-cta > i {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   color: var(--primary-color);
   flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 .teaching-materials-cta__text {
-  flex: 1 1 16rem;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
 .teaching-materials-cta__title {
   display: block;
   font-weight: 700;
+  font-size: 1.02rem;
   color: var(--heading-color);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.teaching-materials-cta__arrow {
+  display: inline-block;
+  margin-left: 0.3em;
+  color: var(--primary-color);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.teaching-materials-cta:hover .teaching-materials-cta__arrow {
+  transform: translateX(4px);
 }
 
 .teaching-materials-cta__desc {
@@ -2085,9 +2121,12 @@ img.lazy-fade.loaded {
     background-color 0.25s ease;
 }
 
-/* Override the .page__content anchor defaults (colour + underline) */
-.page__content .material-link,
-.page__content .material-link:visited {
+/* Override the inherited anchor styling (colour + underline); see the note
+   on a.teaching-materials-cta for why this is not wrapper-scoped. */
+a.material-link,
+a.material-link:visited,
+a.material-link:hover,
+a.material-link:focus {
   color: var(--body-color);
   border-bottom: none;
   text-decoration: none;
@@ -2100,7 +2139,7 @@ img.lazy-fade.loaded {
   background: var(--card-bg-hover);
 }
 
-.page__content .material-link:hover {
+a.material-link:hover {
   color: var(--heading-color);
 }
 

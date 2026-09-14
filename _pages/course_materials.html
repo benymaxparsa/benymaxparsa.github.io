@@ -44,7 +44,12 @@ excerpt: "Tutorial notes, lecture notes, and slides for the courses I teach at C
       <ul class="material-list">
         {% for file in files %}
           {% assign ext = file.extname | remove: "." | upcase %}
-          {% assign pretty = file.basename | replace: "_", " " | replace: "-", " " %}
+          {% assign override = course.titles[file.name] %}
+          {% if override %}
+            {% assign pretty = override %}
+          {% else %}
+            {% assign pretty = file.basename | replace: "_", " " | replace: "-", " " %}
+          {% endif %}
           <li class="material-item">
             <a class="material-link" href="{{ file.path | relative_url }}" download>
               <i class="fas fa-file-download" aria-hidden="true"></i>

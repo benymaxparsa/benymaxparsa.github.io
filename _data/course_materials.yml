@@ -5,8 +5,12 @@
 #   2. That's it. The page lists whatever is actually in the folder, so
 #      there are never dead links and no YAML edit is required.
 #
-# Optional: add a `titles:` mapping to override the auto-generated name
-# for a specific filename.
+# The display name is derived from the filename (underscores and dashes
+# become spaces). To show something different, add the filename under that
+# course's `titles:` mapping, e.g.
+#
+#   titles:
+#     SOEN363_Tutorial_drawio_ER.pdf: "ER Diagrams with draw.io"
 
 courses:
   - code: "COMP 339"
@@ -22,3 +26,5 @@ courses:
     terms: "Winter 2025, Fall 2025, Winter 2026, Fall 2026"
     blurb: "Tutorial slides on relational design, query languages, indexing, transactions, and NoSQL data systems."
     dir: "/files/teaching/soen363/"
+    titles:
+      SOEN363_Tutorial_drawio_ER.pdf: "Tutorial: ER Diagrams with draw.io"
