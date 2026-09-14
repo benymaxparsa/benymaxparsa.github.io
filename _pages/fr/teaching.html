@@ -13,7 +13,7 @@ author_profile: true
   <div class="teaching-award__head">
     <i class="fas fa-trophy" aria-hidden="true"></i>
     <div class="teaching-award__text">
-      <p class="teaching-award__title">Dean&rsquo;s Excellence Award for Excellence in Teaching by a Teaching Assistant</p>
+      <p class="teaching-award__title">Prix d’excellence du doyen pour l’excellence en enseignement par un auxiliaire d’enseignement</p>
       <p class="teaching-award__meta">&Eacute;cole de g&eacute;nie et d&rsquo;informatique Gina-Cody, Universit&eacute; Concordia &mdash; mai 2026</p>
     </div>
   </div>
@@ -23,7 +23,9 @@ author_profile: true
       {% for photo in award_photos %}
         {% assign caption = photo.basename | replace: "_", " " | replace: "-", " " %}
         <figure class="teaching-award__photo">
-          <img src="{{ photo.path | relative_url }}" alt="{{ caption }}" loading="lazy">
+          <a href="{{ photo.path | relative_url }}" title="{{ caption }}">
+            <img src="{{ photo.path | relative_url }}" alt="{{ caption }}" loading="lazy">
+          </a>
         </figure>
       {% endfor %}
     </div>

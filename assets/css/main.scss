@@ -1910,6 +1910,17 @@ img.lazy-fade.loaded {
   background: var(--bg-base);
 }
 
+/* The anchor exists to open the lightbox; it should not draw link styling
+   or affect layout. */
+.teaching-award__photo a,
+.teaching-award__photo a:visited,
+.teaching-award__photo a:hover {
+  display: block;
+  border-bottom: none;
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
 .teaching-award__photo img {
   display: block;
   width: 100%;

@@ -21,7 +21,9 @@ author_profile: true
       {% for photo in award_photos %}
         {% assign caption = photo.basename | replace: "_", " " | replace: "-", " " %}
         <figure class="teaching-award__photo">
-          <img src="{{ photo.path | relative_url }}" alt="{{ caption }}" loading="lazy">
+          <a href="{{ photo.path | relative_url }}" title="{{ caption }}">
+            <img src="{{ photo.path | relative_url }}" alt="{{ caption }}" loading="lazy">
+          </a>
         </figure>
       {% endfor %}
     </div>
