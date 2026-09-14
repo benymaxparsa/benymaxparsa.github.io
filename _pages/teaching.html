@@ -7,6 +7,27 @@ author_profile: true
 
 {% include base_path %}
 
+<div class="teaching-award">
+  <div class="teaching-award__head">
+    <i class="fas fa-trophy" aria-hidden="true"></i>
+    <div class="teaching-award__text">
+      <p class="teaching-award__title">Dean&rsquo;s Excellence Award for Excellence in Teaching by a Teaching Assistant</p>
+      <p class="teaching-award__meta">Gina Cody School of Engineering and Computer Science, Concordia University &mdash; May 2026</p>
+    </div>
+  </div>
+  {% assign award_photos = site.static_files | where_exp: "f", "f.path contains '/images/Teaching_Award/'" | where_exp: "f", "f.extname != '.gitkeep'" | sort: "name" %}
+  {% if award_photos.size > 0 %}
+    <div class="teaching-award__photos">
+      {% for photo in award_photos %}
+        {% assign caption = photo.basename | replace: "_", " " | replace: "-", " " %}
+        <figure class="teaching-award__photo">
+          <img src="{{ photo.path | relative_url }}" alt="{{ caption }}" loading="lazy">
+        </figure>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
 <a class="teaching-materials-cta" href="/teaching/materials/">
   <i class="fas fa-folder-open" aria-hidden="true"></i>
   <span class="teaching-materials-cta__text">

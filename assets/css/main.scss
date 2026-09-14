@@ -1851,6 +1851,89 @@ img.lazy-fade.loaded {
 }
 
 /* ==========================================================================
+   Teaching award recognition banner
+   ========================================================================== */
+
+.teaching-award {
+  background: var(--gradient-brand-soft);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.35rem;
+  margin: 0 0 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.teaching-award__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.teaching-award__head > i {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.teaching-award__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.teaching-award__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.04rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--heading-color);
+}
+
+.teaching-award__meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted-color);
+}
+
+.teaching-award__photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.15rem;
+}
+
+.teaching-award__photo {
+  margin: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--card-border-strong);
+  background: var(--bg-base);
+}
+
+.teaching-award__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  transition: transform 0.35s var(--ease-out);
+}
+
+.teaching-award__photo:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .teaching-award {
+    padding: 1rem 1.05rem;
+  }
+
+  .teaching-award__photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Course materials for students (/teaching/materials/)
    ========================================================================== */
 
