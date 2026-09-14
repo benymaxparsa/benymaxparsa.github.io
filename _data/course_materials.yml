@@ -1,5 +1,9 @@
 # Course materials shared with students.
 #
+# Each course may carry an `fr:` block overriding name/role/terms/blurb
+# (and optionally `titles:`) for /fr/enseignement/materiel/. The file
+# list itself is shared: the PDFs are the same in both languages.
+#
 # HOW TO ADD MATERIAL:
 #   1. Drop the file (PDF, slides, etc.) into the course's `dir` below.
 #   2. That's it. The page lists whatever is actually in the folder, so
@@ -19,6 +23,11 @@ courses:
     terms: "Fall 2024, Fall 2025, Fall 2026"
     blurb: "Tutorial notes covering counting, recurrences, generating functions, and graph-theoretic combinatorics."
     dir: "/files/teaching/comp339/"
+    fr:
+      name: "Combinatoire"
+      role: "Instructeur de tutoriels"
+      terms: "Automne 2024, Automne 2025, Automne 2026"
+      blurb: "Notes de tutoriel portant sur le dénombrement, les récurrences, les fonctions génératrices et la combinatoire des graphes."
 
   - code: "SOEN 363"
     name: "Data Systems for Software Engineers"
@@ -28,3 +37,10 @@ courses:
     dir: "/files/teaching/soen363/"
     titles:
       SOEN363_Tutorial_drawio_ER.pdf: "Tutorial: ER Diagrams with draw.io"
+    fr:
+      name: "Systèmes de données pour les ingénieurs en logiciel"
+      role: "Instructeur de tutoriels, programmeur de service (POD) et correcteur"
+      terms: "Hiver 2025, Automne 2025, Hiver 2026, Automne 2026"
+      blurb: "Diapositives de tutoriel sur la conception relationnelle, les langages de requête, l’indexation, les transactions et les systèmes de données NoSQL."
+      titles:
+        SOEN363_Tutorial_drawio_ER.pdf: "Tutoriel : diagrammes entité-association avec draw.io"

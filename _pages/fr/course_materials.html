@@ -1,0 +1,76 @@
+---
+layout: archive
+lang: fr-CA
+title: "Matériel de cours pour les étudiants"
+permalink: /fr/enseignement/materiel/
+author_profile: true
+excerpt: "Notes de tutoriel, notes de cours et diapositives pour les cours auxquels je participe à l'Université Concordia — à consulter et à télécharger librement."
+---
+
+{% include base_path %}
+
+<p class="page__lead">
+  Notes et diapositives que je prépare pour les cours auxquels je participe à
+  l’Université Concordia. Tout le contenu est libre de consultation et de
+  téléchargement. S’il manque un document, ou si vous relevez une erreur,
+  <a href="/fr/contact/">faites-le moi savoir</a>.
+</p>
+
+<div class="materials-note">
+  <i class="fas fa-info-circle" aria-hidden="true"></i>
+  <span>
+    Il s’agit de matériel complémentaire rédigé pour appuyer les tutoriels et les
+    laboratoires. Il ne remplace ni les notes de cours de votre enseignant, ni le
+    manuel du cours, ni ce qui est publié sur Moodle&nbsp;; le plan de cours
+    officiel a toujours préséance.
+  </span>
+</div>
+
+{% for course in site.data.course_materials.courses %}
+  {% assign files = site.static_files | where_exp: "f", "f.path contains course.dir" | sort: "name" %}
+  {% assign name = course.fr.name | default: course.name %}
+  {% assign role = course.fr.role | default: course.role %}
+  {% assign terms = course.fr.terms | default: course.terms %}
+  {% assign blurb = course.fr.blurb | default: course.blurb %}
+
+  <div class="course-materials">
+    <div class="course-materials__header">
+      <h2 class="course-materials__title">
+        <span class="course-materials__code">{{ course.code }}</span>
+        {{ name }}
+      </h2>
+      <p class="course-materials__meta">
+        {{ role }} <span class="course-materials__sep">•</span> {{ terms }}
+      </p>
+      {% if blurb %}<p class="course-materials__blurb">{{ blurb }}</p>{% endif %}
+    </div>
+
+    {% if files.size > 0 %}
+      <ul class="material-list">
+        {% for file in files %}
+          {% assign ext = file.extname | remove: "." | upcase %}
+          {% assign override = course.fr.titles[file.name] | default: course.titles[file.name] %}
+          {% if override %}
+            {% assign pretty = override %}
+          {% else %}
+            {% assign pretty = file.basename | replace: "_", " " | replace: "-", " " %}
+          {% endif %}
+          <li class="material-item">
+            <a class="material-link" href="{{ file.path | relative_url }}" download>
+              <i class="fas fa-file-download" aria-hidden="true"></i>
+              <span class="material-name">{{ pretty }}</span>
+              <span class="material-ext">{{ ext }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="material-empty">
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        Le matériel de ce cours sera publié ici au cours de la session.
+      </p>
+    {% endif %}
+  </div>
+{% endfor %}
+
+<p><a class="btn btn--news" href="/fr/enseignement/"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Retour à l’enseignement</a></p>
