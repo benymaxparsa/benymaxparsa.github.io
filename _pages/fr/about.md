@@ -33,7 +33,7 @@ Parsa s'intéresse particulièrement à des domaines tels que la ***conception e
 <div class="stats-band" aria-label="Profil académique en un coup d'œil">
   <div class="stat-card"><span class="stat-card__number">4</span><span class="stat-card__label">Publications</span></div>
   <div class="stat-card"><span class="stat-card__number">15+</span><span class="stat-card__label">Cours assistés</span></div>
-  <div class="stat-card"><span class="stat-card__number">1400+</span><span class="stat-card__label">Heures d'enseignement</span></div>
+  <div class="stat-card"><span class="stat-card__number">1650+</span><span class="stat-card__label">Heures d'enseignement</span></div>
   <div class="stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Postes de recherche</span></div>
 </div>
 
