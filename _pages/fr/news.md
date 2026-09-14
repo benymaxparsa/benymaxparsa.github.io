@@ -9,6 +9,17 @@ author_profile: true
 <div class="news-feed" markdown="1">
 
 
+#### Septembre 2026
+> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement (Graduate Teaching Assistant) pour quatre cours durant la session d’automne 2026 !**
+>
+> C’est un honneur de continuer à contribuer à la formation des étudiantes et étudiants dans plusieurs domaines de l’informatique et du génie logiciel à l’Université Concordia.
+>
+> 🎓 **Cours :**
+> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire  
+> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire  
+> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels, programmeur de service (POD) et correcteur  
+> - **COMP 339** – *Combinatoire* — Instructeur de tutoriels  
+
 #### Mai 2026
 > 🏆 J’ai l’honneur d’annoncer que j’ai reçu le **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant**, décerné par l’**École de génie et d’informatique Gina Cody** de l’**Université Concordia**.
 >

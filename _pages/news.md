@@ -10,6 +10,16 @@ author_profile: true
 
 <!-- # NEWS -->
 
+#### September 2026
+>🍁 **Excited to share that I’ve been selected as the Graduate Teaching Assistant for four courses this Fall 2026 semester!**
+>
+>It’s an honor to continue contributing to student learning across multiple areas of computer science and software engineering at Concordia University.
+>🎓 **Courses:**
+>- **COEN 311** – *Computer Organization and Software* — Lab Demonstrator  
+>- **COEN 317** – *Microprocessor‑Based Systems* — Lab Demonstrator  
+>- **SOEN 363** – *Data Systems for Software Engineers* — Tutorial Instructor, Programmer on Duty (POD), and Marker  
+>- **COMP 339** – *Combinatorics* — Tutorial Instructor  
+
 #### May 2026
 > 🏆 I am honoured to share that I have received the **Dean's Excellence Award for Excellence in Teaching by a Teaching Assistant**, awarded by the **Gina Cody School of Engineering and Computer Science** at **Concordia University**.
 >
