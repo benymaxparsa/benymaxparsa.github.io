@@ -18,4 +18,5 @@ location: "Enschede, The Netherlands"
     - Constructed two refactoring datasets used for empirical evaluation in the SANER 2024 study.
     - Improved analysis reliability and runtime through targeted debugging and algorithmic refinements.
     - Investigated LLM-based prompt engineering for cross-language code translation in refactoring mining.
-- We have published one paper in the [IEEE SANER 2024 Conference[1]](/publication/p3), and we have submitted our 2nd paper in the [??? [2]](/publication/p4).
+    - Contributed to the XlateRefactor pipeline, evaluated across 241 commits and 71 repositories with ~2,000 validated refactorings in Java, Kotlin, and C, with all artifacts released publicly.
+- We have published one paper in the [IEEE SANER 2024 Conference[1]](/publication/p3). Our second paper, **“XlateRefactor: A Language-Agnostic Pipeline for Cross-Language Refactoring Detection Using LLM-Based Code Translation”**, is currently under review at **JSME** (major revision).

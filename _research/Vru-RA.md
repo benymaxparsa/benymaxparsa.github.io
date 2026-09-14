@@ -18,4 +18,4 @@ location: "Rafsanjān, Kerman, Iran"
     - Developed weighted probabilistic seeding and similarity-driven community assignment with heuristic community merging.
     - Implemented and evaluated the framework in MATLAB and Python, including validation, testing, and performance tuning.
     - Evaluated on real-world networks and GN/LFR benchmarks, achieving up to 10% improvement over LCDR, MOACO, Node2Vec-SC, NE-N2V, CDASS, and TS using NMI, modularity, and density metrics.
-- We have published one paper in the [JNCA journal[1]](/publication/p1).
+- We have published one paper in the [JNCA journal[1]](/publication/p1) (Q1), which has been cited 25+ times.

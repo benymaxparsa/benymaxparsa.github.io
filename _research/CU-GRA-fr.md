@@ -15,7 +15,8 @@ lang: fr-CA
 - Date : Août 2024 -- Présent
 - Mon rôle principal consistait à :
     - Concevoir Spider, un algorithme de détection de communautés dans les graphes combinant une expansion géodésique, un raffinement guidé par la modularité et un appariement glouton par fusion.
-    - Évaluer les performances de Spider sur 14 réseaux réels (jusqu’à 8 035 nœuds et 183 663 arêtes) en comparaison avec Leiden, Louvain et Infomap, obtenant des améliorations de 8 à 15 % en NMI, modularité et score F1.
-    - Appliquer une sparsification par metric backbone, permettant une réduction moyenne de 65 % des arêtes, et proposer la modularité moyenne pondérée par distance géodésique (wGDM) afin de normaliser et d’équilibrer la GDM pour l’évaluation locale de la qualité des communautés.
+    - Évaluer les performances de Spider face à Louvain, Leiden, Infomap, CNM et Label Propagation sur neuf réseaux réels (de 34 à 8 035 sommets) et des bancs d’essai LFR, obtenant les meilleurs scores F1 et ARI sur Karate Club et Political Blogs ainsi qu’un NMI de 0,88 sur Primary School, là où les méthodes fondées sur le flot et la propagation se réduisent à des partitions quasi triviales.
+    - Proposer la modularité moyenne pondérée par distance géodésique (wGDM), une mesure de qualité de partition sans étiquettes et robuste à la taille des communautés.
+    - Mener la première étude systématique de la sparsification par metric backbone combinée à Leiden, obtenant une réduction de 14 à 71 % des arêtes sur sept réseaux tout en préservant — et, sur les réseaux de contacts denses, en améliorant — la qualité de détection (F1 sur High School : 0,834 → 0,970).
     - Mettre en place un pipeline expérimental entièrement reproductible, incluant des graines aléatoires fixes, des implémentations de référence et des scripts d’évaluation automatisés.
 - Nous avons publié deux articles à ce jour : la [conférence IEEE SNAMS 2025[1]](/fr/publications/p5) et la [revue Computers[2]](/fr/publications/p6)

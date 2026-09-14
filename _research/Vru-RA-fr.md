@@ -19,4 +19,4 @@ lang: fr-CA
     - Développer un mécanisme d’initialisation probabiliste pondérée ainsi qu’une assignation des communautés fondée sur la similarité, avec une fusion heuristique des communautés.
     - Implémenter et évaluer le cadre en MATLAB et Python, incluant la validation, les tests et l’optimisation des performances.
     - Évaluer la méthode sur des réseaux réels et des bancs d’essai GN/LFR, obtenant jusqu’à 10 % d’amélioration par rapport à LCDR, MOACO, Node2Vec-SC, NE-N2V, CDASS et TS selon les métriques NMI, modularité et densité.
-- Nous avons publié un article dans la [revue JNCA[1]](/fr/publications/p1).
+- Nous avons publié un article dans la [revue JNCA[1]](/fr/publications/p1) (Q1), cité plus de 25 fois.

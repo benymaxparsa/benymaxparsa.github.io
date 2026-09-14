@@ -14,7 +14,8 @@ location: "Montreal, Québec, Canada"
 - Date: Aug 2024 -- Now
 - My key role consisted of:
     - Designed Spider, a graph community detection algorithm combining geodesic expansion, modularity-guided refinement, and greedy merge matching.
-    - Benchmarked Spider on 14 real-world networks (up to 8,035 nodes / 183,663 edges) against Leiden, Louvain, and Infomap, achieving 8–15% improvements in NMI, modularity, and F1-score.
-    - Applied metric backbone sparsification, achieving an average 65% edge reduction, and introduced Weighted Average Geodesic Distance Modularity (wGDM) to normalize and balance GDM for local community quality evaluation.
+    - Benchmarked Spider against Louvain, Leiden, Infomap, CNM, and Label Propagation on nine real-world networks (34–8,035 vertices) and LFR benchmarks, achieving top F1 and ARI on Karate Club and Political Blogs and NMI 0.88 on Primary School, where flow- and propagation-based baselines collapse to near-trivial partitions.
+    - Introduced Weighted Average Geodesic Distance Modularity (wGDM), a size-consistent, label-free partition quality measure.
+    - Conducted the first systematic study of metric backbone sparsification with Leiden, achieving 14–71% edge reduction across seven networks while preserving — and on dense contact networks improving — detection quality (High School F1: 0.834 → 0.970).
     - Built a fully reproducible experimental pipeline with fixed random seeds, baseline implementations, and automated evaluation scripts.
 - We have published two papers so far: the [IEEE SNAMS 2025 Conference[1]](/publication/p5) and the [Computers Journal[2]](/publication/p6)
