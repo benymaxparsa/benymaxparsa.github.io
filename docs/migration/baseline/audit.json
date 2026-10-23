@@ -1,0 +1,380 @@
+[
+ {
+  "page": "/fr/enseignement/",
+  "theme": "light",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/fr/enseignement/",
+  "theme": "light",
+  "width": 375,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/fr/enseignement/",
+  "theme": "dark",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/fr/enseignement/",
+  "theme": "dark",
+  "width": 375,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/teaching/",
+  "theme": "light",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/teaching/",
+  "theme": "light",
+  "width": 375,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 2.84,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/teaching/",
+  "theme": "dark",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/teaching/",
+  "theme": "dark",
+  "width": 375,
+  "issues": [
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   },
+   {
+    "kind": "contrast",
+    "ratio": 3.83,
+    "el": "SPAN.teaching-meta-sep",
+    "text": "•"
+   }
+  ]
+ },
+ {
+  "page": "/terms/",
+  "theme": "light",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "overflow",
+    "scrollWidth": 1336,
+    "clientWidth": 1280,
+    "wide": [
+     "ASIDE.sidebar__right",
+     "NAV.toc",
+     "HEADER."
+    ]
+   }
+  ]
+ },
+ {
+  "page": "/terms/",
+  "theme": "dark",
+  "width": 1280,
+  "issues": [
+   {
+    "kind": "overflow",
+    "scrollWidth": 1336,
+    "clientWidth": 1280,
+    "wide": [
+     "ASIDE.sidebar__right",
+     "NAV.toc",
+     "HEADER."
+    ]
+   }
+  ]
+ }
+]

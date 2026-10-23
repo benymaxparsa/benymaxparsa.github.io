@@ -1,0 +1,3131 @@
+[
+ {
+  "path": "/404.html",
+  "type": "text/html",
+  "size": 18182,
+  "title": "Page Not Found - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/404.html",
+  "redirect": null
+ },
+ {
+  "path": "/about.html",
+  "type": "text/html",
+  "size": 469,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/"
+ },
+ {
+  "path": "/about/index.html",
+  "type": "text/html",
+  "size": 469,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/"
+ },
+ {
+  "path": "/academicons-1.9.4/bower.json",
+  "type": "application/json",
+  "size": 227
+ },
+ {
+  "path": "/academicons-1.9.4/css/academicons.css",
+  "type": "text/css",
+  "size": 9207
+ },
+ {
+  "path": "/academicons-1.9.4/css/academicons.min.css",
+  "type": "text/css",
+  "size": 7768
+ },
+ {
+  "path": "/academicons-1.9.4/fonts/academicons.eot",
+  "type": "application/octet-stream",
+  "size": 68058
+ },
+ {
+  "path": "/academicons-1.9.4/fonts/academicons.svg",
+  "type": "image/svg+xml",
+  "size": 387754
+ },
+ {
+  "path": "/academicons-1.9.4/fonts/academicons.ttf",
+  "type": "application/octet-stream",
+  "size": 67872
+ },
+ {
+  "path": "/academicons-1.9.4/fonts/academicons.woff",
+  "type": "application/octet-stream",
+  "size": 131616
+ },
+ {
+  "path": "/academicons-1.9.4/package.json",
+  "type": "application/json",
+  "size": 939
+ },
+ {
+  "path": "/academicons-1.9.4/source/academicons.sfd",
+  "type": "application/octet-stream",
+  "size": 745607
+ },
+ {
+  "path": "/academicons-1.9.4/svg/academia-square.svg",
+  "type": "image/svg+xml",
+  "size": 5098
+ },
+ {
+  "path": "/academicons-1.9.4/svg/academia.svg",
+  "type": "image/svg+xml",
+  "size": 4398
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acclaim-square.svg",
+  "type": "image/svg+xml",
+  "size": 4227
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acclaim.svg",
+  "type": "image/svg+xml",
+  "size": 3743
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acm-square.svg",
+  "type": "image/svg+xml",
+  "size": 9328
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acm.svg",
+  "type": "image/svg+xml",
+  "size": 7686
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acmdl-square.svg",
+  "type": "image/svg+xml",
+  "size": 8197
+ },
+ {
+  "path": "/academicons-1.9.4/svg/acmdl.svg",
+  "type": "image/svg+xml",
+  "size": 7091
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ads-square.svg",
+  "type": "image/svg+xml",
+  "size": 8016
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ads.svg",
+  "type": "image/svg+xml",
+  "size": 6728
+ },
+ {
+  "path": "/academicons-1.9.4/svg/africarxiv-square.svg",
+  "type": "image/svg+xml",
+  "size": 13918
+ },
+ {
+  "path": "/academicons-1.9.4/svg/africarxiv.svg",
+  "type": "image/svg+xml",
+  "size": 11795
+ },
+ {
+  "path": "/academicons-1.9.4/svg/archive-square.svg",
+  "type": "image/svg+xml",
+  "size": 5698
+ },
+ {
+  "path": "/academicons-1.9.4/svg/archive.svg",
+  "type": "image/svg+xml",
+  "size": 4513
+ },
+ {
+  "path": "/academicons-1.9.4/svg/arxiv-square.svg",
+  "type": "image/svg+xml",
+  "size": 6252
+ },
+ {
+  "path": "/academicons-1.9.4/svg/arxiv.svg",
+  "type": "image/svg+xml",
+  "size": 5241
+ },
+ {
+  "path": "/academicons-1.9.4/svg/biorxiv-square.svg",
+  "type": "image/svg+xml",
+  "size": 7375
+ },
+ {
+  "path": "/academicons-1.9.4/svg/biorxiv.svg",
+  "type": "image/svg+xml",
+  "size": 6198
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ceur-square.svg",
+  "type": "image/svg+xml",
+  "size": 4130
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ceur.svg",
+  "type": "image/svg+xml",
+  "size": 3368
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ciencia-vitae-square.svg",
+  "type": "image/svg+xml",
+  "size": 4592
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ciencia-vitae.svg",
+  "type": "image/svg+xml",
+  "size": 3843
+ },
+ {
+  "path": "/academicons-1.9.4/svg/clarivate-square.svg",
+  "type": "image/svg+xml",
+  "size": 4352
+ },
+ {
+  "path": "/academicons-1.9.4/svg/clarivate.svg",
+  "type": "image/svg+xml",
+  "size": 4057
+ },
+ {
+  "path": "/academicons-1.9.4/svg/closed-access-square.svg",
+  "type": "image/svg+xml",
+  "size": 5115
+ },
+ {
+  "path": "/academicons-1.9.4/svg/closed-access.svg",
+  "type": "image/svg+xml",
+  "size": 4318
+ },
+ {
+  "path": "/academicons-1.9.4/svg/conversation-square.svg",
+  "type": "image/svg+xml",
+  "size": 4670
+ },
+ {
+  "path": "/academicons-1.9.4/svg/conversation.svg",
+  "type": "image/svg+xml",
+  "size": 3902
+ },
+ {
+  "path": "/academicons-1.9.4/svg/coursera-square.svg",
+  "type": "image/svg+xml",
+  "size": 8033
+ },
+ {
+  "path": "/academicons-1.9.4/svg/coursera.svg",
+  "type": "image/svg+xml",
+  "size": 6775
+ },
+ {
+  "path": "/academicons-1.9.4/svg/crossref-square.svg",
+  "type": "image/svg+xml",
+  "size": 4440
+ },
+ {
+  "path": "/academicons-1.9.4/svg/crossref.svg",
+  "type": "image/svg+xml",
+  "size": 3647
+ },
+ {
+  "path": "/academicons-1.9.4/svg/cv-square.svg",
+  "type": "image/svg+xml",
+  "size": 4732
+ },
+ {
+  "path": "/academicons-1.9.4/svg/cv.svg",
+  "type": "image/svg+xml",
+  "size": 3947
+ },
+ {
+  "path": "/academicons-1.9.4/svg/datacite-square.svg",
+  "type": "image/svg+xml",
+  "size": 5034
+ },
+ {
+  "path": "/academicons-1.9.4/svg/datacite.svg",
+  "type": "image/svg+xml",
+  "size": 4193
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dataverse-square.svg",
+  "type": "image/svg+xml",
+  "size": 5744
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dataverse.svg",
+  "type": "image/svg+xml",
+  "size": 4784
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dblp-square.svg",
+  "type": "image/svg+xml",
+  "size": 5328
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dblp.svg",
+  "type": "image/svg+xml",
+  "size": 4473
+ },
+ {
+  "path": "/academicons-1.9.4/svg/depsy-square.svg",
+  "type": "image/svg+xml",
+  "size": 5164
+ },
+ {
+  "path": "/academicons-1.9.4/svg/depsy.svg",
+  "type": "image/svg+xml",
+  "size": 4385
+ },
+ {
+  "path": "/academicons-1.9.4/svg/doi-square.svg",
+  "type": "image/svg+xml",
+  "size": 6805
+ },
+ {
+  "path": "/academicons-1.9.4/svg/doi.svg",
+  "type": "image/svg+xml",
+  "size": 5683
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dryad-square.svg",
+  "type": "image/svg+xml",
+  "size": 7173
+ },
+ {
+  "path": "/academicons-1.9.4/svg/dryad.svg",
+  "type": "image/svg+xml",
+  "size": 6115
+ },
+ {
+  "path": "/academicons-1.9.4/svg/elsevier-square.svg",
+  "type": "image/svg+xml",
+  "size": 4782
+ },
+ {
+  "path": "/academicons-1.9.4/svg/elsevier.svg",
+  "type": "image/svg+xml",
+  "size": 3631
+ },
+ {
+  "path": "/academicons-1.9.4/svg/figshare-square.svg",
+  "type": "image/svg+xml",
+  "size": 36631
+ },
+ {
+  "path": "/academicons-1.9.4/svg/figshare.svg",
+  "type": "image/svg+xml",
+  "size": 31389
+ },
+ {
+  "path": "/academicons-1.9.4/svg/google-scholar-square.svg",
+  "type": "image/svg+xml",
+  "size": 8000
+ },
+ {
+  "path": "/academicons-1.9.4/svg/google-scholar.svg",
+  "type": "image/svg+xml",
+  "size": 6620
+ },
+ {
+  "path": "/academicons-1.9.4/svg/hal-square.svg",
+  "type": "image/svg+xml",
+  "size": 6735
+ },
+ {
+  "path": "/academicons-1.9.4/svg/hal.svg",
+  "type": "image/svg+xml",
+  "size": 5750
+ },
+ {
+  "path": "/academicons-1.9.4/svg/hf-logo.svg",
+  "type": "image/svg+xml",
+  "size": 35286
+ },
+ {
+  "path": "/academicons-1.9.4/svg/hypothesis-square.svg",
+  "type": "image/svg+xml",
+  "size": 4939
+ },
+ {
+  "path": "/academicons-1.9.4/svg/hypothesis.svg",
+  "type": "image/svg+xml",
+  "size": 3898
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ideas-repec-square.svg",
+  "type": "image/svg+xml",
+  "size": 6272
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ideas-repec.svg",
+  "type": "image/svg+xml",
+  "size": 5228
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ieee-square.svg",
+  "type": "image/svg+xml",
+  "size": 8366
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ieee.svg",
+  "type": "image/svg+xml",
+  "size": 7045
+ },
+ {
+  "path": "/academicons-1.9.4/svg/impactstory-square.svg",
+  "type": "image/svg+xml",
+  "size": 8675
+ },
+ {
+  "path": "/academicons-1.9.4/svg/impactstory.svg",
+  "type": "image/svg+xml",
+  "size": 7315
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inaturalist-square.svg",
+  "type": "image/svg+xml",
+  "size": 6485
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inaturalist.svg",
+  "type": "image/svg+xml",
+  "size": 5460
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inpn-square.svg",
+  "type": "image/svg+xml",
+  "size": 5579
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inpn.svg",
+  "type": "image/svg+xml",
+  "size": 4560
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inspire-square.svg",
+  "type": "image/svg+xml",
+  "size": 4068
+ },
+ {
+  "path": "/academicons-1.9.4/svg/inspire.svg",
+  "type": "image/svg+xml",
+  "size": 3376
+ },
+ {
+  "path": "/academicons-1.9.4/svg/isidore-square.svg",
+  "type": "image/svg+xml",
+  "size": 4983
+ },
+ {
+  "path": "/academicons-1.9.4/svg/isidore.svg",
+  "type": "image/svg+xml",
+  "size": 4339
+ },
+ {
+  "path": "/academicons-1.9.4/svg/isni-square.svg",
+  "type": "image/svg+xml",
+  "size": 16419
+ },
+ {
+  "path": "/academicons-1.9.4/svg/isni.svg",
+  "type": "image/svg+xml",
+  "size": 12772
+ },
+ {
+  "path": "/academicons-1.9.4/svg/jstor-square.svg",
+  "type": "image/svg+xml",
+  "size": 6474
+ },
+ {
+  "path": "/academicons-1.9.4/svg/jstor.svg",
+  "type": "image/svg+xml",
+  "size": 5576
+ },
+ {
+  "path": "/academicons-1.9.4/svg/lattes-square.svg",
+  "type": "image/svg+xml",
+  "size": 6187
+ },
+ {
+  "path": "/academicons-1.9.4/svg/lattes.svg",
+  "type": "image/svg+xml",
+  "size": 5182
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mathoverflow-square.svg",
+  "type": "image/svg+xml",
+  "size": 6344
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mathoverflow.svg",
+  "type": "image/svg+xml",
+  "size": 5083
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mendeley-square.svg",
+  "type": "image/svg+xml",
+  "size": 6917
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mendeley.svg",
+  "type": "image/svg+xml",
+  "size": 5857
+ },
+ {
+  "path": "/academicons-1.9.4/svg/moodle-square.svg",
+  "type": "image/svg+xml",
+  "size": 5236
+ },
+ {
+  "path": "/academicons-1.9.4/svg/moodle.svg",
+  "type": "image/svg+xml",
+  "size": 4183
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mtmt-square.svg",
+  "type": "image/svg+xml",
+  "size": 8242
+ },
+ {
+  "path": "/academicons-1.9.4/svg/mtmt.svg",
+  "type": "image/svg+xml",
+  "size": 6813
+ },
+ {
+  "path": "/academicons-1.9.4/svg/nakala-square.svg",
+  "type": "image/svg+xml",
+  "size": 5762
+ },
+ {
+  "path": "/academicons-1.9.4/svg/nakala.svg",
+  "type": "image/svg+xml",
+  "size": 5019
+ },
+ {
+  "path": "/academicons-1.9.4/svg/obp-square.svg",
+  "type": "image/svg+xml",
+  "size": 6863
+ },
+ {
+  "path": "/academicons-1.9.4/svg/obp.svg",
+  "type": "image/svg+xml",
+  "size": 6087
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-access-square.svg",
+  "type": "image/svg+xml",
+  "size": 5018
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-access.svg",
+  "type": "image/svg+xml",
+  "size": 5515
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-data-square.svg",
+  "type": "image/svg+xml",
+  "size": 5125
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-data.svg",
+  "type": "image/svg+xml",
+  "size": 4554
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-materials-square.svg",
+  "type": "image/svg+xml",
+  "size": 4858
+ },
+ {
+  "path": "/academicons-1.9.4/svg/open-materials.svg",
+  "type": "image/svg+xml",
+  "size": 4132
+ },
+ {
+  "path": "/academicons-1.9.4/svg/openedition-square.svg",
+  "type": "image/svg+xml",
+  "size": 5268
+ },
+ {
+  "path": "/academicons-1.9.4/svg/openedition.svg",
+  "type": "image/svg+xml",
+  "size": 4552
+ },
+ {
+  "path": "/academicons-1.9.4/svg/orcid-square.svg",
+  "type": "image/svg+xml",
+  "size": 5573
+ },
+ {
+  "path": "/academicons-1.9.4/svg/orcid.svg",
+  "type": "image/svg+xml",
+  "size": 4644
+ },
+ {
+  "path": "/academicons-1.9.4/svg/osf-square.svg",
+  "type": "image/svg+xml",
+  "size": 7599
+ },
+ {
+  "path": "/academicons-1.9.4/svg/osf.svg",
+  "type": "image/svg+xml",
+  "size": 6280
+ },
+ {
+  "path": "/academicons-1.9.4/svg/overleaf-square.svg",
+  "type": "image/svg+xml",
+  "size": 4847
+ },
+ {
+  "path": "/academicons-1.9.4/svg/overleaf.svg",
+  "type": "image/svg+xml",
+  "size": 4033
+ },
+ {
+  "path": "/academicons-1.9.4/svg/philpapers-square.svg",
+  "type": "image/svg+xml",
+  "size": 5279
+ },
+ {
+  "path": "/academicons-1.9.4/svg/philpapers.svg",
+  "type": "image/svg+xml",
+  "size": 4401
+ },
+ {
+  "path": "/academicons-1.9.4/svg/piazza-square.svg",
+  "type": "image/svg+xml",
+  "size": 5377
+ },
+ {
+  "path": "/academicons-1.9.4/svg/piazza.svg",
+  "type": "image/svg+xml",
+  "size": 4465
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-plus-square.svg",
+  "type": "image/svg+xml",
+  "size": 6122
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-plus.svg",
+  "type": "image/svg+xml",
+  "size": 4935
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-square.svg",
+  "type": "image/svg+xml",
+  "size": 5837
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-tc-plus-square.svg",
+  "type": "image/svg+xml",
+  "size": 6714
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-tc-plus.svg",
+  "type": "image/svg+xml",
+  "size": 5502
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-tc-square.svg",
+  "type": "image/svg+xml",
+  "size": 6424
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de-tc.svg",
+  "type": "image/svg+xml",
+  "size": 5347
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-de.svg",
+  "type": "image/svg+xml",
+  "size": 4780
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-square.svg",
+  "type": "image/svg+xml",
+  "size": 5103
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-tc-plus-square.svg",
+  "type": "image/svg+xml",
+  "size": 5986
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-tc-plus.svg",
+  "type": "image/svg+xml",
+  "size": 5074
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-tc-square.svg",
+  "type": "image/svg+xml",
+  "size": 5700
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered-tc.svg",
+  "type": "image/svg+xml",
+  "size": 4923
+ },
+ {
+  "path": "/academicons-1.9.4/svg/preregistered.svg",
+  "type": "image/svg+xml",
+  "size": 4340
+ },
+ {
+  "path": "/academicons-1.9.4/svg/protocols-square.svg",
+  "type": "image/svg+xml",
+  "size": 9945
+ },
+ {
+  "path": "/academicons-1.9.4/svg/protocols.svg",
+  "type": "image/svg+xml",
+  "size": 8547
+ },
+ {
+  "path": "/academicons-1.9.4/svg/psyarxiv-square.svg",
+  "type": "image/svg+xml",
+  "size": 6366
+ },
+ {
+  "path": "/academicons-1.9.4/svg/psyarxiv.svg",
+  "type": "image/svg+xml",
+  "size": 4887
+ },
+ {
+  "path": "/academicons-1.9.4/svg/publons-square.svg",
+  "type": "image/svg+xml",
+  "size": 6810
+ },
+ {
+  "path": "/academicons-1.9.4/svg/publons.svg",
+  "type": "image/svg+xml",
+  "size": 5668
+ },
+ {
+  "path": "/academicons-1.9.4/svg/pubmed-square.svg",
+  "type": "image/svg+xml",
+  "size": 4612
+ },
+ {
+  "path": "/academicons-1.9.4/svg/pubmed.svg",
+  "type": "image/svg+xml",
+  "size": 3787
+ },
+ {
+  "path": "/academicons-1.9.4/svg/pubpeer-square.svg",
+  "type": "image/svg+xml",
+  "size": 6419
+ },
+ {
+  "path": "/academicons-1.9.4/svg/pubpeer.svg",
+  "type": "image/svg+xml",
+  "size": 6621
+ },
+ {
+  "path": "/academicons-1.9.4/svg/researcherid-square.svg",
+  "type": "image/svg+xml",
+  "size": 5091
+ },
+ {
+  "path": "/academicons-1.9.4/svg/researcherid.svg",
+  "type": "image/svg+xml",
+  "size": 4237
+ },
+ {
+  "path": "/academicons-1.9.4/svg/researchgate-square.svg",
+  "type": "image/svg+xml",
+  "size": 8087
+ },
+ {
+  "path": "/academicons-1.9.4/svg/researchgate.svg",
+  "type": "image/svg+xml",
+  "size": 6709
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ror-square.svg",
+  "type": "image/svg+xml",
+  "size": 8620
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ror.svg",
+  "type": "image/svg+xml",
+  "size": 7107
+ },
+ {
+  "path": "/academicons-1.9.4/svg/sci-hub-square.svg",
+  "type": "image/svg+xml",
+  "size": 15181
+ },
+ {
+  "path": "/academicons-1.9.4/svg/sci-hub.svg",
+  "type": "image/svg+xml",
+  "size": 17353
+ },
+ {
+  "path": "/academicons-1.9.4/svg/scirate-square.svg",
+  "type": "image/svg+xml",
+  "size": 6004
+ },
+ {
+  "path": "/academicons-1.9.4/svg/scirate.svg",
+  "type": "image/svg+xml",
+  "size": 4984
+ },
+ {
+  "path": "/academicons-1.9.4/svg/scopus-square.svg",
+  "type": "image/svg+xml",
+  "size": 5263
+ },
+ {
+  "path": "/academicons-1.9.4/svg/scopus.svg",
+  "type": "image/svg+xml",
+  "size": 4409
+ },
+ {
+  "path": "/academicons-1.9.4/svg/semantic-scholar-square.svg",
+  "type": "image/svg+xml",
+  "size": 6137
+ },
+ {
+  "path": "/academicons-1.9.4/svg/semantic-scholar.svg",
+  "type": "image/svg+xml",
+  "size": 5212
+ },
+ {
+  "path": "/academicons-1.9.4/svg/springer-square.svg",
+  "type": "image/svg+xml",
+  "size": 7635
+ },
+ {
+  "path": "/academicons-1.9.4/svg/springer.svg",
+  "type": "image/svg+xml",
+  "size": 6154
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ssrn-square.svg",
+  "type": "image/svg+xml",
+  "size": 11451
+ },
+ {
+  "path": "/academicons-1.9.4/svg/ssrn.svg",
+  "type": "image/svg+xml",
+  "size": 9136
+ },
+ {
+  "path": "/academicons-1.9.4/svg/stackoverflow-square.svg",
+  "type": "image/svg+xml",
+  "size": 4608
+ },
+ {
+  "path": "/academicons-1.9.4/svg/stackoverflow.svg",
+  "type": "image/svg+xml",
+  "size": 3495
+ },
+ {
+  "path": "/academicons-1.9.4/svg/viaf-square.svg",
+  "type": "image/svg+xml",
+  "size": 7858
+ },
+ {
+  "path": "/academicons-1.9.4/svg/viaf.svg",
+  "type": "image/svg+xml",
+  "size": 7693
+ },
+ {
+  "path": "/academicons-1.9.4/svg/wiley-square.svg",
+  "type": "image/svg+xml",
+  "size": 11380
+ },
+ {
+  "path": "/academicons-1.9.4/svg/wiley.svg",
+  "type": "image/svg+xml",
+  "size": 17275
+ },
+ {
+  "path": "/academicons-1.9.4/svg/zenodo.svg",
+  "type": "image/svg+xml",
+  "size": 11710
+ },
+ {
+  "path": "/academicons-1.9.4/svg/zotero-square.svg",
+  "type": "image/svg+xml",
+  "size": 4061
+ },
+ {
+  "path": "/academicons-1.9.4/svg/zotero.svg",
+  "type": "image/svg+xml",
+  "size": 3309
+ },
+ {
+  "path": "/assets/css/academicons.css",
+  "type": "text/css",
+  "size": 5922
+ },
+ {
+  "path": "/assets/css/academicons.min.css",
+  "type": "text/css",
+  "size": 4087
+ },
+ {
+  "path": "/assets/css/collapse.css",
+  "type": "text/css",
+  "size": 287
+ },
+ {
+  "path": "/assets/css/main.css",
+  "type": "text/css",
+  "size": 109626
+ },
+ {
+  "path": "/assets/css/style.css",
+  "type": "text/css",
+  "size": 76559
+ },
+ {
+  "path": "/assets/favicon/android-chrome-192x192.png",
+  "type": "image/png",
+  "size": 15484
+ },
+ {
+  "path": "/assets/favicon/android-chrome-512x512.png",
+  "type": "image/png",
+  "size": 33836
+ },
+ {
+  "path": "/assets/favicon/android-icon-144x144.png",
+  "type": "image/png",
+  "size": 11118
+ },
+ {
+  "path": "/assets/favicon/android-icon-192x192.png",
+  "type": "image/png",
+  "size": 14942
+ },
+ {
+  "path": "/assets/favicon/android-icon-36x36.png",
+  "type": "image/png",
+  "size": 2345
+ },
+ {
+  "path": "/assets/favicon/android-icon-48x48.png",
+  "type": "image/png",
+  "size": 3032
+ },
+ {
+  "path": "/assets/favicon/android-icon-72x72.png",
+  "type": "image/png",
+  "size": 4585
+ },
+ {
+  "path": "/assets/favicon/android-icon-96x96.png",
+  "type": "image/png",
+  "size": 6452
+ },
+ {
+  "path": "/assets/favicon/apple-icon-114x114.png",
+  "type": "image/png",
+  "size": 8446
+ },
+ {
+  "path": "/assets/favicon/apple-icon-120x120.png",
+  "type": "image/png",
+  "size": 8614
+ },
+ {
+  "path": "/assets/favicon/apple-icon-144x144.png",
+  "type": "image/png",
+  "size": 11118
+ },
+ {
+  "path": "/assets/favicon/apple-icon-152x152.png",
+  "type": "image/png",
+  "size": 12242
+ },
+ {
+  "path": "/assets/favicon/apple-icon-180x180.png",
+  "type": "image/png",
+  "size": 15284
+ },
+ {
+  "path": "/assets/favicon/apple-icon-57x57.png",
+  "type": "image/png",
+  "size": 3733
+ },
+ {
+  "path": "/assets/favicon/apple-icon-60x60.png",
+  "type": "image/png",
+  "size": 3768
+ },
+ {
+  "path": "/assets/favicon/apple-icon-72x72.png",
+  "type": "image/png",
+  "size": 4585
+ },
+ {
+  "path": "/assets/favicon/apple-icon-76x76.png",
+  "type": "image/png",
+  "size": 5201
+ },
+ {
+  "path": "/assets/favicon/apple-icon-precomposed.png",
+  "type": "image/png",
+  "size": 15484
+ },
+ {
+  "path": "/assets/favicon/apple-icon.png",
+  "type": "image/png",
+  "size": 15484
+ },
+ {
+  "path": "/assets/favicon/apple-touch-icon.png",
+  "type": "image/png",
+  "size": 15284
+ },
+ {
+  "path": "/assets/favicon/browserconfig.xml",
+  "type": "application/xml",
+  "size": 281
+ },
+ {
+  "path": "/assets/favicon/favicon-16x16.png",
+  "type": "image/png",
+  "size": 1461
+ },
+ {
+  "path": "/assets/favicon/favicon-32x32.png",
+  "type": "image/png",
+  "size": 2173
+ },
+ {
+  "path": "/assets/favicon/favicon-96x96.png",
+  "type": "image/png",
+  "size": 6452
+ },
+ {
+  "path": "/assets/favicon/favicon.ico",
+  "type": "image/x-icon",
+  "size": 1150
+ },
+ {
+  "path": "/assets/favicon/manifest.json",
+  "type": "application/json",
+  "size": 720
+ },
+ {
+  "path": "/assets/favicon/ms-icon-144x144.png",
+  "type": "image/png",
+  "size": 11118
+ },
+ {
+  "path": "/assets/favicon/ms-icon-150x150.png",
+  "type": "image/png",
+  "size": 12083
+ },
+ {
+  "path": "/assets/favicon/ms-icon-310x310.png",
+  "type": "image/png",
+  "size": 34793
+ },
+ {
+  "path": "/assets/favicon/ms-icon-70x70.png",
+  "type": "image/png",
+  "size": 4608
+ },
+ {
+  "path": "/assets/favicon/site - Copy.webmanifest",
+  "type": "application/octet-stream",
+  "size": 263
+ },
+ {
+  "path": "/assets/favicon/site.webmanifest",
+  "type": "application/octet-stream",
+  "size": 760
+ },
+ {
+  "path": "/assets/fonts/academicons.eot",
+  "type": "application/octet-stream",
+  "size": 38012
+ },
+ {
+  "path": "/assets/fonts/academicons.svg",
+  "type": "image/svg+xml",
+  "size": 162593
+ },
+ {
+  "path": "/assets/fonts/academicons.ttf",
+  "type": "application/octet-stream",
+  "size": 37832
+ },
+ {
+  "path": "/assets/fonts/academicons.woff",
+  "type": "application/octet-stream",
+  "size": 37908
+ },
+ {
+  "path": "/assets/fonts/fa-brands-400.eot",
+  "type": "application/octet-stream",
+  "size": 126428
+ },
+ {
+  "path": "/assets/fonts/fa-brands-400.svg",
+  "type": "image/svg+xml",
+  "size": 714760
+ },
+ {
+  "path": "/assets/fonts/fa-brands-400.ttf",
+  "type": "application/octet-stream",
+  "size": 126192
+ },
+ {
+  "path": "/assets/fonts/fa-brands-400.woff",
+  "type": "application/octet-stream",
+  "size": 81612
+ },
+ {
+  "path": "/assets/fonts/fa-brands-400.woff2",
+  "type": "application/octet-stream",
+  "size": 69608
+ },
+ {
+  "path": "/assets/fonts/fa-regular-400.eot",
+  "type": "application/octet-stream",
+  "size": 40460
+ },
+ {
+  "path": "/assets/fonts/fa-regular-400.svg",
+  "type": "image/svg+xml",
+  "size": 140716
+ },
+ {
+  "path": "/assets/fonts/fa-regular-400.ttf",
+  "type": "application/octet-stream",
+  "size": 40232
+ },
+ {
+  "path": "/assets/fonts/fa-regular-400.woff",
+  "type": "application/octet-stream",
+  "size": 18112
+ },
+ {
+  "path": "/assets/fonts/fa-regular-400.woff2",
+  "type": "application/octet-stream",
+  "size": 14844
+ },
+ {
+  "path": "/assets/fonts/fa-solid-900.eot",
+  "type": "application/octet-stream",
+  "size": 197172
+ },
+ {
+  "path": "/assets/fonts/fa-solid-900.svg",
+  "type": "image/svg+xml",
+  "size": 749291
+ },
+ {
+  "path": "/assets/fonts/fa-solid-900.ttf",
+  "type": "application/octet-stream",
+  "size": 196952
+ },
+ {
+  "path": "/assets/fonts/fa-solid-900.woff",
+  "type": "application/octet-stream",
+  "size": 95436
+ },
+ {
+  "path": "/assets/fonts/fa-solid-900.woff2",
+  "type": "application/octet-stream",
+  "size": 73852
+ },
+ {
+  "path": "/assets/js/collapse.js",
+  "type": "text/javascript",
+  "size": 561
+ },
+ {
+  "path": "/assets/js/custom-enhancements.js",
+  "type": "text/javascript",
+  "size": 22660
+ },
+ {
+  "path": "/assets/js/lunr/lunr-en.js",
+  "type": "text/javascript",
+  "size": 2853
+ },
+ {
+  "path": "/assets/js/lunr/lunr-gr.js",
+  "type": "text/javascript",
+  "size": 16172
+ },
+ {
+  "path": "/assets/js/lunr/lunr-store.js",
+  "type": "text/javascript",
+  "size": 71261
+ },
+ {
+  "path": "/assets/js/lunr/lunr.js",
+  "type": "text/javascript",
+  "size": 103279
+ },
+ {
+  "path": "/assets/js/lunr/lunr.min.js",
+  "type": "text/javascript",
+  "size": 29516
+ },
+ {
+  "path": "/assets/js/main.min.js",
+  "type": "text/javascript",
+  "size": 122511
+ },
+ {
+  "path": "/banner.js",
+  "type": "text/javascript",
+  "size": 653
+ },
+ {
+  "path": "/biography/index.html",
+  "type": "text/html",
+  "size": 25261,
+  "title": "Biography of Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/biographie/",
+  "redirect": null
+ },
+ {
+  "path": "/contact/index.html",
+  "type": "text/html",
+  "size": 22969,
+  "title": "Address and Contact Information - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/contact/",
+  "redirect": null
+ },
+ {
+  "path": "/cv/index.html",
+  "type": "text/html",
+  "size": 19153,
+  "title": "CV - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/cv/",
+  "redirect": null
+ },
+ {
+  "path": "/education/CU_MCS.html",
+  "type": "text/html",
+  "size": 22677,
+  "title": "Master of Computer Science Degree in Computer Science from Concordia University - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/formation/CU_MCS",
+  "redirect": null
+ },
+ {
+  "path": "/education/index.html",
+  "type": "text/html",
+  "size": 22153,
+  "title": "Education - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/formation/",
+  "redirect": null
+ },
+ {
+  "path": "/education/VRU.html",
+  "type": "text/html",
+  "size": 23995,
+  "title": "Bachelor of Science Degree in Computer Engineering from Vali-e-Asr University of Rafsanjan - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/formation/VRU",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/CEA_member.html",
+  "type": "text/html",
+  "size": 23926,
+  "title": "Scientific Committee Member at Vali-e-Asr University Scientific Association of Computer Engineering - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/CEA_member",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/index.html",
+  "type": "text/html",
+  "size": 25535,
+  "title": "Extra Curricular Activities - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/RA_committee.html",
+  "type": "text/html",
+  "size": 21569,
+  "title": "Director of Research Assistant Committee - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/RA_committee",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/ta_committee.html",
+  "type": "text/html",
+  "size": 21754,
+  "title": "Director of Teaching Assistant Committee - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/ta_committee",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/VCPC_member.html",
+  "type": "text/html",
+  "size": 21627,
+  "title": "Member of Teaching Staff for the Vali-e-Asr Collegiate Programming Contest (VCPC) - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/VCPC_member",
+  "redirect": null
+ },
+ {
+  "path": "/extracurricular/VGA_member.html",
+  "type": "text/html",
+  "size": 21590,
+  "title": "Executive Committee Member at Vali-e-Asr Video Games Association - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/activites/VGA_member",
+  "redirect": null
+ },
+ {
+  "path": "/favicon.ico",
+  "type": "image/x-icon",
+  "size": 15406
+ },
+ {
+  "path": "/feed.xml",
+  "type": "application/xml",
+  "size": 833
+ },
+ {
+  "path": "/files/FR_ParsaKamalipour_CV.pdf",
+  "type": "application/pdf",
+  "size": 84129
+ },
+ {
+  "path": "/files/ParsaKamalipour_CV.pdf",
+  "type": "application/pdf",
+  "size": 84552
+ },
+ {
+  "path": "/files/Projects/ComGNN_Project_Presentation.pdf",
+  "type": "application/pdf",
+  "size": 4897606
+ },
+ {
+  "path": "/files/Projects/ComGNN_Project_Proposal.pdf",
+  "type": "application/pdf",
+  "size": 101882
+ },
+ {
+  "path": "/files/Projects/ComGNN_Project_Report.pdf",
+  "type": "application/pdf",
+  "size": 6065052
+ },
+ {
+  "path": "/files/Projects/MinFlow_Report.pdf",
+  "type": "application/pdf",
+  "size": 290676
+ },
+ {
+  "path": "/files/teaching/comp339/Induction_and_Strong_Induction_Lecture_Notes.pdf",
+  "type": "application/pdf",
+  "size": 216482
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_1_Counting_Notes.pdf",
+  "type": "application/pdf",
+  "size": 240838
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_2_Counting_Induction_Notes.pdf",
+  "type": "application/pdf",
+  "size": 242885
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_3_Assignment_1_Notes.pdf",
+  "type": "application/pdf",
+  "size": 244804
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_4_Assignment_1_Notes.pdf",
+  "type": "application/pdf",
+  "size": 264838
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_5_Assignment_2_Notes.pdf",
+  "type": "application/pdf",
+  "size": 250667
+ },
+ {
+  "path": "/files/teaching/comp339/Tutorial_6_Assignment_2_Notes.pdf",
+  "type": "application/pdf",
+  "size": 263434
+ },
+ {
+  "path": "/files/teaching/soen363/SOEN363_Tutorial_drawio_ER.pdf",
+  "type": "application/pdf",
+  "size": 238572
+ },
+ {
+  "path": "/fr/404.html",
+  "type": "text/html",
+  "size": 19091,
+  "title": "Page non trouvée - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/404.html",
+  "redirect": null
+ },
+ {
+  "path": "/fr/a-propos/index.html",
+  "type": "text/html",
+  "size": 481,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/fr/"
+ },
+ {
+  "path": "/fr/accueil/index.html",
+  "type": "text/html",
+  "size": 481,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/fr/"
+ },
+ {
+  "path": "/fr/activites/CEA_member.html",
+  "type": "text/html",
+  "size": 25421,
+  "title": "Membre du comité scientifique à l’Association scientifique de génie informatique de l’Université Vali-e-Asr - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/CEA_member",
+  "redirect": null
+ },
+ {
+  "path": "/fr/activites/index.html",
+  "type": "text/html",
+  "size": 26712,
+  "title": "Activités parascolaires - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/activites/RA_committee.html",
+  "type": "text/html",
+  "size": 23163,
+  "title": "Directeur du comité des assistants de recherche - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/RA_committee",
+  "redirect": null
+ },
+ {
+  "path": "/fr/activites/ta_committee.html",
+  "type": "text/html",
+  "size": 23284,
+  "title": "Directeur du comité des auxiliaires d’enseignement - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/ta_committee",
+  "redirect": null
+ },
+ {
+  "path": "/fr/activites/VCPC_member.html",
+  "type": "text/html",
+  "size": 22694,
+  "title": "Membre du personnel enseignant pour le concours de programmation collégial Vali-e-Asr (VCPC) - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/VCPC_member",
+  "redirect": null
+ },
+ {
+  "path": "/fr/activites/VGA_member.html",
+  "type": "text/html",
+  "size": 22800,
+  "title": "Membre du comité exécutif à l’Association de jeux vidéo Vali-e-Asr - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/extracurricular/VGA_member",
+  "redirect": null
+ },
+ {
+  "path": "/fr/biographie/index.html",
+  "type": "text/html",
+  "size": 22720,
+  "title": "Biographie de Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/biography/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/contact/index.html",
+  "type": "text/html",
+  "size": 23683,
+  "title": "Adresse et coordonnées - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/contact/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/cours/index.html",
+  "type": "text/html",
+  "size": 22643,
+  "title": "Cours sélectionnés - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/selected_courses/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/cv/index.html",
+  "type": "text/html",
+  "size": 18917,
+  "title": "CV - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/cv/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/distinctions/index.html",
+  "type": "text/html",
+  "size": 25848,
+  "title": "Distinctions et prix, résultats de tests, compétences, etc. - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/honors_and_extra/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2021-DA.html",
+  "type": "text/html",
+  "size": 24465,
+  "title": "Auxiliaire d’enseignement principal du cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2021-DA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2021-DM.html",
+  "type": "text/html",
+  "size": 22950,
+  "title": "Auxiliaire d’enseignement du cours de mathématiques discrètes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2021-DM",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2021-DS.html",
+  "type": "text/html",
+  "size": 22869,
+  "title": "Auxiliaire d’enseignement du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2021-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2022-AI.html",
+  "type": "text/html",
+  "size": 25758,
+  "title": "Co-auxiliaire d’enseignement principal du cours d’intelligence artificielle - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2022-AI",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2022-DA.html",
+  "type": "text/html",
+  "size": 24975,
+  "title": "Co-auxiliaire d’enseignement principal du cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2022-DA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2022-DB.html",
+  "type": "text/html",
+  "size": 22574,
+  "title": "Auxiliaire d’enseignement du cours de bases de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2022-DB",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2022-DS.html",
+  "type": "text/html",
+  "size": 24605,
+  "title": "Co-auxiliaire d’enseignement principal du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2022-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2022-FP.html",
+  "type": "text/html",
+  "size": 23163,
+  "title": "Auxiliaire d’enseignement du cours de fondements de la programmation - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2022-FP",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2023-DS.html",
+  "type": "text/html",
+  "size": 22891,
+  "title": "Auxiliaire d’enseignement du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2023-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2024-COMP335.html",
+  "type": "text/html",
+  "size": 23281,
+  "title": "Auxiliaire d’enseignement diplômé : Correcteur de COMP 335 [Introduction à l’informatique théorique] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2024-COMP335",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Fall-2024-COMP339.html",
+  "type": "text/html",
+  "size": 23518,
+  "title": "Auxiliaire d’enseignement diplômé et correcteur de COMP 339 [Combinatoire] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Fall-2024-COMP339",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/index.html",
+  "type": "text/html",
+  "size": 30082,
+  "title": "Expériences d’enseignement - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/materiel/index.html",
+  "type": "text/html",
+  "size": 23373,
+  "title": "Matériel de cours pour les étudiants - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/materials/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2021-DA.html",
+  "type": "text/html",
+  "size": 24425,
+  "title": "Auxiliaire d’enseignement principal du cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2021-DA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2021-DS.html",
+  "type": "text/html",
+  "size": 22922,
+  "title": "Auxiliaire d’enseignement du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2021-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2022-DA.html",
+  "type": "text/html",
+  "size": 24994,
+  "title": "Co-auxiliaire d’enseignement principal du cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2022-DA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2022-DM.html",
+  "type": "text/html",
+  "size": 22993,
+  "title": "Auxiliaire d’enseignement du cours de mathématiques discrètes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2022-DM",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2022-DS.html",
+  "type": "text/html",
+  "size": 24652,
+  "title": "Co-auxiliaire d’enseignement principal du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2022-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2022-IR.html",
+  "type": "text/html",
+  "size": 22028,
+  "title": "Auxiliaire d’enseignement du cours de recherche d’information - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2022-IR",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2022-OS.html",
+  "type": "text/html",
+  "size": 22036,
+  "title": "Auxiliaire d’enseignement du cours de systèmes d’exploitation - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2022-OS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2023-DA.html",
+  "type": "text/html",
+  "size": 25011,
+  "title": "Co-auxiliaire d’enseignement principal du cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2023-DA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2023-DS.html",
+  "type": "text/html",
+  "size": 22975,
+  "title": "Auxiliaire d’enseignement du cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2023-DS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2023-DTM.html",
+  "type": "text/html",
+  "size": 22240,
+  "title": "Auxiliaire d’enseignement du cours d’exploration de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2023-DTM",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2023-IR.html",
+  "type": "text/html",
+  "size": 22232,
+  "title": "Auxiliaire d’enseignement du cours de recherche d’information - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2023-IR",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Spring-2023-SE.html",
+  "type": "text/html",
+  "size": 22346,
+  "title": "Auxiliaire d’enseignement du cours de génie logiciel - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Spring-2023-SE",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Summer-2022-python.html",
+  "type": "text/html",
+  "size": 21388,
+  "title": "Tuteur privé de Python - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Summer-2022-python",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Summer-2022-SCB.html",
+  "type": "text/html",
+  "size": 24559,
+  "title": "Instructeur pour le Bootcamp de codage d’été - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Summer-2022-SCB",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Summer1-2025-COMP335.html",
+  "type": "text/html",
+  "size": 23371,
+  "title": "Auxiliaire d’enseignement diplômé : Correcteur de COMP 335 [Introduction à l’informatique théorique] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Summer1-2025-COMP335",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Summer1-2025-COMP348.html",
+  "type": "text/html",
+  "size": 24013,
+  "title": "Auxiliaire d’enseignement diplômé : Instructeur de tutoriels et correcteur de COMP 348 [Principes des langages de programmation] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Summer1-2025-COMP348",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Summer2-2025-COMP233.html",
+  "type": "text/html",
+  "size": 23504,
+  "title": "Auxiliaire d’enseignement diplômé : Instructeur de tutoriels de COMP 233 [Probabilités et statistiques pour l’informatique] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Summer2-2025-COMP233",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Winter-2025-COMP348.html",
+  "type": "text/html",
+  "size": 23146,
+  "title": "Auxiliaire d’enseignement diplômé : Instructeur de tutoriels, programmeur de service (POD) et correcteur de COMP 348 [Principes des langages de programmation] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Winter-2025-COMP348",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Winter-2025-COMP465.html",
+  "type": "text/html",
+  "size": 22477,
+  "title": "Auxiliaire d’enseignement diplômé : Instructeur de tutoriels de COMP 465 [Conception et analyse d’algorithmes] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Winter-2025-COMP465",
+  "redirect": null
+ },
+ {
+  "path": "/fr/enseignement/Winter-2025-SOEN363.html",
+  "type": "text/html",
+  "size": 23266,
+  "title": "Auxiliaire d’enseignement diplômé : Instructeur de tutoriels, programmeur de service (POD) et correcteur de SOEN 363 [Systèmes de données pour ingénieurs logiciels] - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/teaching/Winter-2025-SOEN363",
+  "redirect": null
+ },
+ {
+  "path": "/fr/experiences/index.html",
+  "type": "text/html",
+  "size": 22137,
+  "title": "Expériences professionnelles - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/industry/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/experiences/null_references.html",
+  "type": "text/html",
+  "size": 30835,
+  "title": "Co-fondateur d’équipe et développeur de jeux indépendant - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/industry/null_references",
+  "redirect": null
+ },
+ {
+  "path": "/fr/formation/CU_MCS.html",
+  "type": "text/html",
+  "size": 23959,
+  "title": "Maîtrise en informatique de l’Université Concordia - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/education/CU_MCS",
+  "redirect": null
+ },
+ {
+  "path": "/fr/formation/index.html",
+  "type": "text/html",
+  "size": 22852,
+  "title": "Formation - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/education/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/formation/VRU.html",
+  "type": "text/html",
+  "size": 25640,
+  "title": "Baccalauréat ès sciences en génie informatique de l’Université Vali-e-Asr de Rafsanjan - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/education/VRU",
+  "redirect": null
+ },
+ {
+  "path": "/fr/galerie/index.html",
+  "type": "text/html",
+  "size": 18958,
+  "title": "Galerie d’images - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/gallery/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/index.html",
+  "type": "text/html",
+  "size": 24278,
+  "title": "Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/nouvelles/index.html",
+  "type": "text/html",
+  "size": 30835,
+  "title": "Nouvelles publiées par Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/news/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/projets/index.html",
+  "type": "text/html",
+  "size": 43231,
+  "title": "Projets - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/publications/index.html",
+  "type": "text/html",
+  "size": 27650,
+  "title": "Publications - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/publications/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/publications/p1.html",
+  "type": "text/html",
+  "size": 25177,
+  "title": "Détection de communautés dans un réseau complexe basée sur un algorithme aléatoire amélioré utilisant des informations de réseau locales et globales - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/publication/p1",
+  "redirect": null
+ },
+ {
+  "path": "/fr/publications/p3.html",
+  "type": "text/html",
+  "size": 25870,
+  "title": "Extension de la détection de réusinage à Kotlin : Un ensemble de données et une étude comparative - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/publication/p3",
+  "redirect": null
+ },
+ {
+  "path": "/fr/publications/p5.html",
+  "type": "text/html",
+  "size": 25783,
+  "title": "Des graphes denses aux communautés significatives : évaluation de la qualité des communautés à l’aide de la modularité fondée sur la distance géodésique dans des réseaux sparsifiés par Metric Backbone - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/publication/p5",
+  "redirect": null
+ },
+ {
+  "path": "/fr/publications/p6.html",
+  "type": "text/html",
+  "size": 24675,
+  "title": "Détection de communautés Spider : expansion géodésique à partir de graines avec raffinement guidé par la modularité et appariement glouton par fusion - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/publication/p6",
+  "redirect": null
+ },
+ {
+  "path": "/fr/recherche/CU-GRA.html",
+  "type": "text/html",
+  "size": 29013,
+  "title": "Assistant de recherche diplômé - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/research/CU-GRA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/recherche/index.html",
+  "type": "text/html",
+  "size": 26548,
+  "title": "Expérience de recherche - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/research/",
+  "redirect": null
+ },
+ {
+  "path": "/fr/recherche/UT-RA.html",
+  "type": "text/html",
+  "size": 27557,
+  "title": "Assistant de recherche à distance - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/research/UT-RA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/recherche/Vru-RA.html",
+  "type": "text/html",
+  "size": 26477,
+  "title": "Assistant de recherche de premier cycle - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/research/Vru-RA",
+  "redirect": null
+ },
+ {
+  "path": "/fr/resume.html",
+  "type": "text/html",
+  "size": 493,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/fr/cv/"
+ },
+ {
+  "path": "/gallery/index.html",
+  "type": "text/html",
+  "size": 18009,
+  "title": "Gallery &amp; Images - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/galerie/",
+  "redirect": null
+ },
+ {
+  "path": "/googlef74902c0964df8f1.html",
+  "type": "text/html",
+  "size": 53,
+  "title": null,
+  "lang": null,
+  "twin": null,
+  "redirect": null
+ },
+ {
+  "path": "/honors_and_extra/index.html",
+  "type": "text/html",
+  "size": 26087,
+  "title": "Honors and Awards, Test Scores, Skills, etc. - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/distinctions/",
+  "redirect": null
+ },
+ {
+  "path": "/images/3953273590_704e3899d5_m.jpg",
+  "type": "image/jpeg",
+  "size": 14037
+ },
+ {
+  "path": "/images/500x300.png",
+  "type": "image/png",
+  "size": 1662
+ },
+ {
+  "path": "/images/AI.jpg",
+  "type": "image/jpeg",
+  "size": 622192
+ },
+ {
+  "path": "/images/asm.png",
+  "type": "image/png",
+  "size": 28715
+ },
+ {
+  "path": "/images/Astar.png",
+  "type": "image/png",
+  "size": 460390
+ },
+ {
+  "path": "/images/bfex.png",
+  "type": "image/png",
+  "size": 38681
+ },
+ {
+  "path": "/images/bio-photo-2.jpg",
+  "type": "image/jpeg",
+  "size": 1806
+ },
+ {
+  "path": "/images/bio-photo.jpg",
+  "type": "image/jpeg",
+  "size": 1661
+ },
+ {
+  "path": "/images/browserconfig.xml",
+  "type": "application/xml",
+  "size": 467
+ },
+ {
+  "path": "/images/CE.jpg",
+  "type": "image/jpeg",
+  "size": 407760
+ },
+ {
+  "path": "/images/Closest_Pair_of_Points.png",
+  "type": "image/png",
+  "size": 53461
+ },
+ {
+  "path": "/images/CommGNN.png",
+  "type": "image/png",
+  "size": 419868
+ },
+ {
+  "path": "/images/compiler.png",
+  "type": "image/png",
+  "size": 86263
+ },
+ {
+  "path": "/images/Computers2026-screenshot.png",
+  "type": "image/png",
+  "size": 399190
+ },
+ {
+  "path": "/images/Concordia.jpg",
+  "type": "image/jpeg",
+  "size": 159477
+ },
+ {
+  "path": "/images/CRLG-arc.jpg",
+  "type": "image/jpeg",
+  "size": 1002485
+ },
+ {
+  "path": "/images/CRLG-result.jpg",
+  "type": "image/jpeg",
+  "size": 679870
+ },
+ {
+  "path": "/images/CRLG-screenshot.png",
+  "type": "image/png",
+  "size": 300830
+ },
+ {
+  "path": "/images/DFS&bfs.jpg",
+  "type": "image/jpeg",
+  "size": 43959
+ },
+ {
+  "path": "/images/DTM.jpg",
+  "type": "image/jpeg",
+  "size": 63316
+ },
+ {
+  "path": "/images/editing-talk.png",
+  "type": "image/png",
+  "size": 57016
+ },
+ {
+  "path": "/images/foo-bar-identity-th.jpg",
+  "type": "image/jpeg",
+  "size": 75014
+ },
+ {
+  "path": "/images/foo-bar-identity.jpg",
+  "type": "image/jpeg",
+  "size": 61076
+ },
+ {
+  "path": "/images/google/google_pic.jpg",
+  "type": "image/jpeg",
+  "size": 299951
+ },
+ {
+  "path": "/images/Graduation_Celebration/img1.JPG",
+  "type": "image/jpeg",
+  "size": 929933
+ },
+ {
+  "path": "/images/Graduation_Celebration/img2.JPG",
+  "type": "image/jpeg",
+  "size": 978169
+ },
+ {
+  "path": "/images/ids.jpg",
+  "type": "image/jpeg",
+  "size": 81920
+ },
+ {
+  "path": "/images/image-alignment-1200x4002.jpg",
+  "type": "image/jpeg",
+  "size": 35514
+ },
+ {
+  "path": "/images/image-alignment-150x150.jpg",
+  "type": "image/jpeg",
+  "size": 2844
+ },
+ {
+  "path": "/images/image-alignment-300x200.jpg",
+  "type": "image/jpeg",
+  "size": 6446
+ },
+ {
+  "path": "/images/image-alignment-580x300.jpg",
+  "type": "image/jpeg",
+  "size": 9082
+ },
+ {
+  "path": "/images/manifest.json",
+  "type": "application/json",
+  "size": 893
+ },
+ {
+  "path": "/images/MinFlow.png",
+  "type": "image/png",
+  "size": 313511
+ },
+ {
+  "path": "/images/mstile-144x144.png",
+  "type": "image/png",
+  "size": 1164
+ },
+ {
+  "path": "/images/mstile-150x150.png",
+  "type": "image/png",
+  "size": 1926
+ },
+ {
+  "path": "/images/mstile-310x150.png",
+  "type": "image/png",
+  "size": 2063
+ },
+ {
+  "path": "/images/mstile-310x310.png",
+  "type": "image/png",
+  "size": 4718
+ },
+ {
+  "path": "/images/mstile-70x70.png",
+  "type": "image/png",
+  "size": 1115
+ },
+ {
+  "path": "/images/os.png",
+  "type": "image/png",
+  "size": 17097
+ },
+ {
+  "path": "/images/paragraph-indent.png",
+  "type": "image/png",
+  "size": 32911
+ },
+ {
+  "path": "/images/paragraph-no-indent.png",
+  "type": "image/png",
+  "size": 33539
+ },
+ {
+  "path": "/images/Profile_Pictures/p1.jpg",
+  "type": "image/jpeg",
+  "size": 104526
+ },
+ {
+  "path": "/images/Profile_Pictures/p2.jpg",
+  "type": "image/jpeg",
+  "size": 193126
+ },
+ {
+  "path": "/images/Profile_Pictures/p3.jpg",
+  "type": "image/jpeg",
+  "size": 250204
+ },
+ {
+  "path": "/images/Profile_Pictures/p4.jpg",
+  "type": "image/jpeg",
+  "size": 106391
+ },
+ {
+  "path": "/images/Profile_Pictures/p5.jpg",
+  "type": "image/jpeg",
+  "size": 250801
+ },
+ {
+  "path": "/images/Profile_Pictures/p6.jpg",
+  "type": "image/jpeg",
+  "size": 83074
+ },
+ {
+  "path": "/images/Profile_Pictures/p7.jpg",
+  "type": "image/jpeg",
+  "size": 217767
+ },
+ {
+  "path": "/images/Profile_Pictures/p8.jpg",
+  "type": "image/jpeg",
+  "size": 205879
+ },
+ {
+  "path": "/images/Profile_Pictures/p9.jpg",
+  "type": "image/jpeg",
+  "size": 124792
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p1.jpg",
+  "type": "image/jpeg",
+  "size": 28956
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p2.jpg",
+  "type": "image/jpeg",
+  "size": 39384
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p3.jpg",
+  "type": "image/jpeg",
+  "size": 50813
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p4.jpg",
+  "type": "image/jpeg",
+  "size": 31108
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p5.jpg",
+  "type": "image/jpeg",
+  "size": 58623
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p6.jpg",
+  "type": "image/jpeg",
+  "size": 40434
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p7.jpg",
+  "type": "image/jpeg",
+  "size": 48962
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p8.jpg",
+  "type": "image/jpeg",
+  "size": 60185
+ },
+ {
+  "path": "/images/Profile_Pictures/sm/p9.jpg",
+  "type": "image/jpeg",
+  "size": 38864
+ },
+ {
+  "path": "/images/profile.png",
+  "type": "image/png",
+  "size": 282602
+ },
+ {
+  "path": "/images/profile1.png",
+  "type": "image/png",
+  "size": 597770
+ },
+ {
+  "path": "/images/profile2.png",
+  "type": "image/png",
+  "size": 316524
+ },
+ {
+  "path": "/images/QT.png",
+  "type": "image/png",
+  "size": 28635
+ },
+ {
+  "path": "/images/safari-pinned-tab.svg",
+  "type": "image/svg+xml",
+  "size": 2015
+ },
+ {
+  "path": "/images/SANER2024-screenshot.png",
+  "type": "image/png",
+  "size": 658457
+ },
+ {
+  "path": "/images/SCB_2022/img1.JPG",
+  "type": "image/jpeg",
+  "size": 473206
+ },
+ {
+  "path": "/images/SCB_2022/img2.JPG",
+  "type": "image/jpeg",
+  "size": 647339
+ },
+ {
+  "path": "/images/SCB_2022/img3.JPG",
+  "type": "image/jpeg",
+  "size": 683189
+ },
+ {
+  "path": "/images/SCB_2022/img4.JPG",
+  "type": "image/jpeg",
+  "size": 647491
+ },
+ {
+  "path": "/images/SCB_2022/img5.JPG",
+  "type": "image/jpeg",
+  "size": 568464
+ },
+ {
+  "path": "/images/site-logo.png",
+  "type": "image/png",
+  "size": 4653
+ },
+ {
+  "path": "/images/SNAMS2025-screenshot.png",
+  "type": "image/png",
+  "size": 385691
+ },
+ {
+  "path": "/images/Teaching_Award/TA_Excel1.jpeg",
+  "type": "image/jpeg",
+  "size": 234104
+ },
+ {
+  "path": "/images/Teaching_Award/TA_Excel2.png",
+  "type": "image/png",
+  "size": 732023
+ },
+ {
+  "path": "/images/Threaded-Binary-Tree.jpg",
+  "type": "image/jpeg",
+  "size": 65372
+ },
+ {
+  "path": "/images/Tournament.png",
+  "type": "image/png",
+  "size": 18191
+ },
+ {
+  "path": "/images/uniform-cost-search-algorithm.png",
+  "type": "image/png",
+  "size": 377555
+ },
+ {
+  "path": "/images/unity.jpg",
+  "type": "image/jpeg",
+  "size": 7338
+ },
+ {
+  "path": "/images/vhdl1.png",
+  "type": "image/png",
+  "size": 20364
+ },
+ {
+  "path": "/images/vhdl2.png",
+  "type": "image/png",
+  "size": 19138
+ },
+ {
+  "path": "/index.html",
+  "type": "text/html",
+  "size": 23641,
+  "title": "Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/",
+  "redirect": null
+ },
+ {
+  "path": "/industry/index.html",
+  "type": "text/html",
+  "size": 21000,
+  "title": "Industry Experiences - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/experiences/",
+  "redirect": null
+ },
+ {
+  "path": "/industry/null_references.html",
+  "type": "text/html",
+  "size": 28071,
+  "title": "Team Co-Founder &amp; Indie Game Developer - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/experiences/null_references",
+  "redirect": null
+ },
+ {
+  "path": "/manifest.json",
+  "type": "application/json",
+  "size": 1114
+ },
+ {
+  "path": "/minimal-mistakes-jekyll.gemspec",
+  "type": "application/octet-stream",
+  "size": 1108
+ },
+ {
+  "path": "/news/index.html",
+  "type": "text/html",
+  "size": 29924,
+  "title": "News posted by Parsa Kamalipour - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/nouvelles/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/A-star-fr/index.html",
+  "type": "text/html",
+  "size": 22555,
+  "title": "Implémentation de l’algorithme de recherche de chemin A* dans Unity3D - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/A-star/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/A-star/index.html",
+  "type": "text/html",
+  "size": 21788,
+  "title": "Implementing A* path finding algorithm in Unity3D - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/A-star-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/AI-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 23896,
+  "title": "Plusieurs projets relatifs au cours d’intelligence artificielle - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/AI-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/AI-Projects/index.html",
+  "type": "text/html",
+  "size": 26151,
+  "title": "Multiple projects regarding to Artificial Intelligence course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/AI-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/CommunityGNN-fr/index.html",
+  "type": "text/html",
+  "size": 27834,
+  "title": "Optimisation des réseaux de neurones sur graphes pour la détection de communautés à grande échelle - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/CommunityGNN/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/CommunityGNN/index.html",
+  "type": "text/html",
+  "size": 25372,
+  "title": "Optimizing Graph Neural Networks for Scalable Community Detection - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/CommunityGNN-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DA-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 22142,
+  "title": "Plusieurs projets relatifs au cours de conception et analyse d’algorithmes - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/DA-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DA-Projects/index.html",
+  "type": "text/html",
+  "size": 28598,
+  "title": "Multiple projects regarding to Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/DA-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DS-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 21991,
+  "title": "Plusieurs projets relatifs au cours de structures de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/DS-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DS-Projects/index.html",
+  "type": "text/html",
+  "size": 25860,
+  "title": "Multiple projects regarding to Data Structures and Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/DS-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DTM-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 22181,
+  "title": "Plusieurs projets relatifs au cours d’exploration de données - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/DTM-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/DTM-Projects/index.html",
+  "type": "text/html",
+  "size": 24650,
+  "title": "Multiple assignments regarding to the Intro to Data Mining course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/DTM-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/index.html",
+  "type": "text/html",
+  "size": 42619,
+  "title": "Projects - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/projets/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/IR-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 22095,
+  "title": "Plusieurs projets relatifs au cours de recherche d’information - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/IR-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/IR-Projects/index.html",
+  "type": "text/html",
+  "size": 23084,
+  "title": "Two projects regarding to Introduction to Information Retrieval &amp; Web Search course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/IR-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Learning-Unity-fr/index.html",
+  "type": "text/html",
+  "size": 21899,
+  "title": "Apprentissage d’Unity3D et développement de jeux - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/Learning-Unity/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Learning-Unity/index.html",
+  "type": "text/html",
+  "size": 22051,
+  "title": "Two projects regarding to when I was learning the Unity - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/Learning-Unity-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/MinFlow-fr/index.html",
+  "type": "text/html",
+  "size": 26618,
+  "title": "Algorithmes de flot à coût minimal sur des réseaux source–puits aléatoires - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/MinFlow/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/MinFlow/index.html",
+  "type": "text/html",
+  "size": 24505,
+  "title": "Minimum-Cost Flow Algorithms on Randomized Source–Sink Networks - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/MinFlow-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/OS_VHDL_CD_x64-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 22372,
+  "title": "Projets de systèmes d’exploitation, VHDL, conception de circuits et assembleur x64 - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/OS_VHDL_CD_x64-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/OS_VHDL_CD_x64-Projects/index.html",
+  "type": "text/html",
+  "size": 26994,
+  "title": "Some codes and projects related to the Compiler Design, Digital System Design, Assembly and microprocessor, Operating Systems courses, Digital Logic Circuit Design, Programming Language Design - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/OS_VHDL_CD_x64-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Qt-Projects-fr/index.html",
+  "type": "text/html",
+  "size": 21911,
+  "title": "Plusieurs projets utilisant le framework Qt - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/Qt-Projects/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Qt-Projects/index.html",
+  "type": "text/html",
+  "size": 21148,
+  "title": "Two simple projects regarding to learn Qt framework - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/Qt-Projects-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/SYMPHONYC-fr/index.html",
+  "type": "text/html",
+  "size": 24401,
+  "title": "SYMPHONYC : La base de données d’un service de streaming musical similaire à Spotify. - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/SYMPHONYC/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/SYMPHONYC/index.html",
+  "type": "text/html",
+  "size": 26160,
+  "title": "SYMPHONYC: The database of a music streaming service similar to Spotify. - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/SYMPHONYC-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Uncertainty-fr/index.html",
+  "type": "text/html",
+  "size": 26880,
+  "title": "Projet ‘Uncertainty’ : Un jeu vidéo et projet de laboratoire de génie logiciel - Parsa Kamalipour",
+  "lang": "fr-CA",
+  "twin": "/projects/Uncertainty/",
+  "redirect": null
+ },
+ {
+  "path": "/projects/Uncertainty/index.html",
+  "type": "text/html",
+  "size": 29836,
+  "title": "Project ‘Uncertainty’: A video game &amp; Software Engineering Lab project - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/projects/Uncertainty-fr/",
+  "redirect": null
+ },
+ {
+  "path": "/publication/p1.html",
+  "type": "text/html",
+  "size": 23789,
+  "title": "Community detection in complex network based on an improved random algorithm using local and global network information - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/publications/p1",
+  "redirect": null
+ },
+ {
+  "path": "/publication/p3.html",
+  "type": "text/html",
+  "size": 24263,
+  "title": "Extending refactoring detection to Kotlin: A dataset and comparative study. - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/publications/p3",
+  "redirect": null
+ },
+ {
+  "path": "/publication/p5.html",
+  "type": "text/html",
+  "size": 24096,
+  "title": "From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/publications/p5",
+  "redirect": null
+ },
+ {
+  "path": "/publication/p6.html",
+  "type": "text/html",
+  "size": 23041,
+  "title": "Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/publications/p6",
+  "redirect": null
+ },
+ {
+  "path": "/publications/index.html",
+  "type": "text/html",
+  "size": 26988,
+  "title": "Publications - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/publications/",
+  "redirect": null
+ },
+ {
+  "path": "/redirects.json",
+  "type": "application/json",
+  "size": 298
+ },
+ {
+  "path": "/research/CU-GRA.html",
+  "type": "text/html",
+  "size": 26366,
+  "title": "Graduate Research Assistant - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/recherche/CU-GRA",
+  "redirect": null
+ },
+ {
+  "path": "/research/index.html",
+  "type": "text/html",
+  "size": 26085,
+  "title": "Research Experience - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/recherche/",
+  "redirect": null
+ },
+ {
+  "path": "/research/UT-RA.html",
+  "type": "text/html",
+  "size": 25767,
+  "title": "Remote Research Assistant - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/recherche/UT-RA",
+  "redirect": null
+ },
+ {
+  "path": "/research/Vru-RA.html",
+  "type": "text/html",
+  "size": 24670,
+  "title": "Undergraduate Research Assistant - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/recherche/Vru-RA",
+  "redirect": null
+ },
+ {
+  "path": "/resume.html",
+  "type": "text/html",
+  "size": 481,
+  "title": "Redirecting&hellip;",
+  "lang": "en-US",
+  "twin": null,
+  "redirect": "/cv/"
+ },
+ {
+  "path": "/robots.txt",
+  "type": "text/plain",
+  "size": 435
+ },
+ {
+  "path": "/screenshot-layouts.png",
+  "type": "image/png",
+  "size": 124853
+ },
+ {
+  "path": "/screenshot.png",
+  "type": "image/png",
+  "size": 210879
+ },
+ {
+  "path": "/selected_courses/index.html",
+  "type": "text/html",
+  "size": 22030,
+  "title": "Selected Courses - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/cours/",
+  "redirect": null
+ },
+ {
+  "path": "/sitemap.xml",
+  "type": "application/xml",
+  "size": 19607
+ },
+ {
+  "path": "/sitemap/index.html",
+  "type": "text/html",
+  "size": 254535,
+  "title": "Sitemap - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/",
+  "redirect": null
+ },
+ {
+  "path": "/staticman.yml",
+  "type": "application/octet-stream",
+  "size": 3872
+ },
+ {
+  "path": "/teaching/Fall-2021-DA.html",
+  "type": "text/html",
+  "size": 22964,
+  "title": "Head Teaching Assistant of Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2021-DA",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2021-DM.html",
+  "type": "text/html",
+  "size": 21537,
+  "title": "Teaching Assistant of Discrete Mathematics course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2021-DM",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2021-DS.html",
+  "type": "text/html",
+  "size": 22841,
+  "title": "Head Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2021-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2022-AI.html",
+  "type": "text/html",
+  "size": 24004,
+  "title": "Co-Head Teaching Assistant of Artificial intelligence course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2022-AI",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2022-DA.html",
+  "type": "text/html",
+  "size": 23749,
+  "title": "Co-Head Teaching Assistant of Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2022-DA",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2022-DB.html",
+  "type": "text/html",
+  "size": 22734,
+  "title": "Co-Head Teaching Assistant of Database course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2022-DB",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2022-DS.html",
+  "type": "text/html",
+  "size": 23607,
+  "title": "Co-Head Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2022-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2022-FP.html",
+  "type": "text/html",
+  "size": 23815,
+  "title": "Co-Head Teaching Assistant of Fundamentals of Programming course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2022-FP",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2023-DS.html",
+  "type": "text/html",
+  "size": 22558,
+  "title": "Remote Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2023-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2024-COMP335.html",
+  "type": "text/html",
+  "size": 22371,
+  "title": "Graduate Teaching Assistant: Marker of COMP 335 [Introduction to Theoretical Computer Science] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2024-COMP335",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Fall-2024-COMP339.html",
+  "type": "text/html",
+  "size": 22954,
+  "title": "Graduate Teaching Assistant: Tutorial Leader &amp; Marker of COMP 339 [Combinatorics] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Fall-2024-COMP339",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/index.html",
+  "type": "text/html",
+  "size": 28595,
+  "title": "Teaching Experiences - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/materials/index.html",
+  "type": "text/html",
+  "size": 22600,
+  "title": "Course Materials for Students - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/materiel/",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2021-DA.html",
+  "type": "text/html",
+  "size": 22212,
+  "title": "Head Teaching Assistant of Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2021-DA",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2021-DS.html",
+  "type": "text/html",
+  "size": 22513,
+  "title": "Head Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2021-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2022-DA.html",
+  "type": "text/html",
+  "size": 23136,
+  "title": "Head Teaching Assistant of Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2022-DA",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2022-DM.html",
+  "type": "text/html",
+  "size": 21637,
+  "title": "Teaching Assistant(Grader) of Discrete Mathematics course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2022-DM",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2022-DS.html",
+  "type": "text/html",
+  "size": 23644,
+  "title": "Co-Head Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2022-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2022-IR.html",
+  "type": "text/html",
+  "size": 22972,
+  "title": "Teaching Assistant of Introduction to Information Retrieval &amp; Web Search course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2022-IR",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2022-OS.html",
+  "type": "text/html",
+  "size": 20813,
+  "title": "Teaching Assistant(Grader) of Operating Systems course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2022-OS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2023-DA.html",
+  "type": "text/html",
+  "size": 23676,
+  "title": "Head Teaching Assistant of Design and Analysis of Algorithms course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2023-DA",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2023-DS.html",
+  "type": "text/html",
+  "size": 23559,
+  "title": "Co-Head Teaching Assistant of Data Structures course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2023-DS",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2023-DTM.html",
+  "type": "text/html",
+  "size": 21267,
+  "title": "Teaching Assistant of Intro to Data Mining - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2023-DTM",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2023-IR.html",
+  "type": "text/html",
+  "size": 22961,
+  "title": "Head Teaching Assistant of Introduction to Information Retrieval &amp; Web Search course - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2023-IR",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Spring-2023-SE.html",
+  "type": "text/html",
+  "size": 21145,
+  "title": "Teaching Assistant of Software Engineering - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Spring-2023-SE",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Summer-2022-python.html",
+  "type": "text/html",
+  "size": 20402,
+  "title": "Python Private Tutor - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Summer-2022-python",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Summer-2022-SCB.html",
+  "type": "text/html",
+  "size": 23335,
+  "title": "Instructor for The Summer Coding Bootcamp - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Summer-2022-SCB",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Summer1-2025-COMP335.html",
+  "type": "text/html",
+  "size": 22413,
+  "title": "Graduate Teaching Assistant: Marker of COMP 335 [Introduction to Theoretical Computer Science] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Summer1-2025-COMP335",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Summer1-2025-COMP348.html",
+  "type": "text/html",
+  "size": 22009,
+  "title": "Graduate Teaching Assistant: Tutorial Leader &amp; Marker of COMP 348 [Principles of Programming Languages] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Summer1-2025-COMP348",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Summer2-2025-COMP233.html",
+  "type": "text/html",
+  "size": 21831,
+  "title": "Graduate Teaching Assistant: Tutorial Leader of COMP 233 [Probability and Statistics for Computer Science] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Summer2-2025-COMP233",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Winter-2025-COMP348.html",
+  "type": "text/html",
+  "size": 22278,
+  "title": "Graduate Teaching Assistant: Tutorial Leader &amp; Programmer on Duty (POD) &amp; Marker of COMP 348 [Principles of Programming Languages] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Winter-2025-COMP348",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Winter-2025-COMP465.html",
+  "type": "text/html",
+  "size": 21690,
+  "title": "Graduate Teaching Assistant: Tutorial Leader of COMP 465 [Design and Analysis of Algorithms] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Winter-2025-COMP465",
+  "redirect": null
+ },
+ {
+  "path": "/teaching/Winter-2025-SOEN363.html",
+  "type": "text/html",
+  "size": 22285,
+  "title": "Graduate Teaching Assistant: Tutorial Leader &amp; Programmer on Duty (POD) &amp; Marker of SOEN 363 [Data Systems for Software Engineers] - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/enseignement/Winter-2025-SOEN363",
+  "redirect": null
+ },
+ {
+  "path": "/terms/index.html",
+  "type": "text/html",
+  "size": 20775,
+  "title": "Terms and Privacy Policy - Parsa Kamalipour",
+  "lang": "en-US",
+  "twin": "/fr/",
+  "redirect": null
+ }
+]

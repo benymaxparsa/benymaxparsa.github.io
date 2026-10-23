@@ -262,6 +262,13 @@ exclude:
   - _pages/category-archive.html
   - _pages/collection-archive.html
   - assets/index.html
+  # Astro project (astro-migration branch)
+  - scripts
+  - src
+  - public
+  - dist
+  - astro.config.mjs
+  - tsconfig.json
 keep_files:
   - .git
   - .svn
