@@ -94,8 +94,13 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
       nd.vx += (W / 2 - nd.x) * 0.0012;
       nd.vy += (H / 2 - nd.y) * 0.006;
       nd.vx *= 0.82; nd.vy *= 0.82;
-      nd.x = Math.max(8, Math.min(W - 8, nd.x + nd.vx));
-      nd.y = Math.max(8, Math.min(H - 8, nd.y + nd.vy));
+      // A node pinned against the edge keeps being pushed out; drop that velocity or the
+      // layout never comes to rest and the animation never stops
+      const x = nd.x + nd.vx, y = nd.y + nd.vy;
+      if (x < 8 || x > W - 8) nd.vx = 0;
+      if (y < 8 || y > H - 8) nd.vy = 0;
+      nd.x = Math.max(8, Math.min(W - 8, x));
+      nd.y = Math.max(8, Math.min(H - 8, y));
       energy += nd.vx * nd.vx + nd.vy * nd.vy;
     }
   }

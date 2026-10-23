@@ -265,7 +265,7 @@ function initSearch() {
       const item = el('div', 'list__item');
       const article = item.appendChild(el('article', 'archive__item'));
       const a = article.appendChild(el('h2', 'archive__item-title')).appendChild(el('a', '')) as HTMLAnchorElement;
-      a.href = d.url;
+      a.href = d.url.replace(/(?<!\/404)\.html$/, ''); // Pagefind records files; link the canonical URL
       a.textContent = d.meta.title ?? d.url;
       // Pagefind's excerpt is escaped page text with <mark> highlights
       article.appendChild(el('p', 'archive__item-excerpt')).innerHTML = d.excerpt;
