@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <p class="page__lead">
-Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science</strong> degree at <a href="https://www.concordia.ca">Concordia University</a> in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering (CSSE)</a>, at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He is conducting research at the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>, where his thesis, <strong><em>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</em></strong>, is expected to be completed in 2027. Parsa’s true expertise is Theoretical Computer Science with an additional touch of Applied Mathematics, Software Engineering, and Data Mining.
+Parsa Kamalipour is a thesis-based <strong>Master of Computer Science</strong> student at <a href="https://www.concordia.ca">Concordia University</a>, in the Department of <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Computer Science and Software Engineering</a> at the <a href="https://www.concordia.ca/ginacody.html">Gina Cody School of Engineering and Computer Science</a>. He works in the <strong><em>Algorithms &amp; Complexity Lab</em></strong> under the supervision of <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>, where he studies community detection in social and complex networks with tools from algorithms and graph theory.
 </p>
 
 <div class="hero-actions">
@@ -18,7 +18,9 @@ Parsa is currently pursuing a <strong>(Thesis-based) Master of Computer Science<
   <a class="hero-btn hero-btn--ghost" href="/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Get in touch</a>
 </div>
 
-Parsa has a keen interest in areas such as ***Design and Analysis of Algorithms***, ***Graph Theory***, ***Discrete Mathematics***, ***Data Structures***, and ***Complexity Theory***. His research interest spans various subcategories within the algorithms domain, including ***Combinatorial Optimization/Algorithms***, ***Graph Algorithms***, ***Graph Mining***, ***Social Network Analysis***, ***Approximation &amp; Randomized Algorithms***, and ***Online Algorithms***. [Read more about Parsa →](/biography/)
+His thesis, ***Geodesic-Compact Community Detection and Quality Assessment in Social Networks*** (expected 2027), starts from a simple idea: the members of a good community are close to each other in shortest-path distance, compared with the rest of the network. This gives a way to find and judge communities without ground-truth labels. The work has so far produced **Spider**, a near-linear community detection algorithm that combines local and global steps (*Computers*, 2026), and a first-author study of the **weighted-average Geodesic Distance Modularity (wGDM)** with Metric Backbone sparsification as preprocessing for Leiden (*IEEE SNAMS 2025*, presented in Vienna).
+
+Before Concordia, Parsa developed the CRLG community detection framework at Vali-e-Asr University of Rafsanjan (*Journal of Network and Computer Applications*, 2022) and worked on refactoring detection for Kotlin at the University of Twente (*IEEE SANER 2024*). His background is in theoretical computer science, and his interests include ***design and analysis of algorithms***, ***graph algorithms***, ***graph mining***, ***social network analysis***, ***combinatorial optimization***, ***approximation and randomized algorithms***, and ***online algorithms***. [Read the full biography →](/biography/)
 
 <div class="interest-tags" aria-label="Research interests">
   <span class="interest-tag"><i class="fas fa-project-diagram" aria-hidden="true"></i> Graph Theory</span>
