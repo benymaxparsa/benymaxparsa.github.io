@@ -170,63 +170,6 @@ function initLanguageSwitcher() {
   }
 }
 
-/**
- * Header nav that moves links which don't fit into the overflow ("more") menu, in order
- * from the end. Replaces the jQuery greedy-nav; measures again on resize and once web
- * fonts have arrived, since they change every link's width.
- */
-function initNav() {
-  const nav = $('nav.greedy-nav');
-  const vlinks = nav && $('.visible-links', nav);
-  const hlinks = nav && $('.hidden-links', nav);
-  const btn = nav && $<HTMLButtonElement>('.greedy-nav__toggle', nav);
-  if (!nav || !vlinks || !hlinks || !btn) return;
-  const items = [...vlinks.children] as HTMLElement[];
-  const fixed = ['.site-logo', '.site-title', '.language-switcher', '.theme-toggle', '.search__toggle'].map((s) => $(s, nav));
-  const outer = (el: HTMLElement | null) => {
-    if (!el || getComputedStyle(el).display === 'none') return 0;
-    const s = getComputedStyle(el);
-    return el.getBoundingClientRect().width + parseFloat(s.marginLeft) + parseFloat(s.marginRight);
-  };
-  const isOpen = () => !hlinks.classList.contains('hidden');
-  const setOpen = (open: boolean) => {
-    hlinks.classList.toggle('hidden', !open);
-    btn.classList.toggle('close', open);
-    btn.setAttribute('aria-expanded', String(open));
-  };
-
-  let lastWidth = -1;
-  function layout() {
-    if (nav!.clientWidth === lastWidth) return;
-    lastWidth = nav!.clientWidth;
-    items.forEach((li) => vlinks!.append(li));
-    const widths = items.map(outer);
-    let available = nav!.clientWidth - fixed.reduce((sum, el) => sum + outer(el), 0);
-    let fit = items.length;
-    if (widths.reduce((a, b) => a + b, 0) > available) {
-      btn!.classList.remove('hidden');
-      available -= outer(btn!);
-      let used = 0;
-      fit = 0;
-      while (fit < items.length && used + widths[fit] <= available) used += widths[fit++];
-    }
-    items.forEach((li, i) => (i < fit ? vlinks! : hlinks!).append(li));
-    btn!.classList.toggle('hidden', fit === items.length);
-    btn!.setAttribute('count', String(items.length - fit));
-    if (fit === items.length) setOpen(false);
-  }
-
-  btn.addEventListener('click', () => setOpen(!isOpen()));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isOpen()) { setOpen(false); btn.focus(); }
-  });
-  document.addEventListener('click', (e) => {
-    if (isOpen() && !hlinks.contains(e.target as Node) && !btn.contains(e.target as Node)) setOpen(false);
-  });
-  new ResizeObserver(layout).observe(nav);
-  document.fonts?.ready.then(() => { lastWidth = -1; layout(); });
-}
-
 /** Search overlay backed by Pagefind; the index is split by <html lang>, so results stay in the page language. */
 function initSearch() {
   const toggle = $<HTMLButtonElement>('.search__toggle');
@@ -345,7 +288,6 @@ addReadingProgressBar();
 addScrollToTopButton();
 initThemeToggle();
 initLanguageSwitcher();
-initNav();
 initSearch();
 initLightbox();
 enhanceLazyLoading();

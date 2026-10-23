@@ -88,6 +88,10 @@ const image = new URL(site.ogImage, site.url).href;
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <!-- Carried over from the Jekyll head; browsers ignore these as <meta> (they only work as HTTP headers). Pending owner decision to drop. -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gtag}`}></script>
     <script is:inline define:vars={{ id: site.gtag }}>

@@ -11,7 +11,7 @@ const other = lang === 'en' ? 'fr' : 'en';
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title}></a>
+        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title} width="512" height="512"></a>
         <a class="site-title" href={t.home}>{site.title}</a>
         <ul class="visible-links">
           {nav[lang].map((link) => (
@@ -47,3 +47,63 @@ const other = lang === 'en' ? 'fr' : 'en';
     </div>
   </div>
 </div>
+<script is:inline>
+  /**
+   * Header nav that moves links which don't fit into the overflow ("more") menu, in order
+   * from the end. Replaces the jQuery greedy-nav; measures again on resize and once web
+   * fonts have arrived, since they change every link's width. Inline and run once right
+   * here so the header has its final shape at first paint (no layout shift).
+   */
+  (function () {
+    const nav = document.querySelector('nav.greedy-nav');
+    const vlinks = nav && nav.querySelector('.visible-links');
+    const hlinks = nav && nav.querySelector('.hidden-links');
+    const btn = nav && nav.querySelector('.greedy-nav__toggle');
+    if (!nav || !vlinks || !hlinks || !btn) return;
+    const items = [...vlinks.children];
+    const fixed = ['.site-logo', '.site-title', '.language-switcher', '.theme-toggle', '.search__toggle'].map((s) => nav.querySelector(s));
+    const outer = (el) => {
+      if (!el || getComputedStyle(el).display === 'none') return 0;
+      const s = getComputedStyle(el);
+      return el.getBoundingClientRect().width + parseFloat(s.marginLeft) + parseFloat(s.marginRight);
+    };
+    const isOpen = () => !hlinks.classList.contains('hidden');
+    const setOpen = (open) => {
+      hlinks.classList.toggle('hidden', !open);
+      btn.classList.toggle('close', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+
+    let lastWidth = -1;
+    function layout() {
+      if (nav.clientWidth === lastWidth) return;
+      lastWidth = nav.clientWidth;
+      items.forEach((li) => vlinks.append(li));
+      const widths = items.map(outer);
+      let available = nav.clientWidth - fixed.reduce((sum, el) => sum + outer(el), 0);
+      let fit = items.length;
+      if (widths.reduce((a, b) => a + b, 0) > available) {
+        btn.classList.remove('hidden');
+        available -= outer(btn);
+        let used = 0;
+        fit = 0;
+        while (fit < items.length && used + widths[fit] <= available) used += widths[fit++];
+      }
+      items.forEach((li, i) => (i < fit ? vlinks : hlinks).append(li));
+      btn.classList.toggle('hidden', fit === items.length);
+      btn.setAttribute('count', String(items.length - fit));
+      if (fit === items.length) setOpen(false);
+    }
+
+    btn.addEventListener('click', () => setOpen(!isOpen()));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) { setOpen(false); btn.focus(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (isOpen() && !hlinks.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+    });
+    layout();
+    new ResizeObserver(layout).observe(nav);
+    document.fonts?.ready.then(() => { lastWidth = -1; layout(); });
+  })();
+</script>

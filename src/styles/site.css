@@ -274,7 +274,7 @@ body {
   margin: 0;
   padding: 0;
   color: #283141;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -286,7 +286,7 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -441,7 +441,7 @@ figure.third figcaption {
 figcaption {
   margin-bottom: 0.5em;
   color: #535a67;
-  font-family: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+  font-family: "Source Serif 4 Variable", "Source Serif 4 Fallback", "Iowan Old Style", Georgia, serif;
   font-size: 0.75em;
 }
 figcaption a {
@@ -552,7 +552,7 @@ input,
 button,
 select {
   box-sizing: border-box;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 label {
@@ -698,7 +698,7 @@ table {
   display: block;
   margin-bottom: 1em;
   width: 100%;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75em;
   border-collapse: collapse;
   overflow-x: auto;
@@ -744,7 +744,7 @@ th {
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75em;
   font-weight: bold;
   text-align: center;
@@ -849,7 +849,7 @@ th {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 .masthead__inner-wrap::after {
   clear: both;
@@ -936,7 +936,7 @@ th {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 .pagination li {
   display: block;
@@ -947,7 +947,7 @@ th {
   display: block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
@@ -985,7 +985,7 @@ th {
   padding: 1em 2em;
   float: left;
   width: 50%;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
@@ -1229,7 +1229,7 @@ th {
 }
 
 .page__footer-copyright {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.6875em;
 }
 
@@ -1242,7 +1242,7 @@ th {
   display: inline-block;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75em;
   text-transform: uppercase;
 }
@@ -1704,7 +1704,7 @@ body {
 }
 
 .page__lead {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.25em;
 }
 
@@ -1758,12 +1758,12 @@ body {
 }
 .page__content dt {
   margin-top: 1em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 }
 .page__content dd {
   margin-left: 1em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75em;
 }
 .page__content .small {
@@ -1807,7 +1807,7 @@ body {
 .page__meta {
   margin-top: 2em;
   color: #535a67;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.75em;
 }
 .page__meta p {
@@ -1880,7 +1880,7 @@ body {
 
 .archive__item-title {
   margin-bottom: 0.25em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2287,14 +2287,14 @@ body {
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
 .page__content {
-  font-family: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+  font-family: "Source Serif 4 Variable", "Source Serif 4 Fallback", "Iowan Old Style", Georgia, serif;
   font-size: 1.06rem;
   line-height: 1.7;
   color: var(--body-color);
@@ -2323,7 +2323,7 @@ h1, h2, h3, h4, h5, h6 {
 .page__content [class*="material"],
 .page__content .archive__item-meta,
 .page__content .award-list {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .page__title {
@@ -2395,7 +2395,7 @@ a:hover {
 }
 
 .site-title {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--heading-color);
@@ -2704,7 +2704,7 @@ a:hover {
 
 .page__content .home-hero__role {
   margin: 0;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.95rem;
   line-height: 1.45;
   color: var(--muted-color);
@@ -2872,7 +2872,7 @@ a:hover {
 
 .stat-card__number {
   margin: 0;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -2883,7 +2883,7 @@ a:hover {
 
 .stat-card__label {
   margin-top: 0.4rem;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--muted-color);
@@ -2925,7 +2925,7 @@ a:hover {
 
 .news-list time {
   padding-top: 0.2em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
   color: var(--muted-color);
   font-variant-numeric: tabular-nums;
@@ -2937,7 +2937,7 @@ a:hover {
 
 .page__content .news-list__more {
   margin-top: 0.5rem;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -3556,7 +3556,7 @@ a:hover {
   position: absolute;
   left: 1em;
   top: 0.95em;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.05em;
   font-weight: 700;
   background: var(--gradient-brand);
@@ -3586,7 +3586,7 @@ a:hover {
 
 .score-card .score-card__total {
   display: block;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.15em;
   font-weight: 700;
   color: var(--heading-color);
@@ -3620,7 +3620,7 @@ a:hover {
 
 .lang-card .lang-card__name {
   display: block;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   color: var(--heading-color);
 }
@@ -3736,7 +3736,7 @@ a:hover {
 
 .info-card .info-card__role,
 .page__content .info-card .info-card__role {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.05em;
   font-weight: 700;
   color: var(--heading-color);
@@ -3769,7 +3769,7 @@ a:hover {
 
 .page__content .profile-links a {
   text-decoration: none;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .profile-links .external-link::after,
@@ -3911,7 +3911,7 @@ input[type="search"]:focus {
 }
 
 .error-page .error-page__code {
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 6.5em;
   font-weight: 700;
   line-height: 1;
@@ -4513,7 +4513,7 @@ select {
 
 .page__content .page__updated {
   margin-top: 2.5rem;
-  font-family: "Schibsted Grotesk Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
   text-align: left;
 }

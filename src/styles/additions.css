@@ -72,3 +72,29 @@
   height: auto;
   aspect-ratio: 16 / 9;
 }
+
+/* Metric-matched fallbacks: text set in these takes the same space as the web fonts,
+   so nothing reflows when they arrive (font-swap CLS). Measured with canvas measureText. */
+@font-face {
+  font-family: "Schibsted Grotesk Fallback";
+  src: local("Arial"), local("ArialMT");
+  size-adjust: 104.52%;
+  ascent-override: 93.76%;
+  descent-override: 24.88%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Source Serif 4 Fallback";
+  src: local("Times New Roman"), local("TimesNewRomanPSMT");
+  size-adjust: 101.52%;
+  ascent-override: 102.44%;
+  descent-override: 33.49%;
+  line-gap-override: 0%;
+}
+
+/* Logo keeps its box before the image arrives (width/height attributes give the ratio) */
+.site-logo img {
+  width: auto;
+  height: auto;
+}
