@@ -3,6 +3,8 @@ import { smart } from '../lib/text';
 import '@fontsource-variable/schibsted-grotesk';
 import '@fontsource-variable/source-serif-4/opsz.css';
 import '@fontsource-variable/source-serif-4/opsz-italic.css';
+import groteskFont from '@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2?url';
+import serifFont from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-opsz-normal.woff2?url';
 import '../styles/site.css';
 import '../styles/icons.css';
 import '../styles/additions.css';
@@ -80,6 +82,9 @@ const image = new URL(site.ogImage, site.url).href;
         try { if (localStorage.getItem('preferredLanguage') === 'fr') location.replace('/fr/'); } catch (e) {}
       </script>
     )}
+    <!-- The two faces every first screen uses; fetching them early keeps text from reflowing -->
+    <link rel="preload" href={groteskFont} as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin>
     <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#121821" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
