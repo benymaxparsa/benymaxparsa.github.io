@@ -43,10 +43,9 @@ export const ui = {
     langButton: 'EN, change language', langOther: 'Passer au français', langOtherText: '🇫🇷 Français', langCurrent: '🇬🇧 EN',
     themeToggle: 'Toggle colour theme', themeDark: 'Switch to dark theme', themeLight: 'Switch to light theme',
     updated: 'Updated:', shareOn: 'Share on', previous: 'Previous', next: 'Next',
-    follow: 'Follow:', poweredBy: 'Powered by', scrollTop: 'Scroll to top', opensInNewTab: 'Opens in new tab: ',
+    follow: 'Follow:', poweredBy: 'Powered by',
     publishedIn: 'Published in', citation: 'Recommended citation:', download: 'Download', here: 'here',
-    lightboxClose: 'Close', lightboxPrev: 'Previous image', lightboxNext: 'Next image',
-    durationYears: (n: number) => `${n} ${n > 1 ? 'yrs' : 'yr'}`, durationMonths: (n: number) => `${n} ${n > 1 ? 'mos' : 'mo'}`,
+    lightbox: 'Image viewer', lightboxClose: 'Close', lightboxPrev: 'Previous image', lightboxNext: 'Next image',
   },
   fr: {
     htmlLang: 'fr-CA', ogLocale: 'fr_CA', home: '/fr/',
@@ -55,10 +54,9 @@ export const ui = {
     langButton: 'FR, changer de langue', langOther: 'Switch to English', langOtherText: '🇬🇧 English', langCurrent: '🇫🇷 FR',
     themeToggle: 'Changer de thème', themeDark: 'Passer au thème sombre', themeLight: 'Passer au thème clair',
     updated: 'Mis à jour :', shareOn: 'Partager sur', previous: 'Précédent', next: 'Suivant',
-    follow: 'Suivez-nous :', poweredBy: 'Propulsé par', scrollTop: 'Retour en haut', opensInNewTab: 'S’ouvre dans un nouvel onglet : ',
+    follow: 'Suivez-nous :', poweredBy: 'Propulsé par',
     publishedIn: 'Publié dans', citation: 'Citation recommandée :', download: 'Télécharger', here: 'ici',
-    lightboxClose: 'Fermer', lightboxPrev: 'Image précédente', lightboxNext: 'Image suivante',
-    durationYears: (n: number) => `${n} ${n > 1 ? 'ans' : 'an'}`, durationMonths: (n: number) => `${n} mois`,
+    lightbox: 'Visionneuse d’images', lightboxClose: 'Fermer', lightboxPrev: 'Image précédente', lightboxNext: 'Image suivante',
   },
 } as const;
 

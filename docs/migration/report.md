@@ -13,7 +13,7 @@ by `scripts/serve.mjs` with GitHub Pages resolution rules; the Astro build is se
 | 3 | Links and images | **Pass.** 152 pages, 209 same-origin targets, 0 broken. 2 external images on `/projects/DA-Projects/` (raw.githubusercontent.com/HB-2000/…) are dead — they were dead on Jekyll too. |
 | 4 | Contrast / dark mode / overflow | **Pass.** 152 pages × light/dark × 1280/375: 0 issues (Jekyll baseline had 48 contrast hits on the decorative `•` separators and a `/terms/` overflow; both gone). |
 | 5 | Lighthouse | **Pass.** See below. |
-| 6 | User approval on a preview | **Pending** — needs you (§7). |
+| 6 | User approval on a preview | **Pass.** Approved 2026-10-23. |
 
 Main-content text of every page was also diffed against Jekyll (`compare-urls.mjs … <jekyllSite>`): identical except the four intended changes listed below.
 
@@ -21,14 +21,14 @@ Main-content text of every page was also diffed against Jekyll (`compare-urls.mj
 
 | | Jekyll | Astro |
 |---|---|---|
-| Lighthouse mobile (perf / a11y / BP / SEO) | 80 / 100 / 96 / 100 | 85 / 100 / 96 / 100 |
-| Lighthouse desktop | 100 / 100 / 96 / 100 | 100 / 100 / 96 / 100 |
+| Lighthouse mobile (perf / a11y / BP / SEO) | 80 / 100 / 96 / 100 | 85 / 100 / 100 / 100 |
+| Lighthouse desktop | 100 / 100 / 96 / 100 | 100 / 100 / 100 / 100 |
 | Lighthouse mobile CLS | 0.069 | 0 |
 | Lighthouse desktop CLS | 0.03 | 0.006 |
 | Home page bytes (Lighthouse) | 1485 KB | ~980 KB |
 | Throttled home (4× CPU, Fast 4G, 390×844) LCP / CLS | 0.65 s / 0.003 | 0.86 s / 0.000 |
 
-Best Practices stays at 96 only because of the `X-Frame-Options` `<meta>` (see "Needs your decision").
+Best Practices went from 96 to 100 once the `X-Frame-Options`, `X-XSS-Protection` and `X-Content-Type-Options` `<meta>` tags were dropped: browsers only honour them as HTTP headers, which GitHub Pages can't set, so they protected nothing and logged a console error.
 Throttled `/teaching/` LCP is 1.51 s (its LCP is a lazy award photo); the 1.0 s target was set for the home page.
 
 ## Behaviour checks (41/41)
@@ -42,6 +42,8 @@ Nav overflow menu (opens, Esc closes and returns focus, outside click closes); l
 - **`hreflang` now points at real twins.** Jekyll emitted `fr-CA` alternates like `/fr/publication/p6`, which don't exist.
 - **`/sitemap/` page** lists the real pages and every collection; it no longer lists stylesheets, `robots.txt`, redirect stubs and untitled entries.
 - **`/terms/`** lost its one-section table of contents (it was overflowing the page at 1280 px).
+- **No security `<meta>` tags** (see Performance).
+- **The image viewer's screen-reader name** is in French on French pages.
 - **Footer** says "Powered by Astro".
 - **Page descriptions** (`<meta name=description>`) for collection docs are the first paragraph of text, capped at 300 characters, instead of raw list markup.
 - **Bold italic serif** text uses the real 700-weight italic (Google Fonts capped italic at 600 and the browser faked the bold), so it is a touch wider.
@@ -71,7 +73,7 @@ Screenshots: `docs/migration/baseline/shots/` (Jekyll) vs `docs/migration/report
 
 ## Needs your decision
 
-1. **Preview hosting** (phase 7): a fork with Pages, or a temporary Pages environment on this repo.
-2. **Drop the `X-Frame-Options` / `X-XSS-Protection` / `X-Content-Type-Options` `<meta>` tags?** Browsers only honour these as HTTP headers, which GitHub Pages doesn't let you set, so as `<meta>` they protect nothing and log a console error (Best Practices 96 → 100). Kept for now.
-3. **Old template redirects** `/nmp*`, `/md/`, `/markdown.html`: they already 404 on the current site; not recreated.
-4. **Cutover** (phase 8): switch Settings → Pages → Source to "GitHub Actions", then merge.
+Preview approved and security `<meta>` tags dropped (2026-10-23).
+
+1. **Old template redirects** `/nmp*`, `/md/`, `/markdown.html`: they already 404 on the current site; not recreated.
+2. **Cutover** (phase 8): switch Settings → Pages → Source to "GitHub Actions", then merge.
