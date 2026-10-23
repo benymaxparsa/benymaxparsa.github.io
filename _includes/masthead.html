@@ -33,6 +33,13 @@
           {%- endfor -%}
         </ul>
         {% include language-switcher.html %}
+        <button class="theme-toggle" type="button"
+                data-label-dark="{% if is_french_page %}Passer au thème sombre{% else %}Switch to dark theme{% endif %}"
+                data-label-light="{% if is_french_page %}Passer au thème clair{% else %}Switch to light theme{% endif %}"
+                aria-label="{% if is_french_page %}Changer de thème{% else %}Toggle colour theme{% endif %}">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+        </button>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           {% if is_french_page %}

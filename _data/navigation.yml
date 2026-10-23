@@ -11,6 +11,7 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
+  # Primary items first: the greedy nav moves whatever doesn't fit into the "more" menu
   - title: "Research"
     url: /research/
 
@@ -20,46 +21,35 @@ main:
   - title: "Teaching"
     url: /teaching/
 
-  - title: "Education"
-    url: /education/
-
   - title: "CV"
     url: /cv/
 
-  # - title: "Talks"
-  #   url: /talks/
+  - title: "News"
+    url: /news/
 
-  - title: "Projects"
-    url: /projects/
-
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-
-
-  - title: "Courses"
-    url: /selected_courses/
+  - title: "Contact"
+    url: /contact/
 
   - title: "Biography"
     url: /biography/
 
-  - title: "Extra Curricular Activities"
-    url: /extracurricular/
+  - title: "Education"
+    url: /education/
 
+  - title: "Projects"
+    url: /projects/
 
-  # - title: "Gallery & Images"
-  #   url: /gallery/
+  - title: "Courses"
+    url: /selected_courses/
 
-  - title: "Industry Experiences"
-    url: /industry/
-
-  - title: "Honors, Scores, Skills, etc."
+  - title: "Honors & Skills"
     url: /honors_and_extra/
 
-  - title: "Contact"
-    url: /contact/ 
+  - title: "Industry"
+    url: /industry/
 
-  - title: "News"
-    url: /news/
+  - title: "Extracurricular"
+    url: /extracurricular/
 
 # main links - French (Canada)
 main_fr:
@@ -72,11 +62,20 @@ main_fr:
   - title: "Enseignement"
     url: /fr/enseignement/
 
-  - title: "Formation"
-    url: /fr/formation/
-
   - title: "CV"
     url: /fr/cv/
+
+  - title: "Nouvelles"
+    url: /fr/nouvelles/
+
+  - title: "Contact"
+    url: /fr/contact/
+
+  - title: "Biographie"
+    url: /fr/biographie/
+
+  - title: "Formation"
+    url: /fr/formation/
 
   - title: "Projets"
     url: /fr/projets/
@@ -84,23 +83,11 @@ main_fr:
   - title: "Cours"
     url: /fr/cours/
 
-  - title: "Biographie"
-    url: /fr/biographie/
+  - title: "Distinctions et compétences"
+    url: /fr/distinctions/
+
+  - title: "Industrie"
+    url: /fr/experiences/
 
   - title: "Activités parascolaires"
     url: /fr/activites/
-
-  # - title: "Galerie d'images"
-  #   url: /fr/galerie/
-
-  - title: "Expériences professionnelles"
-    url: /fr/experiences/
-
-  - title: "Distinctions, résultats, compétences, etc."
-    url: /fr/distinctions/
-
-  - title: "Contact"
-    url: /fr/contact/
-
-  - title: "Nouvelles"
-    url: /fr/nouvelles/

@@ -6,9 +6,24 @@
   {% assign is_french = true %}
 {% endif %}
 
+{% comment %}
+  Collection items come in pairs (_projects/A-star.md / _projects/A-star-fr.md)
+  whose permalinks don't follow one pattern, so link to the twin document itself.
+{% endcomment %}
+{% assign twin_url = nil %}
+{% if page.collection %}
+  {% if is_french %}
+    {% assign twin_path = page.path | replace: "-fr.md", ".md" %}
+  {% else %}
+    {% assign twin_path = page.path | replace: ".md", "-fr.md" %}
+  {% endif %}
+  {% assign twin_doc = site[page.collection] | where: "path", twin_path | first %}
+  {% if twin_doc %}{% assign twin_url = twin_doc.url %}{% endif %}
+{% endif %}
+
 {% if is_french %}
   {% comment %} On a French page, find the English equivalent {% endcomment %}
-  {% assign english_url = nil %}
+  {% assign english_url = twin_url %}
   {% for mapping_pair in site.data.language_urls %}
     {% assign en_path = mapping_pair[0] %}
     {% assign fr_path = mapping_pair[1] %}
@@ -27,7 +42,7 @@
   {% endif %}
 {% else %}
   {% comment %} On an English page, find the French equivalent {% endcomment %}
-  {% assign french_url = site.data.language_urls[page.url] %}
+  {% assign french_url = twin_url | default: site.data.language_urls[page.url] %}
   {% comment %} Fallback: try simple pattern replacement {% endcomment %}
   {% unless french_url %}
     {% assign french_url = page.url | replace: "/research/", "/fr/recherche/" | replace: "/teaching/", "/fr/enseignement/" | replace: "/education/", "/fr/formation/" | replace: "/projects/", "/fr/projets/" | replace: "/honors_and_extra/", "/fr/distinctions/" | replace: "/biography/", "/fr/biographie/" | replace: "/extracurricular/", "/fr/activites/" | replace: "/gallery/", "/fr/galerie/" | replace: "/industry/", "/fr/experiences/" | replace: "/contact/", "/fr/contact/" | replace: "/news/", "/fr/nouvelles/" | replace: "/selected_courses/", "/fr/cours/" | replace: "/publications/", "/fr/publications/" | replace: "/cv/", "/fr/cv/" %}
@@ -41,12 +56,12 @@
 <div class="language-switcher" role="navigation" aria-label="Language switcher">
   <div class="lang-dropdown">
     {% if is_french %}
-      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Changer de langue">🇫🇷 FR <span class="lang-caret" aria-hidden="true">▾</span></button>
+      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="FR, changer de langue">🇫🇷 FR <span class="lang-caret" aria-hidden="true">▾</span></button>
       <div class="lang-dropdown-content">
         <a href="{{ english_url }}" class="lang-option lang-switch-link" data-lang="en" lang="en" hreflang="en" aria-label="Switch to English">🇬🇧 English</a>
       </div>
     {% else %}
-      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Change language">🇬🇧 EN <span class="lang-caret" aria-hidden="true">▾</span></button>
+      <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="EN, change language">🇬🇧 EN <span class="lang-caret" aria-hidden="true">▾</span></button>
       <div class="lang-dropdown-content">
         <a href="{{ french_url }}" class="lang-option lang-switch-link" data-lang="fr" lang="fr" hreflang="fr-CA" aria-label="Passer au français">🇫🇷 Français</a>
       </div>

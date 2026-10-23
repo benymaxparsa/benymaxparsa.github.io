@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -61,7 +61,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : "true" # true, false (default)
-search                   : "true" # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : "true" # true, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
@@ -238,6 +238,30 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  # Repo notes and template samples — not part of the public site (were indexed via sitemap)
+  - IMPLEMENTATION_SUMMARY.md
+  - IMPROVEMENTS.md
+  - LOCALIZATION.md
+  - LOCALIZATION_COVERAGE.md
+  - QA_GUIDE.md
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - README.md
+  - academicons-1.9.4/README.md
+  - markdown_generator
+  - talkmap
+  - _posts
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/archive-layout-with-content.md
+  - _pages/year-archive.html
+  - _pages/talks.html
+  - _pages/talkmap.html
+  - _pages/page-archive.html
+  - _pages/tag-archive.html
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - assets/index.html
 keep_files:
   - .git
   - .svn

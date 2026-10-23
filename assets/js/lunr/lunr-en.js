@@ -38,8 +38,13 @@ $(document).ready(function() {
           }
         })
       });
+    // Only show documents in the page's language (FR docs carry lang: fr-CA)
+    var pageFr = (document.documentElement.lang || '').toLowerCase().indexOf('fr') === 0;
+    result = result.filter(function (r) {
+      return ((store[r.ref].lang || 'en').toLowerCase().indexOf('fr') === 0) === pageFr;
+    });
     resultdiv.empty();
-    resultdiv.prepend('<p class="results__found">'+result.length+' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
+    resultdiv.prepend('<p class="results__found">' + result.length + ' ' + (pageFr ? 'résultat(s) trouvé(s)' : '{{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}') + '</p>');
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){

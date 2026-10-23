@@ -3,162 +3,82 @@ permalink: /fr/
 lang: fr-CA
 title: "Parsa Kamalipour"
 excerpt: "À propos de moi"
-author_profile: true
+classes: home
 redirect_from:
   - /fr/accueil/
   - /fr/a-propos/
 ---
 
-<p class="page__lead">
-Parsa Kamalipour est étudiant à la <strong>maîtrise en informatique avec mémoire</strong> à l'<a href="https://www.concordia.ca">Université Concordia</a>, au Département d'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">informatique et de génie logiciel</a> de l'<a href="https://www.concordia.ca/ginacody.html">École de génie et d'informatique Gina-Cody</a>. Il travaille au <strong><em>Laboratoire d'algorithmes et de complexité</em></strong> sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>, où il étudie la détection de communautés dans les réseaux sociaux et complexes à l'aide d'outils issus de l'algorithmique et de la théorie des graphes.
-</p>
+<section class="home-hero" aria-label="Présentation">
+  <div class="home-hero__text">
+    <div class="home-hero__id">
+      {% include home-photo.html alt="Portrait de Parsa Kamalipour" %}
+      <p class="home-hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
+    </div>
 
-<div class="hero-actions">
-  <a class="hero-btn hero-btn--primary" href="/files/FR_ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Télécharger le CV</a>
-  <a class="hero-btn hero-btn--ghost" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
-  <a class="hero-btn hero-btn--ghost" href="/fr/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Me joindre</a>
-</div>
+    <p class="page__lead">Parsa étudie la détection de communautés dans les réseaux sociaux et complexes : trouver les groupes cachés dans un graphe, et juger s'ils sont réels, à l'aide d'outils issus de l'algorithmique et de la théorie des graphes. Il est étudiant à la maîtrise avec mémoire à l'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Université Concordia</a> à Montréal, sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>.</p>
 
-Son mémoire, ***Geodesic-Compact Community Detection and Quality Assessment in Social Networks*** (achèvement prévu en 2027), part d'une idée simple : les membres d'une bonne communauté sont proches les uns des autres en distance de plus court chemin, comparativement au reste du réseau. Cela permet de détecter et d'évaluer des communautés sans étiquettes de référence. Ces travaux ont déjà donné **Spider**, un algorithme de détection de communautés en temps quasi linéaire qui combine des étapes locales et globales (*Computers*, 2026), et une étude, en premier auteur, de la **modularité de distance géodésique moyenne pondérée (wGDM)** combinée à la sparsification par Metric Backbone comme prétraitement pour Leiden (*IEEE SNAMS 2025*, présentée à Vienne).
+    <div class="hero-actions">
+      <a class="hero-btn hero-btn--primary" href="/files/FR_ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Télécharger le CV</a>
+      <a class="hero-btn hero-btn--ghost" href="/fr/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Me joindre</a>
+    </div>
 
-Avant Concordia, Parsa a développé le cadre de détection de communautés CRLG à l'Université Vali-e-Asr de Rafsanjan (*Journal of Network and Computer Applications*, 2022) et a travaillé sur la détection de réusinages pour Kotlin à l'Université de Twente (*IEEE SANER 2024*). Sa formation est en informatique théorique, et ses intérêts comprennent la ***conception et l'analyse d'algorithmes***, les ***algorithmes de graphes***, l'***exploration de graphes***, l'***analyse de réseaux sociaux***, l'***optimisation combinatoire***, les ***algorithmes d'approximation et aléatoires*** et les ***algorithmes en ligne***. [Lire la biographie complète →](/fr/biographie/)
+    {% include profile-links.html email_label="Courriel" %}
+  </div>
 
-<div class="interest-tags" aria-label="Intérêts de recherche">
-  <span class="interest-tag"><i class="fas fa-project-diagram" aria-hidden="true"></i> Théorie des graphes</span>
-  <span class="interest-tag"><i class="fas fa-code-branch" aria-hidden="true"></i> Algorithmes</span>
-  <span class="interest-tag"><i class="fas fa-infinity" aria-hidden="true"></i> Théorie de la complexité</span>
-  <span class="interest-tag"><i class="fas fa-network-wired" aria-hidden="true"></i> Analyse de réseaux sociaux</span>
-  <span class="interest-tag"><i class="fas fa-users" aria-hidden="true"></i> Détection de communautés</span>
-  <span class="interest-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Optimisation combinatoire</span>
-  <span class="interest-tag"><i class="fas fa-database" aria-hidden="true"></i> Exploration de données</span>
-</div>
+  <figure class="hero-graph">
+    <canvas role="img" aria-label="Un réseau aléatoire de 56 nœuds répartis en quatre groupes cachés. La propagation d'étiquettes colore chaque groupe à mesure qu'elle le trouve."></canvas>
+    <figcaption>
+      <span class="hero-graph__status" data-searching="La propagation d'étiquettes cherche des communautés…" data-found="La propagation d'étiquettes a trouvé {n} communautés dans un graphe aléatoire à partition plantée." aria-live="polite">La propagation d'étiquettes cherche des communautés…</span>
+      <button type="button" class="hero-graph__again">Nouveau graphe</button>
+    </figcaption>
+  </figure>
+</section>
 
-<div class="stats-band" aria-label="Profil académique en un coup d'œil">
-  <div class="stat-card"><span class="stat-card__number">4</span><span class="stat-card__label">Publications</span></div>
-  <div class="stat-card"><span class="stat-card__number">15+</span><span class="stat-card__label">Cours assistés</span></div>
-  <div class="stat-card"><span class="stat-card__number">1650+</span><span class="stat-card__label">Heures d'enseignement</span></div>
-  <div class="stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Postes de recherche</span></div>
-</div>
+<h2 class="section-heading section-heading--first" id="recherche">Recherche</h2>
 
-<h2 class="section-heading" id="explorer">Explorer ce site</h2>
+Son mémoire, ***Geodesic-Compact Community Detection and Quality Assessment in Social Networks*** (achèvement prévu en 2027), part d'une idée simple : les membres d'une bonne communauté sont proches les uns des autres en distance de plus court chemin, comparativement au reste du réseau. Cela permet de détecter et d'évaluer des communautés sans étiquettes de référence. Ces travaux ont déjà donné **Spider**, un algorithme de détection de communautés en temps quasi linéaire qui combine des étapes locales et globales (*Computers*, 2026), et une étude, en premier auteur, de la **modularité de distance géodésique moyenne pondérée (wGDM)** combinée à la sparsification par Metric Backbone comme prétraitement pour Leiden (*IEEE SNAMS 2025*, présentée à Vienne). [Lire la biographie complète](/fr/biographie/)
 
-<nav class="quick-links" aria-label="Navigation rapide vers les sections principales">
-  <a class="quick-link" href="/fr/recherche/">
-    <i class="fas fa-flask" aria-hidden="true"></i>
-    <span class="quick-link__title">Recherche</span>
-    <span class="quick-link__desc">Expériences de recherche</span>
-  </a>
-  <a class="quick-link" href="/fr/publications/">
-    <i class="fas fa-scroll" aria-hidden="true"></i>
-    <span class="quick-link__title">Publications</span>
-    <span class="quick-link__desc">Articles scientifiques</span>
-  </a>
-  <a class="quick-link" href="/fr/enseignement/">
-    <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
-    <span class="quick-link__title">Enseignement</span>
-    <span class="quick-link__desc">Rôles d'auxiliaire d'enseignement</span>
-  </a>
-  <a class="quick-link" href="/fr/formation/">
-    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-    <span class="quick-link__title">Formation</span>
-    <span class="quick-link__desc">Parcours académique</span>
-  </a>
-  <a class="quick-link" href="/fr/cv/">
-    <i class="fas fa-file-alt" aria-hidden="true"></i>
-    <span class="quick-link__title">Curriculum vitæ</span>
-    <span class="quick-link__desc">CV complet et PDF</span>
-  </a>
-  <a class="quick-link" href="/fr/projets/">
-    <i class="fas fa-laptop-code" aria-hidden="true"></i>
-    <span class="quick-link__title">Projets</span>
-    <span class="quick-link__desc">Travaux sélectionnés</span>
-  </a>
-  <a class="quick-link" href="/fr/cours/">
-    <i class="fas fa-book-open" aria-hidden="true"></i>
-    <span class="quick-link__title">Cours</span>
-    <span class="quick-link__desc">Cours sélectionnés</span>
-  </a>
-  <a class="quick-link" href="/fr/activites/">
-    <i class="fas fa-users" aria-hidden="true"></i>
-    <span class="quick-link__title">Parascolaire</span>
-    <span class="quick-link__desc">Activités et bénévolat</span>
-  </a>
-  <a class="quick-link" href="/fr/experiences/">
-    <i class="fas fa-briefcase" aria-hidden="true"></i>
-    <span class="quick-link__title">Industrie</span>
-    <span class="quick-link__desc">Expériences professionnelles</span>
-  </a>
-  <a class="quick-link" href="/fr/distinctions/">
-    <i class="fas fa-trophy" aria-hidden="true"></i>
-    <span class="quick-link__title">Distinctions et prix</span>
-    <span class="quick-link__desc">Bourses, résultats, compétences</span>
-  </a>
-  <a class="quick-link" href="/fr/biographie/">
-    <i class="fas fa-user" aria-hidden="true"></i>
-    <span class="quick-link__title">Biographie</span>
-    <span class="quick-link__desc">L'histoire complète</span>
-  </a>
-  <a class="quick-link" href="/fr/nouvelles/">
-    <i class="fas fa-newspaper" aria-hidden="true"></i>
-    <span class="quick-link__title">Nouvelles</span>
-    <span class="quick-link__desc">Annonces et mises à jour</span>
-  </a>
-  <a class="quick-link" href="/fr/contact/">
-    <i class="fas fa-envelope" aria-hidden="true"></i>
-    <span class="quick-link__title">Contact</span>
-    <span class="quick-link__desc">Me joindre</span>
-  </a>
-</nav>
+<ul class="interest-tags" aria-label="Intérêts de recherche">
+  <li class="interest-tag">Théorie des graphes</li>
+  <li class="interest-tag">Algorithmes</li>
+  <li class="interest-tag">Théorie de la complexité</li>
+  <li class="interest-tag">Analyse de réseaux sociaux</li>
+  <li class="interest-tag">Détection de communautés</li>
+  <li class="interest-tag">Optimisation combinatoire</li>
+  <li class="interest-tag">Exploration de données</li>
+</ul>
 
-<h2 class="section-heading" id="nouvelles">Nouvelles récentes sélectionnées</h2>
+<dl class="stats-band" aria-label="Profil académique en un coup d'œil">
+  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Cours assistés</dt><dd class="stat-card__number">15+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Heures d'enseignement</dt><dd class="stat-card__number">1650+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Postes de recherche</dt><dd class="stat-card__number">3</dd></div>
+</dl>
 
-<div class="news-feed" markdown="1">
+<h2 class="section-heading" id="nouvelles">Nouvelles récentes</h2>
 
-#### Septembre 2026
-> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement pour quatre cours durant la session d’automne 2026 !**
->
-> 🎓 **Cours :**
-> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire
-> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire
-> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels, POD et correcteur
-> - **COMP 339** – *Combinatoire* — Instructeur de tutoriels
+<ol class="news-list">
+  <li>
+    <time datetime="2026-09">sept. 2026</time>
+    <p>Auxiliaire d'enseignement pour quatre cours cet automne : COEN 311, COEN 317, SOEN 363 et COMP 339.</p>
+  </li>
+  <li>
+    <time datetime="2026-05">mai 2026</time>
+    <p>Lauréat du <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong>, décerné par l'École de génie et d'informatique Gina-Cody.</p>
+  </li>
+  <li>
+    <time datetime="2026-02">févr. 2026</time>
+    <p>« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching » est publié dans <em>Computers</em> 15(2), article 83. <a href="https://doi.org/10.3390/computers15020083">Lire l'article</a></p>
+  </li>
+  <li>
+    <time datetime="2025-11">nov. 2025</time>
+    <p>« From Dense Graphs to Meaningful Communities » présenté à IEEE SNAMS 2025 à Vienne.</p>
+  </li>
+</ol>
 
-#### Mai 2026
-> 🏆 J’ai l’honneur d’avoir reçu le **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant**, décerné par l’**École de génie et d’informatique Gina-Cody** de l’**Université Concordia**.
-
-#### Février 2026
-> 📄 Mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** est maintenant **publié** dans la revue **Computers**, vol. 15, n° 2, article 83. [Lire l’article](https://doi.org/10.3390/computers15020083)
-
-#### Janvier 2026
-> J’ai le plaisir d’annoncer que mon article **« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching »** a été **accepté** pour publication dans la revue **Computers**, Numéro spécial : **Recent Advances in Social Networks and Social Media**.
-
-> 🍁 **Heureux d’annoncer que j’ai été sélectionné comme auxiliaire d’enseignement (Graduate Teaching Assistant) pour quatre cours durant la session d’hiver 2026 !**
->
-> C’est un honneur de continuer à contribuer à la formation des étudiantes et étudiants dans plusieurs domaines de l’informatique et du génie logiciel à l’Université Concordia.
->
-> 🎓 **Cours :**
-> - **COMP 248** – *Programmation orientée objet I* — Démonstrateur de laboratoire
-> - **SOEN 363** – *Systèmes de données pour le génie logiciel* — Instructeur de tutoriels et correcteur
-> - **COEN 311** – *Organisation des ordinateurs et logiciels* — Démonstrateur de laboratoire
-> - **COEN 317** – *Systèmes à microprocesseurs* — Démonstrateur de laboratoire
-
-#### Décembre 2025
-> J’ai le plaisir d’annoncer que j’ai reçu la **Concordia Conference and Exposition Allowance** de l’**Université Concordia** en **2025**, en reconnaissance de mes activités universitaires liées aux conférences.
-
-#### Novembre 2025
-> J’ai le plaisir d’annoncer que mon article **« From Dense Graphs to Meaningful Communities: Assessing Community Quality Using Geodesic Distance Modularity on Metric Backbone-Sparsified Networks »** a été **accepté** pour publication et **présentation** à la
-> **12e Conférence internationale sur l’analyse, la gestion et la sécurité des réseaux sociaux (SNAMS 2025)**.
->
-> L’article a été présenté à **Vienne, Autriche**, du **25 au 28 novembre 2025**.
-
-</div>
-
-<p><a class="btn btn--news" href="/fr/nouvelles/"><i class="fas fa-newspaper" aria-hidden="true"></i> Voir toutes les nouvelles</a></p>
-
----
+<p class="news-list__more"><a href="/fr/nouvelles/">Toutes les nouvelles</a></p>
 
 {% assign mois_index = site.time | date: "%-m" | minus: 1 %}
 {% assign mois_fr = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
-<p class="page__updated">
-  <em>Dernière mise à jour : {{ site.time | date: "%-d" }} {{ mois_fr[mois_index] }} {{ site.time | date: "%Y" }}</em>
-</p>
+<p class="page__updated">Dernière mise à jour : {{ site.time | date: "%-d" }} {{ mois_fr[mois_index] }} {{ site.time | date: "%Y" }}</p>

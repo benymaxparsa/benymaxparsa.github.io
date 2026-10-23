@@ -18,7 +18,7 @@ gallery:
 ---
 - Team Name: [Null References](https://github.com/Null-References)
 - Date: Feb 2020 – Sep 2021
-- Co-founded a small indie game development team and jointly developed an open-source game prototype ([Uncertainty](../projects/Uncertainty)).
+- Co-founded a small indie game development team and jointly developed an open-source game prototype ([Uncertainty](/projects/Uncertainty/)).
 - Led technical design discussions and contributed to gameplay logic, architecture, and project planning.
 - Maintained the project repository on GitHub and coordinated development tasks within the team.
 - Developed Uncertainty, a 3D action-adventure space-shooter game built with Unity 2019.4.16f1 (C#) for Windows and macOS.

@@ -4,8 +4,8 @@
   "description": "RA & TA & Master of Computer Science at Concordia University. Highly Interested in Theoretical Computer Science, Algorithms, and Graph Theory.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#252a34",
-  "theme_color": "#00adb5",
+  "background_color": "#1d2531",
+  "theme_color": "#f2c14e",
   "orientation": "portrait-primary",
   "icons": [
     {
