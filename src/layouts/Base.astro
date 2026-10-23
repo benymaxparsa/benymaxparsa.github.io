@@ -1,0 +1,143 @@
+---
+import { smart } from '../lib/text';
+import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource-variable/source-serif-4/opsz.css';
+import '@fontsource-variable/source-serif-4/opsz-italic.css';
+import '../styles/site.css';
+import '../styles/icons.css';
+import '../styles/additions.css';
+import Masthead from '../components/Masthead.astro';
+import Footer from '../components/Footer.astro';
+import { ui, type Lang } from '../i18n';
+import { site } from '../lib/site';
+import { pagePath } from '../lib/paths';
+
+interface Props {
+  title?: string;
+  lang: Lang;
+  description?: string;
+  /** URL of the same page in the other language */
+  twin: string;
+  /** Jekyll layout name, kept as the body class the CSS targets */
+  layout?: 'single' | 'archive';
+  classes?: string;
+  date?: Date;
+  /** false keeps the page out of the search index (404, redirects) */
+  index?: boolean;
+}
+
+const { title, lang, description, twin, layout = 'single', classes, date, index = true } = Astro.props;
+const t = ui[lang];
+const path = pagePath(Astro.url);
+const canonical = new URL(path, site.url).href;
+const seoTitle = title ? `${smart(title)} - ${site.title}` : site.title;
+const desc = (description ?? site.description).replace(/\s+/g, ' ').trim();
+const ogType = date ? 'article' : 'website';
+const enUrl = new URL(lang === 'en' ? path : twin, site.url).href;
+const frUrl = new URL(lang === 'fr' ? path : twin, site.url).href;
+const image = new URL(site.ogImage, site.url).href;
+---
+<!doctype html>
+<html lang={t.htmlLang} class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>{seoTitle}</title>
+    <meta name="description" content={desc}>
+    <meta name="author" content={site.author}>
+    {ogType === 'article' && <meta property="article:author" content={site.author}>}
+    <meta property="og:type" content={ogType}>
+    <meta property="og:locale" content={t.ogLocale}>
+    <meta property="og:site_name" content={site.title}>
+    <meta property="og:title" content={title ?? site.title}>
+    <meta property="og:url" content={canonical}>
+    <meta property="og:description" content={desc}>
+    <meta property="og:image" content={image}>
+    <meta name="twitter:site" content={`@${site.twitter}`}>
+    <meta name="twitter:title" content={title ?? site.title}>
+    <meta name="twitter:description" content={desc}>
+    <meta name="twitter:url" content={canonical}>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content={image}>
+    {date && <meta property="article:published_time" content={date.toISOString()}>}
+    <link rel="canonical" href={canonical}>
+    {index && <link rel="alternate" hreflang="en" href={enUrl}>}
+    {index && <link rel="alternate" hreflang="fr-CA" href={frUrl}>}
+    {index && <link rel="alternate" hreflang="x-default" href={enUrl}>}
+    {path === '/' && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.author, url: site.url + '/', sameAs: site.sameAs })} />}
+    <meta name="google-site-verification" content={site.googleVerification}>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script is:inline>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      // Apply a saved light/dark choice before first paint (no flash); otherwise CSS follows the system
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+      } catch (e) {}
+    </script>
+    {path === '/' && (
+      <script is:inline>
+        // A visitor who switched to French gets the French home page
+        try { if (localStorage.getItem('preferredLanguage') === 'fr') location.replace('/fr/'); } catch (e) {}
+      </script>
+    )}
+    <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121821" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gtag}`}></script>
+    <script is:inline define:vars={{ id: site.gtag }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', id, { anonymize_ip: false });
+    </script>
+  </head>
+
+  <body class:list={[`layout--${layout}`, classes]}>
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">{t.skipNav}</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">{t.skipContent}</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">{t.skipFooter}</a></li>
+      </ul>
+    </nav>
+    <Masthead lang={lang} twin={twin} path={path} />
+
+    <div class="initial-content" data-pagefind-body={index ? '' : undefined}>
+      <slot />
+    </div>
+
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <form class="search-content__form" role="search" onsubmit="return false">
+          <label class="sr-only" for="search">{t.searchPlaceholder}</label>
+          <input type="search" id="search" class="search-input" placeholder={t.searchPlaceholder} autocomplete="off">
+        </form>
+        <div id="results" class="results" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <Footer lang={lang} />
+      </footer>
+    </div>
+
+    <dialog class="lightbox" aria-label="Image viewer">
+      <img class="lightbox__img" alt="">
+      <p class="lightbox__caption"></p>
+      <button type="button" class="lightbox__btn lightbox__prev" aria-label={t.lightboxPrev}>‹</button>
+      <button type="button" class="lightbox__btn lightbox__next" aria-label={t.lightboxNext}>›</button>
+      <button type="button" class="lightbox__btn lightbox__close" aria-label={t.lightboxClose}>×</button>
+    </dialog>
+
+    <script>
+      import '../scripts/enhancements';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+// One entry in a collection listing (was _includes/archive-single.html).
+import { formatDate, ui, type Lang } from '../i18n';
+import { urlOf, type Doc } from '../lib/urls';
+import { listExcerpt } from '../lib/excerpt';
+
+interface Props { doc: Doc; lang: Lang }
+const { doc, lang } = Astro.props;
+const t = ui[lang];
+const { title, venue, type, location, date, citation, paperurl } = doc.data;
+const excerpt = await listExcerpt(doc.body ?? '');
+const time = `<time datetime="${date.toISOString()}">${formatDate(date, lang, false)}</time>`;
+---
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      <a href={urlOf(doc)} rel="permalink">{title}</a>
+    </h2>
+    {doc.collection === 'publications'
+      ? <p class="archive__item-meta">{t.publishedIn} <span class="venue">{venue}</span> · <Fragment set:html={time} /></p>
+      : <p class="archive__item-meta">{type}{venue && <> · <span class="venue">{venue}</span></>}{location && ` · ${location}`} · <Fragment set:html={time} /></p>}
+    {/* The excerpt holds block elements, so the browser closes this <p> early, exactly as on the Jekyll site */}
+    <Fragment set:html={`<p class="archive__item-excerpt" itemprop="description">${excerpt}</p>`} />
+    {citation
+      ? <div class="archive__item-citation">{t.citation} {citation}{paperurl && <> <a href={paperurl}>{paperurl}</a></>}</div>
+      : paperurl && <p>{t.download} <a href={paperurl}>{t.here}</a></p>}
+  </article>
+</div>

@@ -1,0 +1,74 @@
+/* Components that are new in the Astro build (no Minimal Mistakes equivalent). */
+
+/* Image lightbox — native <dialog>, replaces Magnific Popup */
+.lightbox {
+  max-width: min(92vw, 1200px);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(8, 12, 18, 0.88);
+}
+
+.lightbox__img {
+  display: block;
+  max-width: 100%;
+  max-height: 84vh;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  cursor: zoom-out;
+}
+
+.lightbox__caption {
+  margin: 0.6rem 0 0;
+  color: #eef2f8;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.lightbox__btn {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(238, 242, 248, 0.35);
+  border-radius: 50%;
+  background: rgba(8, 12, 18, 0.6);
+  color: #eef2f8;
+  font: 1.6rem/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.lightbox__btn:hover {
+  background: rgba(8, 12, 18, 0.85);
+}
+
+.lightbox__close { top: 1rem; right: 1rem; }
+.lightbox__prev { top: 50%; left: 1rem; transform: translateY(-50%); }
+.lightbox__next { top: 50%; right: 1rem; transform: translateY(-50%); }
+.lightbox--single .lightbox__prev,
+.lightbox--single .lightbox__next { display: none; }
+
+/* Scroll lock while the lightbox is open */
+.lightbox-open {
+  overflow: hidden;
+}
+
+/* Pagefind highlights in search results */
+.search-content mark {
+  background: var(--primary-soft);
+  color: inherit;
+}
+
+/* Embedded videos fill the column at 16:9 (FitVids did this with jQuery) */
+.page__content iframe[src*="youtube.com/embed"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}

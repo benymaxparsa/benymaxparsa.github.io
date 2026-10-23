@@ -1,0 +1,12 @@
+---
+// Collection docs whose URL has no trailing slash (/teaching/x -> teaching/x.html)
+import DocPage from '../components/DocPage.astro';
+import { allDocs, urlOf } from '../lib/urls';
+
+export async function getStaticPaths() {
+  return (await allDocs())
+    .filter((doc) => !urlOf(doc).endsWith('/'))
+    .map((doc) => ({ params: { path: urlOf(doc).slice(1) }, props: { doc } }));
+}
+---
+<DocPage doc={Astro.props.doc} />

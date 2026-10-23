@@ -1,0 +1,12 @@
+---
+interface Props { emailLabel?: string }
+const { emailLabel = 'Email' } = Astro.props;
+---
+<ul class="profile-links">
+  <li><a class="plain-link" href="https://scholar.google.com/citations?user=eBNZsM0AAAAJ" rel="me"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a></li>
+  <li><a class="plain-link" href="https://github.com/benymaxparsa" rel="me"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a></li>
+  <li><a class="plain-link" href="https://www.linkedin.com/in/parsakamalipour/" rel="me"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+  <li><a class="plain-link" href="https://orcid.org/0000-0003-2546-9676" rel="me"><i class="fab fa-orcid" aria-hidden="true"></i>ORCID</a></li>
+  <li><a class="plain-link" href="https://www.researchgate.net/profile/Parsa-Kamalipour" rel="me"><i class="fab fa-researchgate" aria-hidden="true"></i>ResearchGate</a></li>
+  <li><a class="plain-link" href="mailto:parsakamalipour.edu@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>{emailLabel}</a></li>
+</ul>

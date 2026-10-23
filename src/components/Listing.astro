@@ -1,0 +1,17 @@
+---
+// A collection listing page, newest first, in one language (was the _pages/*.html loops).
+import Archive from '../layouts/Archive.astro';
+import ListItem from './ListItem.astro';
+import { docs, pageTwin, type CollectionName } from '../lib/urls';
+import { langFromPath, pagePath } from '../lib/paths';
+
+interface Props { title: string; collection: CollectionName }
+const { title, collection } = Astro.props;
+const path = pagePath(Astro.url);
+const lang = langFromPath(path);
+const items = (await docs(collection, lang)).reverse();
+---
+<Archive title={title} lang={lang} twin={pageTwin(path, lang)}>
+  <slot />
+  {items.map((doc) => <ListItem doc={doc} lang={lang} />)}
+</Archive>

@@ -1,0 +1,37 @@
+---
+import Archive from '../../layouts/Archive.astro';
+import { nav } from '../../i18n';
+import { COLLECTIONS, docs, urlOf } from '../../lib/urls';
+
+const pages = [
+  { url: '/', title: 'Parsa Kamalipour' },
+  ...nav.en,
+  { url: '/teaching/materials/', title: 'Course Materials for Students' },
+  { url: '/gallery/', title: 'Gallery & Images' },
+  { url: '/terms/', title: 'Terms and Privacy Policy' },
+  { url: '/sitemap/', title: 'Sitemap' },
+  { url: '/fr/', title: 'Parsa Kamalipour' },
+  ...nav.fr,
+  { url: '/fr/enseignement/materiel/', title: 'Matériel de cours pour les étudiants' },
+  { url: '/fr/galerie/', title: 'Galerie d’images' },
+];
+const sorted = [...COLLECTIONS].sort();
+const collections = await Promise.all(sorted.map(async (name) => ({ name, items: await docs(name) })));
+---
+<Archive title="Sitemap" lang="en" twin="/fr/">
+  <p>A list of all the posts and pages found on the site. For you robots out there is an <a href="/sitemap.xml">XML version</a> available for digesting as well.</p>
+
+  <h2>Pages</h2>
+  {pages.map((p) => (
+    <div class="list__item"><article class="archive__item"><h2 class="archive__item-title no_toc"><a href={p.url} rel="permalink">{p.title}</a></h2></article></div>
+  ))}
+
+  {collections.map(({ name, items }) => (
+    <>
+      <h2>{name}</h2>
+      {items.map((doc) => (
+        <div class="list__item"><article class="archive__item"><h2 class="archive__item-title no_toc"><a href={urlOf(doc)} rel="permalink">{doc.data.title}</a></h2></article></div>
+      ))}
+    </>
+  ))}
+</Archive>

@@ -1,0 +1,17 @@
+---
+import { smart } from '../lib/text';
+import Base from './Base.astro';
+import type { Lang } from '../i18n';
+
+interface Props { title: string; lang: Lang; twin: string; description?: string }
+const { lang, twin, description } = Astro.props;
+const title = smart(Astro.props.title);
+---
+<Base title={title} lang={lang} twin={twin} description={description} layout="archive">
+  <div id="main" role="main">
+    <div class="archive">
+      <h1 id="page-title" class="page__title">{title}</h1>
+      <slot />
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,22 @@
+---
+title: "Baccalauréat ès sciences en génie informatique de l'Université Vali-e-Asr de Rafsanjan"
+collection: education
+permalink: /fr/formation/VRU
+type: "Baccalauréat ès sciences"
+date: 2018-09-21
+location: "Rafsanjan, Kerman, Iran"
+venue: "Université Vali-e-Asr de Rafsanjan, Département de génie informatique"
+lang: fr-CA
+---
+* Majeure : Baccalauréat ès sciences - B.Sc. Génie informatique
+* Voie principale : Génie logiciel
+* Date : Sep 2018 – Juin 2023
+* Diplômé avec mention
+* Directrice de mémoire : Dr Fahimeh Dabaghi-Zarandi
+* Moyenne cumulative : 16,26 / 20
+* Moyenne cumulative (cours de spécialisation) : 17,80 / 20
+* Mémoire de baccalauréat : Détection de communautés dans un réseau complexe basée sur un algorithme aléatoire amélioré utilisant des informations de réseau locales et globales
+* Note du mémoire de baccalauréat : 20/20 (4.0/4.0)
+* Classement : 6e parmi les étudiants en génie informatique (cohorte de 8e session, année d’admission 2018)
+
+<figure class="half"><a href="/images/Graduation_Celebration/img1.JPG" title="Jour de remise des diplômes de baccalauréat - image 1, Personnes sur cette photo : Hossein Ahmadi, Mohammad Hosein(Cena) Ashoori, Moi"><img src="/images/Graduation_Celebration/img1.JPG" loading="lazy" decoding="async" alt="Jour de remise des diplômes de baccalauréat - image 1, Personnes sur cette photo : Hossein Ahmadi, Mohammad Hosein(Cena) Ashoori, Moi"></a><a href="/images/Graduation_Celebration/img2.JPG" title="Jour de remise des diplômes de baccalauréat - image 2, Personnes sur cette photo : Mohammad Hosein(Cena) Ashoori, Mohammad Mehdi Afkhami, Hossein Ahmadi, Moi"><img src="/images/Graduation_Celebration/img2.JPG" loading="lazy" decoding="async" alt="Jour de remise des diplômes de baccalauréat - image 2, Personnes sur cette photo : Mohammad Hosein(Cena) Ashoori, Mohammad Mehdi Afkhami, Hossein Ahmadi, Moi"></a><figcaption>Photos du jour de remise des diplômes de baccalauréat</figcaption></figure>

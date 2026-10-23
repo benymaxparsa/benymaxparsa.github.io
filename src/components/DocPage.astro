@@ -1,0 +1,28 @@
+---
+import { render } from 'astro:content';
+import Single from '../layouts/Single.astro';
+import { docs, langOf, twinOf, urlOf, type Doc } from '../lib/urls';
+import { excerpt } from '../lib/text';
+
+interface Props { doc: Doc }
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+const lang = langOf(doc);
+const twin = await twinOf(doc);
+
+// Previous/next within the same collection and language, in collection order
+const siblings = await docs(doc.collection, lang);
+const i = siblings.findIndex((d) => d.id === doc.id);
+const link = (d?: Doc) => d && { url: urlOf(d), title: d.data.title };
+---
+<Single
+  title={doc.data.title}
+  lang={lang}
+  twin={twin ? urlOf(twin) : lang === 'fr' ? '/' : '/fr/'}
+  description={excerpt(doc.rendered?.html ?? '')}
+  date={doc.data.date}
+  share
+  pager={{ prev: link(siblings[i - 1]), next: link(siblings[i + 1]) }}
+>
+  <Content />
+</Single>

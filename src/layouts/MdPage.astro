@@ -1,0 +1,16 @@
+---
+// Layout for the Markdown pages in src/pages: `archive: true` picks Jekyll's archive layout.
+import Single from './Single.astro';
+import Archive from './Archive.astro';
+import { pageTwin } from '../lib/urls';
+import { langFromPath, pagePath } from '../lib/paths';
+
+const { frontmatter } = Astro.props;
+const path = pagePath(Astro.url);
+const lang = langFromPath(path);
+const twin = pageTwin(path, lang);
+const { title, excerpt: description, archive, classes, sitemap } = frontmatter;
+---
+{archive
+  ? <Archive title={title} lang={lang} twin={twin} description={description}><slot /></Archive>
+  : <Single title={title} lang={lang} twin={twin} description={description} classes={classes} index={sitemap !== false}><slot /></Single>}

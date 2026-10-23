@@ -1,0 +1,32 @@
+---
+import Archive from '../../../../layouts/Archive.astro';
+import CourseMaterials from '../../../../components/CourseMaterials.astro';
+import { pageTwin } from '../../../../lib/urls';
+import { langFromPath, pagePath } from '../../../../lib/paths';
+
+const path = pagePath(Astro.url);
+const lang = langFromPath(path);
+---
+<Archive title="Matériel de cours pour les étudiants" lang={lang} twin={pageTwin(path, lang)} description="Notes de tutoriel, notes de cours et diapositives pour les cours auxquels je participe à l'Université Concordia — à consulter et à télécharger librement.">
+
+<p class="page__lead">
+  Notes et diapositives que je prépare pour les cours auxquels je participe à
+  l’Université Concordia. Tout le contenu est libre de consultation et de
+  téléchargement. S’il manque un document, ou si vous relevez une erreur,
+  <a href="/fr/contact/">faites-le moi savoir</a>.
+</p>
+
+<div class="materials-note">
+  <i class="fas fa-info-circle" aria-hidden="true"></i>
+  <span>
+    Il s’agit de matériel complémentaire rédigé pour appuyer les tutoriels et les
+    laboratoires. Il ne remplace ni les notes de cours de votre enseignant, ni le
+    manuel du cours, ni ce qui est publié sur Moodle&nbsp;; le plan de cours
+    officiel a toujours préséance.
+  </span>
+</div>
+
+<CourseMaterials lang={lang} />
+
+<p><a class="btn btn--news" href="/fr/enseignement/"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Retour à l’enseignement</a></p>
+</Archive>

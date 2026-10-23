@@ -1,0 +1,54 @@
+---
+// Course blocks for the materials page; the file list is whatever is in each course's folder.
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
+import { staticFiles, prettyName } from '../lib/files';
+import type { Lang } from '../i18n';
+
+interface Course {
+  code: string; name: string; role: string; terms: string; blurb?: string; dir: string;
+  titles?: Record<string, string>;
+  fr?: Partial<Pick<Course, 'name' | 'role' | 'terms' | 'blurb' | 'titles'>>;
+}
+
+const { lang } = Astro.props as { lang: Lang };
+const { courses } = parse(readFileSync('src/data/course_materials.yml', 'utf8')) as { courses: Course[] };
+const empty = lang === 'fr' ? 'Le matériel de ce cours sera publié ici au cours de la session.' : 'Materials for this course will be posted here during the term.';
+---
+{courses.map((course) => {
+  const tr = (lang === 'fr' && course.fr) || {};
+  const files = staticFiles(course.dir);
+  const blurb = tr.blurb ?? course.blurb;
+  return (
+    <div class="course-materials">
+      <div class="course-materials__header">
+        <h2 class="course-materials__title">
+          <span class="course-materials__code">{course.code}</span>
+          {tr.name ?? course.name}
+        </h2>
+        <p class="course-materials__meta">
+          {tr.role ?? course.role} <span class="course-materials__sep" aria-hidden="true">•</span> {tr.terms ?? course.terms}
+        </p>
+        {blurb && <p class="course-materials__blurb">{blurb}</p>}
+      </div>
+      {files.length > 0 ? (
+        <ul class="material-list">
+          {files.map((file) => (
+            <li class="material-item">
+              <a class="material-link" href={file.path} download>
+                <i class="fas fa-file-download" aria-hidden="true"></i>
+                <span class="material-name">{tr.titles?.[file.name] ?? course.titles?.[file.name] ?? prettyName(file)}</span>
+                <span class="material-ext">{file.extname.slice(1).toUpperCase()}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="material-empty">
+          <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+          {empty}
+        </p>
+      )}
+    </div>
+  );
+})}

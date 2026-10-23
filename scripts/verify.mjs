@@ -110,6 +110,7 @@ function pageAudit(theme) {
   if (theme === 'dark') {
     for (const el of document.querySelectorAll('body *')) {
       if (/^(IMG|VIDEO|CANVAS|IFRAME|PICTURE|svg|path)$/.test(el.tagName)) continue;
+      if (getComputedStyle(el).maskImage !== 'none') continue; // mask icons paint currentColor by design
       const c = parse(getComputedStyle(el).backgroundColor);
       const r = el.getBoundingClientRect();
       // icon-sized marks (hamburger bars) are meant to be light in dark mode

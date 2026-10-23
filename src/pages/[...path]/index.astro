@@ -1,0 +1,12 @@
+---
+// Collection docs whose URL ends in a slash (/projects/x/ -> projects/x/index.html)
+import DocPage from '../../components/DocPage.astro';
+import { allDocs, urlOf } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  return (await allDocs())
+    .filter((doc) => urlOf(doc).endsWith('/'))
+    .map((doc) => ({ params: { path: urlOf(doc).slice(1, -1) }, props: { doc } }));
+}
+---
+<DocPage doc={Astro.props.doc} />

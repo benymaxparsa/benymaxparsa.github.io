@@ -1,0 +1,49 @@
+---
+import { nav, ui, type Lang } from '../i18n';
+import { site } from '../lib/site';
+
+interface Props { lang: Lang; twin: string; path: string }
+const { lang, twin, path } = Astro.props;
+const t = ui[lang];
+const other = lang === 'en' ? 'fr' : 'en';
+---
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title}></a>
+        <a class="site-title" href={t.home}>{site.title}</a>
+        <ul class="visible-links">
+          {nav[lang].map((link) => (
+            <li class="masthead__menu-item">
+              {path === link.url
+                ? <a href={link.url} class="nav-current" aria-current="page">{link.title}</a>
+                : <a href={link.url}>{link.title}</a>}
+            </li>
+          ))}
+        </ul>
+        <div class="language-switcher" role="navigation" aria-label="Language switcher">
+          <div class="lang-dropdown">
+            <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label={t.langButton}>{t.langCurrent} <span class="lang-caret" aria-hidden="true">▾</span></button>
+            <div class="lang-dropdown-content">
+              <a href={twin} class="lang-option lang-switch-link" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'} aria-label={t.langOther}>{t.langOtherText}</a>
+            </div>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" data-label-dark={t.themeDark} data-label-light={t.themeLight} aria-label={t.themeToggle}>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+        </button>
+        <button class="search__toggle" type="button" aria-expanded="false">
+          <span class="visually-hidden">{t.search}</span>
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="greedy-nav__toggle hidden" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="visually-hidden">{t.menu}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden" id="site-menu"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

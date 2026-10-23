@@ -1,0 +1,79 @@
+---
+import { smart } from '../lib/text';
+import Base from './Base.astro';
+import { ui, formatDate, type Lang } from '../i18n';
+import { site } from '../lib/site';
+import { pagePath } from '../lib/paths';
+
+interface Props {
+  title: string;
+  lang: Lang;
+  twin: string;
+  description?: string;
+  classes?: string;
+  date?: Date;
+  /** collection docs: share buttons and previous/next within the collection */
+  share?: boolean;
+  pager?: { prev?: { url: string; title: string }; next?: { url: string; title: string } };
+  index?: boolean;
+}
+
+const { lang, twin, description, classes, date, share, pager, index } = Astro.props;
+const title = smart(Astro.props.title);
+const t = ui[lang];
+const path = pagePath(Astro.url);
+const url = new URL(path, site.url).href;
+const enc = encodeURIComponent;
+const shareLinks = [
+  { cls: 'twitter', label: 'Twitter', icon: 'fa-twitter', href: `https://twitter.com/intent/tweet?via=${site.twitter}&text=${enc(title)}%20${enc(url)}` },
+  { cls: 'facebook', label: 'Facebook', icon: 'fa-facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}` },
+  { cls: 'linkedin', label: 'LinkedIn', icon: 'fa-linkedin', href: `https://www.linkedin.com/shareArticle?mini=true&url=${enc(url)}` },
+];
+---
+<Base title={title} lang={lang} twin={twin} description={description} classes={classes} date={date} index={index}>
+  <div id="main" role="main">
+    <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+      <meta itemprop="headline" content={title}>
+      {description && <meta itemprop="description" content={description}>}
+      {date && <meta itemprop="datePublished" content={date.toISOString()}>}
+
+      <div class="page__inner-wrap">
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href={url} class="u-url" itemprop="url">{title}</a>
+          </h1>
+        </header>
+
+        <section class="page__content e-content" itemprop="text">
+          <slot />
+        </section>
+
+        <footer class="page__meta">
+          {date && (
+            <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {t.updated}</strong> <time class="dt-published" datetime={date.toISOString()}>{formatDate(date, lang)}</time></p>
+          )}
+        </footer>
+
+        {share && (
+          <section class="page__share">
+            <h4 class="page__share-title">{t.shareOn}</h4>
+            {shareLinks.map((s) => (
+              <a href={s.href} class={`btn btn--${s.cls}`} data-share-popup title={`${t.shareOn} ${s.label}`}><i class={`fab fa-fw ${s.icon}`} aria-hidden="true"></i><span> {s.label}</span></a>
+            ))}
+          </section>
+        )}
+
+        {pager && (pager.prev || pager.next) && (
+          <nav class="pagination">
+            {pager.prev
+              ? <a href={pager.prev.url} class="pagination--pager" title={pager.prev.title}>{t.previous}</a>
+              : <a href="#" class="pagination--pager disabled">{t.previous}</a>}
+            {pager.next
+              ? <a href={pager.next.url} class="pagination--pager" title={pager.next.title}>{t.next}</a>
+              : <a href="#" class="pagination--pager disabled">{t.next}</a>}
+          </nav>
+        )}
+      </div>
+    </article>
+  </div>
+</Base>

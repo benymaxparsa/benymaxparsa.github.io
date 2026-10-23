@@ -1,0 +1,18 @@
+---
+import { ui, type Lang } from '../i18n';
+import { site } from '../lib/site';
+
+interface Props { lang: Lang }
+const t = ui[Astro.props.lang];
+---
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li><strong>{t.follow}</strong></li>
+    {site.footerLinks.map((link) => (
+      <li><a href={link.url} rel="nofollow noopener noreferrer"><i class={link.icon} aria-hidden="true"></i> {link.label}</a></li>
+    ))}
+    <li><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> <a rel="me" href="https://mastodon.social/@parsakamalipour">Mastodon</a> </li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; {new Date().getFullYear()} {site.author}. {t.poweredBy} <a href="https://astro.build" rel="nofollow">Astro</a>.</div>

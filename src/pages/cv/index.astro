@@ -1,0 +1,42 @@
+---
+import Archive from '../../layouts/Archive.astro';
+import { pageTwin } from '../../lib/urls';
+import { langFromPath, pagePath } from '../../lib/paths';
+
+const path = pagePath(Astro.url);
+const lang = langFromPath(path);
+---
+<Archive title="CV" lang={lang} twin={pageTwin(path, lang)}>
+<div class="cv-actions">
+  <a class="cv-btn primary" href="/files/ParsaKamalipour_CV.pdf" download aria-label="Download CV in English PDF">
+    Download CV (English, PDF)
+  </a>
+  <a id="cv-fr" class="cv-btn secondary" href="/files/FR_ParsaKamalipour_CV.pdf" download aria-label="Télécharger le CV en français PDF">
+    Télécharger le CV (Français, PDF)
+  </a>
+  <div class="cv-meta"><b><u>Last CV update: <i>August 5, 2025</i></u></b></div>
+</div>
+
+<div class="cv-ctrl">
+  <label for="cv-lang">View:</label>
+  <select id="cv-lang" name="cv-lang" aria-label="Select CV language to preview">
+    <option value="/files/ParsaKamalipour_CV.pdf" selected>English PDF</option>
+    <option value="/files/FR_ParsaKamalipour_CV.pdf">Français (PDF)</option>
+  </select>
+</div>
+
+<div class="cv-viewer">
+  <iframe
+    id="cv-frame"
+    class="cv-iframe"
+    src="/files/ParsaKamalipour_CV.pdf"
+    title="CV preview"
+  ></iframe>
+</div>
+<script>
+  // Preview the CV in the language picked in the selector
+  const select = document.querySelector<HTMLSelectElement>('#cv-lang');
+  const frame = document.querySelector<HTMLIFrameElement>('#cv-frame');
+  select?.addEventListener('change', () => { if (frame) frame.src = select.value; });
+</script>
+</Archive>
