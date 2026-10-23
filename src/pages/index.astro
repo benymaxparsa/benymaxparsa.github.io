@@ -2,16 +2,21 @@
 import Single from '../layouts/Single.astro';
 import HomePhoto from '../components/HomePhoto.astro';
 import ProfileLinks from '../components/ProfileLinks.astro';
+import { docs, urlOf } from '../lib/urls';
 import { formatDate } from '../i18n';
 
 const lang = 'en';
+const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
 ---
-<Single title="Parsa Kamalipour" lang={lang} twin="/fr/" description="About me" classes="home">
+<Single title="Parsa Kamalipour" lang={lang} twin="/fr/" description="About me" classes="home" showTitle={false}>
 <section class="home-hero" aria-label="Introduction">
   <div class="home-hero__text">
     <div class="home-hero__id">
       <HomePhoto alt="Portrait of Parsa Kamalipour" />
-      <p class="home-hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
+      <div>
+        <h1 class="home-hero__name">Parsa Kamalipour</h1>
+        <p class="home-hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
+      </div>
     </div>
     <p class="page__lead">Parsa studies community detection in social and complex networks: finding the groups hidden inside a graph, and judging whether they are real, with tools from algorithms and graph theory. He is a thesis-based master’s student at <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Concordia University</a> in Montréal, supervised by <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>.</p>
     <div class="hero-actions">
@@ -23,11 +28,13 @@ const lang = 'en';
   <figure class="hero-graph">
     <canvas role="img" aria-label="A random network of 56 nodes in four hidden groups. Label propagation colours each group as it finds it."></canvas>
     <figcaption>
-      <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities in a random planted-partition graph." aria-live="polite">Label propagation is looking for communities…</span>
+      <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities." aria-live="polite">Label propagation is looking for communities…</span>
       <button type="button" class="hero-graph__again">New graph</button>
     </figcaption>
   </figure>
 </section>
+<div class="home-cols">
+<section class="home-research">
 <h2 class="section-heading section-heading--first" id="research">Research</h2>
 <p>His thesis, <em><strong>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</strong></em> (expected 2027), starts from a simple idea: the members of a good community are close to each other in shortest-path distance, compared with the rest of the network. This gives a way to find and judge communities without ground-truth labels. The work has so far produced <strong>Spider</strong>, a near-linear community detection algorithm that combines local and global steps (<em>Computers</em>, 2026), and a first-author study of the <strong>weighted-average Geodesic Distance Modularity (wGDM)</strong> with Metric Backbone sparsification as preprocessing for Leiden (<em>IEEE SNAMS 2025</em>, presented in Vienna). <a href="/biography/">Read the full biography</a></p>
 <ul class="interest-tags" aria-label="Research interests">
@@ -39,12 +46,15 @@ const lang = 'en';
   <li class="interest-tag">Combinatorial optimization</li>
   <li class="interest-tag">Data mining</li>
 </ul>
-<dl class="stats-band" aria-label="Academic profile at a glance">
-  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Courses as TA</dt><dd class="stat-card__number">15+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Teaching hours</dt><dd class="stat-card__number">1650+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Research positions</dt><dd class="stat-card__number">3</dd></div>
-</dl>
+<h2 class="section-heading">Selected publications</h2>
+<ul class="pub-list">
+  {pubs.map((doc) => (
+    <li><a class="plain-link" href={urlOf(doc)}>{doc.data.title}</a><span class="pub-list__venue">{doc.data.venue}, {doc.data.date.getUTCFullYear()}</span></li>
+  ))}
+</ul>
+<p class="news-list__more"><a href="/publications/">All publications</a></p>
+</section>
+<section class="home-news">
 <h2 class="section-heading" id="news">Recent news</h2>
 <ol class="news-list">
   <li>
@@ -65,5 +75,13 @@ const lang = 'en';
   </li>
 </ol>
 <p class="news-list__more"><a href="/news/">All news</a></p>
+</section>
+</div>
+<dl class="stats-band" aria-label="Academic profile at a glance">
+  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Courses as TA</dt><dd class="stat-card__number">15+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Teaching hours</dt><dd class="stat-card__number">1650+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Research positions</dt><dd class="stat-card__number">3</dd></div>
+</dl>
 <p class="page__updated">Last updated {formatDate(new Date(), lang)}</p>
 </Single>

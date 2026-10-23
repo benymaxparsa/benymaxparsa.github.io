@@ -2,16 +2,21 @@
 import Single from '../../layouts/Single.astro';
 import HomePhoto from '../../components/HomePhoto.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
+import { docs, urlOf } from '../../lib/urls';
 import { formatDate } from '../../i18n';
 
 const lang = 'fr';
+const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
 ---
-<Single title="Parsa Kamalipour" lang={lang} twin="/" description="À propos de moi" classes="home">
+<Single title="Parsa Kamalipour" lang={lang} twin="/" description="À propos de moi" classes="home" showTitle={false}>
 <section class="home-hero" aria-label="Présentation">
   <div class="home-hero__text">
     <div class="home-hero__id">
       <HomePhoto alt="Portrait de Parsa Kamalipour" />
-      <p class="home-hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
+      <div>
+        <h1 class="home-hero__name">Parsa Kamalipour</h1>
+        <p class="home-hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
+      </div>
     </div>
     <p class="page__lead">Parsa étudie la détection de communautés dans les réseaux sociaux et complexes : trouver les groupes cachés dans un graphe, et juger s'ils sont réels, à l'aide d'outils issus de l'algorithmique et de la théorie des graphes. Il est étudiant à la maîtrise avec mémoire à l'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Université Concordia</a> à Montréal, sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>.</p>
     <div class="hero-actions">
@@ -23,11 +28,13 @@ const lang = 'fr';
   <figure class="hero-graph">
     <canvas role="img" aria-label="Un réseau aléatoire de 56 nœuds répartis en quatre groupes cachés. La propagation d'étiquettes colore chaque groupe à mesure qu'elle le trouve."></canvas>
     <figcaption>
-      <span class="hero-graph__status" data-searching="La propagation d'étiquettes cherche des communautés…" data-found="La propagation d'étiquettes a trouvé {n} communautés dans un graphe aléatoire à partition plantée." aria-live="polite">La propagation d'étiquettes cherche des communautés…</span>
+      <span class="hero-graph__status" data-searching="La propagation d’étiquettes cherche des communautés…" data-found="La propagation d’étiquettes a trouvé {n} communautés." aria-live="polite">La propagation d’étiquettes cherche des communautés…</span>
       <button type="button" class="hero-graph__again">Nouveau graphe</button>
     </figcaption>
   </figure>
 </section>
+<div class="home-cols">
+<section class="home-research">
 <h2 class="section-heading section-heading--first" id="recherche">Recherche</h2>
 <p>Son mémoire, <em><strong>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</strong></em> (achèvement prévu en 2027), part d’une idée simple : les membres d’une bonne communauté sont proches les uns des autres en distance de plus court chemin, comparativement au reste du réseau. Cela permet de détecter et d’évaluer des communautés sans étiquettes de référence. Ces travaux ont déjà donné <strong>Spider</strong>, un algorithme de détection de communautés en temps quasi linéaire qui combine des étapes locales et globales (<em>Computers</em>, 2026), et une étude, en premier auteur, de la <strong>modularité de distance géodésique moyenne pondérée (wGDM)</strong> combinée à la sparsification par Metric Backbone comme prétraitement pour Leiden (<em>IEEE SNAMS 2025</em>, présentée à Vienne). <a href="/fr/biographie/">Lire la biographie complète</a></p>
 <ul class="interest-tags" aria-label="Intérêts de recherche">
@@ -39,12 +46,15 @@ const lang = 'fr';
   <li class="interest-tag">Optimisation combinatoire</li>
   <li class="interest-tag">Exploration de données</li>
 </ul>
-<dl class="stats-band" aria-label="Profil académique en un coup d'œil">
-  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Cours assistés</dt><dd class="stat-card__number">15+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Heures d'enseignement</dt><dd class="stat-card__number">1650+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Postes de recherche</dt><dd class="stat-card__number">3</dd></div>
-</dl>
+<h2 class="section-heading">Publications choisies</h2>
+<ul class="pub-list">
+  {pubs.map((doc) => (
+    <li><a class="plain-link" href={urlOf(doc)}>{doc.data.title}</a><span class="pub-list__venue">{doc.data.venue}, {doc.data.date.getUTCFullYear()}</span></li>
+  ))}
+</ul>
+<p class="news-list__more"><a href="/fr/publications/">Toutes les publications</a></p>
+</section>
+<section class="home-news">
 <h2 class="section-heading" id="nouvelles">Nouvelles récentes</h2>
 <ol class="news-list">
   <li>
@@ -65,5 +75,13 @@ const lang = 'fr';
   </li>
 </ol>
 <p class="news-list__more"><a href="/fr/nouvelles/">Toutes les nouvelles</a></p>
+</section>
+</div>
+<dl class="stats-band" aria-label="Profil académique en un coup d'œil">
+  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Cours assistés</dt><dd class="stat-card__number">15+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Heures d'enseignement</dt><dd class="stat-card__number">1650+</dd></div>
+  <div class="stat-card"><dt class="stat-card__label">Postes de recherche</dt><dd class="stat-card__number">3</dd></div>
+</dl>
 <p class="page__updated">Dernière mise à jour : {formatDate(new Date(), lang)}</p>
 </Single>

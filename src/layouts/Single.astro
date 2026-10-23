@@ -16,9 +16,11 @@ interface Props {
   share?: boolean;
   pager?: { prev?: { url: string; title: string }; next?: { url: string; title: string } };
   index?: boolean;
+  /** false when the page sets its own <h1> (the homepage hero) */
+  showTitle?: boolean;
 }
 
-const { lang, twin, description, classes, date, share, pager, index } = Astro.props;
+const { lang, twin, description, classes, date, share, pager, index, showTitle = true } = Astro.props;
 const title = smart(Astro.props.title);
 const t = ui[lang];
 const path = pagePath(Astro.url);
@@ -38,11 +40,13 @@ const shareLinks = [
       {date && <meta itemprop="datePublished" content={date.toISOString()}>}
 
       <div class="page__inner-wrap">
-        <header>
-          <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href={url} class="u-url" itemprop="url">{title}</a>
-          </h1>
-        </header>
+        {showTitle && (
+          <header>
+            <h1 id="page-title" class="page__title p-name" itemprop="headline">
+              <a href={url} class="u-url" itemprop="url">{title}</a>
+            </h1>
+          </header>
+        )}
 
         <section class="page__content e-content" itemprop="text">
           <slot />

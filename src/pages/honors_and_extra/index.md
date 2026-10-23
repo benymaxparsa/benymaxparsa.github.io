@@ -8,11 +8,11 @@ excerpt: "Honors and Awards, Test Scores, Skills, etc."
 <h2 id="honors-and-awards" class="section-heading section-heading--first">Honors and Awards</h2>
 
 <ol class="award-list">
-<li><strong>Awarded the Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong> - <em><strong>Issued by Concordia University, Gina Cody School of Engineering and Computer Science</strong></em></li>
-<li><strong>Awarded Concordia Conference and Exposition Allowance</strong> - <em><strong>Issued by Concordia University</strong></em></li>
-<li><strong>Awarded the DRW Graduate Scholarship in Computer Science</strong> - <em><strong>Issued by Concordia University &amp; DRW Company</strong></em></li>
-<li><strong>Awarded Concordia Merit Scholarship (Entrance Scholarship Award)</strong> - <em><strong>Issued by Concordia University, School of Graduate Studies</strong></em></li>
-<li><strong>Awarded Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)</strong> - <em><strong>Issued by Concordia University, Gina Cody School of Engineering and Computer Science</strong></em></li>
+<li><strong>Awarded the Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong> <em><strong>Issued by Concordia University, Gina Cody School of Engineering and Computer Science</strong></em></li>
+<li><strong>Awarded Concordia Conference and Exposition Allowance</strong> <em><strong>Issued by Concordia University</strong></em></li>
+<li><strong>Awarded the DRW Graduate Scholarship in Computer Science</strong> <em><strong>Issued by Concordia University &amp; DRW Company</strong></em></li>
+<li><strong>Awarded Concordia Merit Scholarship (Entrance Scholarship Award)</strong> <em><strong>Issued by Concordia University, School of Graduate Studies</strong></em></li>
+<li><strong>Awarded Concordia Faculty of Engineering and Computer Science Financial Research Support (FRS)</strong> <em><strong>Issued by Concordia University, Gina Cody School of Engineering and Computer Science</strong></em></li>
 <li><strong>Won Distinguished Student Award among all students of Vali-e-Asr University</strong></li>
 <li><strong>Awarded Undergraduate Researcher status among all students of Vali-e-Asr University</strong></li>
 <li><strong>Earned Top Researcher Award among all undergraduate students of Kerman province</strong></li>

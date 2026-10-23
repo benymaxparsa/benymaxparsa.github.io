@@ -24,7 +24,7 @@ const other = lang === 'en' ? 'fr' : 'en';
         </ul>
         <div class="language-switcher" role="navigation" aria-label="Language switcher">
           <div class="lang-dropdown">
-            <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label={t.langButton}>{t.langCurrent} <span class="lang-caret" aria-hidden="true">▾</span></button>
+            <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label={t.langButton}>{t.langCurrent} <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
             <div class="lang-dropdown-content">
               <a href={twin} class="lang-option lang-switch-link" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'} aria-label={t.langOther}>{t.langOtherText}</a>
             </div>
@@ -36,11 +36,11 @@ const other = lang === 'en' ? 'fr' : 'en';
         </button>
         <button class="search__toggle" type="button" aria-expanded="false">
           <span class="visually-hidden">{t.search}</span>
-          <i class="fas fa-search" aria-hidden="true"></i>
+          <svg class="icon-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
         </button>
         <button class="greedy-nav__toggle hidden" type="button" aria-expanded="false" aria-controls="site-menu">
           <span class="visually-hidden">{t.menu}</span>
-          <div class="navicon"></div>
+          <svg class="icon-btn__icon navicon" viewBox="0 0 24 24" aria-hidden="true"><path class="navicon__open" d="M4 7h16M4 12h16M4 17h16"/><path class="navicon__close" d="m6 6 12 12M18 6 6 18"/></svg>
         </button>
         <ul class="hidden-links hidden" id="site-menu"></ul>
       </nav>

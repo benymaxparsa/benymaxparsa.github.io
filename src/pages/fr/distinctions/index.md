@@ -8,11 +8,11 @@ excerpt: "Distinctions et prix, résultats de tests, compétences, etc."
 <h2 id="distinctions-et-prix" class="section-heading section-heading--first">Distinctions et prix</h2>
 
 <ol class="award-list">
-<li><strong>Prix d’excellence du doyen pour l’excellence en enseignement par un auxiliaire d’enseignement</strong> - <em><strong>Décerné par l’Université Concordia, École de génie et d’informatique Gina-Cody</strong></em></li>
-<li><strong>Allocation de participation aux conférences et expositions de Concordia</strong> - <em><strong>Décernée par l’Université Concordia</strong></em></li>
-<li><strong>Bourse d’études supérieures DRW en informatique</strong> - <em><strong>Décernée par l’Université Concordia et la compagnie DRW</strong></em></li>
-<li><strong>Bourse d’excellence Concordia (bourse d’admission)</strong> - <em><strong>Décernée par l’Université Concordia, École des études supérieures</strong></em></li>
-<li><strong>Soutien financier à la recherche (FRS) de la Faculté de génie et d’informatique de Concordia</strong> - <em><strong>Décerné par l’Université Concordia, École de génie et d’informatique Gina-Cody</strong></em></li>
+<li><strong>Prix d’excellence du doyen pour l’excellence en enseignement par un auxiliaire d’enseignement</strong> <em><strong>Décerné par l’Université Concordia, École de génie et d’informatique Gina-Cody</strong></em></li>
+<li><strong>Allocation de participation aux conférences et expositions de Concordia</strong> <em><strong>Décernée par l’Université Concordia</strong></em></li>
+<li><strong>Bourse d’études supérieures DRW en informatique</strong> <em><strong>Décernée par l’Université Concordia et la compagnie DRW</strong></em></li>
+<li><strong>Bourse d’excellence Concordia (bourse d’admission)</strong> <em><strong>Décernée par l’Université Concordia, École des études supérieures</strong></em></li>
+<li><strong>Soutien financier à la recherche (FRS) de la Faculté de génie et d’informatique de Concordia</strong> <em><strong>Décerné par l’Université Concordia, École de génie et d’informatique Gina-Cody</strong></em></li>
 <li><strong>Prix de l’étudiant distingué parmi tous les étudiants de l’Université Vali-e-Asr</strong></li>
 <li><strong>Statut de chercheur de premier cycle parmi tous les étudiants de l’Université Vali-e-Asr</strong></li>
 <li><strong>Prix du meilleur chercheur parmi tous les étudiants de premier cycle de la province de Kerman</strong></li>

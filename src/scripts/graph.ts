@@ -31,7 +31,7 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
   let W = 0, H = 0;
   let nodes: Node[] = [], edges: [number, number][] = [], adj: number[][] = [];
   let labelColor: Record<number, number> = {};
-  let converged = false, frame = 0, raf = 0, visible = true, energy = Infinity;
+  let converged = false, frame = 0, raf = 0, visible = true, energy = Infinity, settleBy = Infinity;
 
   function resize() {
     const dpr = Math.min(devicePixelRatio || 1, 2);
@@ -47,6 +47,7 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
     nodes = []; edges = []; adj = []; labelColor = {};
     converged = false;
     energy = Infinity;
+    settleBy = Infinity;
     for (let i = 0; i < n; i++) {
       nodes.push({ x: W * (0.2 + 0.6 * Math.random()), y: H * (0.15 + 0.7 * Math.random()), vx: 0, vy: 0, block: Math.floor(i / PER), label: i });
       adj.push([]);
@@ -180,7 +181,9 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
       : status.getAttribute('data-searching');
   }
 
-  const settled = () => converged && energy < 0.02;
+  // Some layouts keep a faint wiggle above any energy threshold; once the communities are
+  // found, give the layout ~5 s to ease out, then stop for good
+  const settled = () => converged && (energy < 0.02 || frame > settleBy);
 
   function tick() {
     raf = 0;
@@ -189,7 +192,7 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
     // Let the layout untangle a little before the labels start moving
     if (!converged && frame > 40 && frame % 14 === 0) {
       converged = !lpaSweep();
-      if (converged) setStatus(true);
+      if (converged) { setStatus(true); settleBy = frame + 300; }
     }
     draw();
     if (settled()) return; // stop burning CPU
@@ -213,17 +216,26 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
     raf = requestAnimationFrame(tick);
   }
 
+  const wake = () => {
+    if (visible && !raf && !settled() && !prefersReducedMotion) raf = requestAnimationFrame(tick);
+  };
+
   new IntersectionObserver((entries) => {
     visible = entries[0].isIntersecting;
-    if (visible && !raf && !settled() && !prefersReducedMotion) raf = requestAnimationFrame(tick);
+    wake();
   }).observe(canvas);
 
-  let lastW = canvas.clientWidth;
-  addEventListener('resize', () => {
-    if (canvas.clientWidth === lastW) return; // ignore mobile URL-bar height jitter
-    lastW = canvas.clientWidth;
-    start();
-  });
+  // A size change keeps the graph and its communities: rescale the layout instead of
+  // starting over (window resizes, devtools, rotating a phone)
+  new ResizeObserver(() => {
+    const oldW = W, oldH = H;
+    if (canvas.clientWidth === oldW && canvas.clientHeight === oldH) return;
+    resize();
+    if (!oldW || !oldH || !nodes.length) return;
+    for (const nd of nodes) { nd.x *= W / oldW; nd.y *= H / oldH; }
+    draw();
+    wake();
+  }).observe(canvas);
   again?.addEventListener('click', start);
   document.addEventListener('themechange', () => { readTheme(); draw(); });
   readTheme();

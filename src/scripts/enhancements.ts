@@ -91,7 +91,8 @@ function addReadingProgressBar() {
   let ticking = false;
   const update = () => {
     const scrollable = document.documentElement.scrollHeight - innerHeight;
-    bar.style.width = `${Math.min(100, Math.max(0, scrollable > 0 ? (scrollY / scrollable) * 100 : 0))}%`;
+    // transform, not width: no layout on every scroll frame
+    bar.style.transform = `scaleX(${Math.min(1, Math.max(0, scrollable > 0 ? scrollY / scrollable : 0))})`;
     ticking = false;
   };
   addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
@@ -173,56 +174,74 @@ function initLanguageSwitcher() {
 /** Search overlay backed by Pagefind; the index is split by <html lang>, so results stay in the page language. */
 function initSearch() {
   const toggle = $<HTMLButtonElement>('.search__toggle');
-  const panel = $('.search-content');
-  const content = $('.initial-content');
+  const dialog = $<HTMLDialogElement>('dialog.search-dialog');
   const input = $<HTMLInputElement>('#search');
   const results = $('#results');
-  if (!toggle || !panel || !content || !input || !results) return;
+  if (!toggle || !dialog || !input || !results) return;
 
   type Pagefind = { search: (q: string) => Promise<{ results: { data: () => Promise<{ url: string; excerpt: string; meta: { title?: string } }> }[] }> };
   let pagefind: Promise<Pagefind> | undefined;
   const load = () => (pagefind ??= import(/* @vite-ignore */ '/pagefind/pagefind.js' as string) as Promise<Pagefind>);
+  const el = (tag: string, cls: string) => Object.assign(document.createElement(tag), { className: cls });
+  const message = (text: string) => { const p = el('p', 'search-dialog__message'); p.textContent = text; results.replaceChildren(p); };
+  const hint = () => message(isFrench
+    ? 'Essayez un titre d’article, un sigle de cours ou un sujet comme « détection de communautés ».'
+    : 'Try a paper title, a course code or a topic like “community detection”.');
 
-  const isOpen = () => panel.classList.contains('is--visible');
-  const setOpen = (open: boolean) => {
-    panel.classList.toggle('is--visible', open);
-    content.classList.toggle('is--hidden', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    if (open) { load(); setTimeout(() => input.focus(), 50); }
-    else toggle.focus();
+  // Native modal: Esc, focus trap and the inert page behind come from <dialog>
+  const open = () => {
+    if (dialog.open) return;
+    dialog.showModal();
+    document.documentElement.classList.add('lightbox-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    load();
+    if (!input.value.trim()) hint();
+    input.focus();
   };
-  toggle.addEventListener('click', () => setOpen(!isOpen()));
+  dialog.addEventListener('close', () => {
+    document.documentElement.classList.remove('lightbox-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.focus();
+  });
+  toggle.addEventListener('click', open);
+  $('.search-dialog__close', dialog)?.addEventListener('click', () => dialog.close());
+  // A click on the backdrop lands on the <dialog> itself, outside its box
+  dialog.addEventListener('click', (e) => {
+    const r = dialog.getBoundingClientRect();
+    if (e.target === dialog && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) dialog.close();
+  });
 
   let seq = 0;
   input.addEventListener('input', async () => {
     const q = input.value.trim();
     const mine = ++seq;
-    if (!q) { results.innerHTML = ''; return; }
+    if (!q) { hint(); return; }
     const { results: hits } = await (await load()).search(q);
     const data = await Promise.all(hits.slice(0, 20).map((h) => h.data()));
     if (mine !== seq) return; // a newer query is already showing
-    const el = (tag: string, cls: string) => Object.assign(document.createElement(tag), { className: cls });
-    const found = el('p', 'results__found');
-    found.textContent = `${data.length} ${isFrench ? 'Résultat(s) trouvé(s)' : 'Result(s) found'}`;
-    results.replaceChildren(found, ...data.map((d) => {
-      const item = el('div', 'list__item');
-      const article = item.appendChild(el('article', 'archive__item'));
-      const a = article.appendChild(el('h2', 'archive__item-title')).appendChild(el('a', '')) as HTMLAnchorElement;
+    if (!data.length) { message(isFrench ? `Aucun résultat pour « ${q} ».` : `No results for “${q}”.`); return; }
+    const found = el('p', 'search-dialog__count');
+    found.textContent = isFrench ? `${data.length} résultat${data.length > 1 ? 's' : ''}` : `${data.length} result${data.length === 1 ? '' : 's'}`;
+    const list = el('ul', 'search-hits');
+    list.append(...data.map((d) => {
+      const a = el('a', 'search-hit') as HTMLAnchorElement;
       a.href = d.url.replace(/(?<!\/404)\.html$/, ''); // Pagefind records files; link the canonical URL
-      a.textContent = d.meta.title ?? d.url;
+      a.appendChild(el('span', 'search-hit__title')).textContent = d.meta.title ?? d.url;
       // Pagefind's excerpt is escaped page text with <mark> highlights
-      article.appendChild(el('p', 'archive__item-excerpt')).innerHTML = d.excerpt;
-      return item;
+      a.appendChild(el('span', 'search-hit__excerpt')).innerHTML = d.excerpt;
+      const li = el('li', '');
+      li.append(a);
+      return li;
     }));
+    results.replaceChildren(found, list);
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isOpen()) { setOpen(false); return; }
     if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
     const active = document.activeElement as HTMLElement | null;
     if (active && (/^(INPUT|TEXTAREA|SELECT)$/.test(active.tagName) || active.isContentEditable)) return;
     e.preventDefault();
-    if (!isOpen()) setOpen(true);
+    open();
   });
 }
 

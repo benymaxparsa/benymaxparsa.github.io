@@ -61,7 +61,7 @@
 }
 
 /* Pagefind highlights in search results */
-.search-content mark {
+.search-hit mark {
   background: var(--primary-soft);
   color: inherit;
 }

@@ -86,7 +86,7 @@ const image = new URL(site.ogImage, site.url).href;
     <link rel="preload" href={groteskFont} as="font" type="font/woff2" crossorigin>
     <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin>
     <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121821" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#1b2230" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -117,15 +117,15 @@ const image = new URL(site.ogImage, site.url).href;
       <slot />
     </div>
 
-    <div class="search-content">
-      <div class="search-content__inner-wrap">
-        <form class="search-content__form" role="search" onsubmit="return false">
-          <label class="sr-only" for="search">{t.searchPlaceholder}</label>
-          <input type="search" id="search" class="search-input" placeholder={t.searchPlaceholder} autocomplete="off">
-        </form>
-        <div id="results" class="results" aria-live="polite"></div>
+    <dialog class="search-dialog" aria-label={t.search}>
+      <div class="search-dialog__bar" role="search">
+        <svg class="search-dialog__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <label class="sr-only" for="search">{t.searchPlaceholder}</label>
+        <input type="search" id="search" class="search-input" placeholder={t.searchPlaceholder} autocomplete="off" enterkeyhint="search">
+        <button type="button" class="search-dialog__close" aria-label={t.lightboxClose}>Esc</button>
       </div>
-    </div>
+      <div id="results" class="search-dialog__results" aria-live="polite"></div>
+    </dialog>
 
     <div id="footer" class="page__footer">
       <footer>

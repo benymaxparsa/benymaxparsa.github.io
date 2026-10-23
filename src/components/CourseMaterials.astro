@@ -15,6 +15,7 @@ const { lang } = Astro.props as { lang: Lang };
 const { courses } = parse(readFileSync('src/data/course_materials.yml', 'utf8')) as { courses: Course[] };
 const empty = lang === 'fr' ? 'Le matériel de ce cours sera publié ici au cours de la session.' : 'Materials for this course will be posted here during the term.';
 ---
+<div class="course-materials-grid">
 {courses.map((course) => {
   const tr = (lang === 'fr' && course.fr) || {};
   const files = staticFiles(course.dir);
@@ -52,3 +53,4 @@ const empty = lang === 'fr' ? 'Le matériel de ce cours sera publié ici au cour
     </div>
   );
 })}
+</div>
