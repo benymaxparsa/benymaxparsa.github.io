@@ -4279,6 +4279,10 @@ a.teaching-materials-cta:focus {
   flex-shrink: 0;
 }
 
+.materials-licence {
+  margin: 2.2rem 0 1.5rem;
+}
+
 .course-materials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
@@ -4417,6 +4421,14 @@ a.material-link:hover {
   border: 1px solid var(--primary-border);
   border-radius: var(--radius-pill);
   padding: 0.2em 0.7em;
+}
+
+.material-topics {
+  margin: 0.4rem 0 0.2rem;
+  padding: 0 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted-color);
 }
 
 .material-empty {

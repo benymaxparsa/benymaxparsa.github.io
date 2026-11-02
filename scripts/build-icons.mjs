@@ -10,7 +10,7 @@ const ICONS = [
   'fa-folder-open', 'fa-home', 'fa-sitemap', 'fa-trophy', 'fa-info-circle', 'fa-hourglass-half',
   'fa-map-marker-alt', 'fa-graduation-cap', 'fa-briefcase', 'fa-chalkboard-teacher', 'fa-search',
   'fa-calendar-alt', 'fa-github', 'fa-linkedin', 'fa-twitter', 'fa-twitter-square', 'fa-facebook',
-  'fa-orcid', 'fa-researchgate', 'fa-youtube', 'fa-mastodon', 'fa-kaggle',
+  'fa-orcid', 'fa-researchgate', 'fa-youtube', 'fa-mastodon', 'fa-kaggle', 'fa-creative-commons',
   'ai-google-scholar-square', 'ai-researchgate-square', 'ai-acmdl', 'ai-scopus-square', 'ai-dblp-square',
   'ai-academia-square', 'ai-semantic-scholar', 'ai-stackoverflow',
 ];

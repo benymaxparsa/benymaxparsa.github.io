@@ -15,6 +15,9 @@
 #
 #   titles:
 #     SOEN363_Tutorial_drawio_ER.pdf: "ER Diagrams with draw.io"
+#
+# `topics:` (same filename keys, with an `fr:` copy) is a one-line summary
+# of what the file covers, shown under it. Written by reading the file.
 
 courses:
   - code: "COMP 339"
@@ -23,11 +26,31 @@ courses:
     terms: "Fall 2024, Fall 2025, Fall 2026"
     blurb: "Tutorial notes covering counting, recurrences, generating functions, and graph-theoretic combinatorics."
     dir: "/files/teaching/comp339/"
+    topics:
+      Induction_and_Strong_Induction_Lecture_Notes.pdf: "Ordinary and strong induction: how to write the proof, how many base cases you need, and the common mistakes."
+      Tutorial_1_Counting_Notes.pdf: "Rules of sum and product, permutations, combinations, arrangements with repeated objects, complements, the gap method, and combinatorial arguments."
+      Tutorial_2_Counting_Induction_Notes.pdf: "Routes on a road map, identical versus labelled containers, “at least” conditions, stars and bars, and proofs by induction (divisibility, inequalities, sums)."
+      Tutorial_3_Assignment_1_Notes.pdf: "Assignment 1, Q1 to 7: books on shelves, round tables, card hands, strings with a fixed composition, the multinomial theorem, binomial sums, and slack variables."
+      Tutorial_4_Assignment_1_Notes.pdf: "Assignment 1, Q8 to 14: positive integer solutions, systems of equations, induction for merge sort and the triangle inequality, Fibonacci identities, ascents, and palindromes."
+      Tutorial_5_Assignment_2_Notes.pdf: "Assignment 2, Q1 to 7: inclusion–exclusion with upper bounds, “exactly m” and “at least m”, glued letters, derangements, generating functions, and compositions of an integer."
+      Tutorial_6_Assignment_2_Notes.pdf: "Assignment 2, Q8 to 14: generating functions for weighted equations and partitions, exponential generating functions, solving recurrences, and combinatorial proofs."
+      Graph_Theory_1_Lecture_Notes.pdf: "Graph theory basics (Sections 11.1 to 11.3): directed and undirected graphs, trails, paths and cycles, connectivity, subgraphs and complements, graph isomorphism, and vertex degree."
+      Tutorial_7_Graph_Theory_Notes_1.pdf: "The Handshaking Theorem, complete and regular graphs, Eulerian trails and Euler’s theorem, a lower bound on the edges of a connected graph, bipartite and planar graphs (K5 and K3,3), and forcing a triangle."
     fr:
       name: "Combinatoire"
       role: "Instructeur de tutoriels"
       terms: "Automne 2024, Automne 2025, Automne 2026"
       blurb: "Notes de tutoriel portant sur le dénombrement, les récurrences, les fonctions génératrices et la combinatoire des graphes."
+      topics:
+        Induction_and_Strong_Induction_Lecture_Notes.pdf: "Récurrence simple et forte : comment rédiger la preuve, combien de cas de base prévoir, et les erreurs courantes."
+        Tutorial_1_Counting_Notes.pdf: "Règles de la somme et du produit, permutations, combinaisons, arrangements avec objets répétés, complémentaire, méthode des espaces et arguments combinatoires."
+        Tutorial_2_Counting_Induction_Notes.pdf: "Trajets sur une carte routière, contenants identiques ou étiquetés, conditions « au moins », étoiles et barres, et preuves par récurrence (divisibilité, inégalités, sommes)."
+        Tutorial_3_Assignment_1_Notes.pdf: "Devoir 1, Q1 à 7 : livres sur des étagères, tables rondes, mains de cartes, chaînes de composition fixée, théorème multinomial, sommes binomiales et variables d’écart."
+        Tutorial_4_Assignment_1_Notes.pdf: "Devoir 1, Q8 à 14 : solutions entières positives, systèmes d’équations, récurrence pour le tri fusion et l’inégalité triangulaire, identités de Fibonacci, montées et palindromes."
+        Tutorial_5_Assignment_2_Notes.pdf: "Devoir 2, Q1 à 7 : inclusion-exclusion avec bornes supérieures, « exactement m » et « au moins m », lettres collées, dérangements, fonctions génératrices et compositions d’un entier."
+        Tutorial_6_Assignment_2_Notes.pdf: "Devoir 2, Q8 à 14 : fonctions génératrices pour équations pondérées et partitions, fonctions génératrices exponentielles, résolution de récurrences et preuves combinatoires."
+        Graph_Theory_1_Lecture_Notes.pdf: "Bases de la théorie des graphes (sections 11.1 à 11.3) : graphes orientés et non orientés, pistes, chemins et cycles, connexité, sous-graphes et compléments, isomorphisme de graphes et degré d’un sommet."
+        Tutorial_7_Graph_Theory_Notes_1.pdf: "Lemme des poignées de main, graphes complets et réguliers, pistes eulériennes et théorème d’Euler, nombre minimal d’arêtes d’un graphe connexe, graphes bipartis et planaires (K5 et K3,3), et forcer un triangle."
 
   - code: "SOEN 363"
     name: "Data Systems for Software Engineers"
@@ -37,10 +60,14 @@ courses:
     dir: "/files/teaching/soen363/"
     titles:
       SOEN363_Tutorial_drawio_ER.pdf: "Tutorial: ER Diagrams with draw.io"
+    topics:
+      SOEN363_Tutorial_drawio_ER.pdf: "Getting started with draw.io: the interface, the course’s ER notation in draw.io, building and styling a diagram step by step, exporting, common mistakes, and a hands-on exercise."
     fr:
       name: "Systèmes de données pour les ingénieurs en logiciel"
       role: "Instructeur de tutoriels, programmeur de service (POD) et correcteur"
       terms: "Hiver 2025, Automne 2025, Hiver 2026, Automne 2026"
       blurb: "Diapositives de tutoriel sur la conception relationnelle, les langages de requête, l’indexation, les transactions et les systèmes de données NoSQL."
       titles:
-        SOEN363_Tutorial_drawio_ER.pdf: "Tutoriel : diagrammes entité-association avec draw.io"
+        SOEN363_Tutorial_drawio_ER.pdf: "Tutoriel : diagrammes entité-association avec draw.io"
+      topics:
+        SOEN363_Tutorial_drawio_ER.pdf: "Prise en main de draw.io : l’interface, la notation EA du cours dans draw.io, construire et mettre en forme un diagramme pas à pas, l’export, les erreurs courantes et un exercice pratique."
