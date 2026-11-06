@@ -11,7 +11,7 @@ collection: projects
 - Gestures on Dock icons too: show all of an app's windows, cycle to its next window, hide or quit it, and bring back minimized windows straight into a snapped layout.
 - A live preview shows where the window will land and a haptic tap confirms the gesture before it runs on lift; Esc cancels, and other scrolling and zooming passes through untouched.
 - Every gesture is remappable, with optional keyboard shortcuts, window gaps, per-app exclusions and launch at login; signed with a Developer ID, notarized by Apple and installable with Homebrew, on macOS 14 Sonoma or later.
-- Website: [Click here](https://flickbar.github.io)
+- Website: [Click here](https://flickbar.parsakp.com)
 - Codes and GitHub Repository: [Click here](https://github.com/flickbar/flickbar)
 
 <figure class=""><a href="/images/Flickbar-banner.jpg" title="Flickbar"><img src="/images/Flickbar-banner.jpg" style="width:80%;margin:0 auto" loading="lazy" decoding="async" alt="Flickbar banner: the headline Flick windows into place, beside a window being snapped to the left half of the screen"></a><figcaption>Flickbar: flick windows into place</figcaption></figure>

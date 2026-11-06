@@ -1,7 +1,7 @@
 # benymaxparsa.github.io
 
 Personal academic website of Parsa Kamalipour, in English and French (Québec).
-Live at <https://benymaxparsa.github.io>.
+Live at <https://parsakp.com>.
 
 Built with [Astro](https://astro.build) as a static site, with [Pagefind](https://pagefind.app) search.
 No client framework; the small amount of browser JavaScript lives in `src/scripts/`.

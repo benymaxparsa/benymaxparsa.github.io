@@ -6,7 +6,7 @@
 
 #### Method 1: Visual Inspection (Recommended)
 1. **Navigate to French pages:**
-   - Start at: `https://benymaxparsa.github.io/fr/`
+   - Start at: `https://parsakp.com/fr/`
    - Click through all navigation items
    - Check language switcher shows "FR" as active
 
@@ -224,8 +224,8 @@ bundle exec jekyll serve
 
 ### Manual Testing Steps
 1. **Navigate to both versions**
-   - English: `https://benymaxparsa.github.io/page/`
-   - French: `https://benymaxparsa.github.io/fr/page/`
+   - English: `https://parsakp.com/page/`
+   - French: `https://parsakp.com/fr/page/`
 
 2. **Test language switcher**
    - Click EN/FR buttons

@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://benymaxparsa.github.io',
+  site: 'https://parsakp.com',
   // Mixed URL forms must survive: /teaching/x (served from x.html) and /projects/x/ (x/index.html)
   build: { format: 'preserve' },
   trailingSlash: 'ignore',

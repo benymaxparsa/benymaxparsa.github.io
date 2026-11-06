@@ -1,9 +1,9 @@
-# Robots.txt for benymaxparsa.github.io
+# Robots.txt for parsakp.com
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://benymaxparsa.github.io/sitemap.xml
+Sitemap: https://parsakp.com/sitemap.xml
 
 # Disallow crawling of search and tag/category archives
 Disallow: /search/

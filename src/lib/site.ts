@@ -1,6 +1,6 @@
 // Site-wide settings (was the relevant part of _config.yml).
 export const site = {
-  url: 'https://benymaxparsa.github.io',
+  url: 'https://parsakp.com',
   title: 'Parsa Kamalipour',
   author: 'Parsa Kamalipour',
   description:

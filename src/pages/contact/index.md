@@ -35,7 +35,7 @@ excerpt: "Address and Contact Information"
 <h2 id="links-to-my-other-accounts" class="section-heading">Links to my other accounts</h2>
 
 <ul class="contact-links">
-  <li><a class="contact-link" rel="me" href="https://benymaxparsa.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Personal Website</a></li>
+  <li><a class="contact-link" rel="me" href="https://parsakp.com"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Personal Website</a></li>
   <li><a class="contact-link" rel="me" href="https://twitter.com/ParsaKamalipour"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> X (Twitter)</a></li>
   <li><a class="contact-link" rel="me" href="https://github.com/benymaxparsa"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
   <li><a class="contact-link" rel="me" href="https://www.linkedin.com/in/parsakamalipour"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
