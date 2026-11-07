@@ -6,10 +6,10 @@ date: 2026-11-04
 location: "Montreal, Quebec"
 collection: projects
 ---
-- Designed and built a free French practice web app for A1–A2 learners in plain JavaScript, with no framework, no build step and no server: 69 lessons in course units, verb drills in 8 tenses, dictation and searchable grammar and vocabulary cheatsheets, covering 239 verbs, 637 practice sentences and 3,443 words.
-- Spaced-repetition review schedules every verb, sentence and word for when you're about to forget it, and forgiving grading accepts alternative answers and points out accent and spelling slips letter by letter.
-- Natural France and Québec voices (Azure neural voices Denise and Sylvie) in every browser, including Safari and iPhone, which hide downloaded voices from websites; a small Cloudflare Worker keeps the key off the site and stores each clip so a phrase is only made once, all on free tiers that refuse requests instead of billing, with the device voice as fallback.
-- Optional sync across devices through the learner's own Google Drive or iCloud, with no server of ours storing progress; works offline and installs as an app (PWA), with light and dark themes and WCAG 2.2 accessibility.
+- Built a free French practice app for A1–A2 learners, with Québec French as a first-class accent next to France, after finding that most apps ignore it while learning French in Montreal.
+- 69 lessons in course units, verb drills in 8 tenses, dictation and searchable cheatsheets, covering 239 verbs, 637 practice sentences and 3,443 words; spaced-repetition review brings each item back just before you’d forget it, and the grading accepts alternative answers and points out accent and spelling slips letter by letter.
+- Natural neural voices (Azure Denise and Sylvie) in every browser, including Safari and iPhone, served through a small Cloudflare Worker that caches each clip so a phrase is only made once; it runs entirely on free tiers, with the device voice as fallback.
+- A static web app in plain JavaScript (no framework, no build step) that works offline, installs as an app (PWA), syncs optionally through the learner’s own Google Drive or iCloud, and is built to WCAG 2.2 guidelines.
 - Website: [Click here](https://petitfrench.parsakp.com)
 - Codes and GitHub Repository: [Click here](https://github.com/Petit-a-petit-francais/Petit-a-petit-francais.github.io)
 

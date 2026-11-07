@@ -8,10 +8,10 @@ collection: projects
 lang: fr-CA
 ---
 
-- Conception et développement en JavaScript pur, sans cadriciel, sans étape de compilation et sans serveur, d’une application Web gratuite pour pratiquer le français aux niveaux A1–A2 : 69 leçons regroupées en unités, exercices de conjugaison dans 8 temps, dictées et aide-mémoires de grammaire et de vocabulaire avec recherche, soit 239 verbes, 637 phrases d’exercice et 3 443 mots.
-- La révision espacée planifie chaque verbe, phrase et mot au moment où on est sur le point de l’oublier, et la correction accepte les réponses équivalentes et signale lettre par lettre les fautes d’accent et d’orthographe.
-- Des voix naturelles de France et du Québec (voix neuronales Azure Denise et Sylvie) dans tous les navigateurs, y compris Safari et l’iPhone, qui cachent aux sites Web les voix téléchargées ; un petit Worker Cloudflare garde la clé hors du site et conserve chaque extrait pour qu’une phrase ne soit générée qu’une fois, le tout sur des forfaits gratuits qui refusent les requêtes au lieu de facturer, avec la voix de l’appareil en secours.
-- Synchronisation facultative entre appareils par le Google Drive ou l’iCloud de l’apprenant, sans aucun serveur qui nous appartienne pour conserver la progression ; fonctionne hors ligne et s’installe comme une application (PWA), avec thèmes clair et sombre et accessibilité WCAG 2.2.
+- Création d’une application gratuite pour pratiquer le français aux niveaux A1–A2, où le français du Québec est un accent à part entière à côté de celui de France, après avoir constaté, en apprenant le français à Montréal, que la plupart des applications l’ignorent.
+- 69 leçons regroupées en unités, exercices de conjugaison dans 8 temps, dictées et aide-mémoires avec recherche, soit 239 verbes, 637 phrases d’exercice et 3 443 mots ; la révision espacée ramène chaque élément juste avant qu’on l’oublie, et la correction accepte les réponses équivalentes et signale lettre par lettre les fautes d’accent et d’orthographe.
+- Des voix neuronales naturelles (Azure Denise et Sylvie) dans tous les navigateurs, y compris Safari et l’iPhone, servies par un petit Worker Cloudflare qui conserve chaque extrait pour qu’une phrase ne soit générée qu’une fois ; le tout fonctionne entièrement sur des forfaits gratuits, avec la voix de l’appareil en secours.
+- Une application Web statique en JavaScript pur (sans cadriciel ni étape de compilation) qui fonctionne hors ligne, s’installe comme une application (PWA), se synchronise au besoin par le Google Drive ou l’iCloud de l’apprenant et suit les lignes directrices WCAG 2.2.
 - Site Web : [Cliquez ici](https://petitfrench.parsakp.com)
 - Code et dépôt GitHub : [Cliquez ici](https://github.com/Petit-a-petit-francais/Petit-a-petit-francais.github.io)
 
