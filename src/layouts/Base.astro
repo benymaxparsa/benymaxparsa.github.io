@@ -41,7 +41,7 @@ const frUrl = new URL(lang === 'fr' ? path : twin, site.url).href;
 const image = new URL(site.ogImage, site.url).href;
 ---
 <!doctype html>
-<html lang={t.htmlLang} class="no-js" style={`--tone: var(--${toneOf(path, lang) === 'ink' ? 'slab-ink' : toneOf(path, lang)})`}>
+<html lang={t.htmlLang} class="no-js" style={`--tone: var(--${toneOf(path, lang) === 'ink' ? 'slab-ink' : toneOf(path, lang)}); --tone-line: var(--${toneOf(path, lang)}-line)`}>
   <head>
     <meta charset="utf-8">
     <title>{seoTitle}</title>

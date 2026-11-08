@@ -13,7 +13,7 @@ const day = z.preprocess((v) => {
 const doc = z.object({
   title: z.string().transform(smart),
   date: day,
-  venue: z.string(),
+  venue: z.string().transform(smart),
   type: z.string().optional(),
   location: z.string().optional(),
   permalink: z.string().startsWith('/').optional(),

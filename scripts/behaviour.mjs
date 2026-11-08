@@ -68,6 +68,39 @@ try {
     await sleep(400);
     check('nav: highlight re-measured after resize', await resize.$eval('.nav-highlight', (h) => h.classList.contains('is-on') && h.getBoundingClientRect().width > 20));
     await resize.close();
+    // Minor fixes: dot/underline contrast, no-JS dropdowns, dropdown state on shrink
+    const contrastOf = () => {
+      const rgb = (c) => (c.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
+      const lum = ([r, g, b]) => [r, g, b].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }).reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
+      const ratio = (a, b) => { const [x, y] = [lum(rgb(a)), lum(rgb(b))].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+      const bgOf = (el) => { for (let e = el.parentElement; e; e = e.parentElement) { const c = getComputedStyle(e).backgroundColor; if (!/rgba\(0, 0, 0, 0\)|transparent/.test(c)) return c; } return 'rgb(255,255,255)'; };
+      const dots = [...document.querySelectorAll('.nav-group .dot, .footer-col__title .dot')].map((d) => ratio(getComputedStyle(d).backgroundColor, bgOf(d)));
+      const btn = document.querySelector('#site-nav .nav-group:first-child > button');
+      btn.click();
+      const cur = document.querySelector('.nav-panel a[aria-current]');
+      const underline = cur ? ratio(getComputedStyle(cur).textDecorationColor, bgOf(cur)) : 99;
+      btn.click();
+      return Math.min(...dots, underline);
+    };
+    for (const theme of ['light', 'dark']) {
+      const page = await open('/publications/', { width: 1280, storage: { theme } });
+      const min = await page.evaluate(contrastOf);
+      check(`nav: dots and current underline ≥ 3:1 (${theme})`, min >= 3, min.toFixed(2));
+      await page.close();
+    }
+    const nojsNav = await browser.newPage();
+    await nojsNav.setJavaScriptEnabled(false);
+    await nojsNav.setViewport({ width: 1280, height: 900 });
+    await nojsNav.goto(base + '/', { waitUntil: 'load' });
+    await nojsNav.focus('#site-nav .nav-group:first-child > button');
+    check('nav: dropdown opens on focus without JS', await nojsNav.$eval('#site-nav .nav-group:first-child .nav-panel', (p) => p.checkVisibility()));
+    await nojsNav.close();
+    const shrink = await open('/', { width: 1280 });
+    await shrink.click('#site-nav .nav-group:first-child > button');
+    await shrink.setViewport({ width: 800, height: 900 });
+    await sleep(200);
+    check('nav: open dropdown resets when the nav collapses', await shrink.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-expanded') === 'false'));
+    await shrink.close();
     const pubs = await open('/publications/', { width: 1280 });
     check('nav: current group marked', await pubs.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-current') === 'true'));
     await pubs.close();
@@ -205,6 +238,13 @@ try {
     await nojs.goto(base + '/', { waitUntil: 'load' });
     check('motion: no JS shows everything', (await opacities(nojs)).every((o) => o === 1));
     await nojs.close();
+    const print = await open('/', { motion: 'no-preference' });
+    await print.emulateMediaType('print');
+    check('motion: print shows every slab', (await opacities(print)).every((o) => o === 1));
+    await print.close();
+    const frHome = await open('/fr/');
+    check('fr: homepage uses typographic apostrophes', await frHome.$eval('main, #main', (m) => !/\p{L}'\p{L}/u.test(m.innerText + [...m.querySelectorAll('[aria-label]')].map((e) => e.getAttribute('aria-label')).join(' '))));
+    await frHome.close();
   }
 
   // 6. Hero graph

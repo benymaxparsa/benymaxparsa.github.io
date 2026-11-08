@@ -19,6 +19,8 @@
   --ochre: #F0BE45;     --on-ochre: #15171A;
   --slab-ink: #15171A;  --on-slab-ink: #F4F1EC;
   --tone: var(--teal);  /* the current page's community, set per page */
+  /* Line shades: the community colour as a dot, underline or rule, readable on the page behind it */
+  --teal-line: #0F3D3A; --lavender-line: #7A5FD6; --coral-line: #D8402B; --ochre-line: #A87800; --ink-line: #15171A;
 
   --graph-ink: 21, 23, 26;
 
@@ -59,6 +61,7 @@
     --btn-fg: #15171A;
     --teal: #1A5A54;
     --slab-ink: #000000;
+    --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F2F2EF;
     --graph-ink: 242, 242, 239;
     --shadow-nav: 0 4px 24px rgba(0, 0, 0, .5);
     --shadow-card: 0 16px 40px rgba(0, 0, 0, .5);
@@ -79,17 +82,18 @@
   --btn-fg: #15171A;
   --teal: #1A5A54;
   --slab-ink: #000000;
+  --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F2F2EF;
   --graph-ink: 242, 242, 239;
   --shadow-nav: 0 4px 24px rgba(0, 0, 0, .5);
   --shadow-card: 0 16px 40px rgba(0, 0, 0, .5);
 }
 
 /* A slab painted in one community colour; text and focus follow it */
-.tone-teal     { --tone-bg: var(--teal);     --tone-fg: var(--on-teal); }
-.tone-lavender { --tone-bg: var(--lavender); --tone-fg: var(--on-lavender); }
-.tone-coral    { --tone-bg: var(--coral);    --tone-fg: var(--on-coral); }
-.tone-ochre    { --tone-bg: var(--ochre);    --tone-fg: var(--on-ochre); }
-.tone-ink      { --tone-bg: var(--slab-ink); --tone-fg: var(--on-slab-ink); }
+.tone-teal     { --tone-line: var(--teal-line); --tone-bg: var(--teal);     --tone-fg: var(--on-teal); }
+.tone-lavender { --tone-line: var(--lavender-line); --tone-bg: var(--lavender); --tone-fg: var(--on-lavender); }
+.tone-coral    { --tone-line: var(--coral-line); --tone-bg: var(--coral);    --tone-fg: var(--on-coral); }
+.tone-ochre    { --tone-line: var(--ochre-line); --tone-bg: var(--ochre);    --tone-fg: var(--on-ochre); }
+.tone-ink      { --tone-line: var(--ink-line); --tone-bg: var(--slab-ink); --tone-fg: var(--on-slab-ink); }
 .slab {
   background: var(--tone-bg); color: var(--tone-fg);
   --ink: var(--tone-fg); --muted: color-mix(in srgb, var(--tone-fg) 78%, transparent);
@@ -97,3 +101,6 @@
   --btn-bg: var(--tone-fg); --btn-fg: var(--tone-bg);
   border-radius: var(--radius-xl);
 }
+
+/* The ink slab (footer) is dark in both themes, so dots inside it use the dark-theme line shades */
+.slab.tone-ink { --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F4F1EC; }

@@ -28,7 +28,7 @@ small, .small { font-size: 15px; line-height: 1.45; }
 strong, b { font-weight: 700; }
 
 /* Links: ink, underlined in the page's community colour */
-a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--tone); text-decoration-thickness: 2px; text-underline-offset: .2em; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--tone-line); text-decoration-thickness: 2px; text-underline-offset: .2em; }
 a:hover { text-decoration-thickness: 3px; }
 .slab a { text-decoration-color: currentColor; }
 :focus-visible { outline: 2.5px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
@@ -48,7 +48,7 @@ li + li { margin-top: .3em; }
 li::marker { color: var(--muted); }
 figure { margin-inline: 0; }
 figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
-blockquote { margin-inline: 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--tone); }
+blockquote { margin-inline: 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--tone-line); }
 code, kbd, samp { font: 500 .86em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--surface); border-radius: 6px; padding: .12em .38em; }
 pre { background: var(--surface); border-radius: var(--radius-md); padding: 16px 20px; overflow-x: auto; }
 pre code { padding: 0; }
@@ -79,7 +79,7 @@ th { font-weight: 700; }
 .slab .chip { background: color-mix(in srgb, var(--tone-fg) 14%, transparent); }
 .chips, .interest-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 1.1em; }
 .chips li + li, .interest-tags li + li { margin-top: 0; }
-.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--tone-bg, var(--tone)); flex: none; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--tone-line); flex: none; }
 
 /* Utilities */
 .sr-only, .screen-reader-text {
@@ -97,4 +97,8 @@ th { font-weight: 700; }
   .btn:active { transform: scale(.97); }
   .reveal { opacity: 0; transform: translateY(48px) scale(.98); transition: opacity .7s var(--ease), transform .8s var(--ease); }
   .reveal.is-in { opacity: 1; transform: none; }
+}
+
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }

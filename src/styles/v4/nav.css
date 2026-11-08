@@ -46,7 +46,7 @@
   border-radius: 10px; color: var(--ink); white-space: nowrap; text-decoration: none !important;
 }
 .nav-panel a:hover, .nav-panel a:focus-visible { background: var(--surface); }
-.nav-panel a[aria-current] { font-weight: 700; text-decoration: underline !important; text-decoration-color: var(--tone) !important; text-decoration-thickness: 2px !important; text-underline-offset: .2em; }
+.nav-panel a[aria-current] { font-weight: 700; text-decoration: underline !important; text-decoration-color: var(--tone-line) !important; text-decoration-thickness: 2px !important; text-underline-offset: .2em; }
 
 .nav-tools { display: flex; align-items: center; gap: 4px; }
 .icon-btn {
@@ -85,7 +85,7 @@
   display: flex; align-items: center; min-height: 48px;
   color: var(--ink); font-size: 24px; font-weight: 600; letter-spacing: -0.015em; text-decoration: none !important;
 }
-.nav-overlay a[aria-current] { text-decoration: underline !important; text-decoration-color: var(--tone) !important; text-decoration-thickness: 3px !important; }
+.nav-overlay a[aria-current] { text-decoration: underline !important; text-decoration-color: var(--tone-line) !important; text-decoration-thickness: 3px !important; }
 :root.menu-open { overflow: hidden; }
 
 @media (max-width: 1179px) {
@@ -109,3 +109,7 @@
 .nav-overlay__title { gap: 10px; }
 .nav-brand { font-weight: 800; font-size: 19px; letter-spacing: -0.02em; }
 .icon-btn { font-weight: 700; }
+
+/* Without JS the dropdowns open on hover/focus (beats the global [hidden] rule by specificity); the phone menu needs JS, so its button is hidden and the footer carries the links */
+.no-js .nav-group:hover > .nav-panel[hidden], .no-js .nav-group:focus-within > .nav-panel[hidden] { display: block !important; }
+.no-js .nav-menu-btn { display: none; }

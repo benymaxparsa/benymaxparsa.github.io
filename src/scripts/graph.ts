@@ -8,7 +8,7 @@ type Node = { x: number; y: number; vx: number; vy: number; block: number; label
 
 // Community colours per theme: deeper inks on paper, pastels on the night slate
 const PALETTES = {
-  light: ['15, 61, 58', '185, 167, 242', '255, 107, 87', '240, 190, 69', '91, 95, 102'],
+  light: ['15, 61, 58', '122, 95, 214', '216, 64, 43', '168, 120, 0', '91, 95, 102'],
   dark: ['46, 140, 130', '185, 167, 242', '255, 107, 87', '240, 190, 69', '163, 167, 173'],
 };
 const K = 4, PER = 14, P_IN = 0.5, P_OUT = 0.012;
