@@ -137,7 +137,7 @@ function initThemeToggle() {
     const label = btn.getAttribute(dark ? 'data-label-light' : 'data-label-dark') ?? '';
     btn.setAttribute('aria-label', label);
     btn.title = label;
-    for (const m of $$('meta[name="theme-color"]')) m.setAttribute('content', dark ? '#141413' : '#F3F0EE');
+    for (const m of $$('meta[name="theme-color"]')) m.setAttribute('content', dark ? '#111315' : '#FFFFFF');
     document.dispatchEvent(new CustomEvent('themechange'));
   };
   btn.addEventListener('click', () => {

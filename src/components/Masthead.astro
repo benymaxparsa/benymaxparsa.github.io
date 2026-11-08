@@ -23,9 +23,9 @@ const caret = '<svg class="nav-caret" viewBox="0 0 24 24" aria-hidden="true"><pa
         {nav[lang].map((g, i) => (
           <li class="nav-group">
             {g.url
-              ? <a class="nav-group__link" href={g.url} aria-current={here(g.url) ?? (current === g.title ? 'true' : undefined)}>{g.title}</a>
+              ? <a class="nav-group__link" href={g.url} aria-current={here(g.url) ?? (current === g.title ? 'true' : undefined)}><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}</a>
               : <>
-                  <button type="button" class="nav-group__btn" aria-expanded="false" aria-controls={`nav-panel-${i}`} aria-current={current === g.title ? 'true' : undefined}>{g.title}<Fragment set:html={caret} /></button>
+                  <button type="button" class="nav-group__btn" aria-expanded="false" aria-controls={`nav-panel-${i}`} aria-current={current === g.title ? 'true' : undefined}><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}<Fragment set:html={caret} /></button>
                   <ul class="nav-panel" id={`nav-panel-${i}`} hidden>
                     {g.items!.map((l) => <li><a href={l.url} aria-current={here(l.url)}>{l.title}</a></li>)}
                   </ul>
@@ -52,9 +52,9 @@ const caret = '<svg class="nav-caret" viewBox="0 0 24 24" aria-hidden="true"><pa
     {nav[lang].map((g) => (
       <section class="nav-overlay__group">
         {g.url
-          ? <a class="nav-overlay__title" href={g.url} aria-current={here(g.url)}>{g.title}</a>
+          ? <a class="nav-overlay__title" href={g.url} aria-current={here(g.url)}><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}</a>
           : <>
-              <h2 class="eyebrow">{g.title}</h2>
+              <h2 class="nav-overlay__heading"><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}</h2>
               <ul>{g.items!.map((l) => <li><a href={l.url} aria-current={here(l.url)}>{l.title}</a></li>)}</ul>
             </>}
       </section>

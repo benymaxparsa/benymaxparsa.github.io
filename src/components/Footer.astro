@@ -14,15 +14,15 @@ const socials = [
   { label: 'Mastodon', icon: 'fab fa-fw fa-mastodon', url: 'https://mastodon.social/@parsakamalipour', rel: 'me' },
 ];
 ---
-<div class="footer-inner">
+<div class="footer-inner slab tone-ink">
   <div class="footer-top">
     <p class="footer-line">{t.footerLine}</p>
-    <a class="btn btn--footer" href={contact.url}>{t.footerCta}</a>
+    <a class="btn btn--primary" href={contact.url}>{t.footerCta}</a>
   </div>
   <nav class="footer-cols" aria-label={t.footerNav}>
     {columns.map((g) => (
       <div>
-        <h2 class="footer-col__title">{g.title}</h2>
+        <h2 class="footer-col__title"><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}</h2>
         <ul>{g.items!.map((l) => <li><a href={l.url}>{l.title}</a></li>)}</ul>
       </div>
     ))}

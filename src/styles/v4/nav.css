@@ -19,10 +19,10 @@
   display: inline-flex; align-items: center; gap: 4px;
   min-height: 44px; padding: 0 14px;
   background: none; border: 0; border-radius: var(--radius-pill);
-  color: var(--ink); font: 500 15px/1 var(--font); letter-spacing: -0.01em;
+  color: var(--ink); font: 600 16px/1 var(--font); letter-spacing: -0.01em; gap: 8px;
   white-space: nowrap; cursor: pointer; text-decoration: none !important;
 }
-.nav-group__link[aria-current], .nav-group__btn[aria-current] { color: var(--accent); font-weight: 600; }
+.nav-group__link[aria-current], .nav-group__btn[aria-current] { font-weight: 700; }
 .nav-caret { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s; }
 .nav-group__btn[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
 
@@ -45,8 +45,8 @@
   display: flex; align-items: center; min-height: 44px; padding: 0 14px;
   border-radius: 10px; color: var(--ink); white-space: nowrap; text-decoration: none !important;
 }
-.nav-panel a:hover, .nav-panel a:focus-visible { background: var(--canvas); }
-.nav-panel a[aria-current] { color: var(--accent); font-weight: 600; }
+.nav-panel a:hover, .nav-panel a:focus-visible { background: var(--surface); }
+.nav-panel a[aria-current] { font-weight: 700; text-decoration: underline !important; text-decoration-color: var(--tone) !important; text-decoration-thickness: 2px !important; text-underline-offset: .2em; }
 
 .nav-tools { display: flex; align-items: center; gap: 4px; }
 .icon-btn {
@@ -56,7 +56,7 @@
   color: var(--ink); font: 600 14px/1 var(--font); letter-spacing: .02em;
   cursor: pointer; text-decoration: none !important;
 }
-.icon-btn:hover { background: var(--canvas); }
+.icon-btn:hover { background: var(--surface); }
 .icon-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Theme icon shows what a click switches to */
@@ -76,7 +76,7 @@
 .nav-overlay {
   position: fixed; inset: 0; z-index: 1;
   overflow-y: auto; padding: 104px var(--gutter) 48px;
-  background: var(--canvas);
+  background: var(--surface);
 }
 .nav-overlay__group { max-width: 560px; margin: 0 auto 28px; }
 .nav-overlay ul { list-style: none; margin: 0; padding: 0; }
@@ -85,7 +85,7 @@
   display: flex; align-items: center; min-height: 48px;
   color: var(--ink); font-size: 24px; font-weight: 600; letter-spacing: -0.015em; text-decoration: none !important;
 }
-.nav-overlay a[aria-current] { color: var(--accent); }
+.nav-overlay a[aria-current] { text-decoration: underline !important; text-decoration-color: var(--tone) !important; text-decoration-thickness: 3px !important; }
 :root.menu-open { overflow: hidden; }
 
 @media (max-width: 1179px) {
@@ -103,3 +103,9 @@
 @media (prefers-reduced-motion: no-preference) {
   .nav-highlight { transition: transform .25s var(--ease), width .25s var(--ease), opacity .2s; }
 }
+
+.nav-group .dot { width: 9px; height: 9px; }
+.nav-overlay__heading { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-size: 15px; font-weight: 700; color: var(--muted); }
+.nav-overlay__title { gap: 10px; }
+.nav-brand { font-weight: 800; font-size: 19px; letter-spacing: -0.02em; }
+.icon-btn { font-weight: 700; }

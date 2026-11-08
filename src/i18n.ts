@@ -2,21 +2,22 @@
 export type Lang = 'en' | 'fr';
 
 export type NavLink = { title: string; url: string };
-export type NavGroup = { title: string; url?: string; items?: NavLink[] };
+export type Tone = 'teal' | 'lavender' | 'coral' | 'ochre' | 'ink';
+export type NavGroup = { title: string; tone: Tone; url?: string; items?: NavLink[] };
 
 export const nav: Record<Lang, NavGroup[]> = {
   en: [
-    { title: 'Research', items: [
+    { title: 'Research', tone: 'teal', items: [
       { title: 'Research', url: '/research/' },
       { title: 'Publications', url: '/publications/' },
       { title: 'Projects', url: '/projects/' },
     ] },
-    { title: 'Teaching', items: [
+    { title: 'Teaching', tone: 'lavender', items: [
       { title: 'Teaching', url: '/teaching/' },
       { title: 'Courses', url: '/selected_courses/' },
       { title: 'Course materials', url: '/teaching/materials/' },
     ] },
-    { title: 'About', items: [
+    { title: 'About', tone: 'coral', items: [
       { title: 'Biography', url: '/biography/' },
       { title: 'Education', url: '/education/' },
       { title: 'Industry', url: '/industry/' },
@@ -24,24 +25,24 @@ export const nav: Record<Lang, NavGroup[]> = {
       { title: 'Extracurricular', url: '/extracurricular/' },
       { title: 'Gallery', url: '/gallery/' },
     ] },
-    { title: 'News', url: '/news/' },
-    { title: 'CV & Contact', items: [
+    { title: 'News', tone: 'ochre', url: '/news/' },
+    { title: 'CV & Contact', tone: 'ink', items: [
       { title: 'CV', url: '/cv/' },
       { title: 'Contact', url: '/contact/' },
     ] },
   ],
   fr: [
-    { title: 'Recherche', items: [
+    { title: 'Recherche', tone: 'teal', items: [
       { title: 'Recherche', url: '/fr/recherche/' },
       { title: 'Publications', url: '/fr/publications/' },
       { title: 'Projets', url: '/fr/projets/' },
     ] },
-    { title: 'Enseignement', items: [
+    { title: 'Enseignement', tone: 'lavender', items: [
       { title: 'Enseignement', url: '/fr/enseignement/' },
       { title: 'Cours', url: '/fr/cours/' },
       { title: 'Matériel de cours', url: '/fr/enseignement/materiel/' },
     ] },
-    { title: 'À propos', items: [
+    { title: 'À propos', tone: 'coral', items: [
       { title: 'Biographie', url: '/fr/biographie/' },
       { title: 'Formation', url: '/fr/formation/' },
       { title: 'Industrie', url: '/fr/experiences/' },
@@ -49,8 +50,8 @@ export const nav: Record<Lang, NavGroup[]> = {
       { title: 'Activités parascolaires', url: '/fr/activites/' },
       { title: 'Galerie', url: '/fr/galerie/' },
     ] },
-    { title: 'Nouvelles', url: '/fr/nouvelles/' },
-    { title: 'CV et contact', items: [
+    { title: 'Nouvelles', tone: 'ochre', url: '/fr/nouvelles/' },
+    { title: 'CV et contact', tone: 'ink', items: [
       { title: 'CV', url: '/fr/cv/' },
       { title: 'Contact', url: '/fr/contact/' },
     ] },
@@ -59,6 +60,9 @@ export const nav: Record<Lang, NavGroup[]> = {
 
 /** Every page link in the nav, in order. */
 export const navLinks = (lang: Lang): NavLink[] => nav[lang].flatMap((g) => g.items ?? [{ title: g.title, url: g.url! }]);
+
+/** The community colour of a page: its nav group's tone, teal for pages outside the nav. */
+export const toneOf = (path: string, lang: Lang): Tone => nav[lang].find((g) => g.title === groupOf(path, lang))?.tone ?? 'teal';
 
 /** The nav group a page belongs to (its title), or undefined for pages outside the nav. */
 export function groupOf(path: string, lang: Lang): string | undefined {

@@ -107,7 +107,7 @@ try {
     const page = await open('/');
     await page.click('.theme-toggle');
     check('theme: toggle sets data-theme and storage', await page.evaluate(() => document.documentElement.dataset.theme === 'dark' && localStorage.getItem('theme') === 'dark'));
-    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#141413'));
+    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#111315'));
     await page.evaluateOnNewDocument(() => document.addEventListener('DOMContentLoaded', () => { window.__themeAtDcl = document.documentElement.dataset.theme; }));
     await page.goto(base + '/publications/', { waitUntil: 'networkidle0' });
     check('theme: applied before first paint on next page', await page.evaluate(() => window.__themeAtDcl === 'dark'));
@@ -121,14 +121,15 @@ try {
       const hero = document.querySelector('.hero');
       return {
         avatar: !!hero?.querySelector('.hero__avatar img'),
+        legend: hero?.querySelectorAll('.legend a').length,
         h1: !!hero?.querySelector('h1'),
         buttons: hero?.querySelectorAll('.hero__actions .btn').length,
         canvas: !!hero?.querySelector('.hero-graph canvas'),
-        tiles: [...document.querySelectorAll('.bento > [data-tile]')].map((t) => t.dataset.tile).join(','),
+        tiles: [...document.querySelectorAll('.slab[data-community]')].map((t) => t.dataset.community).join(','),
       };
     });
-    check(`home: hero has avatar, h1, 2 buttons, graph canvas (${path})`, h.avatar && h.h1 && h.buttons === 2 && h.canvas, JSON.stringify(h));
-    check(`home: bento has 6 tiles in spec order (${path})`, h.tiles === 'research,publication,project,teaching,news,contact', h.tiles);
+    check(`home: hero has avatar, h1, 2 buttons, graph canvas, 4-colour legend (${path})`, h.avatar && h.h1 && h.buttons === 2 && h.canvas && h.legend === 4, JSON.stringify(h));
+    check(`home: one slab per community in nav order (${path})`, h.tiles === 'research,teaching,about,news', h.tiles);
     await page.close();
   }
   {

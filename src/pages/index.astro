@@ -2,26 +2,26 @@
 import Single from '../layouts/Single.astro';
 import HomePhoto from '../components/HomePhoto.astro';
 import ProfileLinks from '../components/ProfileLinks.astro';
-import { urlOf } from '../lib/urls';
-import { latestPublication, featuredProject } from '../lib/home';
+import { docs, urlOf } from '../lib/urls';
+import { firstImage } from '../lib/images';
 import '../styles/v4/home.css';
 
 const lang = 'en';
-const pub = await latestPublication(lang);
-const project = await featuredProject(lang);
+const papers = (await docs('publications', lang)).reverse().slice(0, 3);
+const projects = (await docs('projects', lang)).reverse().slice(0, 3).map((doc) => ({ doc, image: firstImage(doc.body ?? '') }));
 ---
 <Single title="Parsa Kamalipour" lang={lang} twin="/fr/" description="About me" classes="home" showTitle={false}>
 <section class="hero" aria-label="Introduction">
   <div class="hero__text">
     <div class="hero__id">
       <span class="hero__avatar"><HomePhoto alt="Portrait of Parsa Kamalipour" /></span>
-      <p class="hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
+      <p class="hero__role">Parsa Kamalipour<br>MSc in Computer Science, Algorithms &amp; Complexity Lab, Concordia University</p>
     </div>
-    <h1 class="display">Parsa Kamalipour</h1>
+    <h1 class="display">Finding the groups hidden inside a graph.</h1>
     <p class="lead">Parsa studies community detection in social and complex networks: finding the groups hidden inside a graph, and judging whether they are real, with tools from algorithms and graph theory. He is a thesis-based master’s student at <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Concordia University</a> in Montréal, supervised by <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>.</p>
     <div class="hero__actions">
-      <a class="btn btn--primary" href="/research/">Research</a>
-      <a class="btn btn--secondary" href="/files/ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
+      <a class="btn btn--primary" href="/research/">See the research</a>
+      <a class="btn btn--secondary" href="/files/ParsaKamalipour_CV.pdf">Download CV</a>
     </div>
     <ProfileLinks />
   </div>
@@ -31,69 +31,76 @@ const project = await featuredProject(lang);
       <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities." aria-live="polite">Label propagation is looking for communities…</span>
       <button type="button" class="hero-graph__again btn btn--secondary">New graph</button>
     </figcaption>
+    <ul class="legend" aria-label="This site's sections, coloured like the graph's communities">
+      <li><a href="#research"><span class="dot tone-teal" aria-hidden="true"></span>Research</a></li>
+      <li><a href="#teaching"><span class="dot tone-lavender" aria-hidden="true"></span>Teaching</a></li>
+      <li><a href="#about"><span class="dot tone-coral" aria-hidden="true"></span>About</a></li>
+      <li><a href="#news"><span class="dot tone-ochre" aria-hidden="true"></span>News</a></li>
+    </ul>
   </figure>
 </section>
 
-<section class="bento" aria-label="Overview">
-  <article class="tile tile--research" data-tile="research">
-    <p class="eyebrow">Research</p>
-    <h2 class="tile__title"><a class="tile__link" href="/research/">Geodesic-Compact Community Detection and Quality Assessment in Social Networks</a></h2>
-    <p>Thesis, expected 2027. The members of a good community are close to each other in shortest-path distance, compared with the rest of the network.</p>
-    <ul class="chips" aria-label="Research interests">
-      <li class="chip">Graph theory</li>
-      <li class="chip">Algorithms</li>
-      <li class="chip">Complexity theory</li>
-      <li class="chip">Social network analysis</li>
-      <li class="chip">Community detection</li>
-      <li class="chip">Combinatorial optimization</li>
-      <li class="chip">Data mining</li>
+<section class="slab tone-teal community" id="research" data-community="research">
+  <div class="community__head">
+    <h2>Research</h2>
+    <p>Thesis, expected 2027</p>
+  </div>
+  <div class="community__body">
+    <p class="community__lede"><a href="/research/">Geodesic-Compact Community Detection and Quality Assessment in Social Networks</a></p>
+    <p>The members of a good community are close to each other in shortest-path distance, compared with the rest of the network. This gives a way to find and judge communities without ground-truth labels.</p>
+    <ul class="papers">
+      {papers.map((doc) => (
+        <li><span class="papers__year">{doc.data.date.getUTCFullYear()}</span><div><a href={urlOf(doc)}>{doc.data.title}</a><span class="papers__venue">{doc.data.venue}</span></div></li>
+      ))}
     </ul>
-  </article>
+    <ul class="project-strip">
+      {projects.map(({ doc, image }) => (
+        <li class="project-mini">
+          {image && <img src={image.src} alt="" width="480" height="360" loading="lazy" decoding="async">}
+          <a href={urlOf(doc)}>{doc.data.title}</a>
+        </li>
+      ))}
+    </ul>
+    <p class="community__links"><a href="/publications/">All publications</a><a href="/projects/">All projects</a></p>
+  </div>
+</section>
 
-  <article class="tile" data-tile="publication">
-    <p class="eyebrow">Latest paper</p>
-    <h2 class="tile__title"><a class="tile__link" href={urlOf(pub)}>{pub.data.title}</a></h2>
-    <p class="tile__meta">{pub.data.venue}, {pub.data.date.getUTCFullYear()}</p>
-    <a class="tile__more" href="/publications/">All publications</a>
-  </article>
-
-  <article class="tile tile--project" data-tile="project">
-    {project.image && <img class="tile__img" src={project.image.src} alt="" width="960" height="600" loading="lazy" decoding="async">}
-    <div class="tile__body">
-      <p class="eyebrow">Featured project</p>
-      <h2 class="tile__title"><a class="tile__link" href={urlOf(project.doc)}>{project.doc.data.title}</a></h2>
-      {project.doc.data.type && <ul class="chips"><li class="chip">{project.doc.data.type}</li></ul>}
-      <a class="tile__more" href="/projects/">All projects</a>
-    </div>
-  </article>
-
-  <article class="tile" data-tile="teaching">
-    <p class="eyebrow">Teaching</p>
-    <h2 class="tile__title"><a class="tile__link" href="/teaching/">Graduate teaching assistant, Fall 2026</a></h2>
-    <ul class="chips" aria-label="Courses this term">
+<section class="slab tone-lavender community" id="teaching" data-community="teaching">
+  <div class="community__head">
+    <h2>Teaching</h2>
+    <p>Graduate teaching assistant, Fall 2026</p>
+  </div>
+  <div class="community__body">
+    <ul class="chips chips--big" aria-label="Courses this term">
       <li class="chip">COEN 311</li><li class="chip">COEN 317</li><li class="chip">SOEN 363</li><li class="chip">COMP 339</li>
     </ul>
-    <p>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant, 2026.</p>
-    <a class="tile__more" href="/teaching/materials/">Course materials</a>
-  </article>
+    <p class="community__lede">Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant, 2026.</p>
+    <p class="community__links"><a class="btn btn--primary" href="/teaching/materials/">Course materials</a><a href="/teaching/">Teaching history</a></p>
+  </div>
+</section>
 
-  <article class="tile tile--news" data-tile="news">
-    <p class="eyebrow">News</p>
-    <h2 class="tile__title"><a class="tile__link" href="/news/">Recent news</a></h2>
+<section class="slab tone-coral community" id="about" data-community="about">
+  <div class="community__head">
+    <h2>About</h2>
+    <p>Montréal, Québec</p>
+  </div>
+  <div class="community__body">
+    <p class="community__lede">Before Concordia, Parsa did his undergraduate research on community detection at Vali-e-Asr University of Rafsanjan, then worked as a remote research assistant in the Formal Methods and Tools group at the University of Twente.</p>
+    <p class="community__links"><a href="/biography/">Biography</a><a href="/education/">Education</a><a href="/industry/">Industry</a><a href="/honors_and_extra/">Honors &amp; Skills</a></p>
+  </div>
+</section>
+
+<section class="slab tone-ochre community" id="news" data-community="news">
+  <div class="community__head">
+    <h2>News</h2>
+  </div>
+  <div class="community__body">
     <ol class="news-mini">
       <li><time datetime="2026-09">Sep 2026</time><span>Graduate teaching assistant for four courses this fall: COEN 311, COEN 317, SOEN 363 and COMP 339.</span></li>
       <li><time datetime="2026-05">May 2026</time><span>Received the <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong> from the Gina Cody School of Engineering and Computer Science.</span></li>
       <li><time datetime="2026-02">Feb 2026</time><span>“Spider Community Detection” is published in <em>Computers</em> 15(2), article 83.</span></li>
     </ol>
-  </article>
-
-  <article class="tile tile--contact" data-tile="contact">
-    <p class="eyebrow">Contact</p>
-    <h2 class="tile__title">Get in touch</h2>
-    <div class="tile__actions">
-      <a class="btn btn--primary" href="/contact/">Contact</a>
-      <a class="btn btn--secondary" href="/cv/">CV</a>
-    </div>
-  </article>
+    <p class="community__links"><a href="/news/">All news</a></p>
+  </div>
 </section>
 </Single>

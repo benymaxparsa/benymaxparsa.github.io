@@ -8,8 +8,8 @@ type Node = { x: number; y: number; vx: number; vy: number; block: number; label
 
 // Community colours per theme: deeper inks on paper, pastels on the night slate
 const PALETTES = {
-  light: ['0, 102, 204', '176, 112, 72', '110, 128, 96', '150, 110, 150', '105, 105, 105'],
-  dark: ['41, 151, 255', '214, 160, 120', '160, 180, 140', '196, 160, 200', '168, 164, 158'],
+  light: ['15, 61, 58', '185, 167, 242', '255, 107, 87', '240, 190, 69', '91, 95, 102'],
+  dark: ['46, 140, 130', '185, 167, 242', '255, 107, 87', '240, 190, 69', '163, 167, 173'],
 };
 const K = 4, PER = 14, P_IN = 0.5, P_OUT = 0.012;
 
@@ -21,7 +21,7 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
   const status = fig.querySelector('.hero-graph__status');
   const again = fig.querySelector('.hero-graph__again');
 
-  let palette = PALETTES.light, ink = '20, 20, 19';
+  let palette = PALETTES.light, ink = '21, 23, 26';
   function readTheme() {
     const css = getComputedStyle(document.documentElement);
     palette = /dark/.test(css.colorScheme) ? PALETTES.dark : PALETTES.light;
