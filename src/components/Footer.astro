@@ -1,24 +1,48 @@
 ---
+// Footer: four link columns (three site sections + elsewhere), then the made-with line and copyright.
 import { ui, type Lang } from '../i18n';
 import { site } from '../lib/site';
+import { sectionCrumb } from '../lib/crumbs';
+import { pagePairs } from '../lib/urls';
 
 interface Props { lang: Lang }
-const t = ui[Astro.props.lang];
+const { lang } = Astro.props;
+const t = ui[lang];
+
+// English URLs; each becomes the page in this language, titled as in the nav
+const pages = (urls: string[]) => urls.map((u) => sectionCrumb(u, lang)).filter((c) => c !== undefined);
+const materials = { url: lang === 'fr' ? pagePairs['/teaching/materials/'] : '/teaching/materials/', title: t.materials };
+const columns = [
+  { title: t.footerResearch, links: pages(['/research/', '/publications/', '/projects/', '/news/']) },
+  { title: t.footerTeaching, links: [...pages(['/teaching/']), materials, ...pages(['/selected_courses/'])] },
+  { title: t.footerAbout, links: pages(['/biography/', '/cv/', '/education/', '/industry/', '/honors_and_extra/', '/extracurricular/', '/contact/']) },
+];
 ---
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    <li><strong>{t.follow}</strong></li>
-    {site.footerLinks.map((link) => (
-      <li><a href={link.url} rel="nofollow noopener noreferrer"><i class={link.icon} aria-hidden="true"></i> {link.label}</a></li>
+<div class="footer-cols">
+  <nav class="footer-cols__site" aria-label={t.footerNav}>
+    {columns.map((col) => (
+      <div class="footer-col">
+        <p class="footer-col__title">{col.title}</p>
+        <ul>{col.links.map((l) => <li><a href={l.url}>{l.title}</a></li>)}</ul>
+      </div>
     ))}
-    <li><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> <a rel="me" href="https://mastodon.social/@parsakamalipour">Mastodon</a> </li>
-  </ul>
+  </nav>
+  <div class="footer-col page__footer-follow">
+    <p class="footer-col__title">{t.footerElsewhere}</p>
+    <ul class="social-icons">
+      {site.footerLinks.map((link) => (
+        <li><a href={link.url} rel="nofollow noopener noreferrer"><i class={link.icon} aria-hidden="true"></i> {link.label}</a></li>
+      ))}
+      <li><a rel="me" href="https://mastodon.social/@parsakamalipour"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+    </ul>
+  </div>
 </div>
 
-<p class="page__footer-made">
-  {t.madeWith}
-  <svg class="page__footer-heart" viewBox="0 0 24 24" role="img" aria-label={t.love}><path d="M12 20.7 10.6 19.4C5.4 14.7 2 11.6 2 7.8 2 4.7 4.4 2.3 7.5 2.3c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-8.6 11.6Z"/></svg>
-  {t.madeFrom} <img class="flag" src="/images/flags/canada.svg" alt="Canada" width="24" height="12" loading="lazy">, Montréal, Québec <img class="flag" src="/images/flags/quebec.svg" alt="Québec" width="18" height="12" loading="lazy">
-</p>
-
-<div class="page__footer-copyright">&copy; {new Date().getFullYear()} {site.author}. {t.poweredBy} <a href="https://astro.build" rel="nofollow">Astro</a>.</div>
+<div class="footer-bottom">
+  <p class="page__footer-made">
+    {t.madeWith}
+    <svg class="page__footer-heart" viewBox="0 0 24 24" role="img" aria-label={t.love}><path d="M12 20.7 10.6 19.4C5.4 14.7 2 11.6 2 7.8 2 4.7 4.4 2.3 7.5 2.3c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-8.6 11.6Z"/></svg>
+    {t.madeFrom} <img class="flag" src="/images/flags/canada.svg" alt="Canada" width="24" height="12" loading="lazy">, Montréal, Québec <img class="flag" src="/images/flags/quebec.svg" alt="Québec" width="18" height="12" loading="lazy">
+  </p>
+  <div class="page__footer-copyright">&copy; {new Date().getFullYear()} {site.author}. {t.poweredBy} <a href="https://astro.build" rel="nofollow">Astro</a>.</div>
+</div>

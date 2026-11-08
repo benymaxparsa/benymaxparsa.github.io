@@ -48,6 +48,9 @@ export const ui = {
     publishedIn: 'Published in', citation: 'Recommended citation:', download: 'Download', here: 'here',
     lightbox: 'Image viewer', lightboxClose: 'Close', lightboxPrev: 'Previous image', lightboxNext: 'Next image',
     moreDetails: 'More details',
+    breadcrumb: 'Breadcrumb', homeCrumb: 'Home',
+    footerResearch: 'Research', footerTeaching: 'Teaching', footerAbout: 'About', footerElsewhere: 'Elsewhere', footerNav: 'Site map',
+    materials: 'Course materials', files: (n: number) => `${n} ${n === 1 ? 'file' : 'files'}`,
   },
   fr: {
     htmlLang: 'fr-CA', ogLocale: 'fr_CA', home: '/fr/',
@@ -61,6 +64,9 @@ export const ui = {
     publishedIn: 'Publié dans', citation: 'Citation recommandée :', download: 'Télécharger', here: 'ici',
     lightbox: 'Visionneuse d’images', lightboxClose: 'Fermer', lightboxPrev: 'Image précédente', lightboxNext: 'Image suivante',
     moreDetails: 'Plus de détails',
+    breadcrumb: 'Fil d’Ariane', homeCrumb: 'Accueil',
+    footerResearch: 'Recherche', footerTeaching: 'Enseignement', footerAbout: 'À propos', footerElsewhere: 'Ailleurs', footerNav: 'Plan du site',
+    materials: 'Matériel de cours', files: (n: number) => `${n} fichier${n > 1 ? 's' : ''}`,
   },
 } as const;
 

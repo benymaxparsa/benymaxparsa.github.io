@@ -201,6 +201,31 @@ try {
     await page.close();
   }
   check(`header layout: ${widths.length} widths × EN/FR, no overlap or clipping`, failures.length === 0, failures.join(' | '));
+
+  // Course materials accordion: closed by default, click and keyboard open it, a #code link opens that course
+  {
+    const page = await open('/teaching/materials/');
+    const isOpen = () => page.$eval('#comp-339', (d) => d.open);
+    check('materials: courses start closed', !(await isOpen()));
+    await page.click('#comp-339 > summary');
+    check('materials: click opens a course', await isOpen());
+    await page.click('#comp-339 > summary');
+    await page.focus('#comp-339 > summary');
+    await page.keyboard.press('Enter');
+    check('materials: Enter on the summary opens it', await isOpen());
+    await page.close();
+    const linked = await open('/fr/enseignement/materiel/#soen-363');
+    check('materials: #soen-363 opens that course', await linked.$eval('#soen-363', (d) => d.open));
+    await linked.close();
+  }
+
+  // Breadcrumbs: Home › Section, in the page language, above the title
+  for (const [path, crumbs] of [['/projects/CommunityGNN/', 'Home|Projects'], ['/projects/CommunityGNN-fr/', 'Accueil|Projets'], ['/fr/enseignement/materiel/', 'Accueil|Enseignement']]) {
+    const page = await open(path);
+    const got = await page.$$eval('.breadcrumbs a', (as) => as.map((a) => a.textContent.trim()).join('|'));
+    check(`breadcrumbs: ${path}`, got === crumbs, got);
+    await page.close();
+  }
 } finally {
   await browser.close();
 }

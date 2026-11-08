@@ -4,6 +4,8 @@ import Base from './Base.astro';
 import { ui, formatDate, type Lang } from '../i18n';
 import { site } from '../lib/site';
 import { pagePath } from '../lib/paths';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import type { Crumb } from '../lib/crumbs';
 
 interface Props {
   title: string;
@@ -18,9 +20,11 @@ interface Props {
   index?: boolean;
   /** false when the page sets its own <h1> (the homepage hero) */
   showTitle?: boolean;
+  /** Home › these › (this page) above the title */
+  crumbs?: Crumb[];
 }
 
-const { lang, twin, description, classes, date, share, pager, index, showTitle = true } = Astro.props;
+const { lang, twin, description, classes, date, share, pager, index, showTitle = true, crumbs } = Astro.props;
 const title = smart(Astro.props.title);
 const t = ui[lang];
 const path = pagePath(Astro.url);
@@ -42,6 +46,7 @@ const shareLinks = [
       <div class="page__inner-wrap">
         {showTitle && (
           <header>
+            {crumbs && <Breadcrumbs lang={lang} trail={crumbs} current={title} currentUrl={path} />}
             <h1 id="page-title" class="page__title p-name" itemprop="headline">
               <a href={url} class="u-url" itemprop="url">{title}</a>
             </h1>

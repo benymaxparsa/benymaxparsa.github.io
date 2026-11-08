@@ -2,12 +2,14 @@
 import Archive from '../../../layouts/Archive.astro';
 import CourseMaterials from '../../../components/CourseMaterials.astro';
 import { pageTwin } from '../../../lib/urls';
+import { sectionCrumb } from '../../../lib/crumbs';
 import { langFromPath, pagePath } from '../../../lib/paths';
 
 const path = pagePath(Astro.url);
 const lang = langFromPath(path);
+const teaching = sectionCrumb('/teaching/', lang);
 ---
-<Archive title="Course Materials for Students" lang={lang} twin={pageTwin(path, lang)} description="Tutorial notes, lecture notes, and slides for the courses I teach at Concordia University — free to view and download.">
+<Archive crumbs={teaching && [teaching]} title="Course Materials for Students" lang={lang} twin={pageTwin(path, lang)} description="Tutorial notes, lecture notes, and slides for the courses I teach at Concordia University — free to view and download.">
 
 <p class="page__lead">
   Notes and slides I prepare for the courses I assist at Concordia University.

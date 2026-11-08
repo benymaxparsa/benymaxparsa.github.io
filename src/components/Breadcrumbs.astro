@@ -1,0 +1,24 @@
+---
+// Home › Section above the page title. The page itself is the <h1> right below, so it is not repeated here.
+import { ui, type Lang } from '../i18n';
+import { site } from '../lib/site';
+import type { Crumb } from '../lib/crumbs';
+
+interface Props { lang: Lang; trail: Crumb[]; current: string; currentUrl: string }
+const { lang, trail, current, currentUrl } = Astro.props;
+const t = ui[lang];
+const all = [{ url: t.home, title: t.homeCrumb }, ...trail];
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [...all, { url: currentUrl, title: current }].map((c, i) => ({
+    '@type': 'ListItem', position: i + 1, name: c.title, item: new URL(c.url, site.url).href,
+  })),
+};
+---
+<nav class="breadcrumbs" aria-label={t.breadcrumb} data-pagefind-ignore>
+  <ol>
+    {all.map((c) => <li><a href={c.url}>{c.title}</a></li>)}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
