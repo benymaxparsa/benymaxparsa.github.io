@@ -183,3 +183,30 @@ The current homepage sections (research blurb, selected publications, recent new
 - Icon set for footer socials (reuse `icons.css`).
 - Whether a page type needs a dedicated layout or can reuse `Single`/`Archive`.
 - Order of work, as long as the homepage + nav + footer land first so Parsa can react early.
+
+---
+
+## Revision 1 (2026-11-08): direction A, "Communities"
+
+After seeing the first homepage build, Parsa rejected the cream/one-blue look ("all of it" felt off: generic, boxy, weak hero, wrong colours). Three throwaway mockups were compared; he chose **A: Communities**. This revision overrides the sections above wherever they conflict.
+
+**Idea.** The site is a graph and each nav group is a *community* with its own colour. The hero graph's communities use the same four colours, and each group's pages carry that colour.
+
+| Group | Colour | Text on it |
+|---|---|---|
+| Research (research, publications, projects) | teal `#0F3D3A` (dark mode `#1A5A54`) | `#F4F1EC` |
+| Teaching | lavender `#B9A7F2` | ink |
+| About | coral `#FF6B57` | ink |
+| News | ochre `#F0BE45` | ink |
+| CV & Contact | ink `#15171A` (footer slab) | `#F4F1EC` |
+
+**Decisions (Parsa):** keep the 5 nav groups; keep the floating pill nav (each group gets its colour dot); dark mode stays: near-black canvas, same group colours (teal lifted for separation); footer is a rounded ink slab ("Let's talk research.", link columns, socials) acting as the CV & Contact community.
+
+**Replaces from the original spec:**
+- Canvas: white `#FFFFFF` (dark `#111315`), not cream. Surface `#F4F4F2` (dark `#1B1E21`). Ink `#15171A` (dark `#F2F2EF`). Muted `#5B5F66` (dark `#A3A7AD`).
+- No single blue accent. Buttons are ink pills (dark mode: light pills). Body links are ink, underlined, with the underline in the page's group colour. Focus ring is ink (light) / light (dark), and the slab's text colour inside slabs.
+- Typeface: **Bricolage Grotesque** variable (self-hosted, `@fontsource-variable/bricolage-grotesque`), one family; display at 800 with tight tracking (-0.04em), body 18px/1.55.
+- No all-caps eyebrows with dots, no "→" appended to links, no identical bordered card grid.
+- Homepage: hero (avatar, big headline "Finding the groups hidden inside a graph.", lead, two ink buttons; the graph in the four colours with a legend linking to the sections), then one rounded slab (36px) per community in nav order: Research (thesis, latest papers, featured projects), Teaching (courses, award, materials), About (short bio, links to biography/education/industry), News (latest 3), then the ink footer slab.
+- Inner pages: a rounded slab header in the page's group colour holding the page title; body on white; list rows and project cards use neutral surfaces with the group colour as the only accent.
+- Motion: one orchestrated moment (hero graph assembling); slabs and cards do not each fade in. Hover is limited to links/buttons and card image zoom.
