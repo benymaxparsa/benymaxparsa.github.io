@@ -135,6 +135,18 @@ try {
     await page.close();
   }
 
+  // Footer
+  for (const path of ['/', '/fr/']) {
+    const page = await open(path);
+    const f = await page.evaluate(() => ({
+      cols: document.querySelectorAll('.footer-cols > *').length,
+      social: document.querySelectorAll('.footer-social a').length,
+      line: document.querySelector('.footer-line')?.textContent.trim(),
+    }));
+    check(`footer: 4 link columns + socials (${path})`, f.cols === 4 && f.social === 9 && !!f.line, JSON.stringify(f));
+    await page.close();
+  }
+
   // 7-13. Smaller features
   {
     const page = await open('/teaching/');

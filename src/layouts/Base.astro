@@ -5,6 +5,7 @@ import interFont from '@fontsource-variable/inter/files/inter-latin-wght-normal.
 import '../styles/v4/tokens.css';
 import '../styles/v4/base.css';
 import '../styles/v4/nav.css';
+import '../styles/v4/footer.css';
 import '../styles/icons.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
@@ -124,11 +125,9 @@ const image = new URL(site.ogImage, site.url).href;
       <div id="results" class="search-dialog__results" aria-live="polite"></div>
     </dialog>
 
-    <div id="footer" class="page__footer">
-      <footer>
-        <Footer lang={lang} />
-      </footer>
-    </div>
+    <footer id="footer" class="site-footer">
+      <Footer lang={lang} twin={twin} />
+    </footer>
 
     <dialog class="lightbox" aria-label={t.lightbox}>
       <img class="lightbox__img" alt="">
