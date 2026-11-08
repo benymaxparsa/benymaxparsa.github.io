@@ -6,7 +6,7 @@ import { join } from 'node:path';
 
 const [cmd = 'all', base = 'http://localhost:4321', outDir = 'docs/migration/report'] = process.argv.slice(2);
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const SHOT_PAGES = ['/', '/teaching/', '/publications/', '/projects/CommunityGNN/', '/cv/', '/contact/', '/fr/'];
+const SHOT_PAGES = ['/', '/teaching/', '/publications/', '/projects/', '/projects/CommunityGNN/', '/teaching/materials/', '/cv/', '/contact/', '/fr/', '/fr/projets/'];
 mkdirSync(outDir, { recursive: true });
 
 async function sitemapUrls() {

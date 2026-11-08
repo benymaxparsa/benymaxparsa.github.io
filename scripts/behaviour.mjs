@@ -228,7 +228,7 @@ try {
     const want = await page.evaluate(() => { const now = new Date(); const m = (now.getFullYear() - 2024) * 12 + (now.getMonth() + 1 - 9) + 1; const y = Math.floor(m / 12), mo = m % 12; return [y && `${y} ${y > 1 ? 'yrs' : 'yr'}`, mo && `${mo} ${mo > 1 ? 'mos' : 'mo'}`].filter(Boolean).join(' '); });
     check('duration: correct for today', await page.$eval('.teaching-duration[data-start]', (e) => e.textContent) === want, want);
     await page.evaluate(() => window.scrollTo(0, 1200)); await sleep(400);
-    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat(b.style.width) > 0));
+    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat((b.style.transform.match(/scaleX\(([^)]+)\)/) || [])[1]) > 0));
     await page.close();
     const contact = await open('/contact/');
     const ext = await contact.$$eval('a.contact-link[rel~="me"][href^="https://github.com"]', (as) => as.map((a) => [a.target, a.rel, getComputedStyle(a, '::after').content]));

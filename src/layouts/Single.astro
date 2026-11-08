@@ -63,7 +63,7 @@ const shareLinks = [
 
         {share && (
           <section class="page__share">
-            <h4 class="page__share-title">{t.shareOn}</h4>
+            <p class="page__share-title">{t.shareOn}</p>
             {shareLinks.map((s) => (
               <a href={s.href} class={`btn btn--${s.cls}`} data-share-popup title={`${t.shareOn} ${s.label}`}><i class={`fab fa-fw ${s.icon}`} aria-hidden="true"></i><span> {s.label}</span></a>
             ))}
