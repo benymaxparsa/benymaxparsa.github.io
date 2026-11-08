@@ -64,7 +64,9 @@ const empty = lang === 'fr' ? 'Le matériel de ce cours sera publié ici au cour
   // A link to #comp-339 opens that course
   (function () {
     function openHash() {
-      var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      var id;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; } // a malformed link like #%
+      var el = id && document.getElementById(id);
       if (el && el.tagName === 'DETAILS') el.open = true;
     }
     openHash();

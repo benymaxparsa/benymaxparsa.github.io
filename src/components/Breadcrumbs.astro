@@ -16,9 +16,9 @@ const ld = {
   })),
 };
 ---
-<nav class="breadcrumbs" aria-label={t.breadcrumb}>
+<nav class="breadcrumbs" aria-label={t.breadcrumb} data-pagefind-ignore>
   <ol>
     {all.map((c) => <li><a href={c.url}>{c.title}</a></li>)}
   </ol>
 </nav>
-<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
