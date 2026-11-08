@@ -143,6 +143,28 @@ try {
     await page.close();
   }
 
+  // Motion: community slabs reveal on scroll; never hidden without motion or JS
+  {
+    const opacities = (page) => page.$$eval('.community', (els) => els.map((e) => +getComputedStyle(e).opacity));
+    const reduced = await open('/', { motion: 'reduce' });
+    check('motion: reduced shows everything', (await opacities(reduced)).every((o) => o === 1));
+    await reduced.close();
+    const moving = await open('/', { motion: 'no-preference' });
+    const last = await moving.$$eval('.community', (els) => els.length - 1);
+    const before = (await opacities(moving))[last];
+    await moving.$$eval('.community', (els) => els.at(-1).scrollIntoView({ block: 'center' }));
+    await sleep(900);
+    const after = (await opacities(moving))[last];
+    check('motion: reveals on scroll', before < 1 && after === 1, `before ${before}, after ${after}`);
+    await moving.close();
+    const nojs = await browser.newPage();
+    await nojs.setJavaScriptEnabled(false);
+    await nojs.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'no-preference' }]);
+    await nojs.goto(base + '/', { waitUntil: 'load' });
+    check('motion: no JS shows everything', (await opacities(nojs)).every((o) => o === 1));
+    await nojs.close();
+  }
+
   // 6. Hero graph
   {
     const reduced = await open('/');

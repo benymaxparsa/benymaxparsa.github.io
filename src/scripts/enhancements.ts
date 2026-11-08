@@ -150,6 +150,19 @@ function initThemeToggle() {
   sync();
 }
 
+/** Each community slab rises into place once as it scrolls into view; slabs already on screen are left alone. */
+function initReveal() {
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }, { threshold: 0.12 });
+  for (const el of $$('.slab')) {
+    if (el.getBoundingClientRect().top < innerHeight) continue;
+    el.classList.add('reveal');
+    io.observe(el);
+  }
+}
+
 /** The language link remembers the choice, so "/" can send a French reader to "/fr/". */
 function initLanguageSwitcher() {
   for (const link of $$<HTMLAnchorElement>('.lang-switch-link')) {
@@ -357,6 +370,7 @@ initSharePopups();
 addReadingProgressBar();
 addScrollToTopButton();
 initNav();
+initReveal();
 initThemeToggle();
 initLanguageSwitcher();
 initSearch();

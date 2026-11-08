@@ -95,4 +95,6 @@ th { font-weight: 700; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .btn:active { transform: scale(.97); }
+  .reveal { opacity: 0; transform: translateY(48px) scale(.98); transition: opacity .7s var(--ease), transform .8s var(--ease); }
+  .reveal.is-in { opacity: 1; transform: none; }
 }
