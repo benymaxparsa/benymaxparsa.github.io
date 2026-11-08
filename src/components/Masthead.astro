@@ -1,109 +1,63 @@
 ---
-import { nav, ui, type Lang } from '../i18n';
+import { nav, groupOf, ui, type Lang } from '../i18n';
 import { site } from '../lib/site';
 
 interface Props { lang: Lang; twin: string; path: string }
 const { lang, twin, path } = Astro.props;
 const t = ui[lang];
 const other = lang === 'en' ? 'fr' : 'en';
+const current = groupOf(path, lang);
+const norm = (u: string) => u.replace(/\/?$/, '/');
+const here = (url: string) => (norm(path) === norm(url) ? 'page' : undefined);
+const caret = '<svg class="nav-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>';
 ---
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title} width="512" height="512"></a>
-        <a class="site-title" href={t.home}>{site.title}</a>
-        <ul class="visible-links">
-          {nav[lang].map((link) => (
-            <li class="masthead__menu-item">
-              {path === link.url
-                ? <a href={link.url} class="nav-current" aria-current="page">{link.title}</a>
-                : <a href={link.url}>{link.title}</a>}
-            </li>
-          ))}
-        </ul>
-        <div class="language-switcher" role="navigation" aria-label="Language switcher">
-          <div class="lang-dropdown">
-            <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label={t.langButton}>{t.langCurrent} <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
-            <div class="lang-dropdown-content">
-              <a href={twin} class="lang-option lang-switch-link" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'} aria-label={t.langOther}>{t.langOtherText}</a>
-            </div>
-          </div>
-        </div>
-        <button class="theme-toggle" type="button" data-label-dark={t.themeDark} data-label-light={t.themeLight} aria-label={t.themeToggle}>
-          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
-          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
-        </button>
-        <button class="search__toggle" type="button" aria-expanded="false">
-          <span class="visually-hidden">{t.search}</span>
-          <svg class="icon-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-        </button>
-        <button class="greedy-nav__toggle hidden" type="button" aria-expanded="false" aria-controls="site-menu">
-          <span class="visually-hidden">{t.menu}</span>
-          <svg class="icon-btn__icon navicon" viewBox="0 0 24 24" aria-hidden="true"><path class="navicon__open" d="M4 7h16M4 12h16M4 17h16"/><path class="navicon__close" d="m6 6 12 12M18 6 6 18"/></svg>
-        </button>
-        <ul class="hidden-links hidden" id="site-menu"></ul>
-      </nav>
+<header class="nav-shell">
+  <div class="nav-pill">
+    <a class="nav-brand" href={t.home}>
+      <img src={site.logo} alt="" width="512" height="512">
+      <span class="nav-brand__name">{site.title}</span>
+    </a>
+    <nav id="site-nav" aria-label={t.navLabel}>
+      <span class="nav-highlight" aria-hidden="true"></span>
+      <ul class="nav-groups">
+        {nav[lang].map((g, i) => (
+          <li class="nav-group">
+            {g.url
+              ? <a class="nav-group__link" href={g.url} aria-current={here(g.url) ?? (current === g.title ? 'true' : undefined)}>{g.title}</a>
+              : <>
+                  <button type="button" class="nav-group__btn" aria-expanded="false" aria-controls={`nav-panel-${i}`} aria-current={current === g.title ? 'true' : undefined}>{g.title}<Fragment set:html={caret} /></button>
+                  <ul class="nav-panel" id={`nav-panel-${i}`} hidden>
+                    {g.items!.map((l) => <li><a href={l.url} aria-current={here(l.url)}>{l.title}</a></li>)}
+                  </ul>
+                </>}
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="nav-tools">
+      <button class="search__toggle icon-btn" type="button" aria-expanded="false" aria-label={t.search}>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      </button>
+      <a href={twin} class="lang-switch-link icon-btn" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'} aria-label={`${t.langOther} (${other.toUpperCase()})`}>{other.toUpperCase()}</a>
+      <button class="theme-toggle icon-btn" type="button" data-label-dark={t.themeDark} data-label-light={t.themeLight} aria-label={t.themeToggle}>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+      </button>
     </div>
+    <button class="nav-menu-btn icon-btn" type="button" aria-expanded="false" aria-controls="site-menu" data-label-open={t.menu} data-label-close={t.menuClose} aria-label={t.menu}>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="navicon__open" d="M4 8h16M4 16h16"/><path class="navicon__close" d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
   </div>
-</div>
-<script is:inline>
-  /**
-   * Header nav that moves links which don't fit into the overflow ("more") menu, in order
-   * from the end. Replaces the jQuery greedy-nav; measures again on resize and once web
-   * fonts have arrived, since they change every link's width. Inline and run once right
-   * here so the header has its final shape at first paint (no layout shift).
-   */
-  (function () {
-    const nav = document.querySelector('nav.greedy-nav');
-    const vlinks = nav && nav.querySelector('.visible-links');
-    const hlinks = nav && nav.querySelector('.hidden-links');
-    const btn = nav && nav.querySelector('.greedy-nav__toggle');
-    if (!nav || !vlinks || !hlinks || !btn) return;
-    const items = [...vlinks.children];
-    const fixed = ['.site-logo', '.site-title', '.language-switcher', '.theme-toggle', '.search__toggle'].map((s) => nav.querySelector(s));
-    const outer = (el) => {
-      if (!el || getComputedStyle(el).display === 'none') return 0;
-      const s = getComputedStyle(el);
-      return el.getBoundingClientRect().width + parseFloat(s.marginLeft) + parseFloat(s.marginRight);
-    };
-    const isOpen = () => !hlinks.classList.contains('hidden');
-    const setOpen = (open) => {
-      hlinks.classList.toggle('hidden', !open);
-      btn.classList.toggle('close', open);
-      btn.setAttribute('aria-expanded', String(open));
-    };
-
-    let lastWidth = -1;
-    function layout() {
-      if (nav.clientWidth === lastWidth) return;
-      lastWidth = nav.clientWidth;
-      items.forEach((li) => vlinks.append(li));
-      const widths = items.map(outer);
-      let available = nav.clientWidth - fixed.reduce((sum, el) => sum + outer(el), 0);
-      let fit = items.length;
-      if (widths.reduce((a, b) => a + b, 0) > available) {
-        btn.classList.remove('hidden');
-        available -= outer(btn);
-        let used = 0;
-        fit = 0;
-        while (fit < items.length && used + widths[fit] <= available) used += widths[fit++];
-      }
-      items.forEach((li, i) => (i < fit ? vlinks : hlinks).append(li));
-      btn.classList.toggle('hidden', fit === items.length);
-      btn.setAttribute('count', String(items.length - fit));
-      if (fit === items.length) setOpen(false);
-    }
-
-    btn.addEventListener('click', () => setOpen(!isOpen()));
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && isOpen()) { setOpen(false); btn.focus(); }
-    });
-    document.addEventListener('click', (e) => {
-      if (isOpen() && !hlinks.contains(e.target) && !btn.contains(e.target)) setOpen(false);
-    });
-    layout();
-    new ResizeObserver(layout).observe(nav);
-    document.fonts?.ready.then(() => { lastWidth = -1; layout(); });
-  })();
-</script>
+  <div id="site-menu" class="nav-overlay" hidden>
+    {nav[lang].map((g) => (
+      <section class="nav-overlay__group">
+        {g.url
+          ? <a class="nav-overlay__title" href={g.url} aria-current={here(g.url)}>{g.title}</a>
+          : <>
+              <h2 class="eyebrow">{g.title}</h2>
+              <ul>{g.items!.map((l) => <li><a href={l.url} aria-current={here(l.url)}>{l.title}</a></li>)}</ul>
+            </>}
+      </section>
+    ))}
+  </div>
+</header>

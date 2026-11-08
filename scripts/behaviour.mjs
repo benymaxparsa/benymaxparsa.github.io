@@ -20,47 +20,52 @@ async function open(path, { width = 1280, motion = 'reduce', storage = {} } = {}
 const active = (page) => page.evaluate(() => document.activeElement?.className ?? '');
 
 try {
-  // 1. Overflow menu
+  // 1. Grouped navigation
   {
-    const page = await open('/', { width: 900 });
-    const toggle = '.greedy-nav__toggle';
-    const visible = await page.$eval(toggle, (b) => !b.classList.contains('hidden'));
-    check('nav: overflow toggle shown at 900px', visible);
-    await page.click(toggle);
-    check('nav: click opens menu', await page.$eval(toggle, (b) => b.getAttribute('aria-expanded') === 'true') && await page.$eval('.hidden-links', (m) => !m.classList.contains('hidden') && m.children.length > 0));
+    for (const path of ['/', '/fr/']) {
+      const page = await open(path, { width: 1280 });
+      check(`nav: 5 groups in pill (${path})`, await page.$$eval('#site-nav .nav-group', (g) => g.length) === 5);
+      await page.close();
+    }
+    const page = await open('/', { width: 1280 });
+    const btn = '#site-nav .nav-group:first-child > button';
+    await page.click(btn);
+    check('nav: dropdown opens on click', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'true')
+      && await page.$eval(btn, (b) => { const p = document.getElementById(b.getAttribute('aria-controls')); return !p.hidden && p.querySelectorAll('a').length === 3; }));
     await page.keyboard.press('Escape');
-    check('nav: Esc closes, focus on toggle, aria-expanded=false',
-      await page.$eval(toggle, (b) => b.getAttribute('aria-expanded') === 'false') && (await active(page)).includes('greedy-nav__toggle'));
-    await page.click(toggle);
-    await page.mouse.click(200, 600);
-    check('nav: outside click closes', await page.$eval('.hidden-links', (m) => m.classList.contains('hidden')));
+    check('nav: Esc closes and returns focus', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false' && document.activeElement === b));
+    await page.click(btn);
+    for (let i = 0; i < 4; i++) await page.keyboard.press('Tab');
+    check('nav: tabbing out closes dropdown', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false'));
+    await page.click(btn);
+    await page.mouse.click(200, 700);
+    check('nav: outside click closes', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false'));
     await page.close();
+    const fr = await open('/fr/', { width: 1024 });
+    check('nav: FR fits at 1024px', await fr.$eval('.nav-pill', (n) => n.scrollWidth <= n.clientWidth + 1 && n.getBoundingClientRect().height < 80));
+    await fr.close();
+    const phone = await open('/', { width: 390 });
+    await phone.click('.nav-menu-btn');
+    check('nav: phone overlay', await phone.$eval('#site-menu', (m) => { const r = m.getBoundingClientRect(); return !m.hidden && r.width >= innerWidth - 1 && r.height >= innerHeight - 1 && m.querySelectorAll('a').length === 15; }));
+    await phone.keyboard.press('Escape');
+    check('nav: phone overlay closes on Esc', await phone.$eval('#site-menu', (m) => m.hidden) && await phone.$eval('.nav-menu-btn', (b) => document.activeElement === b));
+    await phone.close();
+    const pubs = await open('/publications/', { width: 1280 });
+    check('nav: current group marked', await pubs.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-current') === 'true'));
+    await pubs.close();
   }
 
-  // 2. Language switcher
+  // 2. Language switch (a plain link to the twin page)
   {
     const page = await open('/teaching/Fall-2021-DA');
-    check('lang: accessible name contains visible EN', await page.$eval('.lang-current', (b) => /^EN\b/.test(b.getAttribute('aria-label'))));
     check('lang: links to the doc twin', await page.$eval('.lang-switch-link', (a) => a.getAttribute('href') === '/fr/enseignement/Fall-2021-DA'));
-    await page.hover('.lang-current');
-    check('lang: hover does not open', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    check('lang: click opens', await page.$eval('.lang-dropdown', (d) => d.classList.contains('open')));
-    await page.keyboard.press('Escape');
-    check('lang: Esc closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    await page.mouse.click(200, 600);
-    check('lang: outside click closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
+    check('lang: accessible name names the other language', await page.$eval('.lang-switch-link', (a) => /français/i.test(a.getAttribute('aria-label'))));
     await Promise.all([page.waitForNavigation(), page.click('.lang-switch-link')]);
     check('lang: switch lands on FR twin and stores preference',
       page.url().endsWith('/fr/enseignement/Fall-2021-DA') && await page.evaluate(() => localStorage.getItem('preferredLanguage') === 'fr'));
     await page.goto(base + '/', { waitUntil: 'networkidle0' });
     check('lang: / redirects to /fr/ when preference is fr', new URL(page.url()).pathname === '/fr/');
     await page.close();
-    const fr = await open('/fr/enseignement/');
-    check('lang: FR accessible name contains FR', await fr.$eval('.lang-current', (b) => /^FR\b/.test(b.getAttribute('aria-label'))));
-    await fr.close();
   }
 
   // 3. Search
@@ -68,15 +73,15 @@ try {
     const page = await open(path);
     await page.keyboard.press('/');
     await sleep(200);
-    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('.search-content', (p) => p.classList.contains('is--visible')) && await page.evaluate(() => document.activeElement?.id === 'search'));
+    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('dialog.search-dialog', (d) => d.open) && await page.evaluate(() => document.activeElement?.id === 'search'));
     await page.keyboard.type(word);
-    await page.waitForFunction(() => document.querySelectorAll('#results .archive__item-title a').length > 0, { timeout: 5000 }).catch(() => {});
-    const urls = await page.$$eval('#results .archive__item-title a', (as) => as.map((a) => new URL(a.href).pathname));
+    await page.waitForFunction(() => document.querySelectorAll('#results a.search-hit').length > 0, { timeout: 5000 }).catch(() => {});
+    const urls = await page.$$eval('#results a.search-hit', (as) => as.map((a) => new URL(a.href).pathname));
     const inLang = urls.every((u) => (lang === 'fr' ? /^\/fr\/|-fr\/$/.test(u) : !/^\/fr\/|-fr\/$/.test(u)));
     check(`search ${lang}: results only in page language`, urls.length > 0 && inLang, `${urls.length} results: ${urls.slice(0, 3).join(', ')}`);
     await page.keyboard.press('Escape');
     check(`search ${lang}: Esc closes, focus returns to toggle`,
-      await page.$eval('.search-content', (p) => !p.classList.contains('is--visible')) && (await active(page)).includes('search__toggle'));
+      await page.$eval('dialog.search-dialog', (d) => !d.open) && (await active(page)).includes('search__toggle'));
     await page.close();
   }
 
@@ -102,7 +107,7 @@ try {
     const page = await open('/');
     await page.click('.theme-toggle');
     check('theme: toggle sets data-theme and storage', await page.evaluate(() => document.documentElement.dataset.theme === 'dark' && localStorage.getItem('theme') === 'dark'));
-    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#121821'));
+    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#141413'));
     await page.evaluateOnNewDocument(() => document.addEventListener('DOMContentLoaded', () => { window.__themeAtDcl = document.documentElement.dataset.theme; }));
     await page.goto(base + '/publications/', { waitUntil: 'networkidle0' });
     check('theme: applied before first paint on next page', await page.evaluate(() => window.__themeAtDcl === 'dark'));
@@ -175,23 +180,23 @@ try {
     for (const w of widths) {
       const page = await open(path, { width: w });
       const res = await page.evaluate(() => {
-        const sel = ['.site-logo', '.site-title', '.visible-links', '.language-switcher', '.theme-toggle', '.search__toggle', '.greedy-nav__toggle'];
-        const boxes = sel.map((s) => [s, document.querySelector(s)]).filter(([, e]) => e && getComputedStyle(e).display !== 'none' && !e.classList.contains('hidden')).map(([s, e]) => [s, e.getBoundingClientRect()]);
+        const pill = document.querySelector('.nav-pill');
+        const kids = [...pill.querySelectorAll('.nav-brand, .nav-group, .nav-tools > *, .nav-menu-btn')].filter((e) => e.checkVisibility());
         const problems = [];
-        for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
-          const [a, ra] = boxes[i], [b, rb] = boxes[j];
-          if (ra.width && rb.width && ra.left < rb.right - 1 && rb.left < ra.right - 1 && ra.top < rb.bottom - 1 && rb.top < ra.bottom - 1) problems.push(`${a} overlaps ${b}`);
-        }
-        const vl = document.querySelector('.visible-links').getBoundingClientRect();
-        for (const li of document.querySelectorAll('.visible-links > li')) {
-          const r = li.getBoundingClientRect();
-          if (r.right > vl.right + 1 || r.left < vl.left - 1) problems.push(`clipped nav item ${li.textContent.trim()}`);
+        const pr = pill.getBoundingClientRect();
+        for (let i = 0; i < kids.length; i++) {
+          const a = kids[i].getBoundingClientRect();
+          if (a.right > pr.right + 1 || a.left < pr.left - 1) problems.push(`clipped ${kids[i].className}`);
+          for (let j = i + 1; j < kids.length; j++) {
+            const b = kids[j].getBoundingClientRect();
+            if (a.left < b.right - 1 && b.left < a.right - 1 && a.top < b.bottom - 1 && b.top < a.bottom - 1) problems.push(`${kids[i].className} overlaps ${kids[j].className}`);
+          }
         }
         if (document.documentElement.scrollWidth > innerWidth) problems.push('page overflows');
-        return { problems, height: document.querySelector('.masthead').getBoundingClientRect().height };
+        return { problems, height: pr.height };
       });
       if (res.problems.length) failures.push(`${path} @${w}: ${res.problems.join('; ')}`);
-      if (res.height > 80) failures.push(`${path} @${w}: header ${res.height}px tall`);
+      if (res.height > 72) failures.push(`${path} @${w}: header ${res.height}px tall`);
       await page.close();
     }
   }

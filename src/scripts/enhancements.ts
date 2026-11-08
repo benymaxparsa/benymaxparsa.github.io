@@ -1,5 +1,5 @@
 // Site behaviour, ported from assets/js/custom-enhancements.js and the jQuery plugins
-// Minimal Mistakes bundled (greedy nav, Magnific Popup, lunr search, smooth scroll).
+// Minimal Mistakes bundled (Magnific Popup, lunr search, smooth scroll), plus the v4 grouped nav.
 import { initHeroGraph } from './graph';
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -137,7 +137,7 @@ function initThemeToggle() {
     const label = btn.getAttribute(dark ? 'data-label-light' : 'data-label-dark') ?? '';
     btn.setAttribute('aria-label', label);
     btn.title = label;
-    for (const m of $$('meta[name="theme-color"]')) m.setAttribute('content', dark ? '#121821' : '#f7f8fa');
+    for (const m of $$('meta[name="theme-color"]')) m.setAttribute('content', dark ? '#141413' : '#F3F0EE');
     document.dispatchEvent(new CustomEvent('themechange'));
   };
   btn.addEventListener('click', () => {
@@ -150,25 +150,74 @@ function initThemeToggle() {
   sync();
 }
 
-/** Language dropdown: click/tap only (never hover), Esc and outside click close it. */
+/** The language link remembers the choice, so "/" can send a French reader to "/fr/". */
 function initLanguageSwitcher() {
-  const dropdown = $('.lang-dropdown');
-  const toggle = $('.lang-current');
-  if (!dropdown || !toggle) return;
-  const setOpen = (open: boolean) => {
-    dropdown.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  };
-  toggle.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!dropdown.classList.contains('open')); });
-  document.addEventListener('click', (e) => { if (!dropdown.contains(e.target as Node)) setOpen(false); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && dropdown.classList.contains('open')) { setOpen(false); toggle.focus(); }
-  });
-  for (const link of $$<HTMLAnchorElement>('.lang-switch-link', dropdown)) {
+  for (const link of $$<HTMLAnchorElement>('.lang-switch-link')) {
     link.addEventListener('click', () => {
       try { localStorage.setItem('preferredLanguage', link.dataset.lang ?? ''); } catch { /* storage blocked */ }
     });
   }
+}
+
+/**
+ * Grouped nav: one dropdown open at a time (click, Esc, outside click and focus leaving close it),
+ * a highlight that slides to the hovered/focused group and rests on the current one,
+ * and the full-screen menu on narrow screens.
+ */
+function initNav() {
+  const nav = $('#site-nav');
+  const hl = $('.nav-highlight');
+  const btns = $$<HTMLButtonElement>('.nav-group__btn');
+  const panelOf = (b: HTMLButtonElement) => document.getElementById(b.getAttribute('aria-controls')!)!;
+  const setOpen = (b: HTMLButtonElement, open: boolean) => {
+    b.setAttribute('aria-expanded', String(open));
+    panelOf(b).hidden = !open;
+  };
+  const closeAll = (except?: HTMLButtonElement) => btns.forEach((b) => b !== except && setOpen(b, false));
+  for (const b of btns) {
+    b.addEventListener('click', () => { closeAll(b); setOpen(b, b.getAttribute('aria-expanded') !== 'true'); });
+    b.parentElement!.addEventListener('focusout', (e) => {
+      if (!b.parentElement!.contains(e.relatedTarget as Node)) setOpen(b, false);
+    });
+  }
+  document.addEventListener('click', (e) => { if (nav && !nav.contains(e.target as Node)) closeAll(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = btns.find((b) => b.getAttribute('aria-expanded') === 'true');
+    if (open) { setOpen(open, false); open.focus(); }
+  });
+
+  if (nav && hl) {
+    const targets = $$('.nav-group__link, .nav-group__btn', nav);
+    const home = targets.find((t) => t.hasAttribute('aria-current'));
+    const move = (t?: HTMLElement) => {
+      hl.classList.toggle('is-on', !!t);
+      if (t) { hl.style.width = `${t.offsetWidth}px`; hl.style.transform = `translateX(${t.parentElement!.offsetLeft}px)`; }
+    };
+    for (const t of targets) {
+      t.addEventListener('mouseenter', () => move(t));
+      t.addEventListener('focus', () => move(t));
+    }
+    nav.addEventListener('mouseleave', () => move(home));
+    nav.addEventListener('focusout', (e) => { if (!nav.contains(e.relatedTarget as Node)) move(home); });
+    move(home);
+    document.fonts?.ready.then(() => move(home));
+  }
+
+  const menuBtn = $<HTMLButtonElement>('.nav-menu-btn');
+  const menu = $('#site-menu');
+  if (!menuBtn || !menu) return;
+  const setMenu = (open: boolean) => {
+    menu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', menuBtn.dataset[open ? 'labelClose' : 'labelOpen'] ?? '');
+    document.documentElement.classList.toggle('menu-open', open);
+  };
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); }
+  });
+  matchMedia('(min-width: 960px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 }
 
 /** Search overlay backed by Pagefind; the index is split by <html lang>, so results stay in the page language. */
@@ -204,6 +253,8 @@ function initSearch() {
     toggle.focus();
   });
   toggle.addEventListener('click', open);
+  // In a filled search field the browser spends the first Esc on clearing it; close in one press
+  input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); dialog.close(); toggle.focus(); } });
   $('.search-dialog__close', dialog)?.addEventListener('click', () => dialog.close());
   // A click on the backdrop lands on the <dialog> itself, outside its box
   dialog.addEventListener('click', (e) => {
@@ -305,6 +356,7 @@ addHeaderLinks();
 initSharePopups();
 addReadingProgressBar();
 addScrollToTopButton();
+initNav();
 initThemeToggle();
 initLanguageSwitcher();
 initSearch();
