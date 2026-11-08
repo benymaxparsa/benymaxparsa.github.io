@@ -1831,7 +1831,7 @@ body {
 }
 
 /* The folded card's link list (lib/cards.ts) has no bullets, so it drops the bullet indent and lines up with the text */
-.list__item--projects .archive__item ul.link-pills {
+ul.link-pills {
   margin-left: 0;
   padding-left: 0;
 }
@@ -5200,6 +5200,13 @@ a.pagination--pager:hover {
   background: transparent;
   box-shadow: none;
   accent-color: var(--primary-color);
+}
+
+/* The reset above also drops the global focus glow, so keyboard users get a ring here */
+.hero-graph__ctl input[type="range"]:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .no-js .hero-graph__controls {
