@@ -1795,6 +1795,110 @@ body {
 /* ==========================================================================
    PRINT STYLES
    ========================================================================== */
+/* ==========================================================================
+   Project cards: tag chips and link pills (list-item links become buttons)
+   ========================================================================== */
+.archive__item > .interest-tags {
+  margin: 0.8rem 0 0;
+}
+
+.archive__item li:has(> a:only-child),
+.doc--projects .page__content li:has(> a:only-child) {
+  display: inline-block;
+  margin: 0.6rem 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+:is(.archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  /* the body-copy link rule has more specificity than a pill needs to win by hand */
+  text-decoration: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+:is(.archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary-color);
+}
+
+.doc--projects .page__content > .interest-tags {
+  margin: 0 0 1.5rem;
+}
+
+/* Skills (biography): label column + chips */
+.skill-groups {
+  margin: 1rem 0 0;
+}
+
+.page__content .skill-group {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.page__content .skill-group:first-child {
+  border-top: 0;
+  padding-top: 0.4rem;
+}
+
+.page__content .skill-group dt {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.page__content .skill-group dd {
+  margin: 0;
+}
+
+.skill-group .interest-tags {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .page__content .skill-group {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+  }
+}
+
+/* Home photo: location badge straddling the bottom edge */
+.home-hero__photo-wrap {
+  position: relative;
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+
+.home-hero__badge {
+  position: absolute;
+  left: 50%;
+  bottom: -0.45rem;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  color: var(--heading-color);
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 @media print {
   [hidden] {
     display: none;
@@ -2352,124 +2456,42 @@ a:hover {
   }
 }
 /* ==========================================================================
-   Language switcher (masthead) — click/tap only, no hover-open
+   Language switcher (masthead): a two-option pill, one click to switch
    ========================================================================== */
 .language-switcher {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   margin-left: 0.75rem;
   flex-shrink: 0;
+  padding: 2px;
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
 }
 
-.lang-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.lang-current {
-  padding: 0.35rem 0.7rem;
+.language-switcher .lang-seg {
+  margin: 0;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-pill);
   font-weight: 700;
-  font-size: 0.85rem;
-  font-family: inherit;
-  cursor: pointer;
-  border: 1px solid var(--primary-border);
-  background: var(--primary-soft);
-  color: var(--primary-light);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  white-space: nowrap;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.lang-current:hover,
-.lang-dropdown.open .lang-current {
-  background: var(--primary-border);
-  border-color: var(--primary-color);
-}
-
-.lang-caret {
-  width: 0.9em;
-  height: 0.9em;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.2s ease;
-}
-
-.lang-dropdown.open .lang-caret {
-  transform: rotate(180deg);
-}
-
-.lang-dropdown-content {
-  display: none;
-  position: absolute;
-  left: 50%;
-  translate: -50% 0;
-  top: 100%;
-  padding-top: 0.6rem;
-  /* bridge the gap so the pointer never leaves the dropdown */
-  z-index: 1000;
-}
-
-.lang-dropdown.open .lang-dropdown-content {
-  display: block;
-  animation: langFadeIn 0.15s ease;
-}
-
-/* Arrow: its lower half sits over the option's top border, so the two read as one shape */
-.lang-dropdown-content::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0.27rem;
-  left: 50%;
-  width: 0.7rem;
-  height: 0.7rem;
-  background: var(--card-bg);
-  border-top: 1px solid var(--card-border-strong);
-  border-left: 1px solid var(--card-border-strong);
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.lang-dropdown-content:has(.lang-option:hover)::before {
-  background: linear-gradient(var(--primary-soft), var(--primary-soft)) var(--card-bg);
-}
-
-@keyframes langFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.lang-option {
-  display: flex;
-  white-space: nowrap;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--body-color);
-  font-weight: 600;
-  font-size: 0.9rem;
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border-strong);
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(var(--shadow-rgb), 0.35);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--primary-light);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.lang-option:hover,
-.lang-option:focus-visible {
-  background-color: var(--primary-soft);
-  color: var(--primary-light);
+/* The current language is the filled segment; the page-to-page view transition slides it across */
+.language-switcher .lang-seg--current {
+  background: var(--primary-color);
+  color: var(--on-primary, #fff);
+  view-transition-name: lang-knob;
+}
+
+.language-switcher a.lang-seg:hover,
+.language-switcher a.lang-seg:focus-visible {
+  background: var(--primary-border);
 }
 
 .page__footer {
@@ -4607,6 +4629,11 @@ select {
 /* Detail pages: share buttons and prev/next pager in the site's own ink
    (the theme's brand fills put white text on light blue at 2.5:1) */
 .page__share-title {
+  /* a <p>, not an h4: no heading level to skip after the page title, so it restates what the h4 gave */
+  margin: 2em 0 10px;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
   text-transform: none;
   letter-spacing: 0;
   font-size: 0.9rem;
