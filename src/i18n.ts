@@ -61,22 +61,31 @@ export const nav: Record<Lang, NavGroup[]> = {
 /** Every page link in the nav, in order. */
 export const navLinks = (lang: Lang): NavLink[] => nav[lang].flatMap((g) => g.items ?? [{ title: g.title, url: g.url! }]);
 
-/** The community colour of a page: its nav group's tone, teal for pages outside the nav. */
-export const toneOf = (path: string, lang: Lang): Tone => nav[lang].find((g) => g.title === groupOf(path, lang))?.tone ?? 'teal';
-
-/** The nav group a page belongs to (its title), or undefined for pages outside the nav. */
-export function groupOf(path: string, lang: Lang): string | undefined {
+/**
+ * Index of the nav group a page belongs to: the longest nav URL that prefixes the path.
+ * Both languages' URLs are tried, since French collection docs live under English paths (/projects/A-star-fr/).
+ */
+function groupIndex(path: string, lang: Lang): number {
   const norm = (u: string) => u.replace(/\/?$/, '/');
   const p = norm(path);
-  let best: { title: string; len: number } | undefined;
-  for (const g of nav[lang]) {
-    for (const u of g.url ? [g.url] : (g.items ?? []).map((i) => i.url)) {
-      const n = norm(u);
-      if ((p === n || p.startsWith(n)) && n.length > (best?.len ?? 0)) best = { title: g.title, len: n.length };
-    }
+  let best = { i: -1, len: 0 };
+  for (const l of [lang, lang === 'en' ? 'fr' : 'en'] as Lang[]) {
+    nav[l].forEach((g, i) => {
+      for (const u of g.url ? [g.url] : (g.items ?? []).map((x) => x.url)) {
+        const n = norm(u);
+        if (p.startsWith(n) && n.length > best.len) best = { i, len: n.length };
+      }
+    });
+    if (best.i >= 0) break;
   }
-  return best?.title;
+  return best.i;
 }
+
+/** The nav group a page belongs to (its title in the page language), or undefined for pages outside the nav. */
+export const groupOf = (path: string, lang: Lang): string | undefined => nav[lang][groupIndex(path, lang)]?.title;
+
+/** The community colour of a page: its nav group's tone, teal (research) for pages outside the nav. */
+export const toneOf = (path: string, lang: Lang): Tone => nav[lang][groupIndex(path, lang)]?.tone ?? 'teal';
 
 export const ui = {
   en: {

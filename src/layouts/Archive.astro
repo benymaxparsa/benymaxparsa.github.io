@@ -1,16 +1,23 @@
 ---
 import { smart } from '../lib/text';
 import Base from './Base.astro';
-import type { Lang } from '../i18n';
+import { groupOf, toneOf, type Lang } from '../i18n';
+import { pagePath } from '../lib/paths';
 
 interface Props { title: string; lang: Lang; twin: string; description?: string; wide?: boolean }
 const { lang, twin, description, wide = false } = Astro.props;
 const title = smart(Astro.props.title);
+const path = pagePath(Astro.url);
+const group = groupOf(path, lang);
+const tone = toneOf(path, lang);
 ---
 <Base title={title} lang={lang} twin={twin} description={description} layout="archive">
   <div id="main" role="main">
     <div class:list={["archive", wide && "archive--wide"]}>
-      <h1 id="page-title" class="page__title">{title}</h1>
+      <header class={`page-head slab tone-${tone}`}>
+        {group && <p class="page-head__group">{group}</p>}
+        <h1 id="page-title" class="page__title">{title}</h1>
+      </header>
       <slot />
     </div>
   </div>

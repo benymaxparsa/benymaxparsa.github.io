@@ -143,6 +143,19 @@ try {
     await page.close();
   }
 
+  // Inner pages open with a title slab in their community's colour
+  {
+    const want = { '/publications/': 'teal', '/projects/A-star/': 'teal', '/teaching/': 'lavender', '/teaching/materials/': 'lavender', '/biography/': 'coral', '/fr/biographie/': 'coral', '/news/': 'ochre', '/contact/': 'ink', '/cv/': 'ink' };
+    const wrong = [];
+    for (const [path, tone] of Object.entries(want)) {
+      const page = await open(path);
+      const ok = await page.evaluate((tone) => { const h = document.querySelector('.page-head'); return !!h && h.classList.contains('slab') && h.classList.contains(`tone-${tone}`) && !!h.querySelector('h1'); }, tone);
+      if (!ok) wrong.push(path);
+      await page.close();
+    }
+    check('pages: title slab in the community colour', wrong.length === 0, wrong.join(', '));
+  }
+
   // Project listing: photo cards, newest featured first
   for (const [path, n] of [['/projects/', 16], ['/fr/projets/', 16]]) {
     const page = await open(path);
