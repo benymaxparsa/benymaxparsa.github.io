@@ -1,10 +1,10 @@
 ---
 // Rotating portrait: one of nine photos, never one of the last three this visitor saw.
 // The inline script sets src so exactly one image is fetched; width/height reserve the box.
-interface Props { alt: string }
-const { alt } = Astro.props;
+interface Props { alt: string; badge?: string }
+const { alt, badge } = Astro.props;
 ---
-<img class="home-hero__photo" id="home-photo" width="400" height="400" alt={alt} fetchpriority="high" decoding="async">
+<span class="home-hero__photo-wrap"><img class="home-hero__photo" id="home-photo" width="400" height="400" alt={alt} fetchpriority="high" decoding="async">{badge && <span class="home-hero__badge">{badge}</span>}</span>
 <script is:inline>
   (function () {
     var img = document.getElementById('home-photo');
