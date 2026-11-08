@@ -1,0 +1,423 @@
+/* ==========================================================================
+   Polish pass (loaded last). Ideas taken from a store design system and fitted
+   to an academic site:
+   - blue is for links and one main action per page; chips and labels stay neutral
+   - outlined buttons carry a 2px border
+   - cards are flat: hairline border, no shadow, rounder corners; shadows are kept
+     for things that float (menus, dialogs, the back-to-top button)
+   - headings step down in fixed sizes at 1024 / 768 / 480px
+   - subheads (h3) are lighter than section titles; sans UI text is set a touch tighter
+   - breadcrumbs, the course-materials accordion and the footer columns
+   ========================================================================== */
+:root {
+  --radius-lg: 24px;
+  --radius-media: 16px;
+  --outline-w: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Flat cards
+   -------------------------------------------------------------------------- */
+.list__item .archive__item,
+.teaching-role-body,
+.cv-viewer,
+.info-card,
+.teaching-materials-cta,
+.course-materials,
+.page__content table {
+  box-shadow: none;
+}
+
+.page__content table {
+  border-radius: var(--radius-media);
+}
+
+/* Screenshots and figures inside cards: rounded frames, no shadow; the hover cue is the frame itself */
+.list__item .archive__item figure img {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-media);
+  box-shadow: none;
+}
+
+.list__item .archive__item figure a:hover img {
+  border-color: var(--primary-border);
+  box-shadow: none;
+}
+
+.teaching-award__photo,
+.lightbox__img,
+.news-entry blockquote img {
+  border-radius: var(--radius-media);
+}
+
+.materials-note,
+.archive__item-citation {
+  border-radius: var(--radius-media);
+}
+
+/* The materials call-to-action and the award are cards like the others; the button is the blue part */
+.teaching-materials-cta,
+.teaching-award {
+  border-color: var(--card-border);
+}
+
+/* --------------------------------------------------------------------------
+   Blue, sparingly: chips and course codes are labels, not actions
+   -------------------------------------------------------------------------- */
+.interest-tag,
+.page__content .interest-tag {
+  background: var(--sunken);
+  color: var(--body-color);
+  border: 1px solid var(--card-border);
+}
+
+.course-materials__code {
+  background: var(--sunken);
+  border-color: var(--card-border-strong);
+  color: var(--heading-color);
+}
+
+/* --------------------------------------------------------------------------
+   2px outlines on secondary buttons
+   -------------------------------------------------------------------------- */
+.page__content .hero-btn--ghost,
+.page__content .hero-btn--ghost:visited {
+  border: var(--outline-w) solid var(--card-border-strong);
+}
+
+.page__content .hero-btn--primary,
+.page__content .hero-btn--primary:visited {
+  border-width: var(--outline-w);
+}
+
+/* The body-copy link rule (ten classes deep) strips border-bottom, so the outline is restated with !important */
+:is(.list__item--projects .archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child {
+  border: var(--outline-w) solid var(--primary-border) !important;
+  padding: calc(0.3rem - 1px) calc(0.85rem - 1px);
+}
+
+:is(.list__item--projects .archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child:hover {
+  border-color: var(--primary-color) !important;
+}
+
+/* "Back to …" buttons go somewhere else; they are secondary, so outlined rather than filled */
+.btn--news,
+a.btn--news,
+a.btn--news:visited {
+  background: transparent;
+  border: var(--outline-w) solid var(--card-border-strong);
+  color: var(--heading-color);
+}
+
+a.btn--news:hover,
+.btn--news:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary-border);
+  color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   Type: fixed heading steps, light subheads, slightly tighter sans text
+   -------------------------------------------------------------------------- */
+body {
+  letter-spacing: -0.008em;
+}
+
+/* Reading text keeps the serif's own spacing */
+.page__content {
+  letter-spacing: normal;
+}
+
+.page__content .btn,
+.page__content button,
+.page__content table,
+.page__content figcaption,
+.page__content nav,
+.page__content [class*="card"],
+.page__content [class*="teaching-"],
+.page__content [class*="hero-"],
+.page__content [class*="news-"],
+.page__content [class*="interest-"],
+.page__content [class*="material"],
+.page__content .archive__item-meta {
+  letter-spacing: -0.008em;
+}
+
+.page__title {
+  font-size: 3.3rem;
+}
+
+.page__content .home-hero__name {
+  font-size: 3rem;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+}
+
+.page__content h2:not([class]) {
+  font-size: 1.35rem;
+}
+
+/* Subheads sit between the bold section titles and the body: larger, lighter */
+.page__content h3:not([class]) {
+  font-size: 1.25rem;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1023px) {
+  .page__title { font-size: 2.6rem; }
+  .page__content .home-hero__name { font-size: 2.6rem; }
+  .section-heading { font-size: 1.3rem; }
+  .page__content h2:not([class]) { font-size: 1.3rem; }
+}
+
+@media (max-width: 767px) {
+  .page__title { font-size: 2.25rem; }
+  .page__content .home-hero__name { font-size: 2.3rem; }
+  .section-heading,
+  .page__content h2:not([class]) { font-size: 1.25rem; }
+  .page__content h3:not([class]) { font-size: 1.15rem; }
+}
+
+@media (max-width: 479px) {
+  .page__title { font-size: 2rem; }
+  .page__content .home-hero__name { font-size: 2rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Home: more room between sections
+   -------------------------------------------------------------------------- */
+.home-hero {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.home-research .section-heading:not(.section-heading--first) {
+  margin-top: 4rem;
+}
+
+.stats-band {
+  margin-top: 4.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumbs
+   -------------------------------------------------------------------------- */
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+}
+
+.breadcrumbs li {
+  margin: 0;
+  color: var(--muted-color);
+}
+
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 0.5em;
+  color: var(--faint-color);
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited {
+  color: var(--muted-color);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* --------------------------------------------------------------------------
+   Course materials: one accordion row per course
+   -------------------------------------------------------------------------- */
+.course-materials-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.course-materials {
+  padding: 0;
+}
+
+.course-materials > summary {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 1.25rem 3.5rem 1.15rem 1.5rem;
+  border-bottom: 0;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  list-style: none;
+}
+
+.course-materials > summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-materials__meta {
+  display: block;
+  margin: 0;
+}
+
+.course-materials__title {
+  margin-bottom: 0.3rem;
+}
+
+.course-materials__count {
+  white-space: nowrap;
+}
+
+.course-materials__chevron {
+  position: absolute;
+  top: 50%;
+  right: 1.4rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  fill: none;
+  stroke: var(--muted-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.course-materials[open] .course-materials__chevron {
+  transform: rotate(180deg);
+}
+
+.course-materials > summary:hover .course-materials__chevron {
+  stroke: var(--primary-color);
+}
+
+.course-materials[open] > summary {
+  border-bottom: 1px solid var(--card-border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.course-materials > :not(summary) {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.course-materials > .course-materials__blurb {
+  margin-top: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.course-materials > .material-list,
+.course-materials > .material-empty {
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Opening slides the content in; browsers without ::details-content just open */
+@media (prefers-reduced-motion: no-preference) {
+  .course-materials::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition: block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+  }
+
+  .course-materials[open]::details-content {
+    block-size: auto;
+  }
+
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer: link columns, then the made-with line and copyright
+   -------------------------------------------------------------------------- */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-cols__site {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.footer-col__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.footer-col ul,
+.page__footer-follow.footer-col ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-col li,
+.page__footer-follow.footer-col li {
+  display: block;
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+}
+
+.page__footer-follow.footer-col li + li::before {
+  content: none;
+}
+
+.footer-col a,
+.footer-col a:visited,
+.page__footer-follow.footer-col .social-icons a {
+  color: var(--muted-color);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.page__footer-follow.footer-col .social-icons li {
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+
+.footer-col a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footer-bottom {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--card-border);
+}
+
+@media (max-width: 1023px) {
+  .footer-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Below the site columns the outside links flow into columns of their own */
+  .page__footer-follow.footer-col ul {
+    columns: 3 9.5rem;
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer-cols__site {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
