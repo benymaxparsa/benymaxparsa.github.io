@@ -2,26 +2,26 @@
 import Single from '../../layouts/Single.astro';
 import HomePhoto from '../../components/HomePhoto.astro';
 import ProfileLinks from '../../components/ProfileLinks.astro';
-import { docs, urlOf } from '../../lib/urls';
-import { formatDate } from '../../i18n';
+import { urlOf } from '../../lib/urls';
+import { latestPublication, featuredProject } from '../../lib/home';
+import '../../styles/v4/home.css';
 
 const lang = 'fr';
-const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
+const pub = await latestPublication(lang);
+const project = await featuredProject(lang);
 ---
 <Single title="Parsa Kamalipour" lang={lang} twin="/" description="À propos de moi" classes="home" showTitle={false}>
-<section class="home-hero" aria-label="Présentation">
-  <div class="home-hero__text">
-    <div class="home-hero__id">
-      <HomePhoto alt="Portrait de Parsa Kamalipour" />
-      <div>
-        <h1 class="home-hero__name">Parsa Kamalipour</h1>
-        <p class="home-hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
-      </div>
+<section class="hero" aria-label="Présentation">
+  <div class="hero__text">
+    <div class="hero__id">
+      <span class="hero__avatar"><HomePhoto alt="Portrait de Parsa Kamalipour" /></span>
+      <p class="hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
     </div>
-    <p class="page__lead">Parsa étudie la détection de communautés dans les réseaux sociaux et complexes : trouver les groupes cachés dans un graphe, et juger s'ils sont réels, à l'aide d'outils issus de l'algorithmique et de la théorie des graphes. Il est étudiant à la maîtrise avec mémoire à l'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Université Concordia</a> à Montréal, sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>.</p>
-    <div class="hero-actions">
-      <a class="hero-btn hero-btn--primary" href="/files/FR_ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Télécharger le CV</a>
-      <a class="hero-btn hero-btn--ghost" href="/fr/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Me joindre</a>
+    <h1 class="display">Parsa Kamalipour</h1>
+    <p class="lead">Parsa étudie la détection de communautés dans les réseaux sociaux et complexes : trouver les groupes cachés dans un graphe, et juger s'ils sont réels, à l'aide d'outils issus de l'algorithmique et de la théorie des graphes. Il est étudiant à la maîtrise avec mémoire à l'<a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Université Concordia</a> à Montréal, sous la supervision du <a href="https://users.encs.concordia.ca/~haruty/">professeur Hovhannes Harutyunyan</a>.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/fr/recherche/">Recherche</a>
+      <a class="btn btn--secondary" href="/files/FR_ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Télécharger le CV</a>
     </div>
     <ProfileLinks emailLabel="Courriel" />
   </div>
@@ -29,59 +29,71 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
     <canvas role="img" aria-label="Un réseau aléatoire de 56 nœuds répartis en quatre groupes cachés. La propagation d'étiquettes colore chaque groupe à mesure qu'elle le trouve."></canvas>
     <figcaption>
       <span class="hero-graph__status" data-searching="La propagation d’étiquettes cherche des communautés…" data-found="La propagation d’étiquettes a trouvé {n} communautés." aria-live="polite">La propagation d’étiquettes cherche des communautés…</span>
-      <button type="button" class="hero-graph__again">Nouveau graphe</button>
+      <button type="button" class="hero-graph__again btn btn--secondary">Nouveau graphe</button>
     </figcaption>
   </figure>
 </section>
-<div class="home-cols">
-<section class="home-research">
-<h2 class="section-heading section-heading--first" id="recherche">Recherche</h2>
-<p>Son mémoire, <em><strong>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</strong></em> (achèvement prévu en 2027), part d’une idée simple : les membres d’une bonne communauté sont proches les uns des autres en distance de plus court chemin, comparativement au reste du réseau. Cela permet de détecter et d’évaluer des communautés sans étiquettes de référence. Ces travaux ont déjà donné <strong>Spider</strong>, un algorithme de détection de communautés en temps quasi linéaire qui combine des étapes locales et globales (<em>Computers</em>, 2026), et une étude, en premier auteur, de la <strong>modularité de distance géodésique moyenne pondérée (wGDM)</strong> combinée à la sparsification par Metric Backbone comme prétraitement pour Leiden (<em>IEEE SNAMS 2025</em>, présentée à Vienne). <a href="/fr/biographie/">Lire la biographie complète</a></p>
-<ul class="interest-tags" aria-label="Intérêts de recherche">
-  <li class="interest-tag">Théorie des graphes</li>
-  <li class="interest-tag">Algorithmes</li>
-  <li class="interest-tag">Théorie de la complexité</li>
-  <li class="interest-tag">Analyse de réseaux sociaux</li>
-  <li class="interest-tag">Détection de communautés</li>
-  <li class="interest-tag">Optimisation combinatoire</li>
-  <li class="interest-tag">Exploration de données</li>
-</ul>
-<h2 class="section-heading">Publications choisies</h2>
-<ul class="pub-list">
-  {pubs.map((doc) => (
-    <li><a class="plain-link" href={urlOf(doc)}>{doc.data.title}</a><span class="pub-list__venue">{doc.data.venue}, {doc.data.date.getUTCFullYear()}</span></li>
-  ))}
-</ul>
-<p class="news-list__more"><a href="/fr/publications/">Toutes les publications</a></p>
+
+<section class="bento" aria-label="Aperçu">
+  <article class="tile tile--research" data-tile="research">
+    <p class="eyebrow">Recherche</p>
+    <h2 class="tile__title"><a class="tile__link" href="/fr/recherche/">Geodesic-Compact Community Detection and Quality Assessment in Social Networks</a></h2>
+    <p>Mémoire, achèvement prévu en 2027. Les membres d’une bonne communauté sont proches les uns des autres en distance de plus court chemin, comparativement au reste du réseau.</p>
+    <ul class="chips" aria-label="Intérêts de recherche">
+      <li class="chip">Théorie des graphes</li>
+      <li class="chip">Algorithmes</li>
+      <li class="chip">Théorie de la complexité</li>
+      <li class="chip">Analyse de réseaux sociaux</li>
+      <li class="chip">Détection de communautés</li>
+      <li class="chip">Optimisation combinatoire</li>
+      <li class="chip">Exploration de données</li>
+    </ul>
+  </article>
+
+  <article class="tile" data-tile="publication">
+    <p class="eyebrow">Dernier article</p>
+    <h2 class="tile__title"><a class="tile__link" href={urlOf(pub)}>{pub.data.title}</a></h2>
+    <p class="tile__meta">{pub.data.venue}, {pub.data.date.getUTCFullYear()}</p>
+    <a class="tile__more" href="/fr/publications/">Toutes les publications</a>
+  </article>
+
+  <article class="tile tile--project" data-tile="project">
+    {project.image && <img class="tile__img" src={project.image.src} alt="" width="960" height="600" loading="lazy" decoding="async">}
+    <div class="tile__body">
+      <p class="eyebrow">Projet à la une</p>
+      <h2 class="tile__title"><a class="tile__link" href={urlOf(project.doc)}>{project.doc.data.title}</a></h2>
+      {project.doc.data.type && <ul class="chips"><li class="chip">{project.doc.data.type}</li></ul>}
+      <a class="tile__more" href="/fr/projets/">Tous les projets</a>
+    </div>
+  </article>
+
+  <article class="tile" data-tile="teaching">
+    <p class="eyebrow">Enseignement</p>
+    <h2 class="tile__title"><a class="tile__link" href="/fr/enseignement/">Auxiliaire d'enseignement, automne 2026</a></h2>
+    <ul class="chips" aria-label="Cours de la session">
+      <li class="chip">COEN 311</li><li class="chip">COEN 317</li><li class="chip">SOEN 363</li><li class="chip">COMP 339</li>
+    </ul>
+    <p>Lauréat du Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant, 2026.</p>
+    <a class="tile__more" href="/fr/enseignement/materiel/">Matériel de cours</a>
+  </article>
+
+  <article class="tile tile--news" data-tile="news">
+    <p class="eyebrow">Nouvelles</p>
+    <h2 class="tile__title"><a class="tile__link" href="/fr/nouvelles/">Nouvelles récentes</a></h2>
+    <ol class="news-mini">
+      <li><time datetime="2026-09">sept. 2026</time><span>Auxiliaire d'enseignement pour quatre cours cet automne : COEN 311, COEN 317, SOEN 363 et COMP 339.</span></li>
+      <li><time datetime="2026-05">mai 2026</time><span>Lauréat du <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong>, décerné par l'École de génie et d'informatique Gina-Cody.</span></li>
+      <li><time datetime="2026-02">févr. 2026</time><span>« Spider Community Detection » est publié dans <em>Computers</em> 15(2), article 83.</span></li>
+    </ol>
+  </article>
+
+  <article class="tile tile--contact" data-tile="contact">
+    <p class="eyebrow">Contact</p>
+    <h2 class="tile__title">Me joindre</h2>
+    <div class="tile__actions">
+      <a class="btn btn--primary" href="/fr/contact/">Contact</a>
+      <a class="btn btn--secondary" href="/fr/cv/">CV</a>
+    </div>
+  </article>
 </section>
-<section class="home-news">
-<h2 class="section-heading" id="nouvelles">Nouvelles récentes</h2>
-<ol class="news-list">
-  <li>
-    <time datetime="2026-09">sept. 2026</time>
-    <p>Auxiliaire d'enseignement pour quatre cours cet automne : COEN 311, COEN 317, SOEN 363 et COMP 339.</p>
-  </li>
-  <li>
-    <time datetime="2026-05">mai 2026</time>
-    <p>Lauréat du <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong>, décerné par l'École de génie et d'informatique Gina-Cody.</p>
-  </li>
-  <li>
-    <time datetime="2026-02">févr. 2026</time>
-    <p>« Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching » est publié dans <em>Computers</em> 15(2), article 83. <a href="https://doi.org/10.3390/computers15020083">Lire l'article</a></p>
-  </li>
-  <li>
-    <time datetime="2025-11">nov. 2025</time>
-    <p>« From Dense Graphs to Meaningful Communities » présenté à IEEE SNAMS 2025 à Vienne.</p>
-  </li>
-</ol>
-<p class="news-list__more"><a href="/fr/nouvelles/">Toutes les nouvelles</a></p>
-</section>
-</div>
-<dl class="stats-band" aria-label="Profil académique en un coup d'œil">
-  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Cours assistés</dt><dd class="stat-card__number">15+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Heures d'enseignement</dt><dd class="stat-card__number">1650+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Postes de recherche</dt><dd class="stat-card__number">3</dd></div>
-</dl>
-<p class="page__updated">Dernière mise à jour : {formatDate(new Date(), lang)}</p>
 </Single>

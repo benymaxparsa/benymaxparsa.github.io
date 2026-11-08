@@ -114,6 +114,34 @@ try {
     await page.close();
   }
 
+  // Homepage hero + bento
+  for (const path of ['/', '/fr/']) {
+    const page = await open(path);
+    const h = await page.evaluate(() => {
+      const hero = document.querySelector('.hero');
+      return {
+        avatar: !!hero?.querySelector('.hero__avatar img'),
+        h1: !!hero?.querySelector('h1'),
+        buttons: hero?.querySelectorAll('.hero__actions .btn').length,
+        canvas: !!hero?.querySelector('.hero-graph canvas'),
+        tiles: [...document.querySelectorAll('.bento > [data-tile]')].map((t) => t.dataset.tile).join(','),
+      };
+    });
+    check(`home: hero has avatar, h1, 2 buttons, graph canvas (${path})`, h.avatar && h.h1 && h.buttons === 2 && h.canvas, JSON.stringify(h));
+    check(`home: bento has 6 tiles in spec order (${path})`, h.tiles === 'research,publication,project,teaching,news,contact', h.tiles);
+    await page.close();
+  }
+  {
+    const page = await open('/');
+    await page.waitForFunction(() => /found \d+ communities/.test(document.querySelector('.hero-graph__status').textContent), { timeout: 10000 }).catch(() => {});
+    const sample = () => page.$eval('.hero-graph canvas', (c) => { const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let s = 0; for (let i = 0; i < d.length; i += 97) s = (s * 31 + d[i]) % 1e9; return s; });
+    const before = await sample();
+    await page.click('.theme-toggle');
+    await sleep(200);
+    check('home: graph recolours on theme toggle', (await sample()) !== before);
+    await page.close();
+  }
+
   // 6. Hero graph
   {
     const reduced = await open('/');

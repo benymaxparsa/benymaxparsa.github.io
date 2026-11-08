@@ -2,26 +2,26 @@
 import Single from '../layouts/Single.astro';
 import HomePhoto from '../components/HomePhoto.astro';
 import ProfileLinks from '../components/ProfileLinks.astro';
-import { docs, urlOf } from '../lib/urls';
-import { formatDate } from '../i18n';
+import { urlOf } from '../lib/urls';
+import { latestPublication, featuredProject } from '../lib/home';
+import '../styles/v4/home.css';
 
 const lang = 'en';
-const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
+const pub = await latestPublication(lang);
+const project = await featuredProject(lang);
 ---
 <Single title="Parsa Kamalipour" lang={lang} twin="/fr/" description="About me" classes="home" showTitle={false}>
-<section class="home-hero" aria-label="Introduction">
-  <div class="home-hero__text">
-    <div class="home-hero__id">
-      <HomePhoto alt="Portrait of Parsa Kamalipour" />
-      <div>
-        <h1 class="home-hero__name">Parsa Kamalipour</h1>
-        <p class="home-hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
-      </div>
+<section class="hero" aria-label="Introduction">
+  <div class="hero__text">
+    <div class="hero__id">
+      <span class="hero__avatar"><HomePhoto alt="Portrait of Parsa Kamalipour" /></span>
+      <p class="hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
     </div>
-    <p class="page__lead">Parsa studies community detection in social and complex networks: finding the groups hidden inside a graph, and judging whether they are real, with tools from algorithms and graph theory. He is a thesis-based master’s student at <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Concordia University</a> in Montréal, supervised by <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>.</p>
-    <div class="hero-actions">
-      <a class="hero-btn hero-btn--primary" href="/files/ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
-      <a class="hero-btn hero-btn--ghost" href="/contact/"><i class="fas fa-envelope" aria-hidden="true"></i> Get in touch</a>
+    <h1 class="display">Parsa Kamalipour</h1>
+    <p class="lead">Parsa studies community detection in social and complex networks: finding the groups hidden inside a graph, and judging whether they are real, with tools from algorithms and graph theory. He is a thesis-based master’s student at <a href="https://www.concordia.ca/ginacody/computer-science-software-eng.html">Concordia University</a> in Montréal, supervised by <a href="https://users.encs.concordia.ca/~haruty/">Professor Hovhannes Harutyunyan</a>.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/research/">Research</a>
+      <a class="btn btn--secondary" href="/files/ParsaKamalipour_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
     </div>
     <ProfileLinks />
   </div>
@@ -29,59 +29,71 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
     <canvas role="img" aria-label="A random network of 56 nodes in four hidden groups. Label propagation colours each group as it finds it."></canvas>
     <figcaption>
       <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities." aria-live="polite">Label propagation is looking for communities…</span>
-      <button type="button" class="hero-graph__again">New graph</button>
+      <button type="button" class="hero-graph__again btn btn--secondary">New graph</button>
     </figcaption>
   </figure>
 </section>
-<div class="home-cols">
-<section class="home-research">
-<h2 class="section-heading section-heading--first" id="research">Research</h2>
-<p>His thesis, <em><strong>Geodesic-Compact Community Detection and Quality Assessment in Social Networks</strong></em> (expected 2027), starts from a simple idea: the members of a good community are close to each other in shortest-path distance, compared with the rest of the network. This gives a way to find and judge communities without ground-truth labels. The work has so far produced <strong>Spider</strong>, a near-linear community detection algorithm that combines local and global steps (<em>Computers</em>, 2026), and a first-author study of the <strong>weighted-average Geodesic Distance Modularity (wGDM)</strong> with Metric Backbone sparsification as preprocessing for Leiden (<em>IEEE SNAMS 2025</em>, presented in Vienna). <a href="/biography/">Read the full biography</a></p>
-<ul class="interest-tags" aria-label="Research interests">
-  <li class="interest-tag">Graph theory</li>
-  <li class="interest-tag">Algorithms</li>
-  <li class="interest-tag">Complexity theory</li>
-  <li class="interest-tag">Social network analysis</li>
-  <li class="interest-tag">Community detection</li>
-  <li class="interest-tag">Combinatorial optimization</li>
-  <li class="interest-tag">Data mining</li>
-</ul>
-<h2 class="section-heading">Selected publications</h2>
-<ul class="pub-list">
-  {pubs.map((doc) => (
-    <li><a class="plain-link" href={urlOf(doc)}>{doc.data.title}</a><span class="pub-list__venue">{doc.data.venue}, {doc.data.date.getUTCFullYear()}</span></li>
-  ))}
-</ul>
-<p class="news-list__more"><a href="/publications/">All publications</a></p>
+
+<section class="bento" aria-label="Overview">
+  <article class="tile tile--research" data-tile="research">
+    <p class="eyebrow">Research</p>
+    <h2 class="tile__title"><a class="tile__link" href="/research/">Geodesic-Compact Community Detection and Quality Assessment in Social Networks</a></h2>
+    <p>Thesis, expected 2027. The members of a good community are close to each other in shortest-path distance, compared with the rest of the network.</p>
+    <ul class="chips" aria-label="Research interests">
+      <li class="chip">Graph theory</li>
+      <li class="chip">Algorithms</li>
+      <li class="chip">Complexity theory</li>
+      <li class="chip">Social network analysis</li>
+      <li class="chip">Community detection</li>
+      <li class="chip">Combinatorial optimization</li>
+      <li class="chip">Data mining</li>
+    </ul>
+  </article>
+
+  <article class="tile" data-tile="publication">
+    <p class="eyebrow">Latest paper</p>
+    <h2 class="tile__title"><a class="tile__link" href={urlOf(pub)}>{pub.data.title}</a></h2>
+    <p class="tile__meta">{pub.data.venue}, {pub.data.date.getUTCFullYear()}</p>
+    <a class="tile__more" href="/publications/">All publications</a>
+  </article>
+
+  <article class="tile tile--project" data-tile="project">
+    {project.image && <img class="tile__img" src={project.image.src} alt="" width="960" height="600" loading="lazy" decoding="async">}
+    <div class="tile__body">
+      <p class="eyebrow">Featured project</p>
+      <h2 class="tile__title"><a class="tile__link" href={urlOf(project.doc)}>{project.doc.data.title}</a></h2>
+      {project.doc.data.type && <ul class="chips"><li class="chip">{project.doc.data.type}</li></ul>}
+      <a class="tile__more" href="/projects/">All projects</a>
+    </div>
+  </article>
+
+  <article class="tile" data-tile="teaching">
+    <p class="eyebrow">Teaching</p>
+    <h2 class="tile__title"><a class="tile__link" href="/teaching/">Graduate teaching assistant, Fall 2026</a></h2>
+    <ul class="chips" aria-label="Courses this term">
+      <li class="chip">COEN 311</li><li class="chip">COEN 317</li><li class="chip">SOEN 363</li><li class="chip">COMP 339</li>
+    </ul>
+    <p>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant, 2026.</p>
+    <a class="tile__more" href="/teaching/materials/">Course materials</a>
+  </article>
+
+  <article class="tile tile--news" data-tile="news">
+    <p class="eyebrow">News</p>
+    <h2 class="tile__title"><a class="tile__link" href="/news/">Recent news</a></h2>
+    <ol class="news-mini">
+      <li><time datetime="2026-09">Sep 2026</time><span>Graduate teaching assistant for four courses this fall: COEN 311, COEN 317, SOEN 363 and COMP 339.</span></li>
+      <li><time datetime="2026-05">May 2026</time><span>Received the <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong> from the Gina Cody School of Engineering and Computer Science.</span></li>
+      <li><time datetime="2026-02">Feb 2026</time><span>“Spider Community Detection” is published in <em>Computers</em> 15(2), article 83.</span></li>
+    </ol>
+  </article>
+
+  <article class="tile tile--contact" data-tile="contact">
+    <p class="eyebrow">Contact</p>
+    <h2 class="tile__title">Get in touch</h2>
+    <div class="tile__actions">
+      <a class="btn btn--primary" href="/contact/">Contact</a>
+      <a class="btn btn--secondary" href="/cv/">CV</a>
+    </div>
+  </article>
 </section>
-<section class="home-news">
-<h2 class="section-heading" id="news">Recent news</h2>
-<ol class="news-list">
-  <li>
-    <time datetime="2026-09">Sep 2026</time>
-    <p>Graduate teaching assistant for four courses this fall: COEN 311, COEN 317, SOEN 363 and COMP 339.</p>
-  </li>
-  <li>
-    <time datetime="2026-05">May 2026</time>
-    <p>Received the <strong>Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant</strong> from the Gina Cody School of Engineering and Computer Science.</p>
-  </li>
-  <li>
-    <time datetime="2026-02">Feb 2026</time>
-    <p>“Spider Community Detection: Seeded Geodesic Expansion with Modularity-Guided Refinement and Greedy Merge Matching” is published in <em>Computers</em> 15(2), article 83. <a href="https://doi.org/10.3390/computers15020083">Read the paper</a></p>
-  </li>
-  <li>
-    <time datetime="2025-11">Nov 2025</time>
-    <p>“From Dense Graphs to Meaningful Communities” presented at IEEE SNAMS 2025 in Vienna.</p>
-  </li>
-</ol>
-<p class="news-list__more"><a href="/news/">All news</a></p>
-</section>
-</div>
-<dl class="stats-band" aria-label="Academic profile at a glance">
-  <div class="stat-card"><dt class="stat-card__label">Publications</dt><dd class="stat-card__number">4</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Courses as TA</dt><dd class="stat-card__number">15+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Teaching hours</dt><dd class="stat-card__number">1650+</dd></div>
-  <div class="stat-card"><dt class="stat-card__label">Research positions</dt><dd class="stat-card__number">3</dd></div>
-</dl>
-<p class="page__updated">Last updated {formatDate(new Date(), lang)}</p>
 </Single>
