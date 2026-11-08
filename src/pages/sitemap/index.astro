@@ -1,19 +1,15 @@
 ---
 import Archive from '../../layouts/Archive.astro';
-import { nav } from '../../i18n';
+import { navLinks } from '../../i18n';
 import { COLLECTIONS, docs, urlOf } from '../../lib/urls';
 
 const pages = [
   { url: '/', title: 'Parsa Kamalipour' },
-  ...nav.en,
-  { url: '/teaching/materials/', title: 'Course Materials for Students' },
-  { url: '/gallery/', title: 'Gallery & Images' },
+  ...navLinks('en'),
   { url: '/terms/', title: 'Terms and Privacy Policy' },
   { url: '/sitemap/', title: 'Sitemap' },
   { url: '/fr/', title: 'Parsa Kamalipour' },
-  ...nav.fr,
-  { url: '/fr/enseignement/materiel/', title: 'Matériel de cours pour les étudiants' },
-  { url: '/fr/galerie/', title: 'Galerie d’images' },
+  ...navLinks('fr'),
 ];
 const sorted = [...COLLECTIONS].sort();
 const collections = await Promise.all(sorted.map(async (name) => ({ name, items: await docs(name) })));

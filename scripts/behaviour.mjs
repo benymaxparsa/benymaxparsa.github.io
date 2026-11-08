@@ -20,47 +20,103 @@ async function open(path, { width = 1280, motion = 'reduce', storage = {} } = {}
 const active = (page) => page.evaluate(() => document.activeElement?.className ?? '');
 
 try {
-  // 1. Overflow menu
+  // 1. Grouped navigation
   {
-    const page = await open('/', { width: 900 });
-    const toggle = '.greedy-nav__toggle';
-    const visible = await page.$eval(toggle, (b) => !b.classList.contains('hidden'));
-    check('nav: overflow toggle shown at 900px', visible);
-    await page.click(toggle);
-    check('nav: click opens menu', await page.$eval(toggle, (b) => b.getAttribute('aria-expanded') === 'true') && await page.$eval('.hidden-links', (m) => !m.classList.contains('hidden') && m.children.length > 0));
+    for (const path of ['/', '/fr/']) {
+      const page = await open(path, { width: 1280 });
+      check(`nav: 5 groups in pill (${path})`, await page.$$eval('#site-nav .nav-group', (g) => g.length) === 5);
+      await page.close();
+    }
+    const page = await open('/', { width: 1280 });
+    const btn = '#site-nav .nav-group:first-child > button';
+    await page.click(btn);
+    check('nav: dropdown opens on click', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'true')
+      && await page.$eval(btn, (b) => { const p = document.getElementById(b.getAttribute('aria-controls')); return !p.hidden && p.querySelectorAll('a').length === 3; }));
     await page.keyboard.press('Escape');
-    check('nav: Esc closes, focus on toggle, aria-expanded=false',
-      await page.$eval(toggle, (b) => b.getAttribute('aria-expanded') === 'false') && (await active(page)).includes('greedy-nav__toggle'));
-    await page.click(toggle);
-    await page.mouse.click(200, 600);
-    check('nav: outside click closes', await page.$eval('.hidden-links', (m) => m.classList.contains('hidden')));
+    check('nav: Esc closes and returns focus', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false' && document.activeElement === b));
+    await page.click(btn);
+    for (let i = 0; i < 4; i++) await page.keyboard.press('Tab');
+    check('nav: tabbing out closes dropdown', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false'));
+    await page.click(btn);
+    await page.mouse.click(200, 700);
+    check('nav: outside click closes', await page.$eval(btn, (b) => b.getAttribute('aria-expanded') === 'false'));
     await page.close();
+    const fr = await open('/fr/', { width: 1024 });
+    check('nav: FR fits at 1024px', await fr.$eval('.nav-pill', (n) => n.scrollWidth <= n.clientWidth + 1 && n.getBoundingClientRect().height < 80));
+    await fr.close();
+    const phone = await open('/', { width: 390 });
+    await phone.click('.nav-menu-btn');
+    check('nav: phone overlay', await phone.$eval('#site-menu', (m) => { const r = m.getBoundingClientRect(); return !m.hidden && r.width >= innerWidth - 1 && r.height >= innerHeight - 1 && m.querySelectorAll('a').length === 15; }));
+    await phone.keyboard.press('Escape');
+    check('nav: phone overlay closes on Esc', await phone.$eval('#site-menu', (m) => m.hidden) && await phone.$eval('.nav-menu-btn', (b) => document.activeElement === b));
+    await phone.close();
+    // Review fixes: menu focus + inert page, one Esc closes one layer, highlight survives resize
+    const menuFocus = await open('/', { width: 390 });
+    await menuFocus.click('.nav-menu-btn');
+    check('nav: phone menu takes focus and makes the page inert', await menuFocus.evaluate(() =>
+      document.getElementById('site-menu').contains(document.activeElement) && document.querySelector('.initial-content').inert && document.getElementById('footer').inert));
+    await menuFocus.keyboard.press('Escape');
+    check('nav: closing the menu restores the page', await menuFocus.evaluate(() => !document.querySelector('.initial-content').inert && !document.getElementById('footer').inert));
+    await menuFocus.click('.nav-menu-btn');
+    await menuFocus.click('.search__toggle');
+    await menuFocus.keyboard.type('graph');
+    await menuFocus.keyboard.press('Escape');
+    check('nav: Esc in search leaves the phone menu open', await menuFocus.evaluate(() => !document.querySelector('dialog.search-dialog').open && !document.getElementById('site-menu').hidden));
+    await menuFocus.close();
+    const resize = await open('/biography/', { width: 500 });
+    await resize.setViewport({ width: 1300, height: 900 });
+    await sleep(400);
+    check('nav: highlight re-measured after resize', await resize.$eval('.nav-highlight', (h) => h.classList.contains('is-on') && h.getBoundingClientRect().width > 20));
+    await resize.close();
+    // Minor fixes: dot/underline contrast, no-JS dropdowns, dropdown state on shrink
+    const contrastOf = () => {
+      const rgb = (c) => (c.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
+      const lum = ([r, g, b]) => [r, g, b].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }).reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
+      const ratio = (a, b) => { const [x, y] = [lum(rgb(a)), lum(rgb(b))].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+      const bgOf = (el) => { for (let e = el.parentElement; e; e = e.parentElement) { const c = getComputedStyle(e).backgroundColor; if (!/rgba\(0, 0, 0, 0\)|transparent/.test(c)) return c; } return 'rgb(255,255,255)'; };
+      const dots = [...document.querySelectorAll('.nav-group .dot, .footer-col__title .dot')].map((d) => ratio(getComputedStyle(d).backgroundColor, bgOf(d)));
+      const btn = document.querySelector('#site-nav .nav-group:first-child > button');
+      btn.click();
+      const cur = document.querySelector('.nav-panel a[aria-current]');
+      const underline = cur ? ratio(getComputedStyle(cur).textDecorationColor, bgOf(cur)) : 99;
+      btn.click();
+      return Math.min(...dots, underline);
+    };
+    for (const theme of ['light', 'dark']) {
+      const page = await open('/publications/', { width: 1280, storage: { theme } });
+      const min = await page.evaluate(contrastOf);
+      check(`nav: dots and current underline ≥ 3:1 (${theme})`, min >= 3, min.toFixed(2));
+      await page.close();
+    }
+    const nojsNav = await browser.newPage();
+    await nojsNav.setJavaScriptEnabled(false);
+    await nojsNav.setViewport({ width: 1280, height: 900 });
+    await nojsNav.goto(base + '/', { waitUntil: 'load' });
+    await nojsNav.focus('#site-nav .nav-group:first-child > button');
+    check('nav: dropdown opens on focus without JS', await nojsNav.$eval('#site-nav .nav-group:first-child .nav-panel', (p) => p.checkVisibility()));
+    await nojsNav.close();
+    const shrink = await open('/', { width: 1280 });
+    await shrink.click('#site-nav .nav-group:first-child > button');
+    await shrink.setViewport({ width: 800, height: 900 });
+    await sleep(200);
+    check('nav: open dropdown resets when the nav collapses', await shrink.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-expanded') === 'false'));
+    await shrink.close();
+    const pubs = await open('/publications/', { width: 1280 });
+    check('nav: current group marked', await pubs.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-current') === 'true'));
+    await pubs.close();
   }
 
-  // 2. Language switcher
+  // 2. Language switch (a plain link to the twin page)
   {
     const page = await open('/teaching/Fall-2021-DA');
-    check('lang: accessible name contains visible EN', await page.$eval('.lang-current', (b) => /^EN\b/.test(b.getAttribute('aria-label'))));
     check('lang: links to the doc twin', await page.$eval('.lang-switch-link', (a) => a.getAttribute('href') === '/fr/enseignement/Fall-2021-DA'));
-    await page.hover('.lang-current');
-    check('lang: hover does not open', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    check('lang: click opens', await page.$eval('.lang-dropdown', (d) => d.classList.contains('open')));
-    await page.keyboard.press('Escape');
-    check('lang: Esc closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    await page.mouse.click(200, 600);
-    check('lang: outside click closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
+    check('lang: accessible name names the other language', await page.$eval('.lang-switch-link', (a) => /français/i.test(a.getAttribute('aria-label'))));
     await Promise.all([page.waitForNavigation(), page.click('.lang-switch-link')]);
     check('lang: switch lands on FR twin and stores preference',
       page.url().endsWith('/fr/enseignement/Fall-2021-DA') && await page.evaluate(() => localStorage.getItem('preferredLanguage') === 'fr'));
     await page.goto(base + '/', { waitUntil: 'networkidle0' });
     check('lang: / redirects to /fr/ when preference is fr', new URL(page.url()).pathname === '/fr/');
     await page.close();
-    const fr = await open('/fr/enseignement/');
-    check('lang: FR accessible name contains FR', await fr.$eval('.lang-current', (b) => /^FR\b/.test(b.getAttribute('aria-label'))));
-    await fr.close();
   }
 
   // 3. Search
@@ -68,15 +124,15 @@ try {
     const page = await open(path);
     await page.keyboard.press('/');
     await sleep(200);
-    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('.search-content', (p) => p.classList.contains('is--visible')) && await page.evaluate(() => document.activeElement?.id === 'search'));
+    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('dialog.search-dialog', (d) => d.open) && await page.evaluate(() => document.activeElement?.id === 'search'));
     await page.keyboard.type(word);
-    await page.waitForFunction(() => document.querySelectorAll('#results .archive__item-title a').length > 0, { timeout: 5000 }).catch(() => {});
-    const urls = await page.$$eval('#results .archive__item-title a', (as) => as.map((a) => new URL(a.href).pathname));
+    await page.waitForFunction(() => document.querySelectorAll('#results a.search-hit').length > 0, { timeout: 5000 }).catch(() => {});
+    const urls = await page.$$eval('#results a.search-hit', (as) => as.map((a) => new URL(a.href).pathname));
     const inLang = urls.every((u) => (lang === 'fr' ? /^\/fr\/|-fr\/$/.test(u) : !/^\/fr\/|-fr\/$/.test(u)));
     check(`search ${lang}: results only in page language`, urls.length > 0 && inLang, `${urls.length} results: ${urls.slice(0, 3).join(', ')}`);
     await page.keyboard.press('Escape');
     check(`search ${lang}: Esc closes, focus returns to toggle`,
-      await page.$eval('.search-content', (p) => !p.classList.contains('is--visible')) && (await active(page)).includes('search__toggle'));
+      await page.$eval('dialog.search-dialog', (d) => !d.open) && (await active(page)).includes('search__toggle'));
     await page.close();
   }
 
@@ -102,11 +158,93 @@ try {
     const page = await open('/');
     await page.click('.theme-toggle');
     check('theme: toggle sets data-theme and storage', await page.evaluate(() => document.documentElement.dataset.theme === 'dark' && localStorage.getItem('theme') === 'dark'));
-    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#121821'));
+    check('theme: theme-color meta updated', await page.$eval('meta[name="theme-color"]', (m) => m.content === '#111315'));
     await page.evaluateOnNewDocument(() => document.addEventListener('DOMContentLoaded', () => { window.__themeAtDcl = document.documentElement.dataset.theme; }));
     await page.goto(base + '/publications/', { waitUntil: 'networkidle0' });
     check('theme: applied before first paint on next page', await page.evaluate(() => window.__themeAtDcl === 'dark'));
     await page.close();
+  }
+
+  // Homepage hero + bento
+  for (const path of ['/', '/fr/']) {
+    const page = await open(path);
+    const h = await page.evaluate(() => {
+      const hero = document.querySelector('.hero');
+      return {
+        avatar: !!hero?.querySelector('.hero__avatar img'),
+        legend: hero?.querySelectorAll('.legend a').length,
+        h1: !!hero?.querySelector('h1'),
+        buttons: hero?.querySelectorAll('.hero__actions .btn').length,
+        canvas: !!hero?.querySelector('.hero-graph canvas'),
+        tiles: [...document.querySelectorAll('.slab[data-community]')].map((t) => t.dataset.community).join(','),
+      };
+    });
+    check(`home: hero has avatar, h1, 2 buttons, graph canvas, 4-colour legend (${path})`, h.avatar && h.h1 && h.buttons === 2 && h.canvas && h.legend === 4, JSON.stringify(h));
+    check(`home: one slab per community in nav order (${path})`, h.tiles === 'research,teaching,about,news', h.tiles);
+    await page.close();
+  }
+  {
+    const page = await open('/');
+    await page.waitForFunction(() => /found \d+ communities/.test(document.querySelector('.hero-graph__status').textContent), { timeout: 10000 }).catch(() => {});
+    const sample = () => page.$eval('.hero-graph canvas', (c) => { const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let s = 0; for (let i = 0; i < d.length; i += 97) s = (s * 31 + d[i]) % 1e9; return s; });
+    const before = await sample();
+    await page.click('.theme-toggle');
+    await sleep(200);
+    check('home: graph recolours on theme toggle', (await sample()) !== before);
+    await page.close();
+  }
+
+  // Inner pages open with a title slab in their community's colour
+  {
+    const want = { '/publications/': 'teal', '/projects/A-star/': 'teal', '/teaching/': 'lavender', '/teaching/materials/': 'lavender', '/biography/': 'coral', '/fr/biographie/': 'coral', '/news/': 'ochre', '/contact/': 'ink', '/cv/': 'ink' };
+    const wrong = [];
+    for (const [path, tone] of Object.entries(want)) {
+      const page = await open(path);
+      const ok = await page.evaluate((tone) => { const h = document.querySelector('.page-head'); return !!h && h.classList.contains('slab') && h.classList.contains(`tone-${tone}`) && !!h.querySelector('h1'); }, tone);
+      if (!ok) wrong.push(path);
+      await page.close();
+    }
+    check('pages: title slab in the community colour', wrong.length === 0, wrong.join(', '));
+  }
+
+  // Project listing: photo cards, newest featured first
+  for (const [path, n] of [['/projects/', 16], ['/fr/projets/', 16]]) {
+    const page = await open(path);
+    const r = await page.evaluate(() => {
+      const cards = [...document.querySelectorAll('.project-card')];
+      return { count: cards.length, featured: cards[0]?.classList.contains('project-card--featured'), imgs: cards.filter((c) => c.querySelector('img[src]')).length, links: cards.filter((c) => c.querySelector('a[href]')).length };
+    });
+    check(`projects: ${n} photo cards, first featured (${path})`, r.count === n && r.featured && r.links === n && r.imgs === n, JSON.stringify(r));
+    await page.close();
+  }
+
+  // Motion: community slabs reveal on scroll; never hidden without motion or JS
+  {
+    const opacities = (page) => page.$$eval('.community', (els) => els.map((e) => +getComputedStyle(e).opacity));
+    const reduced = await open('/', { motion: 'reduce' });
+    check('motion: reduced shows everything', (await opacities(reduced)).every((o) => o === 1));
+    await reduced.close();
+    const moving = await open('/', { motion: 'no-preference' });
+    const last = await moving.$$eval('.community', (els) => els.length - 1);
+    const before = (await opacities(moving))[last];
+    await moving.$$eval('.community', (els) => els.at(-1).scrollIntoView({ block: 'center' }));
+    await sleep(900);
+    const after = (await opacities(moving))[last];
+    check('motion: reveals on scroll', before < 1 && after === 1, `before ${before}, after ${after}`);
+    await moving.close();
+    const nojs = await browser.newPage();
+    await nojs.setJavaScriptEnabled(false);
+    await nojs.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'no-preference' }]);
+    await nojs.goto(base + '/', { waitUntil: 'load' });
+    check('motion: no JS shows everything', (await opacities(nojs)).every((o) => o === 1));
+    await nojs.close();
+    const print = await open('/', { motion: 'no-preference' });
+    await print.emulateMediaType('print');
+    check('motion: print shows every slab', (await opacities(print)).every((o) => o === 1));
+    await print.close();
+    const frHome = await open('/fr/');
+    check('fr: homepage uses typographic apostrophes', await frHome.$eval('main, #main', (m) => !/\p{L}'\p{L}/u.test(m.innerText + [...m.querySelectorAll('[aria-label]')].map((e) => e.getAttribute('aria-label')).join(' '))));
+    await frHome.close();
   }
 
   // 6. Hero graph
@@ -130,13 +268,25 @@ try {
     await page.close();
   }
 
+  // Footer
+  for (const path of ['/', '/fr/']) {
+    const page = await open(path);
+    const f = await page.evaluate(() => ({
+      cols: document.querySelectorAll('.footer-cols > *').length,
+      social: document.querySelectorAll('.footer-social a').length,
+      line: document.querySelector('.footer-line')?.textContent.trim(),
+    }));
+    check(`footer: 4 link columns + socials (${path})`, f.cols === 4 && f.social === 9 && !!f.line, JSON.stringify(f));
+    await page.close();
+  }
+
   // 7-13. Smaller features
   {
     const page = await open('/teaching/');
     const want = await page.evaluate(() => { const now = new Date(); const m = (now.getFullYear() - 2024) * 12 + (now.getMonth() + 1 - 9) + 1; const y = Math.floor(m / 12), mo = m % 12; return [y && `${y} ${y > 1 ? 'yrs' : 'yr'}`, mo && `${mo} ${mo > 1 ? 'mos' : 'mo'}`].filter(Boolean).join(' '); });
     check('duration: correct for today', await page.$eval('.teaching-duration[data-start]', (e) => e.textContent) === want, want);
     await page.evaluate(() => window.scrollTo(0, 1200)); await sleep(400);
-    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat(b.style.width) > 0));
+    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat((b.style.transform.match(/scaleX\(([^)]+)\)/) || [])[1]) > 0));
     await page.close();
     const contact = await open('/contact/');
     const ext = await contact.$$eval('a.contact-link[rel~="me"][href^="https://github.com"]', (as) => as.map((a) => [a.target, a.rel, getComputedStyle(a, '::after').content]));
@@ -175,23 +325,23 @@ try {
     for (const w of widths) {
       const page = await open(path, { width: w });
       const res = await page.evaluate(() => {
-        const sel = ['.site-logo', '.site-title', '.visible-links', '.language-switcher', '.theme-toggle', '.search__toggle', '.greedy-nav__toggle'];
-        const boxes = sel.map((s) => [s, document.querySelector(s)]).filter(([, e]) => e && getComputedStyle(e).display !== 'none' && !e.classList.contains('hidden')).map(([s, e]) => [s, e.getBoundingClientRect()]);
+        const pill = document.querySelector('.nav-pill');
+        const kids = [...pill.querySelectorAll('.nav-brand, .nav-group, .nav-tools > *, .nav-menu-btn')].filter((e) => e.checkVisibility());
         const problems = [];
-        for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
-          const [a, ra] = boxes[i], [b, rb] = boxes[j];
-          if (ra.width && rb.width && ra.left < rb.right - 1 && rb.left < ra.right - 1 && ra.top < rb.bottom - 1 && rb.top < ra.bottom - 1) problems.push(`${a} overlaps ${b}`);
-        }
-        const vl = document.querySelector('.visible-links').getBoundingClientRect();
-        for (const li of document.querySelectorAll('.visible-links > li')) {
-          const r = li.getBoundingClientRect();
-          if (r.right > vl.right + 1 || r.left < vl.left - 1) problems.push(`clipped nav item ${li.textContent.trim()}`);
+        const pr = pill.getBoundingClientRect();
+        for (let i = 0; i < kids.length; i++) {
+          const a = kids[i].getBoundingClientRect();
+          if (a.right > pr.right + 1 || a.left < pr.left - 1) problems.push(`clipped ${kids[i].className}`);
+          for (let j = i + 1; j < kids.length; j++) {
+            const b = kids[j].getBoundingClientRect();
+            if (a.left < b.right - 1 && b.left < a.right - 1 && a.top < b.bottom - 1 && b.top < a.bottom - 1) problems.push(`${kids[i].className} overlaps ${kids[j].className}`);
+          }
         }
         if (document.documentElement.scrollWidth > innerWidth) problems.push('page overflows');
-        return { problems, height: document.querySelector('.masthead').getBoundingClientRect().height };
+        return { problems, height: pr.height };
       });
       if (res.problems.length) failures.push(`${path} @${w}: ${res.problems.join('; ')}`);
-      if (res.height > 80) failures.push(`${path} @${w}: header ${res.height}px tall`);
+      if (res.height > 72) failures.push(`${path} @${w}: header ${res.height}px tall`);
       await page.close();
     }
   }

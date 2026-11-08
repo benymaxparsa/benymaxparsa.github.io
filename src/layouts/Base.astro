@@ -1,16 +1,17 @@
 ---
 import { smart } from '../lib/text';
-import '@fontsource-variable/schibsted-grotesk';
-import '@fontsource-variable/source-serif-4/opsz.css';
-import '@fontsource-variable/source-serif-4/opsz-italic.css';
-import groteskFont from '@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2?url';
-import serifFont from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-opsz-normal.woff2?url';
-import '../styles/site.css';
+import '@fontsource-variable/bricolage-grotesque/opsz.css';
+import displayFont from '@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-opsz-normal.woff2?url';
+import '../styles/v4/tokens.css';
+import '../styles/v4/base.css';
+import '../styles/v4/nav.css';
+import '../styles/v4/footer.css';
+import '../styles/v4/doc.css';
+import '../styles/v4/overlays.css';
 import '../styles/icons.css';
-import '../styles/additions.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
-import { ui, type Lang } from '../i18n';
+import { ui, toneOf, type Lang } from '../i18n';
 import { site } from '../lib/site';
 import { pagePath } from '../lib/paths';
 
@@ -40,7 +41,7 @@ const frUrl = new URL(lang === 'fr' ? path : twin, site.url).href;
 const image = new URL(site.ogImage, site.url).href;
 ---
 <!doctype html>
-<html lang={t.htmlLang} class="no-js">
+<html lang={t.htmlLang} class="no-js" style={`--tone: var(--${toneOf(path, lang) === 'ink' ? 'slab-ink' : toneOf(path, lang)}); --tone-line: var(--${toneOf(path, lang)}-line)`}>
   <head>
     <meta charset="utf-8">
     <title>{seoTitle}</title>
@@ -82,11 +83,10 @@ const image = new URL(site.ogImage, site.url).href;
         try { if (localStorage.getItem('preferredLanguage') === 'fr') location.replace('/fr/'); } catch (e) {}
       </script>
     )}
-    <!-- The two faces every first screen uses; fetching them early keeps text from reflowing -->
-    <link rel="preload" href={groteskFont} as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin>
-    <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1b2230" media="(prefers-color-scheme: dark)">
+    <!-- The one face every screen uses; fetching it early keeps text from reflowing -->
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin>
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -127,11 +127,9 @@ const image = new URL(site.ogImage, site.url).href;
       <div id="results" class="search-dialog__results" aria-live="polite"></div>
     </dialog>
 
-    <div id="footer" class="page__footer">
-      <footer>
-        <Footer lang={lang} />
-      </footer>
-    </div>
+    <footer id="footer" class="site-footer">
+      <Footer lang={lang} twin={twin} />
+    </footer>
 
     <dialog class="lightbox" aria-label={t.lightbox}>
       <img class="lightbox__img" alt="">

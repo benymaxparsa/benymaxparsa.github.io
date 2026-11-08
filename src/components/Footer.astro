@@ -1,24 +1,45 @@
 ---
-import { ui, type Lang } from '../i18n';
+import { nav, ui, type Lang } from '../i18n';
 import { site } from '../lib/site';
 
-interface Props { lang: Lang }
-const t = ui[Astro.props.lang];
+interface Props { lang: Lang; twin: string }
+const { lang, twin } = Astro.props;
+const t = ui[lang];
+const other = lang === 'en' ? 'fr' : 'en';
+const columns = nav[lang].filter((g) => g.items);
+const news = nav[lang].find((g) => g.url)!;
+const contact = columns.at(-1)!.items!.find((l) => /contact/.test(l.url))!;
+const socials = [
+  ...site.footerLinks.map((l) => ({ ...l, rel: 'nofollow noopener noreferrer' })),
+  { label: 'Mastodon', icon: 'fab fa-fw fa-mastodon', url: 'https://mastodon.social/@parsakamalipour', rel: 'me' },
+];
 ---
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    <li><strong>{t.follow}</strong></li>
-    {site.footerLinks.map((link) => (
-      <li><a href={link.url} rel="nofollow noopener noreferrer"><i class={link.icon} aria-hidden="true"></i> {link.label}</a></li>
+<div class="footer-inner slab tone-ink">
+  <div class="footer-top">
+    <p class="footer-line">{t.footerLine}</p>
+    <a class="btn btn--primary" href={contact.url}>{t.footerCta}</a>
+  </div>
+  <nav class="footer-cols" aria-label={t.footerNav}>
+    {columns.map((g) => (
+      <div>
+        <h2 class="footer-col__title"><span class={`dot tone-${g.tone}`} aria-hidden="true"></span>{g.title}</h2>
+        <ul>{g.items!.map((l) => <li><a href={l.url}>{l.title}</a></li>)}</ul>
+      </div>
     ))}
-    <li><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> <a rel="me" href="https://mastodon.social/@parsakamalipour">Mastodon</a> </li>
+  </nav>
+  <ul class="footer-social" aria-label={t.follow}>
+    {socials.map((s) => (
+      <li><a href={s.url} rel={s.rel} aria-label={s.label} title={s.label}><i class={s.icon} aria-hidden="true"></i></a></li>
+    ))}
   </ul>
+  <div class="footer-bottom">
+    <p>&copy; {new Date().getFullYear()} {site.author} · {t.licence}</p>
+    <p>
+      <a href={news.url}>{news.title}</a>{' · '}
+      <a href={twin} class="lang-switch-link" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'}>{t.langOtherText}</a>
+    </p>
+    <p class="footer-made">
+      {t.madeWith}{' '}<svg class="footer-heart" viewBox="0 0 24 24" role="img" aria-label={t.love}><path d="M12 20.7 10.6 19.4C5.4 14.7 2 11.6 2 7.8 2 4.7 4.4 2.3 7.5 2.3c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-8.6 11.6Z"/></svg>{' '}{t.madeFrom} <img class="flag" src="/images/flags/canada.svg" alt="Canada" width="24" height="12" loading="lazy">, Montréal, Québec <img class="flag" src="/images/flags/quebec.svg" alt="Québec" width="18" height="12" loading="lazy">
+    </p>
+  </div>
 </div>
-
-<p class="page__footer-made">
-  {t.madeWith}
-  <svg class="page__footer-heart" viewBox="0 0 24 24" role="img" aria-label={t.love}><path d="M12 20.7 10.6 19.4C5.4 14.7 2 11.6 2 7.8 2 4.7 4.4 2.3 7.5 2.3c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-8.6 11.6Z"/></svg>
-  {t.madeFrom} <img class="flag" src="/images/flags/canada.svg" alt="Canada" width="24" height="12" loading="lazy">, Montréal, Québec <img class="flag" src="/images/flags/quebec.svg" alt="Québec" width="18" height="12" loading="lazy">
-</p>
-
-<div class="page__footer-copyright">&copy; {new Date().getFullYear()} {site.author}. {t.poweredBy} <a href="https://astro.build" rel="nofollow">Astro</a>.</div>

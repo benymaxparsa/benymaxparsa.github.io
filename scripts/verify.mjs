@@ -6,7 +6,7 @@ import { join } from 'node:path';
 
 const [cmd = 'all', base = 'http://localhost:4321', outDir = 'docs/migration/report'] = process.argv.slice(2);
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const SHOT_PAGES = ['/', '/teaching/', '/publications/', '/projects/CommunityGNN/', '/cv/', '/contact/', '/fr/'];
+const SHOT_PAGES = ['/', '/teaching/', '/publications/', '/projects/', '/projects/CommunityGNN/', '/teaching/materials/', '/cv/', '/contact/', '/fr/', '/fr/projets/'];
 mkdirSync(outDir, { recursive: true });
 
 async function sitemapUrls() {
@@ -110,6 +110,7 @@ function pageAudit(theme) {
   if (theme === 'dark') {
     for (const el of document.querySelectorAll('body *')) {
       if (/^(IMG|VIDEO|CANVAS|IFRAME|PICTURE|svg|path)$/.test(el.tagName)) continue;
+      if (el.closest('.slab, .btn, .cv-btn, .hero-btn, .news-entry h4')) continue; // community slabs and light pill buttons are bright in dark mode by design
       if (getComputedStyle(el).maskImage !== 'none') continue; // mask icons paint currentColor by design
       const c = parse(getComputedStyle(el).backgroundColor);
       const r = el.getBoundingClientRect();

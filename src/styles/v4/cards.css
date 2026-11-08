@@ -1,0 +1,30 @@
+/* v4 project photo cards (ProjectCard.astro) */
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 8px; }
+.project-card { position: relative; display: flex; flex-direction: column; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); }
+.project-card__media { aspect-ratio: 16 / 10; overflow: hidden; background: color-mix(in srgb, var(--tone) 18%, var(--surface)); }
+.project-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.project-card__body { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 22px 26px 26px; }
+.project-card__title { margin: 0; font-size: clamp(20px, .5vw + 17px, 24px); line-height: 1.2; letter-spacing: -0.02em; }
+.project-card__title a { text-decoration: none; }
+.project-card__title a::after { content: ""; position: absolute; inset: 0; }
+.project-card__title a:focus-visible { outline: none; }
+.project-card:focus-within { outline: 2.5px solid var(--focus); outline-offset: 3px; }
+.project-card__meta { margin: 0; color: var(--muted); font-size: 15px; }
+.project-card .chips { margin: 6px 0 0; }
+
+.project-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.3fr 1fr; background: var(--tone); color: var(--on-teal); --ink: var(--on-teal); --muted: color-mix(in srgb, var(--on-teal) 78%, transparent); --focus: var(--page-ink); }
+.project-card--featured .project-card__media { aspect-ratio: auto; min-height: 340px; }
+.project-card--featured .project-card__body { justify-content: center; padding: 40px; }
+.project-card--featured .project-card__title { font-size: clamp(26px, 1.4vw + 16px, 36px); font-weight: 800; letter-spacing: -0.03em; }
+.project-card--featured .chip { background: color-mix(in srgb, var(--on-teal) 16%, transparent); color: var(--on-teal); }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card__media img { transition: transform .5s var(--ease); }
+  .project-card:hover .project-card__media img { transform: scale(1.04); }
+}
+@media (max-width: 767px) {
+  .project-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-card--featured { grid-template-columns: 1fr; }
+  .project-card--featured .project-card__media { min-height: 0; aspect-ratio: 16 / 10; }
+  .project-card--featured .project-card__body { padding: 24px; }
+}

@@ -1,0 +1,21 @@
+---
+// A project as a photo card: first image of the write-up, title, year and type.
+import { formatDate, type Lang } from '../i18n';
+import { urlOf, type Doc } from '../lib/urls';
+import { firstImage } from '../lib/images';
+
+interface Props { doc: Doc; lang: Lang; featured?: boolean }
+const { doc, lang, featured = false } = Astro.props;
+const { title, type, date } = doc.data;
+const image = firstImage(doc.body ?? '');
+---
+<article class:list={['project-card', featured && 'project-card--featured']}>
+  <div class="project-card__media">
+    {image && <img src={image.src} alt="" width="960" height="600" loading={featured ? 'eager' : 'lazy'} decoding="async">}
+  </div>
+  <div class="project-card__body">
+    <h2 class="project-card__title"><a href={urlOf(doc)}>{title}</a></h2>
+    <p class="project-card__meta"><time datetime={date.toISOString()}>{formatDate(date, lang, false)}</time></p>
+    {type && <ul class="chips"><li class="chip">{type}</li></ul>}
+  </div>
+</article>

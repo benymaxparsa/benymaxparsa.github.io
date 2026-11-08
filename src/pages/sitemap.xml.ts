@@ -3,11 +3,11 @@ import type { APIRoute } from 'astro';
 import { readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { allDocs, urlOf } from '../lib/urls';
-import { nav } from '../i18n';
+import { navLinks } from '../i18n';
 import { site } from '../lib/site';
 
-const PAGES = ['/', '/fr/', ...nav.en.map((l) => l.url), ...nav.fr.map((l) => l.url),
-  '/teaching/materials/', '/fr/enseignement/materiel/', '/gallery/', '/fr/galerie/', '/terms/', '/sitemap/'];
+const PAGES = [...new Set(['/', '/fr/', ...navLinks('en').map((l) => l.url), ...navLinks('fr').map((l) => l.url),
+  '/teaching/materials/', '/fr/enseignement/materiel/', '/gallery/', '/fr/galerie/', '/terms/', '/sitemap/'])];
 
 function pdfs(dir: string): string[] {
   return readdirSync(dir).flatMap((n: string) => {

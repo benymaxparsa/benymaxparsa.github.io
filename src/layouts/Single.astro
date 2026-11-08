@@ -1,7 +1,7 @@
 ---
 import { smart } from '../lib/text';
 import Base from './Base.astro';
-import { ui, formatDate, type Lang } from '../i18n';
+import { ui, formatDate, groupOf, toneOf, type Lang } from '../i18n';
 import { site } from '../lib/site';
 import { pagePath } from '../lib/paths';
 
@@ -25,6 +25,8 @@ const title = smart(Astro.props.title);
 const t = ui[lang];
 const path = pagePath(Astro.url);
 const url = new URL(path, site.url).href;
+const group = groupOf(path, lang);
+const tone = toneOf(path, lang);
 const enc = encodeURIComponent;
 const shareLinks = [
   { cls: 'twitter', label: 'Twitter', icon: 'fa-twitter', href: `https://twitter.com/intent/tweet?via=${site.twitter}&text=${enc(title)}%20${enc(url)}` },
@@ -41,7 +43,8 @@ const shareLinks = [
 
       <div class="page__inner-wrap">
         {showTitle && (
-          <header>
+          <header class={`page-head slab tone-${tone}`}>
+            {group && <p class="page-head__group">{group}</p>}
             <h1 id="page-title" class="page__title p-name" itemprop="headline">
               <a href={url} class="u-url" itemprop="url">{title}</a>
             </h1>
@@ -60,7 +63,7 @@ const shareLinks = [
 
         {share && (
           <section class="page__share">
-            <h4 class="page__share-title">{t.shareOn}</h4>
+            <p class="page__share-title">{t.shareOn}</p>
             {shareLinks.map((s) => (
               <a href={s.href} class={`btn btn--${s.cls}`} data-share-popup title={`${t.shareOn} ${s.label}`}><i class={`fab fa-fw ${s.icon}`} aria-hidden="true"></i><span> {s.label}</span></a>
             ))}

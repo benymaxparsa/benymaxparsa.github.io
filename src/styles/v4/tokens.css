@@ -1,0 +1,106 @@
+/* v4 design tokens, direction A "Communities" (spec Revision 1): white page, ink, one colour per nav group */
+:root {
+  color-scheme: light;
+  --paper: #FFFFFF;
+  --surface: #F4F4F2;
+  --surface-pill: #FFFFFF;
+  --ink: #15171A;
+  --page-ink: #15171A; /* ink that slabs do not repaint */
+  --muted: #5B5F66;
+  --hairline: rgba(21, 23, 26, .12);
+  --focus: #15171A;
+  --btn-bg: #15171A;
+  --btn-fg: #FFFFFF;
+
+  /* Communities: each nav group's colour and the text colour that sits on it */
+  --teal: #0F3D3A;      --on-teal: #F4F1EC;
+  --lavender: #B9A7F2;  --on-lavender: #15171A;
+  --coral: #FF6B57;     --on-coral: #15171A;
+  --ochre: #F0BE45;     --on-ochre: #15171A;
+  --slab-ink: #15171A;  --on-slab-ink: #F4F1EC;
+  --tone: var(--teal);  /* the current page's community, set per page */
+  /* Line shades: the community colour as a dot, underline or rule, readable on the page behind it */
+  --teal-line: #0F3D3A; --lavender-line: #7A5FD6; --coral-line: #D8402B; --ochre-line: #A87800; --ink-line: #15171A;
+
+  --graph-ink: 21, 23, 26;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  --shadow-nav: 0 4px 24px rgba(0, 0, 0, .06);
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, .10);
+
+  --space-section: 96px;
+  --gutter: 24px;
+  --content-max: 1240px;
+  --reading-max: 720px;
+
+  --font: "Bricolage Grotesque Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+@media (max-width: 767px) {
+  :root { --space-section: 56px; --radius-xl: 28px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111315;
+    --surface: #1B1E21;
+    --surface-pill: #1B1E21;
+    --ink: #F2F2EF;
+    --page-ink: #F2F2EF;
+    --muted: #A3A7AD;
+    --hairline: rgba(242, 242, 239, .12);
+    --focus: #F2F2EF;
+    --btn-bg: #F2F2EF;
+    --btn-fg: #15171A;
+    --teal: #1A5A54;
+    --slab-ink: #000000;
+    --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F2F2EF;
+    --graph-ink: 242, 242, 239;
+    --shadow-nav: 0 4px 24px rgba(0, 0, 0, .5);
+    --shadow-card: 0 16px 40px rgba(0, 0, 0, .5);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111315;
+  --surface: #1B1E21;
+  --surface-pill: #1B1E21;
+  --ink: #F2F2EF;
+  --page-ink: #F2F2EF;
+  --muted: #A3A7AD;
+  --hairline: rgba(242, 242, 239, .12);
+  --focus: #F2F2EF;
+  --btn-bg: #F2F2EF;
+  --btn-fg: #15171A;
+  --teal: #1A5A54;
+  --slab-ink: #000000;
+  --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F2F2EF;
+  --graph-ink: 242, 242, 239;
+  --shadow-nav: 0 4px 24px rgba(0, 0, 0, .5);
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, .5);
+}
+
+/* A slab painted in one community colour; text and focus follow it */
+.tone-teal     { --tone-line: var(--teal-line); --tone-bg: var(--teal);     --tone-fg: var(--on-teal); }
+.tone-lavender { --tone-line: var(--lavender-line); --tone-bg: var(--lavender); --tone-fg: var(--on-lavender); }
+.tone-coral    { --tone-line: var(--coral-line); --tone-bg: var(--coral);    --tone-fg: var(--on-coral); }
+.tone-ochre    { --tone-line: var(--ochre-line); --tone-bg: var(--ochre);    --tone-fg: var(--on-ochre); }
+.tone-ink      { --tone-line: var(--ink-line); --tone-bg: var(--slab-ink); --tone-fg: var(--on-slab-ink); }
+.slab {
+  background: var(--tone-bg); color: var(--tone-fg);
+  --ink: var(--tone-fg); --muted: color-mix(in srgb, var(--tone-fg) 78%, transparent);
+  --focus: var(--tone-fg); --hairline: color-mix(in srgb, var(--tone-fg) 22%, transparent);
+  --btn-bg: var(--tone-fg); --btn-fg: var(--tone-bg);
+  border-radius: var(--radius-xl);
+}
+
+/* The ink slab (footer) is dark in both themes, so dots inside it use the dark-theme line shades */
+.slab.tone-ink { --teal-line: #4FB3A6; --lavender-line: #B9A7F2; --coral-line: #FF6B57; --ochre-line: #F0BE45; --ink-line: #F4F1EC; }
