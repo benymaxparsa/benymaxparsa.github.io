@@ -5,7 +5,6 @@ import { site } from '../lib/site';
 interface Props { lang: Lang; twin: string; path: string }
 const { lang, twin, path } = Astro.props;
 const t = ui[lang];
-const other = lang === 'en' ? 'fr' : 'en';
 ---
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -22,13 +21,10 @@ const other = lang === 'en' ? 'fr' : 'en';
             </li>
           ))}
         </ul>
-        <div class="language-switcher" role="navigation" aria-label="Language switcher">
-          <div class="lang-dropdown">
-            <button type="button" class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label={t.langButton}>{t.langCurrent} <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
-            <div class="lang-dropdown-content">
-              <a href={twin} class="lang-option lang-switch-link" data-lang={other} lang={other} hreflang={other === 'fr' ? 'fr-CA' : 'en'} aria-label={t.langOther}>{t.langOtherText}</a>
-            </div>
-          </div>
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+          {lang === 'en'
+            ? <><span class="lang-seg lang-seg--current" lang="en" aria-current="true" aria-label="English">EN</span><a class="lang-seg lang-switch-link" href={twin} data-lang="fr" lang="fr" hreflang="fr-CA" aria-label={t.langOther}>FR</a></>
+            : <><a class="lang-seg lang-switch-link" href={twin} data-lang="en" lang="en" hreflang="en" aria-label={t.langOther}>EN</a><span class="lang-seg lang-seg--current" lang="fr" aria-current="true" aria-label="Français">FR</span></>}
         </div>
         <button class="theme-toggle" type="button" data-label-dark={t.themeDark} data-label-light={t.themeLight} aria-label={t.themeToggle}>
           <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>

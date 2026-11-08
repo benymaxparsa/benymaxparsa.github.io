@@ -150,21 +150,9 @@ function initThemeToggle() {
   sync();
 }
 
-/** Language dropdown: click/tap only (never hover), Esc and outside click close it. */
+/** Remember an explicit language choice so the bare / URL can send the visitor to their language next time. */
 function initLanguageSwitcher() {
-  const dropdown = $('.lang-dropdown');
-  const toggle = $('.lang-current');
-  if (!dropdown || !toggle) return;
-  const setOpen = (open: boolean) => {
-    dropdown.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  };
-  toggle.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!dropdown.classList.contains('open')); });
-  document.addEventListener('click', (e) => { if (!dropdown.contains(e.target as Node)) setOpen(false); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && dropdown.classList.contains('open')) { setOpen(false); toggle.focus(); }
-  });
-  for (const link of $$<HTMLAnchorElement>('.lang-switch-link', dropdown)) {
+  for (const link of $$<HTMLAnchorElement>('.lang-switch-link')) {
     link.addEventListener('click', () => {
       try { localStorage.setItem('preferredLanguage', link.dataset.lang ?? ''); } catch { /* storage blocked */ }
     });

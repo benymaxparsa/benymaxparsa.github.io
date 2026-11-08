@@ -40,18 +40,8 @@ try {
   // 2. Language switcher
   {
     const page = await open('/teaching/Fall-2021-DA');
-    check('lang: accessible name contains visible EN', await page.$eval('.lang-current', (b) => /^EN\b/.test(b.getAttribute('aria-label'))));
+    check('lang: current segment is EN, other is a link', await page.$eval('.lang-seg--current', (e) => e.textContent === 'EN' && e.getAttribute('aria-current') === 'true'));
     check('lang: links to the doc twin', await page.$eval('.lang-switch-link', (a) => a.getAttribute('href') === '/fr/enseignement/Fall-2021-DA'));
-    await page.hover('.lang-current');
-    check('lang: hover does not open', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    check('lang: click opens', await page.$eval('.lang-dropdown', (d) => d.classList.contains('open')));
-    await page.keyboard.press('Escape');
-    check('lang: Esc closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
-    await page.mouse.click(200, 600);
-    check('lang: outside click closes', await page.$eval('.lang-dropdown', (d) => !d.classList.contains('open')));
-    await page.click('.lang-current');
     await Promise.all([page.waitForNavigation(), page.click('.lang-switch-link')]);
     check('lang: switch lands on FR twin and stores preference',
       page.url().endsWith('/fr/enseignement/Fall-2021-DA') && await page.evaluate(() => localStorage.getItem('preferredLanguage') === 'fr'));
@@ -59,7 +49,7 @@ try {
     check('lang: / redirects to /fr/ when preference is fr', new URL(page.url()).pathname === '/fr/');
     await page.close();
     const fr = await open('/fr/enseignement/');
-    check('lang: FR accessible name contains FR', await fr.$eval('.lang-current', (b) => /^FR\b/.test(b.getAttribute('aria-label'))));
+    check('lang: FR accessible name contains FR', await fr.$eval('.lang-seg--current', (e) => e.textContent === 'FR'));
     await fr.close();
   }
 
