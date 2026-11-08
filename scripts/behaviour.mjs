@@ -50,6 +50,24 @@ try {
     await phone.keyboard.press('Escape');
     check('nav: phone overlay closes on Esc', await phone.$eval('#site-menu', (m) => m.hidden) && await phone.$eval('.nav-menu-btn', (b) => document.activeElement === b));
     await phone.close();
+    // Review fixes: menu focus + inert page, one Esc closes one layer, highlight survives resize
+    const menuFocus = await open('/', { width: 390 });
+    await menuFocus.click('.nav-menu-btn');
+    check('nav: phone menu takes focus and makes the page inert', await menuFocus.evaluate(() =>
+      document.getElementById('site-menu').contains(document.activeElement) && document.querySelector('.initial-content').inert && document.getElementById('footer').inert));
+    await menuFocus.keyboard.press('Escape');
+    check('nav: closing the menu restores the page', await menuFocus.evaluate(() => !document.querySelector('.initial-content').inert && !document.getElementById('footer').inert));
+    await menuFocus.click('.nav-menu-btn');
+    await menuFocus.click('.search__toggle');
+    await menuFocus.keyboard.type('graph');
+    await menuFocus.keyboard.press('Escape');
+    check('nav: Esc in search leaves the phone menu open', await menuFocus.evaluate(() => !document.querySelector('dialog.search-dialog').open && !document.getElementById('site-menu').hidden));
+    await menuFocus.close();
+    const resize = await open('/biography/', { width: 500 });
+    await resize.setViewport({ width: 1300, height: 900 });
+    await sleep(400);
+    check('nav: highlight re-measured after resize', await resize.$eval('.nav-highlight', (h) => h.classList.contains('is-on') && h.getBoundingClientRect().width > 20));
+    await resize.close();
     const pubs = await open('/publications/', { width: 1280 });
     check('nav: current group marked', await pubs.$eval('#site-nav .nav-group:first-child > button', (b) => b.getAttribute('aria-current') === 'true'));
     await pubs.close();

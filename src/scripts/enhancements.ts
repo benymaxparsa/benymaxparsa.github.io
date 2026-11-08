@@ -214,7 +214,8 @@ function initNav() {
     nav.addEventListener('mouseleave', () => move(home));
     nav.addEventListener('focusout', (e) => { if (!nav.contains(e.relatedTarget as Node)) move(home); });
     move(home);
-    document.fonts?.ready.then(() => move(home));
+    // Group widths change with fonts and breakpoints (the name hides below 1180px, the nav below 960px)
+    new ResizeObserver(() => move(home)).observe(nav);
   }
 
   const menuBtn = $<HTMLButtonElement>('.nav-menu-btn');
@@ -225,6 +226,9 @@ function initNav() {
     menuBtn.setAttribute('aria-expanded', String(open));
     menuBtn.setAttribute('aria-label', menuBtn.dataset[open ? 'labelClose' : 'labelOpen'] ?? '');
     document.documentElement.classList.toggle('menu-open', open);
+    // The page under the overlay must not be reachable by Tab or screen readers while it is open
+    for (const el of $$('.initial-content, #footer')) el.inert = open;
+    if (open) $('a', menu)?.focus();
   };
   menuBtn.addEventListener('click', () => setMenu(menu.hasAttribute('hidden')));
   document.addEventListener('keydown', (e) => {
@@ -267,7 +271,8 @@ function initSearch() {
   });
   toggle.addEventListener('click', open);
   // In a filled search field the browser spends the first Esc on clearing it; close in one press
-  input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); dialog.close(); toggle.focus(); } });
+  // stopPropagation: this Esc closes search only, not the phone menu underneath
+  input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); dialog.close(); toggle.focus(); } });
   $('.search-dialog__close', dialog)?.addEventListener('click', () => dialog.close());
   // A click on the backdrop lands on the <dialog> itself, outside its box
   dialog.addEventListener('click', (e) => {
