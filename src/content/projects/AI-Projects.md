@@ -35,7 +35,7 @@ collection: projects
 - In order to implement DFS, a stack data structure is used.
 - As with BFS, the DFS algorithm follows a similar process
 
-![bfs](/images/DFS%26bfs.jpg)
+![bfs](/images/DFS-bfs.jpg)
 
 **Iterative Deepening Search(IDS)**
 

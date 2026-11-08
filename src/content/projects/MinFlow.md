@@ -10,8 +10,8 @@ collection: projects
 - Designed and executed large-scale experimental evaluation on randomized Euclidean directed graphs across 28 configurations with varying density (𝑟), capacity bounds, and cost regimes.
 - Compared SSP, Capacity Scaling, Scaling-SSP, and Primal–Dual algorithms using metrics including total cost, flow value, number of augmenting paths, mean path length, and proportional path length.
 - Demonstrated that the Primal–Dual algorithm consistently achieves optimal minimum cost, while SSP achieves competitive performance in sparse regimes and degrades in dense graphs.
-- Project Report [Click here](/files/Projects/MinFlow_Report.pdf)
-- Codes and GitHub Repository: [Click here](https://github.com/COMP6651-ADT-Project-Fall2024/minimum-cost-flow)
+- [Project Report](/files/Projects/MinFlow_Report.pdf)
+- [Codes and GitHub Repository](https://github.com/COMP6651-ADT-Project-Fall2024/minimum-cost-flow)
 
 <figure class=""><a href="/images/MinFlow.png" title="Report Screenshot"><img src="/images/MinFlow.png" loading="lazy" decoding="async" alt="Report Screenshot"></a><figcaption>Report Screenshot</figcaption></figure>
 
