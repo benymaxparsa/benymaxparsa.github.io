@@ -72,6 +72,10 @@ function pageAudit(theme) {
   const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
   const blend = (fg, bg) => ({ r: fg.r * fg.a + bg.r * (1 - fg.a), g: fg.g * fg.a + bg.g * (1 - fg.a), b: fg.b * fg.a + bg.b * (1 - fg.a), a: 1 });
   function bgOf(el) {
+    // The current-language label sits on the sliding knob (a sibling), not on a background of its own
+    const knob = el.matches('.lang-seg--current') ? el.parentElement.querySelector('.seg-knob') : null;
+    const knobBg = knob && parse(getComputedStyle(knob).backgroundColor);
+    if (knobBg && knobBg.a > 0.5) return knobBg;
     for (let e = el; e; e = e.parentElement) {
       const s = getComputedStyle(e);
       if (/url\(/.test(s.backgroundImage)) return null; // text over an image: not measurable

@@ -12,6 +12,11 @@ async function open(path, { width = 1280, motion = 'reduce', storage = {} } = {}
   const page = await browser.newPage();
   // reset storage once per tab, not on every navigation
   await page.evaluateOnNewDocument((s) => { try { if (!sessionStorage.__init) { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); sessionStorage.__init = '1'; } } catch {} }, storage);
+  // Puppeteer loses track of a prerendered page's activation (waitForNavigation/page.url go stale), so the
+  // hover-prerender rules are dropped as they appear; plain navigations are what these checks exercise
+  await page.evaluateOnNewDocument(() => {
+    new MutationObserver(() => document.querySelectorAll('script[type=speculationrules]').forEach((s) => s.remove())).observe(document, { childList: true, subtree: true });
+  });
   await page.setViewport({ width, height: 900, isMobile: width < 500, hasTouch: width < 500 });
   await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: motion }]);
   await page.goto(base + path, { waitUntil: 'networkidle0' });
