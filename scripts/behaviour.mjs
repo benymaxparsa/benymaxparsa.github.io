@@ -143,6 +143,17 @@ try {
     await page.close();
   }
 
+  // Project listing: photo cards, newest featured first
+  for (const [path, n] of [['/projects/', 16], ['/fr/projets/', 16]]) {
+    const page = await open(path);
+    const r = await page.evaluate(() => {
+      const cards = [...document.querySelectorAll('.project-card')];
+      return { count: cards.length, featured: cards[0]?.classList.contains('project-card--featured'), imgs: cards.filter((c) => c.querySelector('img[src]')).length, links: cards.filter((c) => c.querySelector('a[href]')).length };
+    });
+    check(`projects: ${n} photo cards, first featured (${path})`, r.count === n && r.featured && r.links === n && r.imgs === n, JSON.stringify(r));
+    await page.close();
+  }
+
   // Motion: community slabs reveal on scroll; never hidden without motion or JS
   {
     const opacities = (page) => page.$$eval('.community', (els) => els.map((e) => +getComputedStyle(e).opacity));

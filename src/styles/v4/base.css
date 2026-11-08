@@ -38,7 +38,7 @@ a:hover { text-decoration-thickness: 3px; }
 .page__inner-wrap > header, .page__content, .page__meta, .page__share, .pagination, .archive {
   max-width: var(--reading-max); margin-inline: auto;
 }
-.home .page__inner-wrap > *, .home .page__content { max-width: none; }
+.home .page__inner-wrap > *, .home .page__content, .archive--wide { max-width: none; }
 .page__title, .archive > .page__title { margin: 0 0 32px; }
 .page__title a { color: inherit; text-decoration: none; }
 

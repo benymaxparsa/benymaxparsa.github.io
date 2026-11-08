@@ -2,8 +2,10 @@
 // A collection listing page, newest first, in one language (was the _pages/*.html loops).
 import Archive from '../layouts/Archive.astro';
 import ListItem from './ListItem.astro';
+import ProjectCard from './ProjectCard.astro';
 import { docs, pageTwin, type CollectionName } from '../lib/urls';
 import { langFromPath, pagePath } from '../lib/paths';
+import '../styles/v4/cards.css';
 
 interface Props { title: string; collection: CollectionName }
 const { title, collection } = Astro.props;
@@ -11,7 +13,9 @@ const path = pagePath(Astro.url);
 const lang = langFromPath(path);
 const items = (await docs(collection, lang)).reverse();
 ---
-<Archive title={title} lang={lang} twin={pageTwin(path, lang)}>
+<Archive title={title} lang={lang} twin={pageTwin(path, lang)} wide={collection === 'projects'}>
   <slot />
-  {items.map((doc) => <ListItem doc={doc} lang={lang} />)}
+  {collection === 'projects'
+    ? <div class="project-grid">{items.map((doc, i) => <ProjectCard doc={doc} lang={lang} featured={i === 0} />)}</div>
+    : items.map((doc) => <ListItem doc={doc} lang={lang} />)}
 </Archive>
