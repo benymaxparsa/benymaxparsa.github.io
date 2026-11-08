@@ -4,6 +4,7 @@ type: "Experimental Study of Network Flow Optimization Algorithms - Graduate Cou
 venue: "Concordia University"
 date: 2024-11-01
 location: "Montreal, Quebec"
+tags: ["Network flow", "Successive Shortest Path"]
 collection: projects
 ---
 -  Implemented the Successive Shortest Path algorithm from scratch, including residual graph construction, Bellman–Ford based minimum-cost path extraction, and flow augmentation logic.

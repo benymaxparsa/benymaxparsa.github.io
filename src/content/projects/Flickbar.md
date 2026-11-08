@@ -4,6 +4,7 @@ type: "Personal Open-Source Project"
 venue: "Flickbar"
 date: 2026-10-27
 location: "Montreal, Quebec"
+tags: ["Swift", "macOS"]
 collection: projects
 ---
 - Designed and built a macOS menu bar app in Swift that arranges windows with two-finger trackpad gestures on their title bars: swipe for halves, thirds and quarters, swipe up to fill the screen, down to restore or minimize, pinch for full screen or close.

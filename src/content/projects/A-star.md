@@ -4,6 +4,7 @@ type: "Just for fun!"
 venue: "Null References: Game Development Team"
 date: 2020-02-01
 location: "Kerman & Yazd, Iran"
+tags: ["Unity3D", "A*"]
 collection: projects
 ---
 ***Designing and implementation of:***

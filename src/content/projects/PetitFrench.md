@@ -4,6 +4,7 @@ type: "Personal Open-Source Project"
 venue: "Petit à petit français"
 date: 2026-11-04
 location: "Montreal, Quebec"
+tags: ["JavaScript", "PWA", "Cloudflare Workers"]
 collection: projects
 ---
 - Built a free French practice app for A1–A2 learners, with Québec French as a first-class accent next to France, after finding that most apps ignore it while learning French in Montreal.

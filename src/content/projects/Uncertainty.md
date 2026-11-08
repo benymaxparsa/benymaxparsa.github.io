@@ -4,6 +4,7 @@ type: "Undergraduate Course Project & For Fun!"
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering & Null References: Game Development Team"
 date: 2021-02-01
 location: "Rafsanjān & Kerman & Yazd, Iran"
+tags: ["Unity3D", "C#"]
 collection: projects
 ---
 - Uncertainty is an action-adventure space-shooter game, and currently, It’s under development.

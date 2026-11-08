@@ -4,6 +4,7 @@ type: "Undergraduate Course Project"
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
 date: 2022-02-01
 location: "Rafsanjān, Kerman, Iran"
+tags: ["Pandas", "NumPy", "PCA"]
 collection: projects
 ---
 ***Working with the following topics:***

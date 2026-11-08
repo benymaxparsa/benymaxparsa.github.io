@@ -4,6 +4,7 @@ type: "Just for fun!"
 venue: "Available on Github"
 date: 2019-12-01
 location: "Kerman, Iran"
+tags: ["C++", "Qt"]
 collection: projects
 ---
 ***Projects:***

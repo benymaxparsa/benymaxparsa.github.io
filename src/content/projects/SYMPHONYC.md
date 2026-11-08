@@ -4,6 +4,7 @@ type: "Undergraduate Course Project"
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
 date: 2021-09-01
 location: "Rafsanjān, Kerman, Iran"
+tags: ["SQL"]
 collection: projects
 ---
 ***A project regarding the Database course. This project consists of:***
