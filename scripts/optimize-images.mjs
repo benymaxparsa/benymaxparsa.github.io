@@ -58,7 +58,7 @@ for await (const file of walk(DIST)) {
     const m = tag.match(IMG_SRC);
     if (!m || /\ssrcset=/.test(tag)) continue;
     const info = await describe(m[1]);
-    if (!info) continue;
+    if (!info) { console.warn(`optimize-images: skipped ${m[1]} (not found in ${DIST}) on ${file}`); continue; }
     let next = tag;
     if (!/\swidth=/.test(next)) next = next.replace(/^<img/, `<img width="${info.width}" height="${info.height}"`);
     if (info.srcset) next = next.replace(/^<img/, `<img srcset="${info.srcset}" sizes="${SIZES}"`);

@@ -12,7 +12,7 @@ const excerpt = await listExcerpt(doc.body ?? '');
 const tags = doc.data.tags ?? (await twinOf(doc))?.data.tags;
 const time = `<time datetime="${date.toISOString()}">${formatDate(date, lang, false)}</time>`;
 ---
-<div class="list__item">
+<div class={`list__item list__item--${doc.collection}`}>
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     <h2 class="archive__item-title no_toc" itemprop="headline">
       <a href={urlOf(doc)} rel="permalink">{title}</a>

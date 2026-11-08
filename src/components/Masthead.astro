@@ -23,8 +23,8 @@ const t = ui[lang];
         </ul>
         <div class="language-switcher" role="group" aria-label="Language switcher">
           {lang === 'en'
-            ? <><span class="lang-seg lang-seg--current" lang="en" aria-current="true" aria-label="English">EN</span><a class="lang-seg lang-switch-link" href={twin} data-lang="fr" lang="fr" hreflang="fr-CA" aria-label={t.langOther}>FR</a></>
-            : <><a class="lang-seg lang-switch-link" href={twin} data-lang="en" lang="en" hreflang="en" aria-label={t.langOther}>EN</a><span class="lang-seg lang-seg--current" lang="fr" aria-current="true" aria-label="Français">FR</span></>}
+            ? <><span class="lang-seg lang-seg--current" lang="en" aria-current="true">EN</span><a class="lang-seg lang-switch-link" href={twin} data-lang="fr" lang="fr" hreflang="fr-CA" aria-label={`FR, ${t.langOther}`}>FR</a></>
+            : <><a class="lang-seg lang-switch-link" href={twin} data-lang="en" lang="en" hreflang="en" aria-label={`EN, ${t.langOther}`}>EN</a><span class="lang-seg lang-seg--current" lang="fr" aria-current="true">FR</span></>}
         </div>
         <button class="theme-toggle" type="button" data-label-dark={t.themeDark} data-label-light={t.themeLight} aria-label={t.themeToggle}>
           <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
