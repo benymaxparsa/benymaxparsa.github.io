@@ -9,7 +9,7 @@ const link = (t) => `<li><a href="https://x.test">${t}</a></li>`;
 test('foldBullets: keeps two text bullets, folds the rest, leaves link bullets visible', () => {
   const html = `<ul>${[li('a'), li('b'), li('c'), li('d'), link('Website')].join('\n')}</ul>`;
   const out = foldBullets(html, 'More');
-  assert.match(out, /^<ul><li>a<\/li>\n<li>b<\/li><\/ul><details class="more"><summary>More<\/summary><ul><li>c<\/li>\n<li>d<\/li><\/ul><\/details><ul><li><a href/);
+  assert.match(out, /^<ul><li>a<\/li>\n<li>b<\/li><\/ul><details class="more"><summary>More<\/summary><ul><li>c<\/li>\n<li>d<\/li><\/ul><\/details><ul class="link-pills"><li><a href/);
 });
 
 test('foldBullets: short lists, nested lists and no list are untouched', () => {

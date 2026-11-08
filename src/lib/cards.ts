@@ -19,7 +19,7 @@ export function foldBullets(html: string, summary: string, keep = 2): string {
   const out =
     `<ul>${text.slice(0, keep).join('\n')}</ul>` +
     `<details class="more"><summary>${summary}</summary><ul>${text.slice(keep).join('\n')}</ul></details>` +
-    (links.length ? `<ul>${links.join('\n')}</ul>` : '');
+    (links.length ? `<ul class="link-pills">${links.join('\n')}</ul>` : '');
   return html.replace(m[0], () => out);
 }
 
