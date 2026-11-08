@@ -213,7 +213,7 @@ function initNav() {
     menuBtn.setAttribute('aria-label', menuBtn.dataset[open ? 'labelClose' : 'labelOpen'] ?? '');
     document.documentElement.classList.toggle('menu-open', open);
   };
-  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  menuBtn.addEventListener('click', () => setMenu(menu.hasAttribute('hidden')));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); }
   });
