@@ -11,7 +11,9 @@ const PALETTES = {
   light: ['47, 85, 212', '22, 140, 100', '196, 70, 128', '196, 128, 10', '122, 82, 204'],
   dark: ['147, 172, 255', '124, 196, 164', '227, 154, 184', '242, 193, 78', '190, 160, 255'],
 };
-const K = 4, PER = 14, P_IN = 0.5, P_OUT = 0.012;
+const PER = 14, P_IN = 0.5;
+// Cross-group link probabilities behind the "Links between groups" slider (step 2 is the default look)
+const MIX = [0, 0.006, 0.012, 0.03, 0.06, 0.1, 0.15];
 
 export function initHeroGraph(prefersReducedMotion: boolean) {
   const fig = document.querySelector('.hero-graph');
@@ -20,6 +22,11 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
   if (!fig || !canvas || !ctx) return;
   const status = fig.querySelector('.hero-graph__status');
   const again = fig.querySelector('.hero-graph__again');
+  const groupsInput = fig.querySelector<HTMLInputElement>('input[data-graph="groups"]');
+  const mixInput = fig.querySelector<HTMLInputElement>('input[data-graph="mix"]');
+  let K = Number(groupsInput?.value ?? 4);
+  let P_OUT = MIX[Number(mixInput?.value ?? 2)] ?? 0.012;
+  const locale = document.documentElement.lang.startsWith('fr') ? 'fr-CA' : 'en-CA';
 
   let palette = PALETTES.light, ink = '40, 50, 70';
   function readTheme() {
@@ -66,6 +73,8 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
       }
     }
     setStatus(false);
+    const label = canvas!.getAttribute('data-label');
+    if (label) canvas!.setAttribute('aria-label', label.replace('{nodes}', String(n)).replace('{groups}', String(K)));
   }
 
   // Force step: all-pairs repulsion, edge springs, gentle pull to centre
@@ -176,8 +185,9 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
 
   function setStatus(done: boolean) {
     if (!status) return;
+    const n = communities();
     status.textContent = done
-      ? (status.getAttribute('data-found') ?? '').replace('{n}', String(communities()))
+      ? (n === 1 && status.getAttribute('data-found-one')) || (status.getAttribute('data-found') ?? '').replace('{n}', String(n))
       : status.getAttribute('data-searching');
   }
 
@@ -237,6 +247,28 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
     wake();
   }).observe(canvas);
   again?.addEventListener('click', start);
+  // Sliders: the number of planted groups and how often groups link to each other. Rebuild shortly
+  // after the last input so dragging doesn't restart the layout on every pixel.
+  let rebuildTimer = 0;
+  const syncControlText = () => {
+    const out = (k: string) => fig.querySelector(`output[data-out="${k}"]`);
+    const g = out('groups'), m = out('mix');
+    const percent = `${(P_OUT * 100).toLocaleString(locale, { maximumFractionDigits: 1 })}${locale === 'fr-CA' ? ' %' : '%'}`;
+    if (g) g.textContent = String(K);
+    if (m) m.textContent = percent;
+    // the slider's value is an index (0-6); screen readers should hear the percentage
+    mixInput?.setAttribute('aria-valuetext', percent);
+  };
+  const onControl = () => {
+    K = Number(groupsInput?.value ?? K);
+    P_OUT = MIX[Number(mixInput?.value ?? 2)] ?? P_OUT;
+    syncControlText();
+    clearTimeout(rebuildTimer);
+    rebuildTimer = window.setTimeout(start, 150);
+  };
+  syncControlText();
+  groupsInput?.addEventListener('input', onControl);
+  mixInput?.addEventListener('input', onControl);
   document.addEventListener('themechange', () => { readTheme(); draw(); });
   readTheme();
   start();

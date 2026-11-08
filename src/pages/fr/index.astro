@@ -12,7 +12,7 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
 <section class="home-hero" aria-label="Présentation">
   <div class="home-hero__text">
     <div class="home-hero__id">
-      <HomePhoto alt="Portrait de Parsa Kamalipour" />
+      <HomePhoto alt="Portrait de Parsa Kamalipour" badge="Montréal (Québec)" />
       <div>
         <h1 class="home-hero__name">Parsa Kamalipour</h1>
         <p class="home-hero__role">Maîtrise en informatique<br>Laboratoire d'algorithmes et de complexité, Université Concordia</p>
@@ -26,11 +26,15 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
     <ProfileLinks emailLabel="Courriel" />
   </div>
   <figure class="hero-graph">
-    <canvas role="img" aria-label="Un réseau aléatoire de 56 nœuds répartis en quatre groupes cachés. La propagation d'étiquettes colore chaque groupe à mesure qu'elle le trouve."></canvas>
+    <canvas role="img" aria-label="Un réseau aléatoire de 56 nœuds répartis en quatre groupes cachés. La propagation d’étiquettes colore chaque groupe à mesure qu’elle le trouve." data-label="Un réseau aléatoire de {nodes} nœuds répartis en {groups} groupes cachés. La propagation d’étiquettes colore chaque groupe à mesure qu’elle le trouve."></canvas>
     <figcaption>
-      <span class="hero-graph__status" data-searching="La propagation d’étiquettes cherche des communautés…" data-found="La propagation d’étiquettes a trouvé {n} communautés." aria-live="polite">La propagation d’étiquettes cherche des communautés…</span>
+      <span class="hero-graph__status" data-searching="La propagation d’étiquettes cherche des communautés…" data-found="La propagation d’étiquettes a trouvé {n} communautés." data-found-one="La propagation d’étiquettes a trouvé 1 communauté." aria-live="polite">La propagation d’étiquettes cherche des communautés…</span>
       <button type="button" class="hero-graph__again">Nouveau graphe</button>
     </figcaption>
+    <div class="hero-graph__controls">
+      <label class="hero-graph__ctl"><span>Groupes <output data-out="groups">4</output></span><input type="range" min="2" max="5" step="1" value="4" data-graph="groups"></label>
+      <label class="hero-graph__ctl"><span>Liens entre groupes <output data-out="mix">1,2 %</output></span><input type="range" min="0" max="6" step="1" value="2" data-graph="mix"></label>
+    </div>
   </figure>
 </section>
 <div class="home-cols">

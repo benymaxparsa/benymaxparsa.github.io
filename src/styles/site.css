@@ -1795,6 +1795,116 @@ body {
 /* ==========================================================================
    PRINT STYLES
    ========================================================================== */
+/* ==========================================================================
+   Project cards: tag chips and link pills (list-item links become buttons)
+   ========================================================================== */
+.archive__item > .interest-tags {
+  margin: 0.8rem 0 0;
+}
+
+.list__item--projects .archive__item li:has(> a:only-child),
+.doc--projects .page__content li:has(> a:only-child) {
+  display: inline-block;
+  margin: 0.6rem 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+:is(.list__item--projects .archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  /* the body-copy link rule has more specificity than a pill needs to win by hand */
+  text-decoration: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+:is(.list__item--projects .archive__item, .doc--projects .page__content) li:has(> a:only-child) > a:only-child:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary-color);
+}
+
+/* The folded card's link list (lib/cards.ts) has no bullets, so it drops the bullet indent and lines up with the text */
+ul.link-pills {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.doc--projects .page__content > .interest-tags {
+  margin: 0 0 1.5rem;
+}
+
+/* Skills (biography): label column + chips */
+.skill-groups {
+  margin: 1rem 0 0;
+}
+
+.page__content .skill-group {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.page__content .skill-group:first-child {
+  border-top: 0;
+  padding-top: 0.4rem;
+}
+
+.page__content .skill-group dt {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.page__content .skill-group dd {
+  margin: 0;
+}
+
+.skill-group .interest-tags {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .page__content .skill-group {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+  }
+}
+
+/* Home photo: location badge straddling the bottom edge */
+.home-hero__photo-wrap {
+  position: relative;
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+
+.home-hero__badge {
+  position: absolute;
+  left: 50%;
+  bottom: -0.45rem;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  color: var(--heading-color);
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 @media print {
   [hidden] {
     display: none;
@@ -2009,6 +2119,10 @@ body {
   --faint-color: #8b95a6;
   --shadow-rgb: 22, 34, 56;
   --graph-ink: 40, 50, 70;
+  --ic-1: 47, 85, 212;
+  --ic-2: 22, 140, 100;
+  --ic-3: 196, 70, 128;
+  --ic-4: 196, 128, 10;
   /* Geometry & motion */
   --spacing-unit: 20px;
   --border-radius: 8px;
@@ -2051,6 +2165,10 @@ body {
   --faint-color: #7d889b;
   --shadow-rgb: 0, 0, 0;
   --graph-ink: 214, 224, 240;
+  --ic-1: 147, 172, 255;
+  --ic-2: 124, 196, 164;
+  --ic-3: 227, 154, 184;
+  --ic-4: 242, 193, 78;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2079,6 +2197,10 @@ body {
     --faint-color: #7d889b;
     --shadow-rgb: 0, 0, 0;
     --graph-ink: 214, 224, 240;
+    --ic-1: 147, 172, 255;
+    --ic-2: 124, 196, 164;
+    --ic-3: 227, 154, 184;
+    --ic-4: 242, 193, 78;
   }
 }
 /* Smooth scrolling for in-page navigation */
@@ -2318,7 +2440,6 @@ a:hover {
   stroke-linejoin: round;
 }
 
-.theme-toggle__icon--sun,
 .navicon__close,
 .close .navicon__open {
   display: none;
@@ -2328,21 +2449,6 @@ a:hover {
   display: inline;
 }
 
-:root[data-theme="dark"] .theme-toggle__icon--moon {
-  display: none;
-}
-:root[data-theme="dark"] .theme-toggle__icon--sun {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle__icon--moon {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .theme-toggle__icon--sun {
-    display: block;
-  }
-}
 /* Masthead blur is expensive to composite on low-end phones — use a solid bar there */
 @media (max-width: 768px) {
   .masthead {
@@ -2352,124 +2458,72 @@ a:hover {
   }
 }
 /* ==========================================================================
-   Language switcher (masthead) — click/tap only, no hover-open
+   Language switcher (masthead): a two-option pill, one click to switch
    ========================================================================== */
 .language-switcher {
-  display: inline-block;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  height: 2.5rem;
   position: relative;
   margin-left: 0.75rem;
   flex-shrink: 0;
-}
-
-.lang-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.lang-current {
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.85rem;
-  font-family: inherit;
-  cursor: pointer;
+  padding: 2px;
   border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
   background: var(--primary-soft);
-  color: var(--primary-light);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  white-space: nowrap;
-  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.lang-current:hover,
-.lang-dropdown.open .lang-current {
-  background: var(--primary-border);
-  border-color: var(--primary-color);
-}
-
-.lang-caret {
-  width: 0.9em;
-  height: 0.9em;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.2s ease;
-}
-
-.lang-dropdown.open .lang-caret {
-  transform: rotate(180deg);
-}
-
-.lang-dropdown-content {
-  display: none;
+/* The knob sits under the current language and slides under the other one before the page changes */
+.seg-knob {
   position: absolute;
-  left: 50%;
-  translate: -50% 0;
-  top: 100%;
-  padding-top: 0.6rem;
-  /* bridge the gap so the pointer never leaves the dropdown */
-  z-index: 1000;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  border-radius: var(--radius-pill);
+  background: var(--primary-color);
+  transition: transform 0.35s cubic-bezier(0.3, 1.35, 0.5, 1);
 }
 
-.lang-dropdown.open .lang-dropdown-content {
-  display: block;
-  animation: langFadeIn 0.15s ease;
+.language-switcher[data-pos="1"] .seg-knob {
+  transform: translateX(100%);
 }
 
-/* Arrow: its lower half sits over the option's top border, so the two read as one shape */
-.lang-dropdown-content::before {
-  content: "";
-  position: absolute;
+.language-switcher .lang-seg {
+  position: relative;
   z-index: 1;
-  top: 0.27rem;
-  left: 50%;
-  width: 0.7rem;
-  height: 0.7rem;
-  background: var(--card-bg);
-  border-top: 1px solid var(--card-border-strong);
-  border-left: 1px solid var(--card-border-strong);
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.lang-dropdown-content:has(.lang-option:hover)::before {
-  background: linear-gradient(var(--primary-soft), var(--primary-soft)) var(--card-bg);
-}
-
-@keyframes langFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.lang-option {
   display: flex;
-  white-space: nowrap;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 0.9rem;
+  justify-content: center;
+  min-width: 2.2rem;
+  margin: 0;
+  padding: 0 0.6rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--body-color);
-  font-weight: 600;
-  font-size: 0.9rem;
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border-strong);
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(var(--shadow-rgb), 0.35);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--primary-light);
+  transition: color 0.25s ease;
 }
 
-.lang-option:hover,
-.lang-option:focus-visible {
-  background-color: var(--primary-soft);
+.language-switcher .lang-seg--current {
+  color: var(--on-primary, #fff);
+}
+
+/* Mid-slide: the colours trade places with the knob */
+.language-switcher.is-switching .lang-seg--current {
   color: var(--primary-light);
+}
+
+.language-switcher.is-switching .lang-switch-link {
+  color: var(--on-primary, #fff);
+}
+
+.language-switcher a.lang-seg:hover {
+  background: none;
 }
 
 .page__footer {
@@ -4607,6 +4661,11 @@ select {
 /* Detail pages: share buttons and prev/next pager in the site's own ink
    (the theme's brand fills put white text on light blue at 2.5:1) */
 .page__share-title {
+  /* a <p>, not an h4: no heading level to skip after the page title, so it restates what the h4 gave */
+  margin: 2em 0 10px;
+  font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
   text-transform: none;
   letter-spacing: 0;
   font-size: 0.9rem;
@@ -4920,5 +4979,410 @@ a.pagination--pager:hover {
     grid-row: 2;
     justify-self: start;
     margin-top: 0.35em;
+  }
+}
+
+/* ==========================================================================
+   Theme switch (sun | moon): a knob slides under the active icon
+   ========================================================================== */
+.theme-toggle.theme-seg {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 4.2rem;
+  height: 2.5rem;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+}
+
+.theme-seg .seg-knob {
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  view-transition-name: theme-knob;
+}
+
+.theme-seg .theme-toggle__icon {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  color: var(--muted-color);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle.theme-seg:hover {
+  background: transparent;
+}
+
+/* Knob and lit icon follow the theme itself (saved choice or system), so they are right before any script runs */
+.theme-seg .theme-toggle__icon--sun {
+  color: var(--primary-color);
+}
+
+:root[data-theme="dark"] .theme-seg .seg-knob {
+  transform: translateX(100%);
+}
+:root[data-theme="dark"] .theme-seg .theme-toggle__icon--sun {
+  color: var(--muted-color);
+}
+:root[data-theme="dark"] .theme-seg .theme-toggle__icon--moon {
+  color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-seg .seg-knob {
+    transform: translateX(100%);
+  }
+  :root:not([data-theme="light"]) .theme-seg .theme-toggle__icon--sun {
+    color: var(--muted-color);
+  }
+  :root:not([data-theme="light"]) .theme-seg .theme-toggle__icon--moon {
+    color: var(--primary-color);
+  }
+}
+
+::view-transition-group(theme-knob) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.3, 1.2, 0.5, 1);
+}
+
+/* ==========================================================================
+   Nav bubble: a soft pill behind the current link glides to the one you click
+   ========================================================================== */
+.greedy-nav .visible-links.has-bubble {
+  position: relative;
+}
+
+.greedy-nav .visible-links.has-bubble a {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-bubble {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+  transition: transform 0.3s cubic-bezier(0.3, 1.2, 0.5, 1), width 0.3s cubic-bezier(0.3, 1.2, 0.5, 1), height 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-bubble.is-placed {
+  opacity: 1;
+}
+
+.nav-bubble.no-anim {
+  transition: none;
+}
+
+/* The bubble replaces the underline marker on the current link */
+.greedy-nav .visible-links.has-bubble a.nav-current:before {
+  transform: scaleX(0);
+}
+
+.greedy-nav .visible-links a.is-target {
+  color: var(--primary-color);
+}
+
+.greedy-nav .visible-links a.nav-current.is-leaving {
+  color: var(--body-color);
+}
+
+/* ==========================================================================
+   Colour-coded icons: the same four hues the hero graph uses for its communities
+   ========================================================================== */
+.contact-links li:nth-child(4n + 1),
+.profile-links li:nth-child(4n + 1) { --ic: var(--ic-1); }
+.contact-links li:nth-child(4n + 2),
+.profile-links li:nth-child(4n + 2) { --ic: var(--ic-2); }
+.contact-links li:nth-child(4n + 3),
+.profile-links li:nth-child(4n + 3) { --ic: var(--ic-3); }
+.contact-links li:nth-child(4n + 4),
+.profile-links li:nth-child(4n + 4) { --ic: var(--ic-4); }
+
+.contact-link i {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  color: rgb(var(--ic, var(--ic-1)));
+  background: rgba(var(--ic, var(--ic-1)), 0.14);
+}
+
+.page__content .profile-links i {
+  color: rgb(var(--ic, var(--ic-1)));
+}
+
+/* ==========================================================================
+   Small interaction polish: logo tilt, button press
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .site-logo img {
+    transition: transform 0.4s cubic-bezier(0.3, 1.4, 0.5, 1);
+  }
+
+  .site-logo:hover img {
+    transform: rotate(-8deg) scale(1.06);
+  }
+
+  .hero-btn,
+  .cv-btn {
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .hero-btn:hover,
+  .cv-btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .hero-btn:active,
+  .cv-btn:active,
+  .theme-toggle:active,
+  .search__toggle:active,
+  .contact-link:active {
+    transform: translateY(1px) scale(0.98);
+  }
+}
+
+/* The two switches are wider than the old icon buttons; slightly tighter link gaps keep every link in the bar at 1440px */
+.greedy-nav .visible-links a {
+  margin: 0 0.8rem;
+}
+
+/* Hero graph sliders: planted groups and cross-group links */
+.hero-graph__controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.4rem 1.25rem;
+  padding: 0.3rem 0 0;
+}
+
+.hero-graph__ctl {
+  display: grid;
+  gap: 0.1rem;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+}
+
+.hero-graph__ctl span {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.hero-graph__ctl output {
+  font-family: inherit;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--heading-color);
+}
+
+.hero-graph__ctl input[type="range"] {
+  width: 100%;
+  height: 1.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  accent-color: var(--primary-color);
+}
+
+/* The reset above also drops the global focus glow, so keyboard users get a ring here */
+.hero-graph__ctl input[type="range"]:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.no-js .hero-graph__controls {
+  display: none;
+}
+
+/* ==========================================================================
+   Card slideshow (gallery figures in listings), details fold, reveal on scroll
+   ========================================================================== */
+.list__item .archive__item figure.is-slides {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+/* Every slide sits in the same cell, so the card keeps one height whichever slide shows */
+.list__item .archive__item figure.is-slides > a {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.list__item .archive__item figure.is-slides > a.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 50%;
+  background: rgba(14, 18, 28, 0.6);
+  color: #fff;
+  font: 1.4rem/1 system-ui, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.slide-prev { left: 0.5rem; }
+.slide-next { right: 0.5rem; }
+
+.is-slides:hover .slide-btn,
+.is-slides:focus-within .slide-btn,
+.slide-btn:focus-visible {
+  opacity: 1;
+}
+
+.slide-btn:hover {
+  background: rgba(14, 18, 28, 0.85);
+}
+
+/* Touch screens have no hover: keep the arrows visible */
+@media (hover: none) {
+  .slide-btn {
+    opacity: 1;
+  }
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  pointer-events: none;
+}
+
+.slide-dots span {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--card-border-strong);
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.slide-dots span.is-on {
+  width: 1.1rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+}
+
+/* "More details" fold: opens and closes smoothly where the browser can animate it */
+details.more {
+  interpolate-size: allow-keywords;
+}
+
+details.more > summary {
+  display: inline-block;
+  margin: 0.2rem 0 0.1rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+details.more > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.more > summary::after {
+  content: " +";
+}
+
+details.more[open] > summary::after {
+  content: " \2212";
+}
+
+details.more > ul {
+  margin: 0.4rem 0 0;
+  font-size: 0.92em;
+  color: var(--body-color);
+}
+
+details.more::details-content {
+  height: 0;
+  overflow: clip;
+  transition: height 0.35s ease, content-visibility 0.35s allow-discrete;
+}
+
+details.more[open]::details-content {
+  height: auto;
+}
+
+/* Cards below the first screen slide up as they arrive (script adds .pre, never to anything already visible) */
+.reveal {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.pre {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.pre {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .list__item .archive__item figure.is-slides > a,
+  details.more::details-content {
+    transition: none;
+  }
+}
+
+@media print {
+  .reveal.pre {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Phones: the two switches take the room the site name needs, so the name gives way and the logo keeps its size */
+.greedy-nav a.site-logo {
+  flex: none;
+}
+
+@media (max-width: 440px) {
+  .greedy-nav a.site-title {
+    display: none;
   }
 }

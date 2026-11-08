@@ -1,17 +1,21 @@
 ---
 // One entry in a collection listing (was _includes/archive-single.html).
 import { formatDate, ui, type Lang } from '../i18n';
-import { urlOf, type Doc } from '../lib/urls';
+import { urlOf, twinOf, type Doc } from '../lib/urls';
 import { listExcerpt } from '../lib/excerpt';
+import { foldBullets, slideshow } from '../lib/cards';
 
 interface Props { doc: Doc; lang: Lang }
 const { doc, lang } = Astro.props;
 const t = ui[lang];
 const { title, venue, type, location, date, citation, paperurl } = doc.data;
-const excerpt = await listExcerpt(doc.body ?? '');
+const rendered = await listExcerpt(doc.body ?? '');
+// Project cards fold long bullet lists; gallery figures become slideshows (arrows and dots are in the markup)
+const excerpt = slideshow(doc.collection === 'projects' ? foldBullets(rendered, t.moreDetails) : rendered, t.lightboxPrev, t.lightboxNext);
+const tags = doc.data.tags ?? (await twinOf(doc))?.data.tags;
 const time = `<time datetime="${date.toISOString()}">${formatDate(date, lang, false)}</time>`;
 ---
-<div class="list__item">
+<div class={`list__item list__item--${doc.collection}`}>
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     <h2 class="archive__item-title no_toc" itemprop="headline">
       <a href={urlOf(doc)} rel="permalink">{title}</a>
@@ -21,6 +25,7 @@ const time = `<time datetime="${date.toISOString()}">${formatDate(date, lang, fa
       : <p class="archive__item-meta">{type}{venue && <> · <span class="venue">{venue}</span></>}{location && ` · ${location}`} · <Fragment set:html={time} /></p>}
     {/* The excerpt holds block elements, so the browser closes this <p> early, exactly as on the Jekyll site */}
     <Fragment set:html={`<p class="archive__item-excerpt" itemprop="description">${excerpt}</p>`} />
+    {tags && <ul class="interest-tags" aria-label="Tags">{tags.map((tag) => <li class="interest-tag">{tag}</li>)}</ul>}
     {citation
       ? <div class="archive__item-citation">{t.citation} {citation}{paperurl && <> <a href={paperurl}>{paperurl}</a></>}</div>
       : paperurl && <p>{t.download} <a href={paperurl}>{t.here}</a></p>}

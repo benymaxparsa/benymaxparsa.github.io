@@ -4,6 +4,7 @@ type: "Evaluation of Scalable Training Strategies for Graph Neural Networks - Gr
 venue: "Concordia University"
 date: 2024-11-01
 location: "Montreal, Quebec"
+tags: ["GNN", "GCN", "GraphSAGE"]
 collection: projects
 ---
 -  Designed and implemented scalable GNN-based community detection pipelines using GCN and GraphSAGE architectures with full-batch training, neighbor sampling, and graph partitioning strategies.

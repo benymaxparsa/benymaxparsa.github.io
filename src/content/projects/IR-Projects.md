@@ -4,6 +4,7 @@ type: "Undergraduate Course Project"
 venue: "Vali-e-Asr University of Rafsanjan, Department of Computer Engineering"
 date: 2021-02-01
 location: "Rafsanjān, Kerman, Iran"
+tags: ["Python", "Scrapy", "BSBI"]
 collection: projects
 ---
  ***Designing and implementation of:***

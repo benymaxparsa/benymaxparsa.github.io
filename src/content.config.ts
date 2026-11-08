@@ -20,6 +20,8 @@ const doc = z.object({
   lang: z.literal('fr-CA').optional(),
   paperurl: z.url().optional(),
   citation: z.string().optional(),
+  // Tool/topic chips on project cards; set on the English file, the -fr twin inherits them
+  tags: z.array(z.string()).optional(),
 });
 
 // Keep the file name as the id (A-star-fr), the URL and the EN/FR twin rule depend on it.

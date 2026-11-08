@@ -22,6 +22,14 @@ Il a ensuite rejoint à distance le groupe Formal Methods and Tools de l'Univers
 
 Sa formation est en informatique théorique : conception et analyse d'algorithmes, théorie des graphes, mathématiques discrètes, structures de données et théorie de la complexité. Ses intérêts de recherche comprennent les algorithmes de graphes, l'exploration de graphes, l'analyse de réseaux sociaux, l'optimisation combinatoire, les algorithmes d'approximation et aléatoires et les algorithmes en ligne.
 
+## Compétences
+
+<dl class="skill-groups">
+<div class="skill-group"><dt>Langages</dt><dd><ul class="interest-tags"><li class="interest-tag">Python</li><li class="interest-tag">Java</li><li class="interest-tag">C++</li><li class="interest-tag">C#</li><li class="interest-tag">Kotlin</li><li class="interest-tag">Swift</li><li class="interest-tag">JavaScript</li><li class="interest-tag">SQL</li><li class="interest-tag">MATLAB</li><li class="interest-tag">VHDL</li><li class="interest-tag">Assembly</li></ul></dd></div>
+<div class="skill-group"><dt>Données et graphes</dt><dd><ul class="interest-tags"><li class="interest-tag">NumPy</li><li class="interest-tag">Pandas</li><li class="interest-tag">scikit-learn</li><li class="interest-tag">NetworkX</li></ul></dd></div>
+<div class="skill-group"><dt>Outils</dt><dd><ul class="interest-tags"><li class="interest-tag">Git</li><li class="interest-tag">LaTeX</li><li class="interest-tag">Qt</li><li class="interest-tag">Unity3D</li><li class="interest-tag">Scrapy</li></ul></dd></div>
+</dl>
+
 ## Enseignement
 
 Parsa a été auxiliaire d'enseignement pour plus de 15 cours et plus de 1650 heures, à Concordia et à l'Université Vali-e-Asr. Ces cours vont de la théorie (conception et analyse d'algorithmes, combinatoire, introduction à l'informatique théorique, mathématiques discrètes, structures de données, probabilités et statistiques) à la programmation et aux systèmes (fondements de la programmation, programmation orientée objet, principes des langages de programmation, organisation des ordinateurs, systèmes à microprocesseurs, systèmes d'exploitation), en passant par les données, le génie logiciel et l'IA (bases de données, systèmes de données pour ingénieurs logiciels, exploration de données, recherche d'information, génie logiciel, intelligence artificielle). À l'Université Vali-e-Asr, il a dirigé une équipe de dix auxiliaires pour le cours de conception et analyse d'algorithmes. En mai 2026, il a reçu le **Prix d'excellence du doyen pour l'enseignement par un auxiliaire d'enseignement** de l'École Gina-Cody.

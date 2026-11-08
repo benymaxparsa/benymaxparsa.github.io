@@ -9,6 +9,7 @@ const { doc } = Astro.props;
 const { Content } = await render(doc);
 const lang = langOf(doc);
 const twin = await twinOf(doc);
+const tags = doc.data.tags ?? twin?.data.tags;
 
 // Previous/next within the same collection and language, in collection order
 const siblings = await docs(doc.collection, lang);
@@ -21,8 +22,10 @@ const link = (d?: Doc) => d && { url: urlOf(d), title: d.data.title };
   twin={twin ? urlOf(twin) : lang === 'fr' ? '/' : '/fr/'}
   description={excerpt(doc.rendered?.html ?? '')}
   date={doc.data.date}
+  classes={`doc--${doc.collection}`}
   share
   pager={{ prev: link(siblings[i - 1]), next: link(siblings[i + 1]) }}
 >
+  {tags && <ul class="interest-tags" aria-label="Tags">{tags.map((tag) => <li class="interest-tag">{tag}</li>)}</ul>}
   <Content />
 </Single>

@@ -12,7 +12,7 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
 <section class="home-hero" aria-label="Introduction">
   <div class="home-hero__text">
     <div class="home-hero__id">
-      <HomePhoto alt="Portrait of Parsa Kamalipour" />
+      <HomePhoto alt="Portrait of Parsa Kamalipour" badge="Montréal, QC" />
       <div>
         <h1 class="home-hero__name">Parsa Kamalipour</h1>
         <p class="home-hero__role">MSc student in Computer Science<br>Algorithms &amp; Complexity Lab, Concordia University</p>
@@ -26,11 +26,15 @@ const pubs = (await docs('publications', lang)).reverse().slice(0, 2);
     <ProfileLinks />
   </div>
   <figure class="hero-graph">
-    <canvas role="img" aria-label="A random network of 56 nodes in four hidden groups. Label propagation colours each group as it finds it."></canvas>
+    <canvas role="img" aria-label="A random network of 56 nodes in four hidden groups. Label propagation colours each group as it finds it." data-label="A random network of {nodes} nodes in {groups} hidden groups. Label propagation colours each group as it finds it."></canvas>
     <figcaption>
-      <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities." aria-live="polite">Label propagation is looking for communities…</span>
+      <span class="hero-graph__status" data-searching="Label propagation is looking for communities…" data-found="Label propagation found {n} communities." data-found-one="Label propagation found 1 community." aria-live="polite">Label propagation is looking for communities…</span>
       <button type="button" class="hero-graph__again">New graph</button>
     </figcaption>
+    <div class="hero-graph__controls">
+      <label class="hero-graph__ctl"><span>Groups <output data-out="groups">4</output></span><input type="range" min="2" max="5" step="1" value="4" data-graph="groups"></label>
+      <label class="hero-graph__ctl"><span>Links between groups <output data-out="mix">1.2%</output></span><input type="range" min="0" max="6" step="1" value="2" data-graph="mix"></label>
+    </div>
   </figure>
 </section>
 <div class="home-cols">

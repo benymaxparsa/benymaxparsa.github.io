@@ -76,6 +76,20 @@ const image = new URL(site.ogImage, site.url).href;
         if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
       } catch (e) {}
     </script>
+    <script is:inline>
+      // A page prepared in the background (speculation rules below) re-reads the saved theme when it is shown
+      document.addEventListener('prerenderingchange', function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+          else document.documentElement.removeAttribute('data-theme');
+        } catch (e) {}
+      });
+    </script>
+    <!-- Hovering a link prepares that page in the background so the click opens it at once (Chrome 121+; ignored elsewhere) -->
+    <script type="speculationrules" is:inline>
+      { "prerender": [{ "where": { "and": [{ "href_matches": "/*" }, { "not": { "href_matches": ["/*.pdf", "/files/*", "/images/*", "/assets/*", "/pagefind/*", "/*.xml"] } }] }, "eagerness": "moderate" }] }
+    </script>
     {path === '/' && (
       <script is:inline>
         // A visitor who switched to French gets the French home page
@@ -136,6 +150,7 @@ const image = new URL(site.ogImage, site.url).href;
     <dialog class="lightbox" aria-label={t.lightbox}>
       <img class="lightbox__img" alt="">
       <p class="lightbox__caption"></p>
+      <p class="lightbox__counter" aria-live="polite"></p>
       <button type="button" class="lightbox__btn lightbox__prev" aria-label={t.lightboxPrev}>‹</button>
       <button type="button" class="lightbox__btn lightbox__next" aria-label={t.lightboxNext}>›</button>
       <button type="button" class="lightbox__btn lightbox__close" aria-label={t.lightboxClose}>×</button>

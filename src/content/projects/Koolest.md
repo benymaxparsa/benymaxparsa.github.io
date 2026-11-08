@@ -4,6 +4,7 @@ type: "Personal Open-Source Project"
 venue: "KoolestTVLauncher"
 date: 2026-10-18
 location: "Montreal, Quebec"
+tags: ["Kotlin", "Android TV"]
 collection: projects
 ---
 - Designed and built a replacement home screen for Android TV and Google TV in Kotlin, shipped as a single 0.7 MB APK with no third-party libraries, no ads, no account and no tracking.

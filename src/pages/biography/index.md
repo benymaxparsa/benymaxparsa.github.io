@@ -42,6 +42,14 @@ He then joined the Formal Methods and Tools group at the University of Twente as
 
 His background is in theoretical computer science: design and analysis of algorithms, graph theory, discrete mathematics, data structures, and complexity theory. His research interests include graph algorithms, graph mining, social network analysis, combinatorial optimization, approximation and randomized algorithms, and online algorithms.
 
+## Skills
+
+<dl class="skill-groups">
+<div class="skill-group"><dt>Languages</dt><dd><ul class="interest-tags"><li class="interest-tag">Python</li><li class="interest-tag">Java</li><li class="interest-tag">C++</li><li class="interest-tag">C#</li><li class="interest-tag">Kotlin</li><li class="interest-tag">Swift</li><li class="interest-tag">JavaScript</li><li class="interest-tag">SQL</li><li class="interest-tag">MATLAB</li><li class="interest-tag">VHDL</li><li class="interest-tag">Assembly</li></ul></dd></div>
+<div class="skill-group"><dt>Data and graphs</dt><dd><ul class="interest-tags"><li class="interest-tag">NumPy</li><li class="interest-tag">Pandas</li><li class="interest-tag">scikit-learn</li><li class="interest-tag">NetworkX</li></ul></dd></div>
+<div class="skill-group"><dt>Tools</dt><dd><ul class="interest-tags"><li class="interest-tag">Git</li><li class="interest-tag">LaTeX</li><li class="interest-tag">Qt</li><li class="interest-tag">Unity3D</li><li class="interest-tag">Scrapy</li></ul></dd></div>
+</dl>
+
 ## Teaching
 
 Parsa has been a teaching assistant for more than 15 courses and 1650+ hours, at Concordia and at Vali-e-Asr University. The courses range from theory (Design and Analysis of Algorithms, Combinatorics, Introduction to Theoretical Computer Science, Discrete Mathematics, Data Structures, Probability and Statistics) to programming and systems (Fundamentals of Programming, Object-Oriented Programming, Principles of Programming Languages, Computer Organization, Microprocessor-Based Systems, Operating Systems) and data, software and AI (Database, Data Systems for Software Engineers, Data Mining, Information Retrieval, Software Engineering, Artificial Intelligence). At Vali-e-Asr he led a team of ten TAs for Design and Analysis of Algorithms. In May 2026 he received the **Dean’s Excellence Award for Excellence in Teaching by a Teaching Assistant** from the Gina Cody School.

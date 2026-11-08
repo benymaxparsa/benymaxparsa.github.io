@@ -141,34 +141,98 @@ function initThemeToggle() {
     document.dispatchEvent(new CustomEvent('themechange'));
   };
   btn.addEventListener('click', () => {
-    const next = current() === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch { /* storage blocked */ }
-    sync();
+    const apply = () => {
+      // decided here, not before the transition starts, so a fast second click really flips it back
+      const next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch { /* storage blocked */ }
+      sync();
+    };
+    // Crossfade the page while the switch's knob slides (it has its own transition name)
+    if (document.startViewTransition && !prefersReducedMotion) document.startViewTransition(apply);
+    else apply();
   });
   mq.addEventListener('change', () => { if (!root.getAttribute('data-theme')) sync(); });
   sync();
 }
 
-/** Language dropdown: click/tap only (never hover), Esc and outside click close it. */
+/**
+ * Language pill: remember an explicit choice (so the bare / URL can send the visitor to their language next
+ * time), and slide the knob to the other language before going there.
+ */
 function initLanguageSwitcher() {
-  const dropdown = $('.lang-dropdown');
-  const toggle = $('.lang-current');
-  if (!dropdown || !toggle) return;
-  const setOpen = (open: boolean) => {
-    dropdown.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-  };
-  toggle.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!dropdown.classList.contains('open')); });
-  document.addEventListener('click', (e) => { if (!dropdown.contains(e.target as Node)) setOpen(false); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && dropdown.classList.contains('open')) { setOpen(false); toggle.focus(); }
-  });
-  for (const link of $$<HTMLAnchorElement>('.lang-switch-link', dropdown)) {
-    link.addEventListener('click', () => {
+  const box = $('.language-switcher');
+  for (const link of $$<HTMLAnchorElement>('.lang-switch-link')) {
+    link.addEventListener('click', (e) => {
       try { localStorage.setItem('preferredLanguage', link.dataset.lang ?? ''); } catch { /* storage blocked */ }
+      if (!box || prefersReducedMotion || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      e.preventDefault();
+      box.dataset.pos = box.dataset.pos === '1' ? '0' : '1';
+      box.classList.add('is-switching');
+      setTimeout(() => { location.href = link.href; }, 280);
     });
   }
+  // The back button restores this page from cache mid-slide: put the knob back
+  addEventListener('pageshow', (e) => {
+    if (!e.persisted || !box) return;
+    box.dataset.pos = isFrench ? '1' : '0';
+    box.classList.remove('is-switching');
+  });
+}
+
+/**
+ * Nav bubble: a soft pill behind the current link glides to the link you click, then the page opens.
+ * A second click re-targets instead of stacking navigations. Only links still in the bar get it
+ * (the greedy nav may have moved some into the overflow menu).
+ */
+function initNavBubble() {
+  const list = $('.visible-links');
+  const nav = $('nav.greedy-nav');
+  if (!list || !nav) return;
+  const bubble = document.createElement('li');
+  bubble.className = 'nav-bubble no-anim';
+  bubble.setAttribute('aria-hidden', 'true');
+  list.prepend(bubble);
+  list.classList.add('has-bubble');
+  const current = () => $<HTMLAnchorElement>('a[aria-current="page"]', list);
+  const place = (a: HTMLElement | null) => {
+    if (!a || !list.contains(a)) { bubble.classList.remove('is-placed'); return; }
+    const l = list.getBoundingClientRect(), r = a.getBoundingClientRect();
+    const padX = 10, padY = 3;
+    bubble.style.transform = `translate(${r.left - l.left - padX}px, ${r.top - l.top - padY}px)`;
+    bubble.style.width = `${r.width + padX * 2}px`;
+    bubble.style.height = `${r.height + padY * 2}px`;
+    bubble.classList.add('is-placed');
+  };
+  const settle = () => {
+    bubble.classList.add('no-anim');
+    place(current());
+    requestAnimationFrame(() => bubble.classList.remove('no-anim'));
+  };
+  settle();
+  new ResizeObserver(settle).observe(nav);
+  document.fonts?.ready.then(settle);
+
+  let timer = 0;
+  for (const a of $$<HTMLAnchorElement>('a', list)) {
+    a.addEventListener('click', (e) => {
+      if (prefersReducedMotion || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button || a.matches('[aria-current="page"]')) return;
+      if (!bubble.classList.contains('is-placed') || !list.contains(a)) return; // nothing to glide from, or the link sits in the overflow menu
+      e.preventDefault();
+      place(a);
+      for (const x of $$('a', list)) {
+        x.classList.toggle('is-target', x === a);
+        x.classList.toggle('is-leaving', x !== a && x.matches('[aria-current="page"]'));
+      }
+      clearTimeout(timer);
+      timer = window.setTimeout(() => { location.href = a.href; }, 220);
+    });
+  }
+  addEventListener('pageshow', (e) => {
+    if (!e.persisted) return;
+    for (const x of $$('.is-target, .is-leaving', list)) x.classList.remove('is-target', 'is-leaving');
+    settle();
+  });
 }
 
 /** Search overlay backed by Pagefind; the index is split by <html lang>, so results stay in the page language. */
@@ -254,15 +318,28 @@ function initLightbox() {
   if (!links.length) return;
   const img = $<HTMLImageElement>('.lightbox__img', dialog)!;
   const caption = $('.lightbox__caption', dialog)!;
+  const counter = $('.lightbox__counter', dialog)!;
   let index = 0;
   let opener: HTMLElement | null = null;
+  let seq = 0;
+  // The picture zooms/fades in once decoded, and fades out before the next one replaces it
   const show = (i: number) => {
     index = (i + links.length) % links.length;
     const a = links[index];
-    img.src = a.href;
-    img.alt = a.querySelector('img')?.alt ?? '';
-    caption.textContent = a.title || img.alt;
+    const mine = ++seq;
+    img.classList.remove('ready');
+    const swap = () => {
+      if (mine !== seq) return; // a newer step is already on its way
+      img.src = a.href;
+      img.alt = a.querySelector('img')?.alt ?? '';
+      caption.textContent = a.title || img.alt;
+      counter.textContent = `${index + 1} / ${links.length}`;
+      (img.decode ? img.decode() : Promise.resolve()).catch(() => {}).then(() => { if (mine === seq) img.classList.add('ready'); });
+    };
+    if (img.getAttribute('src') && !prefersReducedMotion) setTimeout(swap, 150); else swap();
     dialog.classList.toggle('lightbox--single', links.length === 1);
+    // Warm the neighbours so stepping through feels instant
+    for (const n of [index - 1, index + 1]) new Image().src = links[(n + links.length) % links.length].href;
   };
   links.forEach((a, i) => a.addEventListener('click', (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // let middle/modified clicks open the image
@@ -274,8 +351,19 @@ function initLightbox() {
   }));
   dialog.addEventListener('close', () => {
     document.documentElement.classList.remove('lightbox-open');
+    seq++;
+    img.classList.remove('ready');
     img.removeAttribute('src');
     opener?.focus();
+  });
+  // Swipe sideways on touch screens to step; vertical drags are left alone
+  let sx: number | null = null, sy = 0;
+  dialog.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  dialog.addEventListener('touchend', (e) => {
+    if (sx === null || links.length < 2) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy)) show(index + (dx < 0 ? 1 : -1));
+    sx = null;
   });
   $('.lightbox__prev', dialog)!.addEventListener('click', () => show(index - 1));
   $('.lightbox__next', dialog)!.addEventListener('click', () => show(index + 1));
@@ -286,6 +374,67 @@ function initLightbox() {
     if (e.key === 'ArrowLeft') show(index - 1);
     else if (e.key === 'ArrowRight') show(index + 1);
   });
+}
+
+/**
+ * Card slideshows (markup from lib/cards.ts): arrows, dots, swipe, and a slow autoplay that waits while
+ * the card is hovered or off screen and stops for good once you step through it yourself.
+ */
+function initSlideshows() {
+  for (const box of $$('figure.is-slides')) {
+    const slides = $$<HTMLAnchorElement>(':scope > a', box);
+    const dots = $$(':scope > .slide-dots span', box);
+    let i = 0, visible = false, hovering = false, userStepped = false, swiped = false;
+    const show = (n: number) => {
+      slides[i].classList.remove('is-active');
+      dots[i]?.classList.remove('is-on');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('is-active');
+      dots[i]?.classList.add('is-on');
+    };
+    const step = (d: number) => { userStepped = true; show(i + d); };
+    $('.slide-prev', box)?.addEventListener('click', () => step(-1));
+    $('.slide-next', box)?.addEventListener('click', () => step(1));
+    let sx: number | null = null, sy = 0;
+    box.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiped = false; }, { passive: true });
+    box.addEventListener('touchend', (e) => {
+      if (sx === null) return;
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy)) {
+        step(dx < 0 ? 1 : -1);
+        swiped = true;
+        setTimeout(() => { swiped = false; }, 400); // a real drag fires no click; don't let the flag swallow the next tap
+      }
+      sx = null;
+    });
+    // the tap that ends a swipe must not also open the viewer
+    box.addEventListener('click', (e) => { if (swiped) { swiped = false; e.preventDefault(); e.stopPropagation(); } }, true);
+    // Autoplay is a courtesy for pointer devices: it runs one pass through the slides and stops, so there is
+    // nothing moving for more than a few seconds and touch users never have it (WCAG 2.2.2)
+    if (prefersReducedMotion || !matchMedia('(hover: hover)').matches) continue;
+    new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(box);
+    box.addEventListener('mouseenter', () => { hovering = true; });
+    box.addEventListener('mouseleave', () => { hovering = false; });
+    box.addEventListener('focusin', () => { hovering = true; });
+    box.addEventListener('focusout', () => { hovering = false; });
+    let shown = 1;
+    const timer = setInterval(() => {
+      if (shown >= slides.length || userStepped) { clearInterval(timer); return; }
+      if (visible && !hovering && !document.hidden) { show(i + 1); shown++; }
+    }, 5000);
+  }
+}
+
+/** Listing cards that start below the first screen slide up as they arrive; nothing already on screen is hidden. */
+function initReveal() {
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    for (const en of entries) if (en.isIntersecting) { en.target.classList.remove('pre'); io.unobserve(en.target); }
+  }, { rootMargin: '0px 0px -40px 0px' });
+  for (const el of $$('.list__item')) {
+    el.classList.add('reveal');
+    if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); }
+  }
 }
 
 /** Fade in natively lazy-loaded images that haven't arrived yet. */
@@ -307,8 +456,11 @@ addReadingProgressBar();
 addScrollToTopButton();
 initThemeToggle();
 initLanguageSwitcher();
+initNavBubble();
 initSearch();
 initLightbox();
+initSlideshows();
+initReveal();
 enhanceLazyLoading();
 updateDurations();
 initHeroGraph(prefersReducedMotion);

@@ -43,7 +43,7 @@ for (const [path, e] of expected) {
   }
   const title = attr(html, /<title>([^<]*)<\/title>/i);
   if (title && e.title && decode(title).trim() !== decode(e.title).trim()) mismatches.push({ path, field: 'title', want: e.title, got: title });
-  const twin = attr(html, /href="([^"]+)"[^>]*class="lang-option/i);
+  const twin = attr(html, /class="[^"]*lang-switch-link[^"]*"[^>]*href="([^"]+)"/i);
   if (e.twin !== twin) mismatches.push({ path, field: 'twin', want: e.twin, got: twin });
 }
 
