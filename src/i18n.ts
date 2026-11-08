@@ -47,6 +47,7 @@ export const ui = {
     madeWith: 'Made with', love: 'love', madeFrom: 'from Canada',
     publishedIn: 'Published in', citation: 'Recommended citation:', download: 'Download', here: 'here',
     lightbox: 'Image viewer', lightboxClose: 'Close', lightboxPrev: 'Previous image', lightboxNext: 'Next image',
+    moreDetails: 'More details',
   },
   fr: {
     htmlLang: 'fr-CA', ogLocale: 'fr_CA', home: '/fr/',
@@ -59,6 +60,7 @@ export const ui = {
     madeWith: 'Fait avec', love: 'amour', madeFrom: 'au Canada',
     publishedIn: 'Publié dans', citation: 'Citation recommandée :', download: 'Télécharger', here: 'ici',
     lightbox: 'Visionneuse d’images', lightboxClose: 'Fermer', lightboxPrev: 'Image précédente', lightboxNext: 'Image suivante',
+    moreDetails: 'Plus de détails',
   },
 } as const;
 
