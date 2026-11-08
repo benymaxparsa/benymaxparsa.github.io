@@ -250,16 +250,23 @@ export function initHeroGraph(prefersReducedMotion: boolean) {
   // Sliders: the number of planted groups and how often groups link to each other. Rebuild shortly
   // after the last input so dragging doesn't restart the layout on every pixel.
   let rebuildTimer = 0;
+  const syncControlText = () => {
+    const out = (k: string) => fig.querySelector(`output[data-out="${k}"]`);
+    const g = out('groups'), m = out('mix');
+    const percent = `${(P_OUT * 100).toLocaleString(locale, { maximumFractionDigits: 1 })}${locale === 'fr-CA' ? ' %' : '%'}`;
+    if (g) g.textContent = String(K);
+    if (m) m.textContent = percent;
+    // the slider's value is an index (0-6); screen readers should hear the percentage
+    mixInput?.setAttribute('aria-valuetext', percent);
+  };
   const onControl = () => {
     K = Number(groupsInput?.value ?? K);
     P_OUT = MIX[Number(mixInput?.value ?? 2)] ?? P_OUT;
-    const out = (k: string) => fig.querySelector(`output[data-out="${k}"]`);
-    const g = out('groups'), m = out('mix');
-    if (g) g.textContent = String(K);
-    if (m) m.textContent = `${(P_OUT * 100).toLocaleString(locale, { maximumFractionDigits: 1 })}${locale === 'fr-CA' ? ' %' : '%'}`;
+    syncControlText();
     clearTimeout(rebuildTimer);
     rebuildTimer = window.setTimeout(start, 150);
   };
+  syncControlText();
   groupsInput?.addEventListener('input', onControl);
   mixInput?.addEventListener('input', onControl);
   document.addEventListener('themechange', () => { readTheme(); draw(); });

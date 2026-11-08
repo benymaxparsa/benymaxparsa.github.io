@@ -20,6 +20,13 @@ test('foldBullets: short lists, nested lists and no list are untouched', () => {
   assert.equal(foldBullets('<p>hi</p>', 'More'), '<p>hi</p>');
 });
 
+test('foldBullets: bullets with attributes are kept, not dropped', () => {
+  const html = '<ul><li class="t">KEEPME</li><li>b</li><li>c</li><li id="x">d</li></ul>';
+  const out = foldBullets(html, 'More');
+  for (const word of ['KEEPME', '>b<', '>c<', '>d<']) assert.ok(out.includes(word), word);
+  assert.equal((out.match(/<li\b/g) ?? []).length, 4);
+});
+
 test('slideshow: a gallery figure with two images gets slides, controls and dots; a single image is untouched', () => {
   const two = '<figure class="half"><a href="/a.jpg"><img src="/a.jpg"></a><a href="/b.jpg"><img src="/b.jpg"></a><figcaption>c</figcaption></figure>';
   const out = slideshow(two, 'Prev', 'Next');

@@ -141,8 +141,9 @@ function initThemeToggle() {
     document.dispatchEvent(new CustomEvent('themechange'));
   };
   btn.addEventListener('click', () => {
-    const next = current() === 'dark' ? 'light' : 'dark';
     const apply = () => {
+      // decided here, not before the transition starts, so a fast second click really flips it back
+      const next = current() === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch { /* storage blocked */ }
       sync();
@@ -332,10 +333,10 @@ function initLightbox() {
       img.src = a.href;
       img.alt = a.querySelector('img')?.alt ?? '';
       caption.textContent = a.title || img.alt;
+      counter.textContent = `${index + 1} / ${links.length}`;
       (img.decode ? img.decode() : Promise.resolve()).catch(() => {}).then(() => { if (mine === seq) img.classList.add('ready'); });
     };
     if (img.getAttribute('src') && !prefersReducedMotion) setTimeout(swap, 150); else swap();
-    counter.textContent = `${index + 1} / ${links.length}`;
     dialog.classList.toggle('lightbox--single', links.length === 1);
     // Warm the neighbours so stepping through feels instant
     for (const n of [index - 1, index + 1]) new Image().src = links[(n + links.length) % links.length].href;
@@ -395,22 +396,32 @@ function initSlideshows() {
     $('.slide-prev', box)?.addEventListener('click', () => step(-1));
     $('.slide-next', box)?.addEventListener('click', () => step(1));
     let sx: number | null = null, sy = 0;
-    box.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    box.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiped = false; }, { passive: true });
     box.addEventListener('touchend', (e) => {
       if (sx === null) return;
       const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
-      if (Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy)) { step(dx < 0 ? 1 : -1); swiped = true; }
+      if (Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy)) {
+        step(dx < 0 ? 1 : -1);
+        swiped = true;
+        setTimeout(() => { swiped = false; }, 400); // a real drag fires no click; don't let the flag swallow the next tap
+      }
       sx = null;
     });
     // the tap that ends a swipe must not also open the viewer
     box.addEventListener('click', (e) => { if (swiped) { swiped = false; e.preventDefault(); e.stopPropagation(); } }, true);
-    if (prefersReducedMotion) continue;
+    // Autoplay is a courtesy for pointer devices: it runs one pass through the slides and stops, so there is
+    // nothing moving for more than a few seconds and touch users never have it (WCAG 2.2.2)
+    if (prefersReducedMotion || !matchMedia('(hover: hover)').matches) continue;
     new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(box);
     box.addEventListener('mouseenter', () => { hovering = true; });
     box.addEventListener('mouseleave', () => { hovering = false; });
     box.addEventListener('focusin', () => { hovering = true; });
     box.addEventListener('focusout', () => { hovering = false; });
-    setInterval(() => { if (visible && !hovering && !userStepped && !document.hidden) show(i + 1); }, 5000);
+    let shown = 1;
+    const timer = setInterval(() => {
+      if (shown >= slides.length || userStepped) { clearInterval(timer); return; }
+      if (visible && !hovering && !document.hidden) { show(i + 1); shown++; }
+    }, 5000);
   }
 }
 

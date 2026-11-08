@@ -63,15 +63,17 @@ try {
     const page = await open(path);
     await page.keyboard.press('/');
     await sleep(200);
-    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('.search-content', (p) => p.classList.contains('is--visible')) && await page.evaluate(() => document.activeElement?.id === 'search'));
+    check(`search ${lang}: "/" opens and focuses input`, await page.$eval('dialog.search-dialog', (d) => d.open) && await page.evaluate(() => document.activeElement?.id === 'search'));
     await page.keyboard.type(word);
-    await page.waitForFunction(() => document.querySelectorAll('#results .archive__item-title a').length > 0, { timeout: 5000 }).catch(() => {});
-    const urls = await page.$$eval('#results .archive__item-title a', (as) => as.map((a) => new URL(a.href).pathname));
+    await page.waitForFunction(() => document.querySelectorAll('#results a.search-hit').length > 0, { timeout: 5000 }).catch(() => {});
+    const urls = await page.$$eval('#results a.search-hit', (as) => as.map((a) => new URL(a.href).pathname));
     const inLang = urls.every((u) => (lang === 'fr' ? /^\/fr\/|-fr\/$/.test(u) : !/^\/fr\/|-fr\/$/.test(u)));
     check(`search ${lang}: results only in page language`, urls.length > 0 && inLang, `${urls.length} results: ${urls.slice(0, 3).join(', ')}`);
-    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape'); // a search field clears its text on the first Esc ...
+    await sleep(150);
+    if (await page.$eval('dialog.search-dialog', (d) => d.open)) { await page.keyboard.press('Escape'); await sleep(150); } // ... and the dialog closes on the next
     check(`search ${lang}: Esc closes, focus returns to toggle`,
-      await page.$eval('.search-content', (p) => !p.classList.contains('is--visible')) && (await active(page)).includes('search__toggle'));
+      await page.$eval('dialog.search-dialog', (d) => !d.open) && (await active(page)).includes('search__toggle'));
     await page.close();
   }
 
@@ -131,7 +133,7 @@ try {
     const want = await page.evaluate(() => { const now = new Date(); const m = (now.getFullYear() - 2024) * 12 + (now.getMonth() + 1 - 9) + 1; const y = Math.floor(m / 12), mo = m % 12; return [y && `${y} ${y > 1 ? 'yrs' : 'yr'}`, mo && `${mo} ${mo > 1 ? 'mos' : 'mo'}`].filter(Boolean).join(' '); });
     check('duration: correct for today', await page.$eval('.teaching-duration[data-start]', (e) => e.textContent) === want, want);
     await page.evaluate(() => window.scrollTo(0, 1200)); await sleep(400);
-    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat(b.style.width) > 0));
+    check('scroll-to-top and progress bar', await page.$eval('.scroll-to-top', (b) => b.classList.contains('visible')) && await page.$eval('.reading-progress', (b) => parseFloat((b.style.transform.match(/scaleX\(([\d.]+)\)/) ?? [])[1]) > 0));
     await page.close();
     const contact = await open('/contact/');
     const ext = await contact.$$eval('a.contact-link[rel~="me"][href^="https://github.com"]', (as) => as.map((a) => [a.target, a.rel, getComputedStyle(a, '::after').content]));
@@ -178,7 +180,7 @@ try {
           if (ra.width && rb.width && ra.left < rb.right - 1 && rb.left < ra.right - 1 && ra.top < rb.bottom - 1 && rb.top < ra.bottom - 1) problems.push(`${a} overlaps ${b}`);
         }
         const vl = document.querySelector('.visible-links').getBoundingClientRect();
-        for (const li of document.querySelectorAll('.visible-links > li')) {
+        for (const li of document.querySelectorAll('.visible-links > li:not(.nav-bubble)')) {
           const r = li.getBoundingClientRect();
           if (r.right > vl.right + 1 || r.left < vl.left - 1) problems.push(`clipped nav item ${li.textContent.trim()}`);
         }
@@ -189,6 +191,14 @@ try {
       if (res.height > 80) failures.push(`${path} @${w}: header ${res.height}px tall`);
       await page.close();
     }
+  }
+  // The home hero (portrait, text, graph and its sliders) fits one 1366x768 screen
+  for (const path of ['/', '/fr/']) {
+    const page = await open(path, { width: 1366 });
+    await page.setViewport({ width: 1366, height: 768 });
+    const bottom = await page.$eval('.home-hero', (h) => h.getBoundingClientRect().bottom);
+    check(`hero fits one screen at 1366x768: ${path}`, bottom <= 768, `hero bottom at ${Math.round(bottom)}px`);
+    await page.close();
   }
   check(`header layout: ${widths.length} widths × EN/FR, no overlap or clipping`, failures.length === 0, failures.join(' | '));
 } finally {

@@ -1,6 +1,6 @@
 // Markup transforms for listing-card excerpts (rendered Markdown as an HTML string).
 
-const LINK_ONLY = /^<li>\s*<a\b[^>]*>[^<]*<\/a>\s*<\/li>$/;
+const LINK_ONLY = /^<li\b[^>]*>\s*<a\b[^>]*>[^<]*<\/a>\s*<\/li>$/;
 
 /**
  * A long bullet list keeps its first `keep` text bullets and folds the rest into a <details>.
@@ -10,7 +10,9 @@ const LINK_ONLY = /^<li>\s*<a\b[^>]*>[^<]*<\/a>\s*<\/li>$/;
 export function foldBullets(html: string, summary: string, keep = 2): string {
   const m = html.match(/<ul>([\s\S]*?)<\/ul>/);
   if (!m || /<[uo]l\b/.test(m[1])) return html;
-  const items = m[1].match(/<li>[\s\S]*?<\/li>/g) ?? [];
+  const items = m[1].match(/<li\b[^>]*>[\s\S]*?<\/li>/g) ?? [];
+  // If the items don't account for every <li>, the list is not shaped the way this expects: leave it alone
+  if (items.length !== (m[1].match(/<li\b/g) ?? []).length) return html;
   const links = items.filter((li) => LINK_ONLY.test(li));
   const text = items.filter((li) => !LINK_ONLY.test(li));
   if (text.length <= keep + 1) return html;
