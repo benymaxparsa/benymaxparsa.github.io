@@ -73,8 +73,6 @@ we're solving this puzzle using Backtracking Algorithm.
 ## Travelling Salesman Problem
 * Code is not available at github at the moment.
 The travelling salesman problem (also called the travelling salesperson problem or TSP) asks the following question: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, important in theoretical computer science and operations research.
-![](https://raw.githubusercontent.com/HB-2000/DA_TSP_IMG/main/T1.JPG)
-![](https://raw.githubusercontent.com/HB-2000/DA_TSP_IMG/main/T2.JPG)
 
 
 

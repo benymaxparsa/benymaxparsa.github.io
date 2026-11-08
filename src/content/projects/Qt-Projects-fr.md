@@ -14,7 +14,7 @@ lang: fr-CA
 - Connexions signal-slot
 - Applications multi-fenêtres
 
-<figure class=""><a href="/images/Qt.png" title="Logo Qt"><img src="/images/Qt.png" loading="lazy" decoding="async" alt="Logo Qt"></a><figcaption>Logo Qt</figcaption></figure>
+<figure class=""><a href="/images/QT.png" title="Logo Qt"><img src="/images/QT.png" loading="lazy" decoding="async" alt="Logo Qt"></a><figcaption>Logo Qt</figcaption></figure>
 
 
 - [Page Github](https://github.com/benymaxparsa/Qt_Projects)

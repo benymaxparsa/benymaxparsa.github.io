@@ -12,9 +12,9 @@ lang: fr-CA
 - Réalisation d’expériences approfondies sur les ensembles de données SBM (1K, 10K), CORA et Reddit, démontrant que l’échantillonnage de voisins et le partitionnement de graphe permettent l’entraînement sur de grands graphes lorsque les méthodes en lot complet échouent en raison de contraintes mémoire.
 - Atteinte d’une précision allant jusqu’à 90 % sur SBM (10K nœuds) avec le partitionnement de graphe tout en réduisant l’empreinte mémoire, et activation d’un entraînement évolutif sur Reddit où les méthodes en lot complet entraînaient des erreurs de mémoire insuffisante.
 - Analyse des compromis entre précision, temps d’entraînement et utilisation de la mémoire, en proposant des lignes directrices pratiques pour le déploiement évolutif de GNN dans des réseaux sociaux de grande taille en contexte réel.
-- Diapositives de présentation [Cliquez ici](/files/Projects/ComGNN_Project_Presentation.pdf)
-- Proposition de projet [Cliquez ici](/files/Projects/ComGNN_Project_Proposal.pdf)
-- Rapport de projet [Cliquez ici](/files/Projects/ComGNN_Project_Report.pdf)
-- Code et dépôt GitHub : [Cliquez ici](https://github.com/Fall2024-MLProjects/CommunityDetection/tree/main)
+- [Diapositives de présentation](/files/Projects/ComGNN_Project_Presentation.pdf)
+- [Proposition de projet](/files/Projects/ComGNN_Project_Proposal.pdf)
+- [Rapport de projet](/files/Projects/ComGNN_Project_Report.pdf)
+- [Code et dépôt GitHub](https://github.com/Fall2024-MLProjects/CommunityDetection/tree/main)
 
 <figure class=""><a href="/images/CommGNN.png" title="Capture d’écran du rapport"><img src="/images/CommGNN.png" loading="lazy" decoding="async" alt="Capture d’écran du rapport"></a><figcaption>Capture d’écran du rapport</figcaption></figure>
