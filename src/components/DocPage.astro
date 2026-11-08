@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import Single from '../layouts/Single.astro';
 import { docs, langOf, twinOf, urlOf, type Doc } from '../lib/urls';
 import { excerpt } from '../lib/text';
+import { sectionCrumb } from '../lib/crumbs';
 
 interface Props { doc: Doc }
 const { doc } = Astro.props;
@@ -15,6 +16,7 @@ const tags = doc.data.tags ?? twin?.data.tags;
 const siblings = await docs(doc.collection, lang);
 const i = siblings.findIndex((d) => d.id === doc.id);
 const link = (d?: Doc) => d && { url: urlOf(d), title: d.data.title };
+const section = sectionCrumb(`/${doc.collection}/`, lang);
 ---
 <Single
   title={doc.data.title}
@@ -24,6 +26,7 @@ const link = (d?: Doc) => d && { url: urlOf(d), title: d.data.title };
   date={doc.data.date}
   classes={`doc--${doc.collection}`}
   share
+  crumbs={section && [section]}
   pager={{ prev: link(siblings[i - 1]), next: link(siblings[i + 1]) }}
 >
   {tags && <ul class="interest-tags" aria-label="Tags">{tags.map((tag) => <li class="interest-tag">{tag}</li>)}</ul>}

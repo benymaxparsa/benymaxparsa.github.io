@@ -2,14 +2,18 @@
 import { smart } from '../lib/text';
 import Base from './Base.astro';
 import type { Lang } from '../i18n';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import type { Crumb } from '../lib/crumbs';
+import { pagePath } from '../lib/paths';
 
-interface Props { title: string; lang: Lang; twin: string; description?: string }
-const { lang, twin, description } = Astro.props;
+interface Props { title: string; lang: Lang; twin: string; description?: string; crumbs?: Crumb[] }
+const { lang, twin, description, crumbs } = Astro.props;
 const title = smart(Astro.props.title);
 ---
 <Base title={title} lang={lang} twin={twin} description={description} layout="archive">
   <div id="main" role="main">
     <div class="archive">
+      {crumbs && <Breadcrumbs lang={lang} trail={crumbs} current={title} currentUrl={pagePath(Astro.url)} />}
       <h1 id="page-title" class="page__title">{title}</h1>
       <slot />
     </div>
