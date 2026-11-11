@@ -299,7 +299,7 @@ try {
     await pub.close();
     const cv = await open('/cv/');
     await cv.select('#cv-lang', '/files/FR_ParsaKamalipour_CV.pdf');
-    check('cv: selector switches the preview', await cv.$eval('#cv-frame', (f) => f.getAttribute('src') === '/files/FR_ParsaKamalipour_CV.pdf'));
+    check('cv: selector switches the preview', await cv.$eval('#cv-frame', (f) => f.getAttribute('src') === '/files/FR_ParsaKamalipour_CV.pdf#view=FitH&navpanes=0'));
     await cv.close();
     const mat = await open('/fr/enseignement/materiel/');
     check('course materials: FR page lists files', await mat.$$eval('.material-link', (as) => as.length) > 0);

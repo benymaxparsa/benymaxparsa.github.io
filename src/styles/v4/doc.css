@@ -42,6 +42,17 @@ video { max-width: 100%; height: auto; border-radius: var(--radius-md); }
 .archive__item-excerpt { margin: 0 0 10px; }
 .archive__item-citation { margin-top: 10px; padding: 14px 18px; border-radius: var(--radius-sm); background: var(--surface); font-size: 15px; color: var(--muted); }
 
+/* A lone figure in a row (a paper's first page) sits as a thumbnail beside the text */
+.archive__item:has(> figure:only-of-type) { display: grid; grid-template-columns: minmax(0, 1fr) 190px; column-gap: 32px; }
+.archive__item:has(> figure:only-of-type) > * { grid-column: 1; }
+.archive__item > figure:only-of-type { grid-column: 2; grid-row: 1 / span 8; align-self: start; margin: 0; }
+.archive__item > figure:only-of-type img { display: block; width: 100%; max-height: 260px; object-fit: cover; object-position: top; border: 1px solid var(--hairline); }
+.archive__item > figure:only-of-type figcaption { display: none; }
+@media (max-width: 767px) {
+  .archive__item:has(> figure:only-of-type) { grid-template-columns: minmax(0, 1fr) 96px; column-gap: 16px; }
+  .archive__item > figure:only-of-type { grid-row: 1 / span 2; }
+}
+
 /* Contact */
 .info-card, .materials-note, .score-card, .lang-card, .teaching-award { background: var(--surface); border-radius: var(--radius-lg); }
 .info-card { padding: 28px 32px; margin-bottom: 1.1em; }
@@ -51,6 +62,8 @@ video { max-width: 100%; height: auto; border-radius: var(--radius-md); }
 .contact-links { display: grid; gap: 8px; list-style: none; padding: 0; }
 .contact-links li + li { margin-top: 0; }
 .contact-link { display: flex; align-items: center; gap: 16px; padding: 14px 20px; border-radius: var(--radius-md); background: var(--surface); text-decoration: none !important; }
+/* Account links carry no second line, so they fit several to a row */
+.contact-links:not(:has(.contact-link__sub)) { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
 .contact-link:hover { background: color-mix(in srgb, var(--tone) 14%, var(--surface)); }
 .contact-link > i { font-size: 20px; flex: none; }
 .contact-link__text { display: flex; flex-direction: column; min-width: 0; font-weight: 700; }
@@ -94,7 +107,8 @@ video { max-width: 100%; height: auto; border-radius: var(--radius-md); }
 .responsibility-list li + li { margin-top: .45em; }
 
 /* Course materials */
-.materials-note { padding: 20px 24px; margin-bottom: 16px; }
+.materials-note { display: flex; gap: 12px; padding: 20px 24px; margin-bottom: 16px; }
+.materials-note > i { flex: none; margin-top: .3em; }
 .materials-note > :last-child { margin-bottom: 0; }
 .materials-licence { font-size: 15px; color: var(--muted); }
 .course-materials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 20px; margin-top: 32px; }
@@ -105,6 +119,7 @@ video { max-width: 100%; height: auto; border-radius: var(--radius-md); }
 .course-materials__blurb { font-size: 16px; }
 .material-list { list-style: none; margin: 16px 0 0; padding: 0; }
 .material-item { margin: 0; padding: 14px 0; border-top: 1px solid var(--hairline); }
+.material-link > i { flex: none; }
 .material-link { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none !important; }
 .material-link:hover .material-name { text-decoration: underline; text-decoration-color: var(--tone-line); text-decoration-thickness: 2px; }
 .material-ext { margin-left: auto; padding: 2px 8px; border-radius: 6px; background: var(--paper); font-size: 12px; font-weight: 700; color: var(--muted); }

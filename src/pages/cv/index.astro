@@ -14,7 +14,7 @@ const lang = langFromPath(path);
   <a id="cv-fr" class="cv-btn secondary" href="/files/FR_ParsaKamalipour_CV.pdf" download aria-label="Télécharger le CV en français PDF">
     Télécharger le CV (Français, PDF)
   </a>
-  <div class="cv-meta"><b><u>Last CV update: <i>August 5, 2025</i></u></b></div>
+  <div class="cv-meta">Last CV update: August 5, 2025</div>
 </div>
 
 <div class="cv-ctrl">
@@ -29,7 +29,7 @@ const lang = langFromPath(path);
   <iframe
     id="cv-frame"
     class="cv-iframe"
-    src="/files/ParsaKamalipour_CV.pdf"
+    src="/files/ParsaKamalipour_CV.pdf#view=FitH&navpanes=0"
     title="CV preview"
   ></iframe>
 </div>
@@ -37,6 +37,6 @@ const lang = langFromPath(path);
   // Preview the CV in the language picked in the selector
   const select = document.querySelector<HTMLSelectElement>('#cv-lang');
   const frame = document.querySelector<HTMLIFrameElement>('#cv-frame');
-  select?.addEventListener('change', () => { if (frame) frame.src = select.value; });
+  select?.addEventListener('change', () => { if (frame) frame.src = select.value + '#view=FitH&navpanes=0'; });
 </script>
 </Archive>

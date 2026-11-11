@@ -1,5 +1,7 @@
 /* v4 footer: the ink community slab (CV & Contact) */
 .site-footer { padding: var(--space-section) var(--gutter) 24px; }
+/* On the homepage the footer is the last slab in the stack */
+.home .site-footer { padding-top: 20px; }
 .footer-inner { max-width: calc(var(--content-max) - 2 * var(--gutter)); margin: 0 auto; padding: 72px 64px 40px; }
 .site-footer a:not(.btn) { color: var(--ink); text-decoration: none; }
 .site-footer a:not(.btn):hover { text-decoration: underline; }
