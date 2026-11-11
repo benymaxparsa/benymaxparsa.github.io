@@ -36,6 +36,7 @@ courses:
       Tutorial_6_Assignment_2_Notes.pdf: "Assignment 2, Q8 to 14: generating functions for weighted equations and partitions, exponential generating functions, solving recurrences, and combinatorial proofs."
       Graph_Theory_1_Lecture_Notes.pdf: "Graph theory basics (Sections 11.1 to 11.3): directed and undirected graphs, trails, paths and cycles, connectivity, subgraphs and complements, graph isomorphism, and vertex degree."
       Tutorial_7_Graph_Theory_Notes_1.pdf: "The Handshaking Theorem, complete and regular graphs, Eulerian trails and Euler’s theorem, a lower bound on the edges of a connected graph, bipartite and planar graphs (K5 and K3,3), and forcing a triangle."
+      Tutorial_8_Graph_Theory_Notes.pdf: "Euler’s formula and the edge bounds, subdivisions and Kuratowski’s theorem (the Petersen graph), complements, Hamilton paths and cycles, trees and pendant vertices, orientations, and Rédei’s theorem."
     fr:
       name: "Combinatoire"
       role: "Instructeur de tutoriels"
@@ -51,6 +52,7 @@ courses:
         Tutorial_6_Assignment_2_Notes.pdf: "Devoir 2, Q8 à 14 : fonctions génératrices pour équations pondérées et partitions, fonctions génératrices exponentielles, résolution de récurrences et preuves combinatoires."
         Graph_Theory_1_Lecture_Notes.pdf: "Bases de la théorie des graphes (sections 11.1 à 11.3) : graphes orientés et non orientés, pistes, chemins et cycles, connexité, sous-graphes et compléments, isomorphisme de graphes et degré d’un sommet."
         Tutorial_7_Graph_Theory_Notes_1.pdf: "Lemme des poignées de main, graphes complets et réguliers, pistes eulériennes et théorème d’Euler, nombre minimal d’arêtes d’un graphe connexe, graphes bipartis et planaires (K5 et K3,3), et forcer un triangle."
+        Tutorial_8_Graph_Theory_Notes.pdf: "Formule d’Euler et bornes sur les arêtes, subdivisions et théorème de Kuratowski (graphe de Petersen), compléments, chemins et cycles hamiltoniens, arbres et sommets pendants, orientations et théorème de Rédei."
 
   - code: "SOEN 363"
     name: "Data Systems for Software Engineers"
