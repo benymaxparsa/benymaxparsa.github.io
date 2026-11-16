@@ -17,6 +17,9 @@ export const site = {
     'https://scholar.google.com/citations?user=eBNZsM0AAAAJ',
     'https://www.researchgate.net/profile/Parsa-Kamalipour',
     'https://orcid.org/0000-0003-2546-9676',
+    'https://dblp.org/pid/328/7111.html',
+    'https://www.semanticscholar.org/author/7592796',
+    'https://huggingface.co/ParsaKamalipour',
   ],
   footerLinks: [
     { label: 'Personal Email', icon: 'fas fa-fw fa-envelope-square', url: 'mailto:parsakamalipour.edu@gmail.com' },
@@ -28,4 +31,35 @@ export const site = {
     { label: 'ResearchGate', icon: 'fab fa-fw fa-researchgate', url: 'https://www.researchgate.net/profile/Parsa-Kamalipour' },
     { label: 'ORCID', icon: 'fab fa-fw fa-orcid', url: 'https://orcid.org/0000-0003-2546-9676' },
   ],
+};
+
+const concordia = { '@type': 'CollegeOrUniversity', name: 'Concordia University', sameAs: 'https://www.concordia.ca/' };
+
+// Home page structured data; Google reads it when deciding whether to show a Knowledge Panel.
+export const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': `${site.url}/#person`,
+    name: site.author,
+    url: `${site.url}/`,
+    image: `${site.url}${site.ogImage}`,
+    description:
+      'Computer science researcher at Concordia University working on graph algorithms, community detection and social network analysis.',
+    jobTitle: 'Graduate Research Assistant',
+    affiliation: { ...concordia, department: { '@type': 'Organization', name: 'Algorithms and Complexity Lab' } },
+    alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Vali-e-Asr University of Rafsanjan' }],
+    knowsAbout: [
+      'Graph algorithms',
+      'Community detection',
+      'Social network analysis',
+      'Graph mining',
+      'Design and analysis of algorithms',
+      'Combinatorial optimization',
+    ],
+    knowsLanguage: ['fa', 'en', 'fr'],
+    award: "Dean's Excellence Award for Excellence in Teaching by a TA, Gina Cody School, Concordia University (2026)",
+    sameAs: site.sameAs,
+  },
 };
