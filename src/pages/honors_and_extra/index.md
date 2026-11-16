@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/MdPage.astro
 title: "Honors and Awards, Test Scores, Skills, etc."
-excerpt: "Honors and Awards, Test Scores, Skills, etc."
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/MdPage.astro
 title: "Gallery & Images"
-excerpt: "Gallery & Images"
 ---
 
 

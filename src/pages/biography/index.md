@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/MdPage.astro
 title: "Biography of Parsa Kamalipour"
-excerpt: "Biography"
 ---
 
 <!-- Parsa is a dedicated professional with a Bachelor of Science degree in Computer Engineering, specializing in Software Engineering and a profound focus on Data Processing. While his academic foundation lies in Computer Engineering, Parsa's true expertise extends into ***Theoretical Computer Science*** and ***Machine Learning***. 

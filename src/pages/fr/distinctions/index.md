@@ -1,7 +1,6 @@
 ---
 layout: ../../../layouts/MdPage.astro
 title: "Distinctions et prix, résultats de tests, compétences, etc."
-excerpt: "Distinctions et prix, résultats de tests, compétences, etc."
 
 ---
 
