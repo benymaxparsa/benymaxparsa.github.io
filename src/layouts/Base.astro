@@ -11,7 +11,7 @@ import '../styles/additions.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
 import { ui, type Lang } from '../i18n';
-import { site } from '../lib/site';
+import { site, personSchema } from '../lib/site';
 import { pagePath } from '../lib/paths';
 
 interface Props {
@@ -65,7 +65,7 @@ const image = new URL(site.ogImage, site.url).href;
     {index && <link rel="alternate" hreflang="en" href={enUrl}>}
     {index && <link rel="alternate" hreflang="fr-CA" href={frUrl}>}
     {index && <link rel="alternate" hreflang="x-default" href={enUrl}>}
-    {path === '/' && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.author, url: site.url + '/', sameAs: site.sameAs })} />}
+    {path === '/' && <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />}
     <meta name="google-site-verification" content={site.googleVerification}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script is:inline>
