@@ -9,10 +9,12 @@ TMP=$(mktemp -d)
 "$ICTOOL" design/Site.icon --export-image --output-file "$TMP/dark.png" --platform iOS --rendition Dark --width 1024 --height 1024 --scale 1 >/dev/null
 # iOS and Android mask the icon themselves, so they get a full-bleed square on the same gradient as icon.json
 magick -size 1024x1024 gradient:'#ffffff-#e8eefa' "$TMP/round.png" -composite "$TMP/square.png"
+magick -size 1024x1024 gradient:'#1f2738-#0b0f19' "$TMP/dark.png" -composite "$TMP/dsquare.png"
 for f in "$OUT"/*.png; do
   n=$(magick identify -format '%w' "$f")
   case $(basename "$f") in
     favicon-dark-*) src=dark ;;
+    logo-dark-*) src=dsquare ;;
     favicon-*) src=round ;;
     *) src=square ;;
   esac

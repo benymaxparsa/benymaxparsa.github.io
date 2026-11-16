@@ -6,6 +6,7 @@ export const site = {
   twitter: 'ParsaKamalipour',
   ogImage: '/images/profile.png',
   logo: '/assets/favicon/android-chrome-512x512.png',
+  logoDark: '/assets/favicon/logo-dark-128x128.png',
   gtag: 'G-YZHKJ874X8',
   googleVerification: 'vQuZMUe3btAbp5KkvECmsGlPRzZigNOqouxjo7-J6Kc',
   sameAs: [

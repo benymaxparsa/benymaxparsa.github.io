@@ -2328,6 +2328,25 @@ a:hover {
   display: inline;
 }
 
+.site-logo__dark {
+  display: none;
+}
+:root[data-theme="dark"] .site-logo__light {
+  display: none;
+}
+:root[data-theme="dark"] .site-logo__dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-logo__light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .site-logo__dark {
+    display: block;
+  }
+}
+
 :root[data-theme="dark"] .theme-toggle__icon--moon {
   display: none;
 }

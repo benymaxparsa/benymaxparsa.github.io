@@ -11,7 +11,7 @@ const other = lang === 'en' ? 'fr' : 'en';
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title} width="512" height="512"></a>
+        <a class="site-logo" href={t.home}><img class="site-logo__light" src={site.logo} alt={site.title} width="512" height="512"><img class="site-logo__dark" src={site.logoDark} alt={site.title} width="128" height="128"></a>
         <a class="site-title" href={t.home}>{site.title}</a>
         <ul class="visible-links">
           {nav[lang].map((link) => (
