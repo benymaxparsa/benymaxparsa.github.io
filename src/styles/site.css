@@ -868,8 +868,10 @@ th {
   text-decoration: none;
 }
 
-.site-logo img {
-  max-height: 2rem;
+.site-logo__mark {
+  display: block;
+  width: auto;
+  height: 2rem;
 }
 
 .site-title {
@@ -2215,10 +2217,6 @@ a:hover {
   padding: 0.55em clamp(1rem, 4vw, 2rem);
 }
 
-.site-logo img {
-  border-radius: 8px;
-}
-
 .site-title {
   font-family: "Schibsted Grotesk Variable", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
@@ -2328,22 +2326,19 @@ a:hover {
   display: inline;
 }
 
-.site-logo__dark {
-  display: none;
+.site-logo {
+  --logo-line: #2e58ff;
+  --logo-fill: #b9dcff;
 }
-:root[data-theme="dark"] .site-logo__light {
-  display: none;
-}
-:root[data-theme="dark"] .site-logo__dark {
-  display: block;
+:root[data-theme="dark"] .site-logo {
+  --logo-line: #7a96ff;
+  --logo-fill: #2b3a68;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .site-logo__light {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .site-logo__dark {
-    display: block;
+  :root:not([data-theme="light"]) .site-logo {
+    --logo-line: #7a96ff;
+    --logo-fill: #2b3a68;
   }
 }
 

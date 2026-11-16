@@ -93,8 +93,3 @@
   line-gap-override: 0%;
 }
 
-/* Logo keeps its box before the image arrives (width/height attributes give the ratio) */
-.site-logo img {
-  width: auto;
-  height: auto;
-}
