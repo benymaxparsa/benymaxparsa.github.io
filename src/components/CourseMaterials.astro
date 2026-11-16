@@ -2,7 +2,7 @@
 // Course blocks for the materials page; the file list is whatever is in each course's folder.
 import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
-import { staticFiles, prettyName } from '../lib/files';
+import { staticFiles, prettyName, pdfCreated } from '../lib/files';
 import type { Lang } from '../i18n';
 
 interface Course {
@@ -14,15 +14,11 @@ interface Course {
 const { lang } = Astro.props as { lang: Lang };
 const { courses } = parse(readFileSync('src/data/course_materials.yml', 'utf8')) as { courses: Course[] };
 const empty = lang === 'fr' ? 'Le matériel de ce cours sera publié ici au cours de la session.' : 'Materials for this course will be posted here during the term.';
-const tutorialNumber = (name: string) => Number(name.match(/^Tutorial[_ -](\d+)/i)?.[1] ?? Infinity);
 ---
 <div class="course-materials-grid">
 {courses.map((course) => {
   const tr = (lang === 'fr' && course.fr) || {};
-  const files = staticFiles(course.dir).sort((a, b) => {
-    const tutorialOrder = tutorialNumber(a.name) - tutorialNumber(b.name);
-    return tutorialOrder || a.name.localeCompare(b.name, undefined, { numeric: true });
-  });
+  const files = staticFiles(course.dir).sort((a, b) => pdfCreated(a) - pdfCreated(b)); // oldest first
   const blurb = tr.blurb ?? course.blurb;
   return (
     <div class="course-materials">
