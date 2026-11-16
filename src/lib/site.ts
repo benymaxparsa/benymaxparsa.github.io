@@ -20,6 +20,7 @@ export const site = {
     'https://dblp.org/pid/328/7111.html',
     'https://www.semanticscholar.org/author/7592796',
     'https://huggingface.co/ParsaKamalipour',
+    'https://www.wikidata.org/wiki/Q142177754',
   ],
   footerLinks: [
     { label: 'Personal Email', icon: 'fas fa-fw fa-envelope-square', url: 'mailto:parsakamalipour.edu@gmail.com' },
