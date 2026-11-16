@@ -11,7 +11,8 @@ const other = lang === 'en' ? 'fr' : 'en';
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-logo" href={t.home}><img src={site.logo} alt={site.title} width="512" height="512"></a>
+        <!-- Flat copy of the layers in design/Site.icon/Assets; colours come from --logo-line and --logo-fill -->
+        <a class="site-logo" href={t.home} aria-label={site.title}><svg class="site-logo__mark" viewBox="56 0 912 1024" width="912" height="1024" aria-hidden="true"><g stroke="var(--logo-line)" stroke-width="32" stroke-linecap="round"><path d="M200 265L440 125"/><path d="M545 140L808 598"/><path d="M290 298L800 298"/><path d="M881 360L881 645"/><path d="M143 370L143 655"/><path d="M205 688L765 365"/><path d="M220 430L480 885"/><path d="M215 725L810 725"/><path d="M830 755L565 905"/><path d="M265 795L450 900"/></g><g fill="var(--logo-fill)"><circle cx="512" cy="85" r="52"/><circle cx="143" cy="298" r="52"/><circle cx="881" cy="298" r="52"/><circle cx="143" cy="725" r="52"/><circle cx="881" cy="725" r="52"/><circle cx="512" cy="938" r="52"/></g><g fill="none" stroke="var(--logo-line)" stroke-width="32" stroke-linecap="round"><path d="M549.9 139.1A66 66 0 1 1 577.0 73.5"/><path d="M200.2 265.0A66 66 0 1 1 131.5 233.0"/><path d="M881.0 364.0A66 66 0 1 1 944.8 315.1"/><path d="M160.1 661.2A66 66 0 1 1 88.9 687.1"/><path d="M823.8 758.0A66 66 0 1 1 892.5 790.0"/><path d="M566.1 900.1A66 66 0 1 1 456.0 903.0"/></g></svg></a>
         <a class="site-title" href={t.home}>{site.title}</a>
         <ul class="visible-links">
           {nav[lang].map((link) => (

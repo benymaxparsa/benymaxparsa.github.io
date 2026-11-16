@@ -138,6 +138,7 @@ function initThemeToggle() {
     btn.setAttribute('aria-label', label);
     btn.title = label;
     for (const m of $$('meta[name="theme-color"]')) m.setAttribute('content', dark ? '#121821' : '#f7f8fa');
+    for (const l of $$<HTMLLinkElement>('link[rel="icon"]')) l.href = l.href.replace(/favicon-(dark-)?/, dark ? 'favicon-dark-' : 'favicon-');
     document.dispatchEvent(new CustomEvent('themechange'));
   };
   btn.addEventListener('click', () => {

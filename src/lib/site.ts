@@ -5,7 +5,6 @@ export const site = {
   author: 'Parsa Kamalipour',
   twitter: 'ParsaKamalipour',
   ogImage: '/images/profile.png',
-  logo: '/assets/favicon/android-chrome-512x512.png',
   gtag: 'G-YZHKJ874X8',
   googleVerification: 'vQuZMUe3btAbp5KkvECmsGlPRzZigNOqouxjo7-J6Kc',
   sameAs: [
