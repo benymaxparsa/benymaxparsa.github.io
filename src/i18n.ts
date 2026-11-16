@@ -46,6 +46,7 @@ export const ui = {
     follow: 'Follow:', poweredBy: 'Powered by',
     madeWith: 'Made with', love: 'love', madeFrom: 'from Canada',
     publishedIn: 'Published in', citation: 'Recommended citation:', download: 'Download', here: 'here',
+    siteDescription: 'Parsa Kamalipour, MSc Computer Science researcher at Concordia University, Montréal: graph algorithms, community detection and social network analysis. Teaching assistant, Dean’s Excellence Award 2026.',
     lightbox: 'Image viewer', lightboxClose: 'Close', lightboxPrev: 'Previous image', lightboxNext: 'Next image',
   },
   fr: {
@@ -58,6 +59,7 @@ export const ui = {
     follow: 'Suivez-nous :', poweredBy: 'Propulsé par',
     madeWith: 'Fait avec', love: 'amour', madeFrom: 'au Canada',
     publishedIn: 'Publié dans', citation: 'Citation recommandée :', download: 'Télécharger', here: 'ici',
+    siteDescription: 'Parsa Kamalipour, chercheur en informatique (maîtrise) à l’Université Concordia, Montréal : algorithmes de graphes, détection de communautés et analyse des réseaux sociaux.',
     lightbox: 'Visionneuse d’images', lightboxClose: 'Fermer', lightboxPrev: 'Image précédente', lightboxNext: 'Image suivante',
   },
 } as const;

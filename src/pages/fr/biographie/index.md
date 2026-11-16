@@ -1,7 +1,6 @@
 ---
 layout: ../../../layouts/MdPage.astro
 title: "Biographie de Parsa Kamalipour"
-excerpt: "Biographie"
 ---
 
 **Parsa Kamalipour** est étudiant à la **maîtrise en informatique avec mémoire** à l'[Université Concordia](https://www.concordia.ca), au Département d'[informatique et de génie logiciel](https://www.concordia.ca/ginacody/computer-science-software-eng.html) de l'[École de génie et d'informatique Gina-Cody](https://www.concordia.ca/ginacody.html). Il travaille au _Laboratoire d'algorithmes et de complexité_ sous la supervision du [professeur Hovhannes Harutyunyan](https://users.encs.concordia.ca/~haruty/).

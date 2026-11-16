@@ -16,6 +16,8 @@ import { pagePath } from '../lib/paths';
 
 interface Props {
   title?: string;
+  /** <title> text when it should say more than the visible heading */
+  headTitle?: string;
   lang: Lang;
   description?: string;
   /** URL of the same page in the other language */
@@ -28,12 +30,15 @@ interface Props {
   index?: boolean;
 }
 
-const { title, lang, description, twin, layout = 'single', classes, date, index = true } = Astro.props;
+const { title, headTitle, lang, description, twin, layout = 'single', classes, date, index = true } = Astro.props;
 const t = ui[lang];
 const path = pagePath(Astro.url);
 const canonical = new URL(path, site.url).href;
-const seoTitle = title ? `${smart(title)} - ${site.title}` : site.title;
-const desc = (description ?? site.description).replace(/\s+/g, ' ').trim();
+const pageTitle = headTitle ?? title;
+const seoTitle = pageTitle && pageTitle !== site.title ? `${smart(pageTitle)} - ${site.title}` : site.title;
+// Pages without their own text get their title in front, so no two share one description
+const fallback = title && title !== site.title ? `${smart(title)}. ${t.siteDescription}` : t.siteDescription;
+const desc = (description ?? fallback).replace(/\s+/g, ' ').trim();
 const ogType = date ? 'article' : 'website';
 const enUrl = new URL(lang === 'en' ? path : twin, site.url).href;
 const frUrl = new URL(lang === 'fr' ? path : twin, site.url).href;

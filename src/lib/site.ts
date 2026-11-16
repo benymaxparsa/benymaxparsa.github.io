@@ -3,8 +3,6 @@ export const site = {
   url: 'https://parsakp.com',
   title: 'Parsa Kamalipour',
   author: 'Parsa Kamalipour',
-  description:
-    'Graph Algorithms & Social Networks Analysis | Teaching Excellence Award · Teaching Assistant | Community Detection · Graph Sparsification · GNNs · ML · Algorithm Design · NetworkX | MSc Computer Science @ Concordia · BSc Computer Engineering',
   twitter: 'ParsaKamalipour',
   ogImage: '/images/profile.png',
   logo: '/assets/favicon/android-chrome-512x512.png',

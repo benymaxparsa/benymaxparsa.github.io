@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/MdPage.astro
 title: "News posted by Parsa Kamalipour"
-excerpt: "News"
 ---
 
 <div class="news-feed">

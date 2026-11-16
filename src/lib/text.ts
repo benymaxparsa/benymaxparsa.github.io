@@ -3,13 +3,15 @@ const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"'
 export const stripHtml = (html: string) =>
   html.replace(/<[^>]+>/g, ' ').replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (_, e) => ENTITIES[e]).replace(/\s+/g, ' ').trim();
 
-// Text of the first block that has any, like Jekyll's excerpt (content up to the first blank line)
-export function excerpt(html: string, max = 300): string | undefined {
-  for (const block of html.split(/\n\s*\n|(?<=<\/(?:p|ul|ol|figure|h\d|div|blockquote)>)/)) {
-    const text = stripHtml(block);
-    if (text) return text.length > max ? text.slice(0, max).replace(/\s\S*$/, '') + '…' : text;
-  }
-  return undefined;
+// Meta description for a page: starts at the abstract when there is one, skips figures
+// (their captions read "screenshot"), and joins blocks so a lead-in like "Designing and implementation of:"
+// is followed by its list instead of standing alone
+export function excerpt(html: string, max = 160): string | undefined {
+  const abstract = html.search(/<h\d[^>]*>\s*(Abstract|Résumé)/i);
+  if (abstract >= 0) html = html.slice(abstract).replace(/^<h\d[^>]*>[\s\S]*?<\/h\d>/, '');
+  const text = stripHtml(html.replace(/<figure[\s\S]*?<\/figure>/g, ' '));
+  if (!text) return undefined;
+  return text.length > max ? text.slice(0, max).replace(/\s\S*$/, '') + '…' : text;
 }
 
 // SmartyPants quotes, as Jekyll's markdownify gave every title

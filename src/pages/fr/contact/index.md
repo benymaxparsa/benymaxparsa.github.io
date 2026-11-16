@@ -1,7 +1,6 @@
 ---
 layout: ../../../layouts/MdPage.astro
 title: "Adresse et coordonnées"
-excerpt: "Adresse et coordonnées"
 ---
 
 
