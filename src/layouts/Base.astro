@@ -37,7 +37,7 @@ const canonical = new URL(path, site.url).href;
 const pageTitle = headTitle ?? title;
 const seoTitle = pageTitle && pageTitle !== site.title ? `${smart(pageTitle)} - ${site.title}` : site.title;
 // Pages without their own text get their title in front, so no two share one description
-const fallback = title && title !== site.title ? `${smart(title)}. ${t.siteDescription}` : t.siteDescription;
+const fallback = title && title !== site.title ? `${smart(title).replace(/\.$/, '')}. ${t.siteDescription}` : t.siteDescription;
 const desc = (description ?? fallback).replace(/\s+/g, ' ').trim();
 const ogType = date ? 'article' : 'website';
 const enUrl = new URL(lang === 'en' ? path : twin, site.url).href;

@@ -11,7 +11,7 @@ export function excerpt(html: string, max = 160): string | undefined {
   if (abstract >= 0) html = html.slice(abstract).replace(/^<h\d[^>]*>[\s\S]*?<\/h\d>/, '');
   const text = stripHtml(html.replace(/<figure[\s\S]*?<\/figure>/g, ' '));
   if (!text) return undefined;
-  return text.length > max ? text.slice(0, max).replace(/\s\S*$/, '') + '…' : text;
+  return text.length > max ? text.slice(0, max + 1).replace(/\s\S*$/, '').replace(/[\s(\[,:;]+$/, '') + '…' : text;
 }
 
 // SmartyPants quotes, as Jekyll's markdownify gave every title
