@@ -36,6 +36,7 @@ courses:
       COMP339_Tutorial_7_Graph_Theory.pdf: "Tutorial 7: Eulerian Trails, Planarity, and Bipartite Graphs"
       COMP339_Tutorial_8_Graph_Theory.pdf: "Tutorial 8: Hamiltonian Paths, Trees, and Graph Orientations"
       Tutorial_9_Graph_Isomorphism_Hypercubes_Longest_Paths.pdf: "Tutorial 9: Graph Isomorphism, Hypercubes, and Longest Paths"
+      Tutorial_10_Complements_Duals_Region_Counting_Bipartite.pdf: "Tutorial 10: Complements, Duals, Region Counting, and Bipartite Graphs"
       COMP339_Lecture_Induction_and_Strong_Induction.pdf: "Lecture Notes: Induction and Strong Induction"
       COMP339_Lecture_Graph_Theory_Basics.pdf: "Lecture Notes: Graph Theory Basics"
     topics:
@@ -47,6 +48,7 @@ courses:
       Tutorial_5_Inclusion_Exclusion_Derangements.pdf: "Inclusion–exclusion with upper bounds, exactly and at least m conditions, glued letters, derangements, generating functions for distributions, and integer compositions."
       Tutorial_6_Generating_Functions_Partitions_Recurrences.pdf: "Generating functions for weighted equations and partitions, exponential generating functions, recurrence solving, and combinatorial and algebraic proofs."
       Tutorial_9_Graph_Isomorphism_Hypercubes_Longest_Paths.pdf: "Graph isomorphism and invariants, complements, hypercubes and Gray codes, path counting, prescribed degrees, longest-path arguments, and bipartite paths."
+      Tutorial_10_Complements_Duals_Region_Counting_Bipartite.pdf: "The edge-budget argument for a graph and its complement, dual graphs, bounds from region degrees, degree-sum extremal problems (bound, then attain), bipartite graphs and odd cycles (Kőnig), hereditary properties, and complements of joins."
       COMP339_Lecture_Graph_Theory_Basics.pdf: "Graph theory basics (Sections 11.1 to 11.3): directed and undirected graphs, trails, paths and cycles, connectivity, subgraphs and complements, graph isomorphism, and vertex degree."
       COMP339_Tutorial_7_Graph_Theory.pdf: "The Handshaking Theorem, complete and regular graphs, Eulerian trails and Euler’s theorem, a lower bound on the edges of a connected graph, bipartite and planar graphs (K5 and K3,3), and forcing a triangle."
       COMP339_Tutorial_8_Graph_Theory.pdf: "Euler’s formula and the edge bounds, subdivisions and Kuratowski’s theorem (the Petersen graph), complements, Hamilton paths and cycles, trees and pendant vertices, orientations, and Rédei’s theorem."
@@ -65,6 +67,7 @@ courses:
         COMP339_Tutorial_7_Graph_Theory.pdf: "Tutoriel 7 : pistes eulériennes, planarité et graphes bipartis"
         COMP339_Tutorial_8_Graph_Theory.pdf: "Tutoriel 8 : chemins hamiltoniens, arbres et orientations de graphes"
         Tutorial_9_Graph_Isomorphism_Hypercubes_Longest_Paths.pdf: "Tutoriel 9 : isomorphisme de graphes, hypercubes et plus longs chemins"
+        Tutorial_10_Complements_Duals_Region_Counting_Bipartite.pdf: "Tutoriel 10 : compléments, graphes duaux, dénombrement des régions et graphes bipartis"
         COMP339_Lecture_Induction_and_Strong_Induction.pdf: "Notes de cours : récurrence simple et forte"
         COMP339_Lecture_Graph_Theory_Basics.pdf: "Notes de cours : bases de la théorie des graphes"
       topics:
@@ -76,6 +79,7 @@ courses:
         Tutorial_5_Inclusion_Exclusion_Derangements.pdf: "Inclusion-exclusion avec bornes supérieures, conditions « exactement m » et « au moins m », lettres regroupées, dérangements, fonctions génératrices et compositions d’un entier."
         Tutorial_6_Generating_Functions_Partitions_Recurrences.pdf: "Fonctions génératrices pour équations pondérées et partitions, fonctions génératrices exponentielles, résolution de récurrences et preuves combinatoires et algébriques."
         Tutorial_9_Graph_Isomorphism_Hypercubes_Longest_Paths.pdf: "Isomorphisme et invariants, compléments, hypercubes et codes de Gray, dénombrement de chemins, degrés prescrits, plus longs chemins et chemins dans les graphes bipartis."
+        Tutorial_10_Complements_Duals_Region_Counting_Bipartite.pdf: "Argument du budget d’arêtes pour un graphe et son complément, graphes duaux, bornes tirées des degrés des régions, problèmes extrémaux sur la somme des degrés (borner, puis atteindre), graphes bipartis et cycles impairs (Kőnig), propriétés héréditaires et compléments de joints."
         COMP339_Lecture_Graph_Theory_Basics.pdf: "Bases de la théorie des graphes (sections 11.1 à 11.3) : graphes orientés et non orientés, pistes, chemins et cycles, connexité, sous-graphes et compléments, isomorphisme de graphes et degré d’un sommet."
         COMP339_Tutorial_7_Graph_Theory.pdf: "Lemme des poignées de main, graphes complets et réguliers, pistes eulériennes et théorème d’Euler, nombre minimal d’arêtes d’un graphe connexe, graphes bipartis et planaires (K5 et K3,3), et forcer un triangle."
         COMP339_Tutorial_8_Graph_Theory.pdf: "Formule d’Euler et bornes sur les arêtes, subdivisions et théorème de Kuratowski (graphe de Petersen), compléments, chemins et cycles hamiltoniens, arbres et sommets pendants, orientations et théorème de Rédei."
